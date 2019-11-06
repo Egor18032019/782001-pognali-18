@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Egor P](https://up.htmlacademy.ru/adaptive/18/user/782001).
-* Наставник: `Неизвестно`.
+* Наставник: [Дарья Воздраганова].
 
 ---
 

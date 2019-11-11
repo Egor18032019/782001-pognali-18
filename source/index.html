@@ -8,7 +8,7 @@
 
 <body>
   <header class="page-header">
-    <a  class="page-header__logo">
+    <a class="page-header__logo">
       <img class="page-header__logo-image logotip" src="#" alt="Сервис для выбора попутчиков" width="100" height="19">
       <!-- логотип Погнали -->
     </a>
@@ -22,7 +22,7 @@
     </nav>
   </header>
 
-  <main class="page-main">
+  <main class="index-main container">
     <h1 class="visually-hidden">Сервис для выбора попутчиков "Погнали"</h1>
 
     <section class="stats">
@@ -99,6 +99,7 @@
         Показать все <span>></span>
       </a>
     </section>
+
     <section class="companions">
       <h2>Попутчики</h2>
       <p>Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому
@@ -106,14 +107,16 @@
       <b>Теперь можно легко найти единомышленников!</b>
       <ul class="companions-list">
         <li class="companions-item">
-          <p><span>99</span>level</p>
-          <ul class="companion-item__country country">
+          <span class="companions__online">0</span>
+          <p class="companions__lvl">99<span>level</span></p>
+          <p class="companions__wish visually-hidden">хочет посетить:</p>
+          <ul class="companions-list__country country">
             <li class="country-item">ШриЛанка</li>
             <li class="country-item">Незнаю</li>
             <li class="country-item">Сейшелы</li>
           </ul>
           <p>Таня Фирсова</p>
-          <ul class="companions-item__teg">
+          <ul class="companions-list__teg teg">
             <li>#ЗОЖ </li>
             <li>#ПП </li>
             <li>#Фитнес</li>
@@ -121,7 +124,8 @@
             <li>#авокадо</li>
             <li> #смузи</li>
           </ul>
-          <ul class="companions-item__favorite transport">
+          <p class="companions__transport visually hidden">Предпочитаемый транспорт:</p>
+          <ul class="companions-list__favorite transport">
             <li class="favorite">Самолет</li>
             <li>Автобус</li>
             <li>Велосипед</li>
@@ -135,14 +139,14 @@
             <li class="country-item">Чехия</li>
           </ul>
           <p>Петя Демин</p>
-          <ul class="companions-item__teg">
+          <ul class="companions-list__teg">
             <li>#бургер </li>
             <li>#бар</li>
             <li>#футбол</li>
             <li>#концерт</li>
             <li>#крафт</li>
           </ul>
-          <ul class="companions-item__favorite transport">
+          <ul class="companions-list__favorite transport">
             <li class="favorite">Самолет</li>
             <li class="favorite">Автобус</li>
             <li>Велосипед</li>
@@ -151,6 +155,7 @@
         </li>
       </ul>
     </section>
+
     <section class="rate">
       <h2>Добавьте свой профиль</h2>
       <span>В рублях</span>
@@ -169,6 +174,7 @@
       </ol>
       <a href="#" class="rate__business">Показать тарифы для бизнеса</a>
     </section>
+
     <section class="register">
       <h2>Заинтересовались?</h2>
       <p>Зарегистрируйтесь, это быстро и бесплатно!
@@ -192,6 +198,7 @@
         mail@htmlacademy.ru
       </p>
     </section>
+
     <section class="trail">
       <a href="#" class="trail_gprs telephone">
         <img src="https://via.placeholder.com/45x45" alt="Позвонить" width="45" height="45">
@@ -208,27 +215,28 @@
     </section>
 
     <footer class="footer">
-        <a  class="footer__logo">
-            <img class="footer__logo-image logotip" src="#" alt="Сервис для выбора попутчиков" width="100" height="19">
-            <!-- логотип Погнали -->
-          </a>
-          <div class="footer__social social">
-              <ul class="social__list">
-                  <li class="social__item">
-                    <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
-                  </li>
-                  <li class="social__item">
-                    <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
-                  </li>
-                  <li class="social__item">
-                    <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
-                  </li>
-                </ul>
-          </div>
-          <p>Разработано</p>
-          <a href="https://htmlacademy.ru" class="footer-htmlacademy" target="_blank">
-            <img src="https://via.placeholder.com/45x45" alt="Логотип академии." width="27" height="34">
-          </a>
+      <a class="footer__logo">
+        <img class="footer__logo-image logotip" src="#" alt="Сервис для выбора попутчиков" width="100" height="19">
+        <!-- логотип Погнали -->
+      </a>
+      <div class="footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в
+              Инстаграме</a>
+          </li>
+        </ul>
+      </div>
+      <p>Разработано</p>
+      <a href="https://htmlacademy.ru" class="footer-htmlacademy" target="_blank">
+        <img src="https://via.placeholder.com/45x45" alt="Логотип академии." width="27" height="34">
+      </a>
     </footer>
 
   </main>

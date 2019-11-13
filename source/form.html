@@ -27,6 +27,79 @@
 
     <h1>Попутчики</h1>
     <section class="selection">
+      <form action="https://echo.htmlacademy.ru" method="GET">
+        <h2>Подберите идеального попутчика</h2>
+
+        <fieldset class="selection__hobby">
+          <legend>Хобби</legend>
+          <button class="selection__hobby__toggle">Раскрыть список</button>
+          <button class="selection__hobby__toggle visually-hidden">Скрыть список</button>
+        </fieldset>
+
+        <fieldset class="selection__musiс">
+          <legend>Музыка</legend>
+          <ul class="selection__musiс__list">
+            <li>
+              <input class="check-input" type="checkbox" name="rock" id="hard-rock" checked>
+              <label class="check" for="hard-rock">Тяжелый рок</label>
+            </li>
+            <li>
+              <input class="check-input" type="checkbox" name="rock" id="rus-rap">
+              <label class="check" for="rus-rap">Русский рэп</label>
+            </li>
+            <li>
+              <input class="check-input" type="checkbox" name="rock" id="eurodance">
+              <label class="check" for="eurodance">Евроденс</label>
+            </li>
+          </ul>
+          <button class="selection__musiс__toggle visually-hidden">Раскрыть список</button>
+          <button class="selection__musiс__toggle">Скрыть список</button>
+        </fieldset>
+
+        <fieldset class="selection__food">
+          <legend>Еда</legend>
+          <button class="selection__food__toggle">Раскрыть список</button>
+          <button class="selection__food__toggle visually-hidden">Скрыть список</button>
+        </fieldset>
+
+        <div class="selection__transport">
+          <p class="selection__transport">транспорт: <span>левел:</span></p>
+          <ul class="selection__list__favorite transport">
+            <li class="favorite">Самолет</li>
+            <li class="favorite">Автобус</li>
+            <li>Велосипед</li>
+            <li class="favorite">Пешие прогулки</li>
+          </ul>
+        </div>
+
+        <fieldset class="selection__lvl">
+          <legend>Левел</legend>
+
+          <div class="selection__lvl__range">
+            <div class="selection__lvl__range">
+              <div class="selection__lvl_scale">
+                <!-- незаполненая линия -->
+                <div class="selection__lvl_bar"></div>
+                <!-- а это заполненая линия -->
+              </div>
+              <div class="range-toogle range-toogle-min">Выбрать минимальный уровень.</div>
+              <!-- ползунок слева -->
+              <div class="range-toogle range-toogle-max">Выбрать максимальный уровень. </div>
+              <!-- ползунок справа -->
+            </div>
+            <!-- или ползунки в спаны и п обернуть ? -->
+            <div class="selection__lvl__controls">
+
+              <input type="text" id="lvl-start" name="start" value="30">
+              <input type="text" id="lvl-end" name="end" value="100">
+
+            </div>
+          </div>
+          <button class="selection__lvl__toggle visually-hidden">Раскрыть список</button>
+          <button class="selection__lvl__toggle ">Скрыть список</button>
+        </fieldset>
+
+      </form>
 
     </section>
 

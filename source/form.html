@@ -3,73 +3,42 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Погнали</title>
 </head>
 
 <body>
 
+  <header class="page-header">
+    <a class="page-header__logo">
+      Погнали?
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle">Показать меню</button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
   <main class="form-main container">
-    <header class="page-header">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image logotip" src="#" alt="Сервис для выбора попутчиков" width="100" height="19">
-        <!-- логотип Погнали -->
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav_toogle">Показать меню</button>
-        <div class="wrapper">
-          <ul class="main-nav__list site-list">
-            <li></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+
     <h1>Попутчики</h1>
     <section class="selection">
 
     </section>
 
     <section class="traveler">
-      <ul class="traveler-list">
-        <li class="traveler-item">
+      <h2 class="visually-hidden">Выбор попутчиков</h2>
+      <ul class="traveler__list slider">
+        <li class="traveler__item">
           <p class="traveler__lvl">99</p>
           <span class="traveler__online">0</span>
-          <p class="traveler__wish">хочет посетить:</p>
-
-          <ul class="traveler-list__country country">
-            <li class="country-item">ШриЛанка</li>
-            <li class="country-item">Незнаю</li>
-            <li class="country-item">Сейшелы</li>
-          </ul>
-          <p>Таня Фирсова</p>
-          <ul class="traveler-list__teg teg">
-            <li>#ЗОЖ </li>
-            <li>#ПП </li>
-            <li>#Фитнес</li>
-            <li> #пляж </li>
-            <li>#авокадо</li>
-            <li> #смузи</li>
-          </ul>
-          <p class="companions__transport">транспорт: <span>левел:</span></p>
-          <ul class="traveler-list__favorite transport">
-            <li class="favorite">Самолет</li>
-            <li>Автобус</li>
-            <li>Велосипед</li>
-            <li>Пешие прогулки</li>
-          </ul>
-        </li>
-        <li class="traveler-item">
-          <p class="traveler__lvl">99</p>
-          <span class="traveler__online">0</span>
-          <p class="traveler__wish">хочет посетить:</p>
-
-          <ul class="traveler-list__country country">
-            <li class="country-item">ШриЛанка</li>
-            <li class="country-item">Незнаю</li>
-            <li class="country-item">Сейшелы</li>
-          </ul>
           <p>Таня Фирсова</p>
           <span>1,5 M</span>
-          <ul class="traveler-list__teg teg">
+          <ul class="traveler__list__teg teg">
             <li>#ЗОЖ </li>
             <li>#ПП </li>
             <li>#Фитнес</li>
@@ -77,98 +46,125 @@
             <li>#авокадо</li>
             <li> #смузи</li>
           </ul>
-          <p class="traveler__transport">транспорт: <span>левел:</span></p>
-          <ul class="traveler-list__favorite transport">
-            <li class="favorite">Самолет</li>
-            <li>Автобус</li>
-            <li>Велосипед</li>
-            <li>Пешие прогулки</li>
-          </ul>
-          <a href="#" class="traveler-item__call button "></a>
-
+          <div class="traveler__countries">
+            <p class="traveler__wish">хочет посетить:</p>
+            <ul class="traveler-list__country country">
+              <li class="country__item">ШриЛанка</li>
+              <li class="country__item">Незнаю</li>
+              <li class="country__item">Сейшелы</li>
+            </ul>
+          </div>
+          <div class="traveler__transport">
+            <p class="traveler__transport">транспорт: <span>левел:</span></p>
+            <ul class="traveler__list__favorite transport">
+              <li class="favorite">Самолет</li>
+              <li>Автобус</li>
+              <li>Велосипед</li>
+              <li>Пешие прогулки</li>
+            </ul>
+          </div>
+          <a href="#" class="traveler-item__call button ">Позвать</a>
         </li>
-        <li class="traveler-item">
+        <li class="traveler__item">
           <p class="traveler__lvl">80</p>
           <span class="traveler__online">0</span>
-          <p class="traveler__wish">хочет посетить:</p>
-          <ul class="traveler-list__country country">
-            <li class="country-item">Бельгия</li>
-            <li class="country-item">Чехия</li>
-          </ul>
+
           <p>Петя Демин</p>
           <span>150</span>
-          <ul class="traveler-list__teg teg">
+          <ul class="traveler__list__teg teg">
             <li>#бургер </li>
             <li>#бар</li>
             <li>#футбол</li>
             <li>#концерт</li>
             <li>#крафт</li>
           </ul>
-          <p class="traveler__transport">транспорт: <span>левел:</span></p>
-          <ul class="traveler-list__favorite transport">
-            <li class="favorite">Самолет</li>
-            <li class="favorite">Автобус</li>
-            <li>Велосипед</li>
-            <li class="favorite">Пешие прогулки</li>
-          </ul>
+          <div class="traveler__countries">
+            <p class="traveler__wish">хочет посетить:</p>
+            <ul class="traveler-list__country country">
+              <li class="country__item">Бельгия</li>
+              <li class="country__item">Чехия</li>
+            </ul>
+          </div>
+          <div class="traveler__transport">
+            <p class="traveler__transport">транспорт: <span>левел:</span></p>
+            <ul class="traveler__list__favorite transport">
+              <li class="favorite">Самолет</li>
+              <li class="favorite">Автобус</li>
+              <li>Велосипед</li>
+              <li class="favorite">Пешие прогулки</li>
+            </ul>
+          </div>
           <a href="#" class="traveler-item__call button "></a>
         </li>
-        <li class="traveler-item">
+        <li class="traveler__item">
           <p class="traveler__lvl">25</p>
           <span class="traveler__online">0</span>
-          <p class="traveler__wish">хочет посетить:</p>
-          <ul class="traveler-list__country country">
-            <li class="country-item">США</li>
-            <li class="country-item">Австралия</li>
-            <li class="country-item">Доминикана</li>
-          </ul>
+
           <p>Марк Смолов</p>
           <span>1700</span>
-          <ul class="traveler-list__teg teg">
+          <ul class="traveler__list__teg teg">
             <li>#рэп </li>
             <li>#тату</li>
             <li>#хайпбист</li>
             <li> #кроссовки </li>
             <li>#суприм</li>
           </ul>
-          <p class="traveler__transport">транспорт: <span>левел:</span></p>
-          <ul class="traveler-list__favorite transport">
-            <li class="favorite">Самолет</li>
-            <li>Автобус</li>
-            <li class="favorite">Велосипед</li>
-            <li>Пешие прогулки</li>
-          </ul>
-          <a href="#" class="traveler-item__call button "></a>
+          <div class="traveler__countries">
+            <p class="traveler__wish">хочет посетить:</p>
+            <ul class="traveler__list__country country">
+              <li class="country__item">США</li>
+              <li class="country__item">Австралия</li>
+              <li class="country__item">Доминикана</li>
+            </ul>
+          </div>
+          <div class="traveler__transport">
+            <p class="traveler__transport">транспорт: <span>левел:</span></p>
+            <ul class="traveler__list__favorite transport">
+              <li class="favorite">Самолет</li>
+              <li>Автобус</li>
+              <li class="favorite">Велосипед</li>
+              <li>Пешие прогулки</li>
+            </ul>
+          </div>
+          <a href="#" class="traveler__item__call button ">Позвать</a>
         </li>
-        <li class="traveler-item">
+        <li class="traveler__item">
           <p class="traveler__lvl">50</p>
           <span class="traveler__online">1</span>
-          <p class="traveler__wish">хочет посетить:</p>
-          <ul class="traveler-list__country country">
-            <li class="country-item">Великобритания</li>
-            <li class="country-item">Германия</li>
-          </ul>
+
           <p>Лариса Роговая</p>
           <span class="traveler-item__heart">23</span>
-          <ul class="traveler-list__teg teg">
+          <ul class="traveler__list__teg teg">
             <li>#образования </li>
             <li>#карьера</li>
             <li>#учеба</li>
             <li>#линкедин</li>
           </ul>
-          <p class="traveler__transport">транспорт: <span>левел:</span></p>
-          <ul class="traveler-list__favorite transport">
-            <li class="favorite">Самолет</li>
-            <li class="favorite">Автобус</li>
-            <li >Велосипед</li>
-            <li>Пешие прогулки</li>
-          </ul>
-          <a href="#" class="traveler-item__call button "></a>
+          <div class="traveler__countries">
+            <p class="traveler__wish">хочет посетить:</p>
+            <ul class="traveler__list__country country">
+              <li class="country__item">Великобритания</li>
+              <li class="country__item">Германия</li>
+            </ul>
+          </div>
+          <div class="traveler__transport">
+            <p class="traveler__transport">транспорт: <span>левел:</span></p>
+            <ul class="traveler__list__favorite transport">
+              <li class="favorite">Самолет</li>
+              <li class="favorite">Автобус</li>
+              <li>Велосипед</li>
+              <li>Пешие прогулки</li>
+            </ul>
+          </div>
+          <a href="#" class="traveler-item__call button">Позвать</a>
         </li>
       </ul>
       <div>
-        <p><span>+</span> Показать ещё</p>
-        <p><span class="arrow-left">Листать влево</span><span class="arrow-right">Листать вправо</span></p>
+        <p><span>+</span><button>Показать ещё</button></p>
+        <div class="traveler__toggle-btns slider__toggle">
+          <button class="slider__toggle slider__toggle--left">Влево</button>
+          <button class="slider__toggle slider__toggle--right">Вправо</button>
+        </div>
       </div>
     </section>
 

@@ -19,5 +19,8 @@
   ],
   "engines": {
     "node": "8.16"
+  },
+  "dependencies": {
+    "html-validator-cli": "^7.0.0"
   }
 }

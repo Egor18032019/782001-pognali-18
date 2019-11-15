@@ -26,14 +26,87 @@
   <main class="form-main container">
 
     <h1>Попутчики</h1>
+
+    <section class="filter-country">
+      <nav class="filter-nav">
+        <button class="filter-nav__toggle">Показать меню</button>
+        <div class="filter-nav__wrapper visually-hidden">
+          <ul class="filter-nav__list">
+            <li></li>
+          </ul>
+        </div>
+      </nav>
+      <h2>Фильтрация по странам</h2>
+      <button type="reset" name="button" class="filter-country__close">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <ul class="filter__continent">
+        <li>
+          <a href="country/europe.html" class="europa choose">Европа</a>
+        </li>
+        <li>
+          <a href="#" class="asia">Азия</a>
+        </li>
+        <li>
+          <a href="#" class="america">Америка</a>
+        </li>
+        <li>
+          <a href="#" class="island">Острова</a>
+        </li>
+      </ul>
+      <ul class="filter__selection">
+        <li>а
+            <ul class="chosen-country">
+                <li><a href=" country/europe/afganistan.html"> Афганистан</a></li>
+                <!-- обсудить как делать и сделать осталные по образцу -->
+                <li><a href="#">Албания</a></li>
+                <li><a href="#">Алжир</a></li>
+                <li><a href="#">Андорра</a></li>
+                <li><a href="#">Аргентина</a></li>
+                <li><a href="#">Армения</a></li>
+                <li><a href="#">Австралия</a></li>
+                <li><a href="#">Австрия</a></li>
+                <li><a href="#">Азербайджан</a></li>
+              </ul>
+        </li>
+        <li>б</li>
+        <li>в</li>
+        <li>г</li>
+        <li>д</li>
+        <li>е</li>
+        <li>з</li>
+        <li>и</li>
+        <li>к</li>
+        <li>л</li>
+        <li>м</li>
+        <li>н</li>
+        <li>о</li>
+        <li>п</li>
+        <li>р</li>
+        <li>с</li>
+        <li>т</li>
+        <li>у</li>
+        <li>ф</li>
+        <li>х</li>
+        <li>ч</li>
+        <li>ш</li>
+        <li>э</li>
+        <li>ю</li>
+        <li>я</li>
+      </ul>
+
+      <button class="filter-country__button">Свернуть</button>
+    </section>
+
     <section class="selection">
       <form action="https://echo.htmlacademy.ru" method="GET">
         <h2>Подберите идеального попутчика</h2>
 
         <fieldset class="selection__hobby">
           <legend>Хобби</legend>
-          <button class="selection__hobby__toggle">Раскрыть список</button>
-          <button class="selection__hobby__toggle visually-hidden">Скрыть список</button>
+          <button class="selection__toggle hobby-open">Раскрыть список</button>
+          <button class="selection__toggle hobby-close visually-hidden">Скрыть список</button>
+          <!-- сделать чтобы небыло элемнтов элемнтов -->
         </fieldset>
 
         <fieldset class="selection__musiс">
@@ -52,14 +125,15 @@
               <label class="check" for="eurodance">Евроденс</label>
             </li>
           </ul>
-          <button class="selection__musiс__toggle visually-hidden">Раскрыть список</button>
-          <button class="selection__musiс__toggle">Скрыть список</button>
+          <input type="radio" id="music" name="music-group">
+          <label class="music-toggle" for="music">!</label>
+          <!-- обсудить как лучше сделать -->
         </fieldset>
 
         <fieldset class="selection__food">
           <legend>Еда</legend>
-          <button class="selection__food__toggle">Раскрыть список</button>
-          <button class="selection__food__toggle visually-hidden">Скрыть список</button>
+          <button class="selection__toggle food-open">Раскрыть список</button>
+          <button class="selection__toggle food-close visually-hidden">Скрыть список</button>
         </fieldset>
 
         <div class="selection__transport">
@@ -74,7 +148,6 @@
 
         <fieldset class="selection__lvl">
           <legend>Левел</legend>
-
           <div class="selection__lvl__range">
             <div class="selection__lvl__range">
               <div class="selection__lvl_scale">
@@ -95,12 +168,11 @@
 
             </div>
           </div>
-          <button class="selection__lvl__toggle visually-hidden">Раскрыть список</button>
-          <button class="selection__lvl__toggle ">Скрыть список</button>
+          <button class="selection__toggle lvl-open visually-hidden">Раскрыть список</button>
+          <button class="selection__toggle lvl-close">Скрыть список</button>
         </fieldset>
-
       </form>
-
+      <a href="#" class="button">Показать всех</a>
     </section>
 
     <section class="traveler">

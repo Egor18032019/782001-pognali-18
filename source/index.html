@@ -15,10 +15,12 @@
     <button type="reset" name="button" class="menu-autho__close">
       <span class="visually-hidden">Закрыть</span>
     </button>
-    <h2>О сервисе
-      Направления
-      Попутчики
-    </h2>
+    <div class="menu__us">
+      <a href="#">О сервисе</a>
+      <a href="#"> Направления</a>
+      <a href="#">Попутчики</a>
+      </h2>
+    </div>
     <button class="menu-autho__ button autho-button ">Авторизация</button>
     <p>
       <a href="tel:+78005558628" class="register__item register__item--telephone">
@@ -48,7 +50,7 @@
     </div>
   </section>
 
-  <section class="scroll-menu">
+  <section class="scroll-menu visually-hidden">
     <a class="scroll-menu__logo">
       Погнали?
     </a>
@@ -68,7 +70,7 @@
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle">Показать меню</button>
-      <div class="main-nav__wrapper">
+      <div class="main-nav__wrapper visually-hidden">
         <ul class="main-nav__list site-list">
           <li></li>
         </ul>
@@ -85,7 +87,6 @@
         <div class="steps-header__slogan">
           <h2 class="steps-slogan">В путешествие с крутыми попутчиками!</h2>
         </div>
-        <!-- картинка с человечком+авторизация+отзыв -->
         <div class="steps-header__autho site-autho">
           <a href="tel:+74954959595" class="site-autho__telephone autho-icon" title="Телефон">
             Звонок
@@ -111,18 +112,18 @@
       <div class="steps-wrapper">
         <h2 class="visually-hidden">Что у нас есть</h2>
         <ol class="steps__list">
-          <li class="steps__list__item">
+          <li class="steps__item">
             <p>Выберите направление</p>
           </li>
-          <li class="steps__list__item">
+          <li class="steps__item">
             <p>Изучите идеи
               путешественников</p>
           </li>
-          <li class="steps__list__item">
+          <li class="steps__item">
             <p>Находите тех,
               кто похож на вас</p>
           </li>
-          <li class="steps__list__item">
+          <li class="steps__item">
             <p>Путешествуйте вместе!</p>
           </li>
         </ol>
@@ -134,7 +135,7 @@
       <p>Любое путешествие веселее
         с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в
         чужих. </p>
-      <p>А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
+      <b>А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</b>
     </section>
 
     <section class="trend">
@@ -145,19 +146,21 @@
       <ul class="trend-list">
         <li class="trend__item">
           <p>Тайланд <span>18321</span></p>
-          <b>Джунгли зовут!</b>
+          <small>Джунгли зовут!</small>
+          <!-- заменить на small -->
         </li>
         <li class="trend__item">
           <p>Франция <span>12815</span></p>
-          <b>Трэ бьен, манифик!</b>
+          <small>Трэ бьен, манифик!</small>
         </li>
         <li class="trend__item">
           <p>Чехия <span>5326</span></p>
-          <b>Закоулки старой Европы</b>
+          <small>Закоулки старой Европы</small>
         </li>
       </ul>
       <a href="catalog.html" class="button">
         Показать все <span>></span>
+        <!-- заменить спаны на псевдоэлементы  -->
       </a>
     </section>
 
@@ -168,7 +171,6 @@
       <b>Теперь можно легко найти единомышленников!</b>
       <ul class="companions-list">
         <li class="companions__item">
-          <span class="companions__online">0</span>
           <p class="companions__lvl">99<span>level</span></p>
           <p class="visually-hidden">хочет посетить:</p>
           <ul class="companions__list__country countries">
@@ -176,6 +178,7 @@
             <li class="countries__item">Незнаю</li>
             <li class="countries__item">Сейшелы</li>
           </ul>
+          <span class="companions__online">0</span>
           <p>Таня Фирсова</p>
           <ul class="companions__list__teg teg">
             <li>#ЗОЖ </li>
@@ -200,6 +203,7 @@
             <li class="country__item">Германия</li>
             <li class="country__item">Чехия</li>
           </ul>
+          <span class="companions__online">1</span>
           <p>Петя Демин</p>
           <ul class="companions__list__teg teg">
             <li>#бургер </li>
@@ -218,7 +222,8 @@
         </li>
       </ul>
       <a href="form.html" class="button">
-        Показать все <span>></span>
+        Показать всех <span>></span>
+        <!-- спаны убрать после того как добавлю псевдо элементы -->
       </a>
     </section>
 
@@ -256,7 +261,7 @@
         </a>
       </p>
       <p>
-        <a href="tel:+74954959595" class="register__item register__item--mail" target="_blank">
+        <a href="mail@htmlacademy.ru" class="register__item register__item--mail" target="_blank">
           mail@htmlacademy.ru
         </a>
       </p>
@@ -267,6 +272,7 @@
         ул. Большая Конюшенная, 19/8
       </a>
       <a href="#" class="trail_run button">Проложить маршрут <span>></span></a>
+      <!-- заменить спаны на псевдо элементы в ксс -->
       <div class="trail-map">
         <a href="https://yandex.ru/maps/?um=constructor%3A8983dc39bf9f718b0af751a69bbe953fbe35870d8c2f381cae16f84b6ed2210d&source=constructorLinkя"
           target="_blank">

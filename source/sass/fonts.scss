@@ -1,0 +1,16 @@
+// для подключения шрифтов
+@font-face {
+  font-family: " ";
+  src: url("../fonts/ .woff2") format("woff2"),
+    url("../fonts/ .woff") format("woff");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: " ";
+  src: url("../fonts/ .woff2") format("woff2"),
+    url("../fonts/ .woff") format("woff");
+  font-weight: 300;
+  font-display: swap;
+}

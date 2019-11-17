@@ -1,0 +1,17 @@
+// для примесей. пример ниже
+@mixin primer {
+  display: inline;
+  font-size: 10px;
+}
+
+@mixin size($width:50px, $height:50em) {
+  width: $width;
+  height: $height;
+}
+
+.dliaPrimera {
+  color: rosybrown;
+
+  @include primer;
+  @include size(50em, 100px);
+}

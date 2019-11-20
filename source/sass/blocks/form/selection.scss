@@ -1,8 +1,10 @@
 .trend {
+  display: flex;
   width: 100%;
-  @include center;
-  @include margin-auto;
+  justify-content: center;
+  flex-direction: column;
   padding-bottom: 30px;
+  @include margin-auto;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
 }
@@ -42,6 +44,21 @@
   width: 270px;
   // height: 200px;
   border-bottom-right-radius: 10px;
+
   // background-color: white;
 }
 
+.index-button {
+  width: 270px;
+  height: 62px;
+  border-radius: 10px;
+  background-color: $indexButton;
+  @include margin-auto;
+ text-decoration: none;
+ font-family: "BloggerSans", 'Arial', sans-serif;
+ font-size: 18px;
+ font-weight: bold;
+ line-height: 1;
+ text-align: left;
+ color: #1d2e5b;
+}

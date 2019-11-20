@@ -1,0 +1,84 @@
+.companions {
+  width: 100%;
+  @include center;
+  @include margin-auto;
+  background-color: $indexColor;
+  background-image: url("../img/smolov-mobile@1x.jpg");
+  background-repeat: no-repeat;
+
+}
+
+.companions h2 {
+  font-family: "BloggerSans", 'Arial', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ff8d30;
+}
+
+.companions p {
+  font-family: "BloggerSans", 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.38;
+  text-align: left;
+  color: white;
+}
+
+.companions b {
+  @include shriftBS;
+}
+
+.companions-list {
+  @include margin-auto;
+  padding: 0;
+
+}
+
+
+.companions__personal p {
+  font-family: "BloggerSans", 'Arial', sans-serif;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #1d2e5b;
+}
+
+.companions-list>li {
+  width: 270px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.companions__personal {
+  width: 177px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 22px;
+  @include margin-auto;
+
+}
+
+.companions__personal ul {
+  width: 100%;
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.companions__personal li {}

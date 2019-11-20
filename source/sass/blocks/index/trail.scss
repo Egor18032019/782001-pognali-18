@@ -1,0 +1,39 @@
+.trail {
+  @include center;
+  @include margin-auto;
+  width: 320px;
+  background-color: #ffd74b;
+  //   border-bottom-right-radius: 20px;
+  //   border-bottom-left-radius: 20px;
+  // overflow: hidden;
+}
+
+.trail__gprs {
+  display: block;
+  @include shriftBS ($color:$indexColor);
+  text-align: center;
+  margin-bottom: 35px;
+  margin-top: 35px;
+  text-transform: uppercase;
+}
+
+.trail__run {
+  @include center;
+  border-radius: 10px;
+  border: solid 3px #192144;
+  margin-bottom: 35px;
+}
+
+
+.trail-map {
+  @include padding25px;
+  // border-bottom-right-radius: 20px;
+  // border-bottom-left-radius: 20px;
+}
+
+.trail__position {
+  width: 100%;
+  height: 320px;
+  background-color: grey;
+  // временно
+}

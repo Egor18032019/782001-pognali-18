@@ -1,0 +1,131 @@
+.steps {
+  width: 100%;
+  background-color: $indexColor;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  @include margin-auto;
+
+}
+
+.steps h2 {
+  font-family: "BloggerSans" ,'Arial', sans-serif;;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.11;
+  text-align: center;
+  color: white;
+}
+
+.steps-header {
+  // height: 569px;
+
+  background-image: url("../img/globe-back-mobile@1x.jpg");
+  background-size: auto;
+  background-size: 320px 320px;
+  background-repeat: no-repeat;
+  // align-items: flex-end;
+}
+
+.steps-header__slogan {
+  width: 234px;
+  height: 114px;
+  @include margin-auto;
+  margin-bottom: 247px;
+
+}
+
+.site-autho {
+  display: flex;
+  align-items: center;
+}
+
+.autho-button {
+  width: 189px;
+  height: 40px;
+  // // border-radius: 50%;
+  // border-top-left-radius: 50%;
+  background-color: $indexButton;
+  font-family: "BloggerSans" ,'Arial', sans-serif;;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.76;
+  text-align: center;
+  color: #161c35;
+}
+
+.autho-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  font-size: 0px;
+  background-color: #ff8d30;
+  border-radius: 50%;
+}
+
+.site-autho__telephone {
+  background-image: url("../img/topmenu-phone.svg");
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.site-autho__mail {
+  background-image: url("../img/topmenu-mail.svg");
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.steps-quote {}
+
+.steps-quote q {
+  font-family: BloggerSans;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.38;
+  text-align: left;
+  color: white;
+
+}
+
+.steps-quote cite {
+  font-family: BloggerSans;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.38;
+  text-align: left;
+  color: white;
+}
+
+.steps-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.steps__list {
+  width: 270px;
+  height: 320px;
+  @include zero;
+}
+
+.steps__list li {
+  width: 270px;
+  height: 80px;
+  border-radius: 10px;
+}
+
+.steps__list li:first-child {
+  background-color: #ff8d30;
+}
+
+.steps__list li:nth-child(2) {
+  background-color: #ffa530;
+}
+.steps__list li:nth-child(3) {
+  background-color: #ffbd30;
+}
+.steps__list li:last-child {
+  background-color: #ffd74b;
+}

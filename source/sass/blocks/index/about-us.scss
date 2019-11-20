@@ -1,0 +1,43 @@
+.about-us {
+  @include center;
+  height: 352px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  @include margin-auto;
+  @include bgIndexColor;
+  // background-image: url("../../img/about-mobile@1x.png");
+  // background-image: url("../img/about-mobile@1x.png");
+  background-image: url("/source/img/about-mobile@1x.png");
+  // немогу поставить картинку
+}
+
+
+.about-us h2 {
+  font-family: "BloggerSans", 'Arial', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ff8d30;
+}
+
+.about-us p {
+  font-family: "BloggerSans", 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.38;
+  text-align: left;
+  color: white;
+}
+
+.about-us b {
+  font-family: "BloggerSans", 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.38;
+  text-align: left;
+  color: white;
+}

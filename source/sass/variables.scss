@@ -1,6 +1,8 @@
 // для переменых
-$chastiyCvet: black;
+$indexButton:#ffd74b;
 
-.gdeNamOnnujenEtotCvet {
-  color: $chastiyCvet;
+$indexColor:#192144;
+
+@mixin bgIndexColor {
+  background-color: $indexColor;
 }

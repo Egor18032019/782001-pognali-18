@@ -1,0 +1,21 @@
+.register {
+  width: 100%;
+  @include center;
+  @include margin-auto;
+  @include bgIndexColor;
+}
+
+.register h2 {
+  @include shriftBS ($fsize:24px, $fweight:bold, $color:#ff8d30);
+  text-align: center;
+}
+
+.register p {
+  @include shriftBS;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.register .register__item {
+  @include shriftBS ($color:#ffd74b);
+}

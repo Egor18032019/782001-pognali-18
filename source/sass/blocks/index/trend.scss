@@ -1,0 +1,64 @@
+.trend {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 30px;
+  @include margin-auto;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.trend h2 {
+  font-family: "BloggerSans", 'Arial', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ff8d30;
+}
+
+.trend p {
+  font-family: "BloggerSans", 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.38;
+  text-align: left;
+  color: #444444;
+}
+
+.trend-list {
+  width: 270px;
+  height: 600px;
+  list-style: none;
+  background-color: white;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+}
+
+.trend-list li {
+  width: 270px;
+  // height: 200px;
+  border-bottom-right-radius: 10px;
+
+  // background-color: white;
+}
+
+.index-button {
+  width: 270px;
+  height: 62px;
+  border-radius: 10px;
+  background-color: $indexButton;
+  @include margin-auto;
+ text-decoration: none;
+ font-family: "BloggerSans", 'Arial', sans-serif;
+ font-size: 18px;
+ font-weight: bold;
+ line-height: 1;
+ text-align: left;
+ color: #1d2e5b;
+}

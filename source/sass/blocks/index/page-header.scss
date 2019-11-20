@@ -1,0 +1,27 @@
+.page-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 73px;
+  background-color: $indexColor;
+  color: white;
+  @include margin-auto;
+
+}
+.page-header__logo {
+  font-size: 0;
+}
+.main-nav__toggle {
+  display: block;
+  // width: 25px;
+  // height: 11px;
+  background-image: url("../img/menu.svg");
+  // незнаю как залить свг
+  border: none;
+  font-size: 0px;
+  // list-style: none;
+}
+svg {
+  fill: brown;
+}

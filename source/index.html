@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Погнали</title>
-  <link href="css/normalize.css" rel="stylesheet">
+  <link href="sass/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -22,7 +22,7 @@
       <a href="#">Попутчики</a>
       </h2>
     </div>
-    <button class="menu-autho__ button autho-button ">Авторизация</button>
+    <button class="menu-autho__button autho-button ">Авторизация</button>
     <p>
       <a href="tel:+78005558628" class="register__item register__item--telephone">
         8 800 555-86-28
@@ -68,6 +68,7 @@
   <header class="page-header">
     <a class="page-header__logo">
       Погнали?
+      <img src="../img/logo-mobile-white@1x.png" alt="логотип сервиса" width="100" height="19">
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle">Показать меню</button>
@@ -144,20 +145,23 @@
       </p>
       <ul class="trend-list">
         <li class="trend__item">
+          <img src="../img/thailand-mobile@1x.jpg" alt="Тайланд" width="270" height="110">
           <p>Тайланд <span>18321</span></p>
           <small>Джунгли зовут!</small>
           <!-- заменить на small -->
         </li>
         <li class="trend__item">
+          <img src="../img/france-mobile@1x.jpg" alt="Франция" width="270" height="110">
           <p>Франция <span>12815</span></p>
           <small>Трэ бьен, манифик!</small>
         </li>
         <li class="trend__item">
+          <img src="../img/czech-mobile@1x.jpg" alt="Чехия" width="270" height="110">
           <p>Чехия <span>5326</span></p>
           <small>Закоулки старой Европы</small>
         </li>
       </ul>
-      <a href="catalog.html" class="button">Показать все</a>
+      <a href="catalog.html" class="index-button">Показать все</a>
     </section>
 
     <section class="companions">
@@ -168,56 +172,63 @@
       <ul class="companions-list">
         <li class="companions__item">
           <p class="companions__lvl">99<span>level</span></p>
-          <p class="visually-hidden">хочет посетить:</p>
-          <ul class="companions___countries countries">
-            <li class="countries__item">ШриЛанка</li>
-            <li class="countries__item">Незнаю</li>
-            <li class="countries__item">Сейшелы</li>
-          </ul>
+          <img src="../img/firsova-mobile@1x.jpg" alt="Фото в бассейне" width="270" height="270">
 
-          <p>Таня Фирсова</p>
-          <ul class="companions__list__teg teg">
-            <li>#ЗОЖ </li>
-            <li>#ПП </li>
-            <li>#Фитнес</li>
-            <li> #пляж </li>
-            <li>#авокадо</li>
-            <li> #смузи</li>
-          </ul>
-          <p class="visually-hidden">Предпочитаемый транспорт:</p>
-          <ul class="companions__list__favorite transport">
-            <li class="favorite">Самолет</li>
-            <li>Автобус</li>
-            <li>Велосипед</li>
-            <li>Пешие прогулки</li>
-          </ul>
+          <div class="companions__personal">
+            <p class="visually-hidden">хочет посетить:</p>
+            <ul class="companions___countries countries">
+              <li class="countries__item">ШриЛанка</li>
+              <li class="countries__item">Незнаю</li>
+              <li class="countries__item">Сейшелы</li>
+            </ul>
+            <p>Таня Фирсова</p>
+            <ul class="companions__list__teg teg">
+              <li>#ЗОЖ </li>
+              <li>#ПП </li>
+              <li>#Фитнес</li>
+              <li> #пляж </li>
+              <li>#авокадо</li>
+              <li> #смузи</li>
+            </ul>
+            <p class="visually-hidden">Предпочитаемый транспорт:</p>
+            <ul class="companions__list__favorite transport">
+              <li class="favorite">Самолет</li>
+              <li>Автобус</li>
+              <li>Велосипед</li>
+              <li>Пешие прогулки</li>
+            </ul>
+          </div>
         </li>
         <li class="companions__item">
           <p><span>80</span>level</p>
-          <p class="visually-hidden">хочет посетить:</p>
-          <ul class="companions__countries country">
-            <li class="country__item">Германия</li>
-            <li class="country__item">Чехия</li>
-          </ul>
+          <img src="../img/demin-mobile@1x.jpg" alt="Зимнее фото" width="270" height="270">
 
-          <p>Петя Демин</p>
-          <ul class="companions__list__teg teg">
-            <li>#бургер </li>
-            <li>#бар</li>
-            <li>#футбол</li>
-            <li>#концерт</li>
-            <li>#крафт</li>
-          </ul>
-          <p class="visually-hidden">Предпочитаемый транспорт:</p>
-          <ul class="companions__list__favorite transport">
-            <li class="favorite">Самолет</li>
-            <li class="favorite">Автобус</li>
-            <li>Велосипед</li>
-            <li class="favorite">Пешие прогулки</li>
-          </ul>
+          <div class="companions__personal">
+            <p class="visually-hidden">хочет посетить:</p>
+            <ul class="companions__countries country">
+              <li class="country__item">Германия</li>
+              <li class="country__item">Чехия</li>
+            </ul>
+            <p>Петя Демин</p>
+            <ul class="companions__list__teg teg">
+              <li>#бургер </li>
+              <li>#бар</li>
+              <li>#футбол</li>
+              <li>#концерт</li>
+              <li>#крафт</li>
+            </ul>
+            <p class="visually-hidden">Предпочитаемый транспорт:</p>
+            <ul class="companions__list__favorite transport">
+              <li class="favorite">Самолет</li>
+              <li class="favorite">Автобус</li>
+              <li>Велосипед</li>
+              <li class="favorite">Пешие прогулки</li>
+            </ul>
+          </div>
+
         </li>
       </ul>
-      <a href="form.html" class="button">Показать всех </a>
+      <a href="form.html" class="index-button">Показать всех </a>
     </section>
 
     <section class="rate">
@@ -239,24 +250,25 @@
     </section>
 
     <section class="rate-modal">
-        <h2>Тарифы для бизнеса</h2>
-        <a href="#" class="rate-modal__blog">
-          Реклама у блоггера
-          <span> 300 000 руб./пост</span>
-        </a>
-        <a href="#" class="rate-modal__cheat">
-          Накрутка подписчиков
-          <span> от 1 руб./шт.</span>
-        </a>
-        <a href="#" class="rate-modal__bot">
-          Лайки от ботов
-          <span>от 20 коп./лайк</span>
-        </a>
-        <a href="#" class="rate-modal__prodact">
-          Ваш продакт-плейсмент
-          <span>Индивидуально</span>
-        </a>
-      </section>
+      <h2>Тарифы для бизнеса</h2>
+      <a href="#" class="rate-modal__blog">
+        Реклама у блоггера
+        <span> 300 000 руб./пост</span>
+      </a>
+      <a href="#" class="rate-modal__cheat">
+        Накрутка подписчиков
+        <span> от 1 руб./шт.</span>
+      </a>
+      <a href="#" class="rate-modal__bot">
+        Лайки от ботов
+        <span>от 20 коп./лайк</span>
+      </a>
+      <a href="#" class="rate-modal__prodact">
+        Ваш продакт-плейсмент
+        <span>Индивидуально</span>
+      </a>
+      <button>Закрыть окно</button>
+    </section>
 
     <section class="register">
       <h2>Заинтересовались?</h2>
@@ -281,46 +293,45 @@
     </section>
 
     <section class="trail">
-      <a href="#" class="trail__gprs ">
-        ул. Большая Конюшенная, 19/8
-      </a>
-      <a href="#" class="trail_run button">Проложить маршрут</a>
-      <!-- заменить спаны на псевдо элементы в ксс -->
       <div class="trail-map">
-        <a href="https://yandex.ru/maps/?um=constructor%3A8983dc39bf9f718b0af751a69bbe953fbe35870d8c2f381cae16f84b6ed2210d&source=constructorLinkя"
-          target="_blank">
-          <img src="https://via.placeholder.com/45x45" alt="карта где нас искать." width="320">
-        </a>
+        <a href="#" class="trail__gprs ">ул. Большая Конюшенная, 19/8</a>
+        <a href="#" class="trail__run index-button">Проложить маршрут</a>
       </div>
+      <a href="https://yandex.ru/maps/?um=constructor%3A8983dc39bf9f718b0af751a69bbe953fbe35870d8c2f381cae16f84b6ed2210d&source=constructorLinkя"
+        target="_blank" class="trail__position">
+        <img src="https://via.placeholder.com/320x546" alt="карта где нас искать." width="320" height="546">
+      </a>
 
     </section>
 
   </main>
 
-    <footer class="footer">
-      <a class="footer__logo">
-        Погнали?
-        <!-- логотип Погнали -->
-      </a>
-      <div class="footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в
-              Инстаграме</a>
-          </li>
-        </ul>
+  <footer class="footer">
+    <a class="footer__logo">
+      Погнали?
+      <img src="../img/logo-mobile-blue@1x.png" alt="логотип сервиса" width="100" height="19">
+    </a>
+    <div class="footer__social social">
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в
+            Инстаграме</a>
+        </li>
+      </ul>
+      <div class="footer__made">
+        <p>Разработано</p>
+        <a href="https://htmlacademy.ru" class="footer__htmlacademy" target="_blank">
+          <img src="../img/htmlacademy.svg" alt="Логотип академии." width="27" height="34">
+        </a>
       </div>
-      <p>Разработано</p>
-      <a href="https://htmlacademy.ru" class="footer__htmlacademy" target="_blank">
-        <img src="https://via.placeholder.com/45x45" alt="Логотип академии." width="27" height="34">
-      </a>
-    </footer>
+    </div>
+  </footer>
 
 
 

@@ -1,0 +1,32 @@
+.menu-autho {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  @include margin-auto;
+
+}
+
+.menu-autho__button {
+  background-color: $indexButton;
+}
+
+.register__item::before {
+  content: " ";
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background-color: pink;
+}
+
+.register__item--telephone::before {
+  background-image: url("../img/contacts-phone.svg");
+  // незаню как залить свг в бэкграунде
+  fill-rule: green;
+  background-repeat: no-repeat;
+}
+
+.register__item--mail {
+  background-image: url("../img/contacts-mail.svg");
+  background-repeat: no-repeat;
+}

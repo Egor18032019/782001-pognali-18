@@ -63,7 +63,7 @@
   vertical-align: middle;
   border: none;
   background-color: inherit;
-  @include shriftBS($fsize:17px, $fweight:bold, $color:#1d2e5b);
+  @include fontBS($fsize:17px, $fweight:bold, $color:#1d2e5b);
   margin-bottom: 27px;
 }
 

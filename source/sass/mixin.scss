@@ -1,15 +1,14 @@
 // для примесей. пример ниже
-@mixin primer {
-  display: inline;
-  font-size: 10px;
+@mixin font-face ($name, $file-path, $weight:normal, $style:normal) {
+  @font-face {
+    font-family: $name ;
+    font-weight: $weight;
+     font-style: $style ;
+     src: url("#{file-path}.woff") format("woff");
+  }
 }
 
-@mixin size($width:50px, $height:50em) {
-  width: $width;
-  height: $height;
-}
-
-@mixin shriftBS($fsize:16px, $fweight:300,$color:white) {
+@mixin shriftBS($fsize:16px, $fweight:300, $color:white) {
   font-family: "BloggerSans", 'Arial', sans-serif;
   font-size: $fsize;
   font-weight: $fweight;
@@ -19,13 +18,18 @@
   letter-spacing: normal;
   text-align: left;
   color: $color;
-  }
+}
 
-.dliaPrimera {
-  color: rosybrown;
-
-  @include primer;
-  @include size(50em, 100px);
+@mixin fontBS($fsize:16px, $fweight:300, $color:white) {
+  font-family: "BloggerSans", 'Arial', sans-serif;
+  font-size: $fsize;
+  font-weight: $fweight;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: $color;
 }
 
 @mixin bgIndexColor {
@@ -36,6 +40,7 @@
   margin-left: auto;
   margin-right: auto;
 }
+
 @mixin padding25px {
   padding-left: 25px;
   padding-right: 25px;
@@ -49,7 +54,8 @@
   align-items: center;
 }
 
-@mixin zero {
+@mixin reset-list {
+  list-style: none;
   padding: 0;
   margin: 0;
 }

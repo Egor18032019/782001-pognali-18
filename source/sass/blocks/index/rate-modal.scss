@@ -10,7 +10,7 @@
 }
 
 .rate-modal h2 {
-  @include shriftBS;
+  @include fontBS;
 }
 
 .rate-modal a {
@@ -19,12 +19,12 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
-  @include shriftBS($color:#444444);
+  @include fontBS ($color:#444444);
   text-decoration: none;
 }
 
 .rate-modal button {
-  @include shriftBS($color:#1d2e5b);
+  @include fontBS ($color:#1d2e5b);
   text-align: center;
   background-color: #f3f4f8;
   border: none;

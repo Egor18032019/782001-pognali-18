@@ -11,7 +11,7 @@
   background-color: $indexButton;
 }
 
-.register__item::before {
+.menu-autho__register::before {
   content: " ";
   display: inline-block;
   width: 45px;
@@ -19,14 +19,16 @@
   background-color: pink;
 }
 
-.register__item--telephone::before {
+.menu-autho__register--telephone::before {
+  content: "";
+  display: inline-block;
   background-image: url("../img/contacts-phone.svg");
   // незаню как залить свг в бэкграунде
   fill-rule: green;
   background-repeat: no-repeat;
 }
 
-.register__item--mail {
+.menu-autho__register--mail {
   background-image: url("../img/contacts-mail.svg");
   background-repeat: no-repeat;
 }

@@ -1,9 +1,7 @@
 .steps {
   width: 100%;
   background-color: $indexColor;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  @include center;
   @include margin-auto;
 
 }
@@ -14,13 +12,13 @@
 }
 
 .steps-header {
-  // height: 569px;
-
+  @include center;
+  background-position-y: 80%;
   background-image: url("../img/globe-back-mobile@1x.jpg");
   background-size: auto;
   background-size: 320px 320px;
   background-repeat: no-repeat;
-  // align-items: flex-end;
+  margin-bottom: 41px;
 }
 
 .steps-header__slogan {
@@ -48,10 +46,10 @@
 .steps-button {
   width: 189px;
   height: 40px;
-  // // border-radius: 50%;
-  // border-top-left-radius: 50%;
-  background-color: $indexButton;
+  border-radius: 20px;
   @include fontBS(17px, bold, #161c35);
+  text-align: center;
+  background-color: $indexButton;
 }
 
 .steps-autho__telephone {
@@ -68,10 +66,15 @@
   background-position: center;
 }
 
-.steps-quote {}
+.steps-quote {
+  width: 195px;
+  margin-bottom: 33px;
+}
 
 .steps-quote q {
+  display: block;
   @include fontBS (16px, 300, white);
+  margin-bottom: 25px;
 }
 
 .steps-quote cite {
@@ -88,6 +91,7 @@
   width: 270px;
   height: 320px;
   @include reset-list;
+  // перенести номера в правую часть ли
 }
 
 .steps__list li {

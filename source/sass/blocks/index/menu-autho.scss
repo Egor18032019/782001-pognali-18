@@ -4,11 +4,40 @@
   justify-content: center;
   flex-direction: column;
   @include margin-auto;
+}
 
+.menu-autho__logo {
+  font-size: 0;
+}
+
+.menu-autho__close {
+  width: 19px;
+  height: 19px;
+  border: none;
+  background-image: url("../img/menu-close.svg");
+}
+
+.menu-autho__us {
+  width: 183px;
+  height: 95px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  @include margin-auto;
+  margin-bottom: 58px;
 }
 
 .menu-autho__button {
+  width: 270px;
+  height: 50px;
+  border-radius: 25px;
   background-color: $indexButton;
+  @include margin-auto;
+  text-decoration: none;
+  @include fontBS(18px, bold, #161c35);
+  text-align: center;
+  margin-bottom: 51px;
 }
 
 .menu-autho__register::before {
@@ -16,7 +45,9 @@
   display: inline-block;
   width: 45px;
   height: 45px;
-  background-color: pink;
+  margin-right: 16px;
+  text-align: left;
+  vertical-align: middle;
 }
 
 .menu-autho__register--telephone::before {
@@ -28,7 +59,11 @@
   background-repeat: no-repeat;
 }
 
-.menu-autho__register--mail {
+.menu-autho__register--mail::before {
   background-image: url("../img/contacts-mail.svg");
   background-repeat: no-repeat;
+}
+
+.menu-autho__register--mail{
+  margin-bottom: 41px;
 }

@@ -5,7 +5,13 @@
   background-color: $indexColor;
   background-image: url("../img/smolov-mobile@1x.jpg");
   background-repeat: no-repeat;
+}
 
+.companions__slogan {
+  @include center;
+  width: 213px;
+  margin-bottom: 60px;
+  margin-top: 71px;
 }
 
 .companions h2 {
@@ -13,12 +19,19 @@
   font-family: "BloggerSans", 'Arial', sans-serif;
 }
 
-.companions p {
+.companions__lvl {
+  @include center;
+  width: 60px;
+  height: 60px;
+  flex-wrap: wrap;
+  border-radius: 50%;
   @include fontBS(16px, 300, white);
+  background-color: black;
+  border: 3px solid #ff8d30;
 }
 
 .companions b {
-  @include fontBS;
+  @include fontBS(16px, bold, #ffffff);
 }
 
 .companions-list {
@@ -64,4 +77,10 @@
   padding: 0;
 }
 
-.companions__personal li {}
+.companions__teg {
+  margin-bottom: 17px;
+}
+
+.companions__transport {
+  margin-bottom: 17px;
+}

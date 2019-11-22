@@ -40,6 +40,7 @@ a {
   @include margin-auto;
   text-decoration: none;
   @include fontBS(18px, bold, #1d2e5b);
+  vertical-align: middle;
 }
 
 .form-button {
@@ -51,4 +52,42 @@ a {
   border-radius: 20px;
   @include fontBS($fsize:17px, $fweight:bold, $color:#161c35);
   background-color: $indexButton;
+}
+
+.transport {
+  display: flex;
+  width: 200px;
+}
+
+.transport li {
+  width: 24px;
+  height: 21px;
+  margin-right: 17px;
+  font-size: 0;
+
+}
+
+.transport li:first-child {
+  background-image: url("../img/plane.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.transport li:nth-child(2) {
+  background-image: url("../img/bus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.transport li:nth-child(3) {
+  background-image: url("../img/bike.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.transport li:last-child {
+  background-image: url("../img/run.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }

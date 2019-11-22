@@ -143,50 +143,63 @@
     </section>
 
     <section class="trend">
-      <h2>Направления</h2>
-      <p>Мы не продаем туры и ничего не рекламируем.
-        Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
-      </p>
+      <div class="trend-slogan">
+        <h2>Направления</h2>
+        <p>Мы не продаем туры и ничего не рекламируем.
+          Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
+        </p>
+      </div>
       <ul class="trend-list">
-        <li class="trend__item">
+        <li class="trend__item trend--thailand">
           <img src="../img/thailand-mobile@1x.jpg" alt="Тайланд" width="270" height="110">
-          <p>Тайланд <span>18321</span></p>
-          <small>Джунгли зовут!</small>
-          <!-- заменить на small -->
+          <div class="trend__text">
+            <p>Тайланд <span>18321</span></p>
+            <small>Джунгли зовут!</small>
+            <!-- как добавить флаги ? -->
+          </div>
         </li>
         <li class="trend__item">
           <img src="../img/france-mobile@1x.jpg" alt="Франция" width="270" height="110">
-          <p>Франция <span>12815</span></p>
-          <small>Трэ бьен, манифик!</small>
+          <div class="trend__text">
+            <p>Франция <span>12815</span></p>
+            <small>Трэ бьен, манифик!</small>
+          </div>
         </li>
         <li class="trend__item">
           <img src="../img/czech-mobile@1x.jpg" alt="Чехия" width="270" height="110">
-          <p>Чехия <span>5326</span></p>
-          <small>Закоулки старой Европы</small>
+          <div class="trend__text">
+            <p>Чехия <span>5326</span></p>
+            <small>Закоулки старой Европы</small>
+          </div>
         </li>
       </ul>
       <a href="catalog.html" class="index-button">Показать все</a>
     </section>
 
     <section class="companions">
-      <h2>Попутчики</h2>
-      <p>Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому
-        маршрут для хайкинга. </p>
-      <b>Теперь можно легко найти единомышленников!</b>
+      <div class="companions__slogan">
+        <h2>Попутчики</h2>
+        <p>Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому
+          маршрут для хайкинга. </p>
+        <b>Теперь можно легко найти единомышленников!</b>
+      </div>
       <ul class="companions-list">
         <li class="companions__item">
-          <p class="companions__lvl">99<span>level</span></p>
+          <div class="companions__lvl">
+            <p>99</p>
+            <span>level</span>
+          </div>
           <img src="../img/firsova-mobile@1x.jpg" alt="Фото в бассейне" width="270" height="270">
 
           <div class="companions__personal">
             <p class="visually-hidden">хочет посетить:</p>
-            <ul class="companions___countries countries">
-              <li class="countries__item">ШриЛанка</li>
-              <li class="countries__item">Незнаю</li>
-              <li class="countries__item">Сейшелы</li>
+            <ul class="companions___countries">
+              <li class="companions___countries--shrilanka">ШриЛанка</li>
+              <li class="companions___countries--thailand">Тайланд</li>
+              <li class="companions___countries--seycheles">Сейшелы</li>
             </ul>
             <p>Таня Фирсова</p>
-            <ul class="companions__list__teg teg">
+            <ul class="companions__teg teg">
               <li>#ЗОЖ </li>
               <li>#ПП </li>
               <li>#Фитнес</li>
@@ -195,7 +208,7 @@
               <li> #смузи</li>
             </ul>
             <p class="visually-hidden">Предпочитаемый транспорт:</p>
-            <ul class="companions__list__favorite transport">
+            <ul class="companions__transport transport">
               <li class="favorite">Самолет</li>
               <li>Автобус</li>
               <li>Велосипед</li>
@@ -204,14 +217,17 @@
           </div>
         </li>
         <li class="companions__item">
-          <p><span>80</span>level</p>
+          <div class="companions__lvl">
+            <p>80</p>
+            <span>level</span>
+          </div>
           <img src="../img/demin-mobile@1x.jpg" alt="Зимнее фото" width="270" height="270">
 
           <div class="companions__personal">
             <p class="visually-hidden">хочет посетить:</p>
-            <ul class="companions__countries country">
-              <li class="country__item">Германия</li>
-              <li class="country__item">Чехия</li>
+            <ul class="companions__countries">
+              <li class="companions___countries--belgium">Бельгия</li>
+              <li class="companions___countries--czech">Чехия</li>
             </ul>
             <p>Петя Демин</p>
             <ul class="companions__list__teg teg">
@@ -255,45 +271,49 @@
 
     <section class="rate-modal">
       <h2>Тарифы для бизнеса</h2>
-      <a href="#" class="rate-modal__blog">
-        Реклама у блоггера
-        <span> 300 000 руб./пост</span>
-      </a>
-      <a href="#" class="rate-modal__cheat">
-        Накрутка подписчиков
-        <span> от 1 руб./шт.</span>
-      </a>
-      <a href="#" class="rate-modal__bot">
-        Лайки от ботов
-        <span>от 20 коп./лайк</span>
-      </a>
-      <a href="#" class="rate-modal__prodact">
-        Ваш продакт-плейсмент
-        <span>Индивидуально</span>
-      </a>
-      <button>Закрыть окно</button>
+      <div class="rate-modal__text">
+        <a href="#" class="rate-modal__blog">
+          Реклама у блоггера
+          <span> 300 000 руб./пост</span>
+        </a>
+        <a href="#" class="rate-modal__cheat">
+          Накрутка подписчиков
+          <span> от 1 руб./шт.</span>
+        </a>
+        <a href="#" class="rate-modal__bot">
+          Лайки от ботов
+          <span>от 20 коп./лайк</span>
+        </a>
+        <a href="#" class="rate-modal__prodact">
+          Ваш продакт-плейсмент
+          <span>Индивидуально</span>
+        </a>
+      </div>
+      <button class="rate-modal__close">Закрыть окно</button>
     </section>
 
     <section class="register">
-      <h2>Заинтересовались?</h2>
-      <p>Зарегистрируйтесь, это быстро и бесплатно!
-        Уже зарегистрированы? Тогда скорее<a href="#" class="register__login">авторизуйтесь</a>.
-      </p>
-      <form action="https://echo.htmlacademy.ru" method="GET">
-        <input type="text" name="login" placeholder="E-mail">
-        <button>></button>
-        <p>Остались вопросы? Мы с радостью на них ответим!</p>
-      </form>
-      <p>
-        <a href="tel:+78005558628" class="register__item register__item--telephone">
-          8 800 555-86-28
-        </a>
-      </p>
-      <p>
-        <a href="mail@htmlacademy.ru" class="register__item register__item--mail" target="_blank">
-          mail@htmlacademy.ru
-        </a>
-      </p>
+      <div class="register__container">
+        <h2>Заинтересовались?</h2>
+        <p>Зарегистрируйтесь, это быстро и бесплатно!
+          Уже зарегистрированы? Тогда скорее<a href="#" class="register__login">авторизуйтесь</a>.
+        </p>
+        <form action="https://echo.htmlacademy.ru" method="GET">
+          <input type="text" name="login" placeholder="E-mail">
+          <button>></button>
+          <p>Остались вопросы? Мы с радостью на них ответим!</p>
+        </form>
+        <p>
+          <a href="tel:+78005558628" class="register__item register__item--telephone">
+            8 800 555-86-28
+          </a>
+        </p>
+        <p>
+          <a href="mail@htmlacademy.ru" class="register__item register__item--mail" target="_blank">
+            mail@htmlacademy.ru
+          </a>
+        </p>
+      </div>
     </section>
 
     <section class="trail">
@@ -336,8 +356,6 @@
       </div>
     </div>
   </footer>
-
-
 
 </body>
 

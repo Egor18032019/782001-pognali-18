@@ -4,18 +4,23 @@
   @include margin-auto;
   @include bgIndexColor;
 }
-
+.register__container {
+  width: 270px;
+}
 .register h2 {
   @include fontBS ($fsize:24px, $fweight:bold, $color:#ff8d30);
   text-align: center;
 }
 
 .register p {
-  @include fontBS;
+  @include fontBS(22px,300,#ffffff);
   text-align: center;
   margin-bottom: 32px;
 }
 
 .register .register__item {
   @include fontBS ($color:#ffd74b);
+}
+.register__login {
+  color: #ffd74b;;
 }

@@ -1,4 +1,6 @@
-@import "variables.scss",
+@import
+"../../node_modules/normalize.scss/normalize.scss",
+"variables.scss",
 "mixin.scss",
 "fonts.scss",
 "stels.scss",
@@ -21,7 +23,7 @@
 "blocks/index/social-autho.scss";
 
 body {
-  width: 320px;
+  // width: 320px;
   background-color: #edeff6;
   font-weight: 400;
   font-size: 16px;
@@ -41,6 +43,7 @@ a {
   text-decoration: none;
   @include fontBS(18px, bold, #1d2e5b);
   vertical-align: middle;
+  padding-left: 25px;
 }
 
 .form-button {

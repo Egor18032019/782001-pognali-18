@@ -1,5 +1,43 @@
 .rate {
   @include center;
   @include margin-auto;
+}
 
+.rate__slogan h2 {
+  width: 99px;
+  @include fontBS(24px, bold, #ff8d30);
+}
+
+.rate__slogan h2::after {
+  content: "";
+  display: inline-block;
+  width: 99px;
+  height: 99px;
+  background-image: url("../img/rates@1x.png");
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+
+.rate li {
+  @include fontBS(16px, 300, #444444);
+}
+
+.rate__slogan {
+  width: 100%;
+  height: 99px;
+  // Обдумать
+  margin-bottom: 31px;
+}
+
+.rate__list {
+  margin-bottom: 31px;
+}
+
+.rate button {
+  width: 100%;
+  background-color: inherit;
+  @include fontBS(16px, bold, #192144);
+  text-align: center;
+  border: none;
+  margin-bottom: 30px;
 }

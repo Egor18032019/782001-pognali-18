@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Погнали</title>
-  <link href="sass/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -25,16 +24,18 @@
       </h2>
     </div>
     <button class="menu-autho__button">Авторизация</button>
-    <p>
-      <a href="tel:+78005558628" class="menu-autho__register menu-autho__register--telephone">
-        8 800 555-86-28
-      </a>
-    </p>
-    <p>
-      <a href="mail@htmlacademy.ru" class="menu-autho__register menu-autho__register--mail" target="_blank">
-        mail@htmlacademy.ru
-      </a>
-    </p>
+    <div class="menu-autho__contacts">
+      <p>
+        <a href="tel:+78005558628" class="menu-autho__register menu-autho__register--telephone">
+          8 800 555-86-28
+        </a>
+      </p>
+      <p>
+        <a href="mail@htmlacademy.ru" class="menu-autho__register menu-autho__register--mail" target="_blank">
+          mail@htmlacademy.ru
+        </a>
+      </p>
+    </div>
     <div class="menu-autho__social social-autho">
       <ul class="social-autho__list">
         <li class="social-autho__item">
@@ -173,7 +174,9 @@
           </div>
         </li>
       </ul>
-      <a href="catalog.html" class="index-button">Показать все</a>
+      <a href="catalog.html" class="index-button">
+        <p>Показать все</p>
+      </a>
     </section>
 
     <section class="companions">
@@ -248,13 +251,17 @@
 
         </li>
       </ul>
-      <a href="form.html" class="index-button">Показать всех </a>
+      <a href="form.html" class="index-button">
+        <p>Показать всех</p>
+      </a>
     </section>
 
     <section class="rate">
-      <h2>Добавьте свой профиль</h2>
-      <img src="https://via.placeholder.com/99x99" alt="Стоимость в рублях." width="45" height="45" title="В рублях">
-      <ol>
+      <div class="rate__slogan">
+        <h2>Добавьте свой профиль</h2>
+        <!-- <img src="https://via.placeholder.com/99x99" alt="Стоимость в рублях." width="99" height="99" title="В рублях"> -->
+      </div>
+      <ol class="rate__list">
         <li>Базовое размещение
           <span> Бесплатно</span>
         </li>
@@ -266,7 +273,7 @@
           <span> 59 руб./мес</span>
         </li>
       </ol>
-      <button>Показать тарифы для бизнеса</button>
+      <button class="index-button">Показать тарифы для бизнеса</button>
     </section>
 
     <section class="rate-modal">
@@ -295,14 +302,14 @@
     <section class="register">
       <div class="register__container">
         <h2>Заинтересовались?</h2>
-        <p>Зарегистрируйтесь, это быстро и бесплатно!
+        <p class="register__slogan">Зарегистрируйтесь, это быстро и бесплатно!
           Уже зарегистрированы? Тогда скорее<a href="#" class="register__login">авторизуйтесь</a>.
         </p>
         <form action="https://echo.htmlacademy.ru" method="GET">
           <input type="text" name="login" placeholder="E-mail">
           <button>></button>
-          <p>Остались вопросы? Мы с радостью на них ответим!</p>
         </form>
+        <p>Остались вопросы? Мы с радостью на них ответим!</p>
         <p>
           <a href="tel:+78005558628" class="register__item register__item--telephone">
             8 800 555-86-28
@@ -318,12 +325,12 @@
 
     <section class="trail">
       <div class="trail-map">
-        <a href="#" class="trail__gprs ">ул. Большая Конюшенная, 19/8</a>
+        <a href="#" class="trail__gprs "><p>ул. Большая Конюшенная, 19/8</p></a>
         <a href="#" class="trail__run index-button">Проложить маршрут</a>
       </div>
       <a href="https://yandex.ru/maps/?um=constructor%3A8983dc39bf9f718b0af751a69bbe953fbe35870d8c2f381cae16f84b6ed2210d&source=constructorLinkя"
         target="_blank" class="trail__position">
-        <img src="https://via.placeholder.com/320x546" alt="карта где нас искать." width="320" height="546">
+        <img src="https://via.placeholder.com/320x320" alt="карта где нас искать." width="320" height="320">
       </a>
 
     </section>

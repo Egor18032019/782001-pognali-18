@@ -1,8 +1,5 @@
 .menu-autho {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  @include center;
   @include margin-auto;
 }
 
@@ -26,6 +23,12 @@
   align-items: center;
   @include margin-auto;
   margin-bottom: 58px;
+  margin-top: 120px;
+  // обдумать позже
+}
+
+.menu-autho__us a {
+  @include fontBS(30px, 500, #192144);
 }
 
 .menu-autho__button {
@@ -38,6 +41,10 @@
   @include fontBS(18px, bold, #161c35);
   text-align: center;
   margin-bottom: 51px;
+}
+
+.menu-autho__register {
+  @include fontBS(16px, bold, #192144);
 }
 
 .menu-autho__register::before {
@@ -64,6 +71,9 @@
   background-repeat: no-repeat;
 }
 
-.menu-autho__register--mail{
+.menu-autho__contacts {
+  @include center;
+  width: 250px;
+  align-items: flex-start;
   margin-bottom: 41px;
 }

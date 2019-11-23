@@ -3,7 +3,6 @@
   background-color: $indexColor;
   @include center;
   @include margin-auto;
-
 }
 
 .steps h2 {
@@ -13,10 +12,11 @@
 
 .steps-header {
   @include center;
-  background-position-y: 80%;
+  background-position: center;
   background-image: url("../img/globe-back-mobile@1x.jpg");
-  background-size: auto;
-  background-size: 320px 320px;
+  background-position-y: 100%;
+  background-size: 100%;
+  // background-size: 320px 320px;
   background-repeat: no-repeat;
   margin-bottom: 41px;
 }
@@ -26,7 +26,6 @@
   height: 114px;
   @include margin-auto;
   margin-bottom: 247px;
-
 }
 
 .steps-autho {
@@ -98,6 +97,7 @@
   width: 270px;
   height: 80px;
   border-radius: 10px;
+  @include fontBS (18px, bold, #161c35);
 }
 
 .steps__list li:first-child {

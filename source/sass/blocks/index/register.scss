@@ -3,24 +3,54 @@
   @include center;
   @include margin-auto;
   @include bgIndexColor;
+  padding-top: 72px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
+
 .register__container {
   width: 270px;
 }
-.register h2 {
-  @include fontBS ($fsize:24px, $fweight:bold, $color:#ff8d30);
-  text-align: center;
+
+.register__container p {
+  @include fontBS (16px, 300, #ffffff);
 }
 
-.register p {
-  @include fontBS(22px,300,#ffffff);
+.register__container h2 {
+  @include fontBS ($fsize:24px, $fweight:bold, $color:#ff8d30);
+  text-align: center;
+  margin-bottom: 23px;
+}
+
+.register__slogan {
+  @include fontBS(22px, 300, #ffffff);
   text-align: center;
   margin-bottom: 32px;
 }
 
-.register .register__item {
-  @include fontBS ($color:#ffd74b);
+.register__item {
+  @include fontBS (16px, bold, $color:#ffd74b);
 }
+
 .register__login {
-  color: #ffd74b;;
+  color: #ffd74b;
+}
+
+.register__container input {
+  width: 200px;
+  height: 62px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.register__container button {
+  width: 50px;
+  height: 62px;
+  background-color: $indexButton;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }

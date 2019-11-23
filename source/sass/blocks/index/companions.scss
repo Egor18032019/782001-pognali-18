@@ -16,7 +16,15 @@
 
 .companions h2 {
   @include fontBS(24px, bold, #ff8d30);
-  font-family: "BloggerSans", 'Arial', sans-serif;
+}
+
+.companions__slogan b {
+  @include fontBS(16px, bold, #ffffff);
+}
+
+.companions__slogan p {
+  @include fontBS(16px, 300, #ffffff);
+  opacity: 0.8;
 }
 
 .companions__lvl {
@@ -30,16 +38,10 @@
   border: 3px solid #ff8d30;
 }
 
-.companions b {
-  @include fontBS(16px, bold, #ffffff);
-}
-
 .companions-list {
   @include margin-auto;
   padding: 0;
-
 }
-
 
 .companions__personal p {
   @include fontBS(21px, bold, #1d2e5b);

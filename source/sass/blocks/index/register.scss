@@ -10,9 +10,11 @@
 
 .register__container {
   width: 270px;
+  @include center;
 }
 
 .register__container p {
+  width: 200px;
   @include fontBS (16px, 300, #ffffff);
 }
 
@@ -30,6 +32,38 @@
 
 .register__item {
   @include fontBS (16px, bold, $color:#ffd74b);
+  @include center;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 225px;
+}
+
+.register__item--telephone::before {
+  content: "";
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  background-image: url("../img/contacts-phone.svg");
+  background-repeat: no-repeat;
+  background-color: yellowgreen;
+  // #121936 узнать как заливать свг
+  border-radius: 50%;
+  background-position: center;
+  background-size: 50%;
+}
+
+.register__item--mail::before{
+  content: "";
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  background-image: url("../img/contacts-mail.svg");
+  background-repeat: no-repeat;
+  background-color: yellowgreen;
+  // #121936 узнать как заливать свг
+  border-radius: 50%;
+  background-position: center;
+  background-size: 50%;
 }
 
 .register__login {

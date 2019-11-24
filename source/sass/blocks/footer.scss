@@ -3,8 +3,8 @@
   @include margin-auto;
   width: 320px;
   background-color: white;
-  //   border-bottom-right-radius: 20px;
-  //   border-bottom-left-radius: 20px;
+  //   border-top-right-radius: 20px;
+  //   border-top-left-radius: 20px;
   // overflow: hidden;
 }
 
@@ -20,7 +20,12 @@
 
 .footer__made {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
   @include fontBS ($color:#444444);
   margin-bottom: 14px;
+}
+
+.footer__htmlacademy {
+  margin-left: 151px;
 }

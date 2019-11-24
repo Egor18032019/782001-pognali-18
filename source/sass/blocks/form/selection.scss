@@ -1,0 +1,13 @@
+.selection{
+  @include center;
+  @include fontBS (16px, bold, #192144);
+}
+
+.selection form {
+  background-color: $indexButton;
+}
+
+.selection .form-button {
+  background-color: white;
+  margin-bottom: 21px;
+}

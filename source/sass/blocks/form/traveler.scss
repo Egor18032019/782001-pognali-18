@@ -52,11 +52,9 @@
   @include fontBS (15px, 500, #1d2e5b);
   text-transform: uppercase;
   padding-left: 0;
-}
-
-.traveler-list__country li {
   margin-bottom: 10px;
 }
+
 
 .traveler__transport {
   @include fontBS (15px, 500, #444444);

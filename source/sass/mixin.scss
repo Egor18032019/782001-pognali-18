@@ -1,27 +1,15 @@
 // для примесей. пример ниже
 @mixin font-face ($name, $file-path, $weight:normal, $style:normal) {
   @font-face {
-    font-family: $name ;
+    font-family: $name;
     font-weight: $weight;
-    font-style: $style ;
+    font-style: $style;
     src: url("#{file-path}.woff") format("woff");
   }
 }
 
-@mixin shriftBS($fsize:16px, $fweight:300, $color:white) {
-  font-family: "BloggerSans", 'Arial', sans-serif;
-  font-size: $fsize;
-  font-weight: $fweight;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1;
-  letter-spacing: normal;
-  text-align: left;
-  color: $color;
-}
-
 @mixin fontBS($fsize:16px, $fweight:300, $color:white) {
-  font-family: "BloggerSans", 'Arial', sans-serif;
+  font-family: "BloggerSans", "Arial", sans-serif;
   font-size: $fsize;
   font-weight: $fweight;
   font-stretch: normal;

@@ -1,5 +1,4 @@
 .companions {
-  width: 100%;
   @include center;
   @include margin-auto;
   background-color: $indexColor;
@@ -29,11 +28,11 @@
 
 .companions__lvl {
   @include center;
+  @include fontBS(16px, 300, white);
   width: 60px;
   height: 60px;
   flex-wrap: wrap;
   border-radius: 50%;
-  @include fontBS(16px, 300, white);
   background-color: black;
   border: 3px solid #ff8d30;
 }
@@ -48,7 +47,7 @@
   text-align: center;
 }
 
-.companions-list>li {
+.companions-list > li {
   width: 270px;
   display: flex;
   justify-content: center;
@@ -61,13 +60,12 @@
 }
 
 .companions__personal {
+  @include margin-auto;
   width: 177px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   padding-bottom: 22px;
-  @include margin-auto;
-
 }
 
 .companions__personal ul {

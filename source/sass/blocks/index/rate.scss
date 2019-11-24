@@ -4,8 +4,8 @@
 }
 
 .rate__slogan h2 {
-  width: 99px;
   @include fontBS(24px, bold, #ff8d30);
+  width: 99px;
 }
 
 .rate__slogan h2::after {
@@ -35,9 +35,9 @@
 }
 
 .rate button {
+  @include fontBS(16px, bold, #192144);
   width: 100%;
   background-color: inherit;
-  @include fontBS(16px, bold, #192144);
   text-align: center;
   border: none;
   margin-bottom: 30px;

@@ -10,10 +10,10 @@
 }
 
 .trail__gprs {
+  @include fontBS (16px, bold, #192144);
   width: 270px;
   display: flex;
   align-items: center;
-  @include fontBS (16px, bold, #192144);
   margin-bottom: 35px;
   text-transform: uppercase;
 }

@@ -1,8 +1,7 @@
 .steps {
-  width: 100%;
-  background-color: $indexColor;
   @include center;
   @include margin-auto;
+  background-color: $indexColor;
 }
 
 .steps h2 {
@@ -22,9 +21,9 @@
 }
 
 .steps-header__slogan {
+  @include margin-auto;
   width: 234px;
   height: 114px;
-  @include margin-auto;
   margin-bottom: 247px;
 }
 
@@ -37,16 +36,16 @@
   display: inline-block;
   width: 40px;
   height: 40px;
-  font-size: 0px;
+  font-size: 0;
   background-color: #ff8d30;
   border-radius: 50%;
 }
 
 .steps-button {
+  @include fontBS(17px, bold, #161c35);
   width: 189px;
   height: 40px;
   border-radius: 20px;
-  @include fontBS(17px, bold, #161c35);
   text-align: center;
   background-color: $indexButton;
 }
@@ -71,8 +70,8 @@
 }
 
 .steps-quote q {
-  display: block;
   @include fontBS (16px, 300, white);
+  display: block;
   margin-bottom: 25px;
 }
 
@@ -87,17 +86,17 @@
 }
 
 .steps__list {
+  @include reset-list;
   width: 270px;
   height: 320px;
-  @include reset-list;
   // перенести номера в правую часть ли
 }
 
 .steps__list li {
+  @include fontBS (18px, bold, #161c35);
   width: 270px;
   height: 80px;
   border-radius: 10px;
-  @include fontBS (18px, bold, #161c35);
 }
 
 .steps__list li:first-child {

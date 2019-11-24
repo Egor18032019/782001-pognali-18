@@ -1,10 +1,10 @@
 .about-us {
   @include center;
+  @include margin-auto;
+  @include bgIndexColor;
   height: 352px;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
-  @include margin-auto;
-  @include bgIndexColor;
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: center;

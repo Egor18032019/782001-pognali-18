@@ -1,25 +1,26 @@
-@import "../../node_modules/normalize.scss/normalize.scss",
-"variables.scss",
-"mixin.scss",
-"fonts.scss",
-"stels.scss",
-"blocks/index/companions.scss",
-"blocks/index/menu-autho.scss",
-"blocks/index/scroll-menu.scss",
-"blocks/index/page-header.scss",
-"blocks/index/steps.scss",
-"blocks/index/trend.scss",
-"blocks/index/about-us.scss",
-"blocks/index/rate.scss",
-"blocks/index/rate-modal.scss",
-"blocks/index/register.scss",
-"blocks/index/trail.scss",
-"blocks/footer.scss",
-"blocks/form/filter-country.scss",
-"blocks/form/selection.scss",
-"blocks/form/traveler.scss",
-"blocks/index/social.scss",
-"blocks/index/social-autho.scss";
+  @import
+  "../../node_modules/normalize.scss/normalize.scss",
+  "variables.scss",
+  "mixin.scss",
+  "fonts.scss",
+  "stels.scss",
+  "blocks/index/companions.scss",
+  "blocks/index/menu-autho.scss",
+  "blocks/index/scroll-menu.scss",
+  "blocks/index/page-header.scss",
+  "blocks/index/steps.scss",
+  "blocks/index/trend.scss",
+  "blocks/index/about-us.scss",
+  "blocks/index/rate.scss",
+  "blocks/index/rate-modal.scss",
+  "blocks/index/register.scss",
+  "blocks/index/trail.scss",
+  "blocks/footer.scss",
+  "blocks/form/filter-country.scss",
+  "blocks/form/selection.scss",
+  "blocks/form/traveler.scss",
+  "blocks/index/social.scss",
+  "blocks/index/social-autho.scss";
 
 body {
   // width: 320px;
@@ -34,26 +35,26 @@ a {
 }
 
 .index-button {
+  @include margin-auto;
+  @include fontBS(18px, bold, #1d2e5b);
   width: 270px;
   height: 62px;
   border-radius: 10px;
   background-color: $indexButton;
-  @include margin-auto;
   text-decoration: none;
-  @include fontBS(18px, bold, #1d2e5b);
   vertical-align: middle;
   padding-left: 25px;
 }
 
 .form-button {
+  @include margin-auto;
+  @include fontBS($fsize:17px, $fweight:bold, $color:#161c35);
   width: 230px;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-  @include margin-auto;
-  @include fontBS($fsize:17px, $fweight:bold, $color:#161c35);
   background-color: $indexButton;
 }
 
@@ -82,7 +83,6 @@ a {
   background-image: url("../img/bus.svg");
   background-repeat: no-repeat;
   background-position: center;
-
 }
 
 .transport li:nth-child(3) {
@@ -98,11 +98,11 @@ a {
 }
 
 .teg {
+  @include reset-list;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  @include reset-list;
 }
 
 .slider__toggle {

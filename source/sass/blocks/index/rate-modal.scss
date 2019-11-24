@@ -8,7 +8,6 @@
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   overflow: hidden;
-
 }
 
 .rate-modal h2 {
@@ -17,13 +16,13 @@
 }
 
 .rate-modal a {
+  @include fontBS ($color:#444444);
   width: 161px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   // align-items: center;
   margin-bottom: 15px;
-  @include fontBS ($color:#444444);
   text-decoration: none;
 }
 
@@ -32,9 +31,9 @@
 }
 
 .rate-modal button {
+  @include fontBS (16px, bold, #1d2e5b);
   width: 100%;
   height: 70px;
-  @include fontBS (16px, bold, #1d2e5b);
   text-align: center;
   background-color: inherit;
   border: none;

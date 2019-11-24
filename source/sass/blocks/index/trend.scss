@@ -1,5 +1,4 @@
 .trend {
-  width: 100%;
   @include center;
   @include margin-auto;
   padding-bottom: 30px;
@@ -53,8 +52,8 @@
 }
 
 .trend__text p {
-  margin-bottom: 5px;
   @include fontBS(21px, bold, #161c35);
+  margin-bottom: 5px;
 }
 
 .trend__text small {
@@ -62,8 +61,8 @@
 }
 
 .trend__text span {
-  float: right;
   @include fontBS(16px, 500, rgba(68, 68, 68, 0.3));
+  float: right;
 }
 
 .trend__text span::before {

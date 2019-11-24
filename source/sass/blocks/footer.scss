@@ -19,10 +19,10 @@
 }
 
 .footer__made {
+  @include fontBS ($color:#444444);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  @include fontBS ($color:#444444);
   margin-bottom: 14px;
 }
 

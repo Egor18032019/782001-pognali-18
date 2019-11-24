@@ -1,5 +1,4 @@
 .register {
-  width: 100%;
   @include center;
   @include margin-auto;
   @include bgIndexColor;
@@ -9,13 +8,13 @@
 }
 
 .register__container {
-  width: 270px;
   @include center;
+  width: 270px;
 }
 
 .register__container p {
-  width: 200px;
   @include fontBS (16px, 300, #ffffff);
+  width: 200px;
 }
 
 .register__container h2 {
@@ -52,7 +51,7 @@
   background-size: 50%;
 }
 
-.register__item--mail::before{
+.register__item--mail::before {
   content: "";
   width: 45px;
   height: 45px;

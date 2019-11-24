@@ -1,12 +1,12 @@
 .page-header {
   // width: 100%;
+  @include margin-auto;
   height: 73px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: $indexColor;
   color: white;
-  @include margin-auto;
   padding-left: 25px;
   padding-right: 25px;
 }
@@ -23,6 +23,6 @@
   background-color: inherit;
   // незнаю как залить свг
   border: none;
-  font-size: 0px;
+  font-size: 0;
   // list-style: none;
 }

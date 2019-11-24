@@ -12,7 +12,7 @@
   @include reset-list;
 }
 
-.traveler__list>li {
+.traveler__list > li {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,9 +39,9 @@
 }
 
 .traveler__item .traveler__tegs {
+  @include fontBS (15px, normal, #444444);
   width: 175px;
   margin-bottom: 20px;
-  @include fontBS (15px, normal, #444444);
 }
 
 .traveler__wish {
@@ -87,11 +87,11 @@
 }
 
 .traveler__btn {
+  @include fontBS ($fsize:17px, $fweight:bold, $color:#1d2e5b);
   display: inline-block;
   vertical-align: middle;
   border: none;
   background-color: inherit;
-  @include fontBS($fsize:17px, $fweight:bold, $color:#1d2e5b);
   margin-bottom: 27px;
 }
 
@@ -108,4 +108,3 @@
 .traveler__toggle-btns {
   margin-bottom: 46px;
 }
-

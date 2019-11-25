@@ -35,8 +35,8 @@
 
 
 .page-header__slogan h2 {
-  width: 87%;
   @include fontBS (36px, bold, white);
+  width: 87%;
   text-align: center;
 }
 
@@ -47,7 +47,6 @@
   background-position: center;
   background-image: url("../img/globe-back-mobile@1x.jpg");
   background-position-y: 100%;
-  background-size: 100%;
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
@@ -60,4 +59,3 @@
 .page-header__list {
   @include reset-list;
 }
-

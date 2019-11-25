@@ -18,9 +18,9 @@
 }
 
 .steps-quote cite {
+  @include fontBS (16px, bold, white);
   display: inline-block;
   width: 70%;
-  @include fontBS (16px, bold, white);
   line-height: 1.4;
 }
 

@@ -20,10 +20,22 @@
   "blocks/form/selection.scss",
   "blocks/form/traveler.scss",
   "blocks/index/social.scss",
-  "blocks/index/social-autho.scss";
+  "blocks/index/social-autho.scss",
+  "outlines.scss";
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+  html {
+    box-sizing: border-box;
+  }
 
 body {
-  // width: 320px;
+  min-width: 320px;
   background-color: #edeff6;
   font-weight: 400;
   font-size: 16px;
@@ -32,6 +44,11 @@ body {
 
 a {
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .index-button {

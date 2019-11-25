@@ -8,7 +8,8 @@
 
 .companions__slogan {
   @include center;
-  width: 213px;
+  align-items: flex-start;
+  width: 66%;
   margin-bottom: 60px;
   margin-top: 71px;
 }
@@ -40,6 +41,7 @@
 .companions-list {
   @include margin-auto;
   padding: 0;
+  width: 85%;
 }
 
 .companions__personal p {
@@ -48,7 +50,7 @@
 }
 
 .companions-list > li {
-  width: 270px;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -61,7 +63,7 @@
 
 .companions__personal {
   @include margin-auto;
-  width: 177px;
+  width: auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -69,7 +71,7 @@
 }
 
 .companions__personal ul {
-  width: 100%;
+  width: 76%;
   display: flex;
   list-style: none;
   flex-wrap: wrap;
@@ -77,10 +79,10 @@
   padding: 0;
 }
 
-.companions__teg {
+.companions__personal .companions__teg {
   margin-bottom: 17px;
 }
 
-.companions__transport {
+.companions__personal .companions__transport {
   margin-bottom: 17px;
 }

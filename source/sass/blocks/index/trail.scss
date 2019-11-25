@@ -11,8 +11,9 @@
 
 .trail__gprs {
   @include fontBS (16px, bold, #192144);
-  width: 270px;
+  width: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
   margin-bottom: 35px;
   text-transform: uppercase;
@@ -30,6 +31,7 @@
   border-radius: 50%;
   background-position: center;
   background-size: 50%;
+  margin-right: 15px;
 }
 
 .trail__run {
@@ -42,6 +44,7 @@
 
 .trail-map {
   @include padding25px;
+  width: 85%;
   // border-bottom-right-radius: 20px;
   // border-bottom-left-radius: 20px;
 }

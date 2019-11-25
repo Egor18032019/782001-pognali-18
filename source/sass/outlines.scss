@@ -1,0 +1,29 @@
+@media (min-width: $tablet-width) {
+
+  .page-header {
+    flex-direction: row-reverse;
+  }
+
+  .steps-header__autho {
+    // align-self: flex-end;
+    order: -1;
+  }
+
+  .steps-icon {
+    display: none;
+  }
+
+  .page-header__main {
+    width: 60%;
+
+  }
+
+}
+
+
+// @media (min-width: $desktop-width) {
+//   body {
+//     background: url("../img/pognali-all-preview/pognali-index-desktop.jpg") no-repeat 50% 0;
+//     background-size: 1391px auto;
+//   }
+// }

@@ -7,26 +7,33 @@
   border-bottom-right-radius: 30px;
 }
 
-.register__container {
+.register__slogan {
   @include center;
-  width: 270px;
+  width: 75%;
 }
 
-.register__container p {
-  @include fontBS (16px, 300, #ffffff);
-  width: 200px;
-}
-
-.register__container h2 {
+.register__slogan h2 {
   @include fontBS ($fsize:24px, $fweight:bold, $color:#ff8d30);
   text-align: center;
   margin-bottom: 23px;
 }
 
-.register__slogan {
-  @include fontBS(22px, 300, #ffffff);
+.register__slogan p {
+  @include fontBS (16px, 300, #ffffff);
+ text-align: center;
+ opacity: 0.9;
+}
+
+.register__container {
+  @include center;
+  width: 85%;
+}
+
+.register__container p {
+  @include fontBS(16px, 300, #ffffff);
   text-align: center;
   margin-bottom: 32px;
+  opacity: 0.9;
 }
 
 .register__item {
@@ -69,8 +76,12 @@
   color: #ffd74b;
 }
 
+.register__container form {
+  width: 100%;
+}
+
 .register__container input {
-  width: 200px;
+  width: 98%;
   height: 62px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -79,11 +90,16 @@
 }
 
 .register__container button {
-  width: 50px;
+  width: 25%;
+  margin-left: -25%;
   height: 62px;
   background-color: $indexButton;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+
+.register__contact {
+  align-self: flex-start;;
 }

@@ -1,11 +1,11 @@
 .footer {
   @include center;
   @include margin-auto;
-  width: 320px;
+  // width: 320px;
   background-color: white;
-  //   border-top-right-radius: 20px;
-  //   border-top-left-radius: 20px;
-  // overflow: hidden;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  overflow: hidden;
 }
 
 .footer__logo {

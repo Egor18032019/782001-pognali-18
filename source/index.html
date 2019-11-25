@@ -10,7 +10,7 @@
 
 <body>
 
-  <section class="menu-autho">
+  <section class="menu-autho visually-hidden">
     <a class="menu-autho__logo">
       <img src="img/logo-mobile-blue@1x.png" alt="логотип сервиса" width="100" height="19">
       Погнали?</a>
@@ -69,18 +69,33 @@
   </section>
 
   <header class="page-header">
-    <a class="page-header__logo">
-      Погнали?
-      <img src="img/logo-mobile-white@1x.png" alt="логотип сервиса" width="100" height="19">
-    </a>
-    <nav class="page-header__nav">
-      <button class="page-header__toggle">Показать меню</button>
-      <div class="page-header__wrapper visually-hidden">
-        <ul class="page-header__list">
-          <li></li>
-        </ul>
-      </div>
-    </nav>
+    <div class="page-header__main">
+      <a class="page-header__logo">
+        Погнали?
+        <img src="img/logo-mobile-white@1x.png" alt="логотип сервиса" width="100" height="19">
+      </a>
+      <nav class="page-header__nav">
+        <button class="page-header__toggle">Показать меню</button>
+        <div class="page-header__wrapper visually-hidden">
+          <ul class="page-header__list">
+            <li></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="steps-header__slogan">
+      <h2 class="steps-slogan">В путешествие с крутыми попутчиками!</h2>
+    </div>
+    <div class="steps-header__autho steps-autho">
+      <a href="tel:+74954959595" class="steps-autho__telephone steps-icon" title="Телефон">
+        Звонок
+      </a>
+      <a href="#" class="steps-autho__mail steps-icon" title="Написать">
+        Почта
+      </a>
+      <!-- или списком это сделать? -->
+      <button class="steps-autho__button steps-button ">Авторизация</button>
+    </div>
   </header>
 
   <main class="index-main container">
@@ -89,21 +104,6 @@
     <section class="steps">
 
       <header class="steps-header">
-        <div class="steps-header__slogan">
-          <h2 class="steps-slogan">В путешествие с крутыми попутчиками!</h2>
-        </div>
-        <div class="steps-header__autho steps-autho">
-          <a href="tel:+74954959595" class="steps-autho__telephone steps-icon" title="Телефон">
-            Звонок
-            <!-- поставить бгркартинку -->
-          </a>
-          <a href="#" class="steps-autho__mail steps-icon" title="Написать">
-            Почта
-            <!-- поставить бгркартинку -->
-          </a>
-          <!-- или списком это сделать? -->
-          <button class="steps-autho__button steps-button ">Авторизация</button>
-        </div>
       </header>
 
       <div class="steps-quote">
@@ -152,7 +152,7 @@
       </div>
       <ul class="trend-list">
         <li class="trend__item trend--thailand">
-          <img src="img/thailand-mobile@1x.jpg" alt="Тайланд" width="270" height="110">
+          <img src="img/thailand-mobile@1x.jpg" alt="Тайланд" width="100%" height="110">
           <div class="trend__text">
             <p>Тайланд <span>18321</span></p>
             <small>Джунгли зовут!</small>
@@ -160,14 +160,14 @@
           </div>
         </li>
         <li class="trend__item">
-          <img src="img/france-mobile@1x.jpg" alt="Франция" width="270" height="110">
+          <img src="img/france-mobile@1x.jpg" alt="Франция" width="100%" height="110">
           <div class="trend__text">
             <p>Франция <span>12815</span></p>
             <small>Трэ бьен, манифик!</small>
           </div>
         </li>
         <li class="trend__item">
-          <img src="img/czech-mobile@1x.jpg" alt="Чехия" width="270" height="110">
+          <img src="img/czech-mobile@1x.jpg" alt="Чехия" width="100%" height="110">
           <div class="trend__text">
             <p>Чехия <span>5326</span></p>
             <small>Закоулки старой Европы</small>
@@ -192,7 +192,7 @@
             <p>99</p>
             <span>level</span>
           </div>
-          <img src="img/firsova-mobile@1x.jpg" alt="Фото в бассейне" width="270" height="270">
+          <img src="img/firsova-mobile@1x.jpg" alt="Фото в бассейне" width="100%" height="270">
 
           <div class="companions__personal">
             <p class="visually-hidden">хочет посетить:</p>
@@ -224,7 +224,7 @@
             <p>80</p>
             <span>level</span>
           </div>
-          <img src="img/demin-mobile@1x.jpg" alt="Зимнее фото" width="270" height="270">
+          <img src="img/demin-mobile@1x.jpg" alt="Зимнее фото" width="100%" height="270">
 
           <div class="companions__personal">
             <p class="visually-hidden">хочет посетить:</p>
@@ -256,7 +256,7 @@
       </a>
     </section>
 
-    <section class="rate">
+    <section class="rate visually-hidden">
       <div class="rate__slogan">
         <h2>Добавьте свой профиль</h2>
         <!-- <img src="https://via.placeholder.com/99x99" alt="Стоимость в рублях." width="99" height="99" title="В рублях"> -->
@@ -276,7 +276,7 @@
       <button class="index-button">Показать тарифы для бизнеса</button>
     </section>
 
-    <section class="rate-modal">
+    <section class="rate-modal visually-hidden">
       <h2>Тарифы для бизнеса</h2>
       <div class="rate-modal__text">
         <a href="#" class="rate-modal__blog">
@@ -300,28 +300,29 @@
     </section>
 
     <section class="register">
-      <div class="register__container">
+      <div class="register__slogan">
         <h2>Заинтересовались?</h2>
-        <p class="register__slogan">Зарегистрируйтесь, это быстро и бесплатно!
-          Уже зарегистрированы? Тогда скорее<a href="#" class="register__login">авторизуйтесь</a>.
+        <p>Зарегистрируйтесь, это быстро и бесплатно!
+          Уже зарегистрированы? Тогда скорее <a href="#" class="register__login">авторизуйтесь</a>.
         </p>
+      </div>
+      <div class="register__container">
         <form action="https://echo.htmlacademy.ru" method="GET">
           <input type="text" name="login" placeholder="E-mail">
           <button>></button>
         </form>
-        <p>Остались вопросы? Мы с радостью на них ответим!</p>
 
-        <p>
+        <p>Остались вопросы? Мы с радостью на них ответим!</p>
+        <p class="register__contact">
           <a href="tel:+78005558628" class="register__item register__item--telephone">
             8 800 555-86-28
           </a>
         </p>
-        <p>
+        <p class="register__contact">
           <a href="mail@htmlacademy.ru" class="register__item register__item--mail" target="_blank">
             mail@htmlacademy.ru
           </a>
         </p>
-
       </div>
     </section>
 
@@ -333,7 +334,7 @@
       </div>
       <a href="https://yandex.ru/maps/?um=constructor%3A8983dc39bf9f718b0af751a69bbe953fbe35870d8c2f381cae16f84b6ed2210d&source=constructorLinkя"
         target="_blank" class="trail__position">
-        <img src="https://via.placeholder.com/320x320" alt="карта где нас искать." width="320" height="320">
+        <img src="https://via.placeholder.com/320x320" alt="карта где нас искать." width="720" height="320">
       </a>
 
     </section>

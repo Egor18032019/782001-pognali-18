@@ -1,14 +1,23 @@
 .page-header {
-  // width: 100%;
-  @include margin-auto;
-  height: 73px;
+  width: 100%;
+  min-height: 73px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   background-color: $indexColor;
   color: white;
   padding-left: 25px;
   padding-right: 25px;
+}
+
+.page-header__main {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 73px;
+
 }
 
 .page-header__logo {

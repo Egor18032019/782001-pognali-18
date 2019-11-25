@@ -1,7 +1,9 @@
 .rate {
   @include center;
   @include margin-auto;
-}
+  background-color: #edeff6;
+  min-height: 480px;
+  }
 
 .rate__slogan h2 {
   @include fontBS(24px, bold, #ff8d30);
@@ -18,8 +20,9 @@
   background-size: 50%;
 }
 
-.rate li {
+.rate__list  li {
   @include fontBS(16px, 300, #444444);
+  margin-bottom: 30px;
 }
 
 .rate__slogan {

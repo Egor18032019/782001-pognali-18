@@ -4,6 +4,8 @@
   background-color: $indexColor;
   background-image: url("../img/smolov-mobile@1x.jpg");
   background-repeat: no-repeat;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 .companions__slogan {
@@ -85,4 +87,8 @@
 
 .companions__personal .companions__transport {
   margin-bottom: 17px;
+}
+
+.companions .index-button {
+  margin-bottom: 25px;
 }

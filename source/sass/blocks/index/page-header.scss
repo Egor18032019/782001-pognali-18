@@ -7,8 +7,6 @@
   flex-wrap: wrap;
   background-color: $indexColor;
   color: white;
-  padding-left: 25px;
-  padding-right: 25px;
 }
 
 .page-header__main {
@@ -17,7 +15,6 @@
   justify-content: space-between;
   align-items: center;
   min-height: 73px;
-
 }
 
 .page-header__logo {
@@ -35,3 +32,32 @@
   font-size: 0;
   // list-style: none;
 }
+
+
+.page-header__slogan h2 {
+  width: 87%;
+  @include fontBS (36px, bold, white);
+  text-align: center;
+}
+
+.page-header__slogan {
+  @include center;
+  // min-height: 114px;
+  padding-bottom: 247px;
+  background-position: center;
+  background-image: url("../img/globe-back-mobile@1x.jpg");
+  background-position-y: 100%;
+  background-size: 100%;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+
+.page-header__autho {
+  margin-bottom: 30px;
+}
+
+.page-header__list {
+  @include reset-list;
+}
+

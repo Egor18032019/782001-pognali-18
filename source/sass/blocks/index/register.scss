@@ -20,8 +20,8 @@
 
 .register__slogan p {
   @include fontBS (16px, 300, #ffffff);
- text-align: center;
- opacity: 0.9;
+  text-align: center;
+  opacity: 0.9;
 }
 
 .register__container {
@@ -40,7 +40,7 @@
   @include fontBS (16px, bold, $color:#ffd74b);
   @include center;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 225px;
 }
 
@@ -56,6 +56,7 @@
   border-radius: 50%;
   background-position: center;
   background-size: 50%;
+  margin-right: 16px;
 }
 
 .register__item--mail::before {
@@ -70,6 +71,8 @@
   border-radius: 50%;
   background-position: center;
   background-size: 50%;
+  margin-right: 16px;
+  flex-grow: 1;
 }
 
 .register__login {
@@ -101,5 +104,6 @@
 }
 
 .register__contact {
-  align-self: flex-start;;
+  align-self: flex-start;
+  ;
 }

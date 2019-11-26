@@ -1,13 +1,154 @@
 .selection {
   @include center;
   @include fontBS (16px, bold, #192144);
-}
-
-.selection form {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
   background-color: $indexButton;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
-.selection .form-button {
+.selection-companion h2 {
+  @include fontBS (23px, bold, #1d2e5b);
+  width: 50%;
+}
+
+.selection-companion legend {
+  font-size: 0;
+}
+
+.selection-companion p {
+  @include fontBS (16px, bold, #1d2e5b);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.selection__toggle {
+  font-size: 0;
+  border: none;
+  width: 8px;
+  min-height: 4px;
+}
+
+.selection-hobby {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.selection-hobby--open {
+  background-image: url("../img/dropdown-form.svg");
+  background-repeat: no-repeat;
+  background-color: inherit;
+}
+
+.selection-companion .form-button {
   background-color: white;
   margin-bottom: 21px;
+}
+
+.selection-musiс > input,
+.selection-food > input,
+.selection-transport > input,
+.selection-lvl > input {
+  display: none;
+}
+
+.selection-musiс--toggle,
+.selection-food--toggle,
+.selection-transport--toggle,
+.selection-lvl--toggle {
+  width: 8px;
+  min-height: 4px;
+  display: inline-block;
+  font-size: 0;
+  background-image: url("../img/dropdown-form.svg");
+  background-repeat: no-repeat;
+  background-color: inherit;
+}
+
+#music:checked ~ .selection-musiс__list {
+  display: none;
+}
+
+#music:checked ~ .selection-music__name .selection-musiс--toggle {
+  transform: rotate(180deg);
+}
+
+#food:checked ~ .selection-food__list {
+  display: none;
+}
+
+#food:checked ~ .selection-food__name .selection-food--toggle {
+  transform: rotate(180deg);
+}
+
+
+#transport:checked ~ .selection-transport__list {
+  display: none;
+}
+
+#transport:checked ~ .selection-transport__name .selection-transport--toggle {
+  transform: rotate(180deg);
+}
+
+#lvl:checked ~ .selection-lvl__controls {
+  display: none;
+}
+
+#lvl:checked ~ .selection-lvl__name .selection-lvl--toggle {
+  transform: rotate(180deg);
+}
+
+.selection-lvl__controls {
+  width: 80%;
+}
+
+.selection-lvl__range {
+  position: relative;
+  margin: 24px;
+}
+
+.selection-lvl__scale {
+  min-height: 2px;
+  background-color: #1d2e5b;
+  opacity: 0.2;
+}
+
+.selection-lvl__bar {
+  width: 30%;
+  background-color: #1d2e5b;
+  min-height: 2px;
+}
+
+.selection-lvl__range--toogle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #1d2e5b;
+  width: 10px;
+  height: 10px;
+  top: -5px;
+  font-size: 0;
+}
+
+// обсудить как назвать рэнджеры
+.range--toogle-min {
+  left: 30%;
+}
+
+.range--toogle-max {
+  left: 100%;
+}
+
+.selection-lvl__input {
+  display: flex;
+}
+
+.selection-lvl__input input {
+  width: 50%;
 }

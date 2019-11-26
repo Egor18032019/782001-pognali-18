@@ -1,3 +1,45 @@
 .filter-country {
   @include center;
 }
+
+.filter-country__main {
+  display: flex;
+  width: 100%;
+  min-height: 50px;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #e2e5f2;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.filter-country__main button {
+  border: none;
+}
+
+.filter-country__main h2 {
+  @include fontBS (16px, bold, #192144);
+  margin: 0;
+}
+
+.filter-country__nav {
+  font-size: 0;
+  min-width: 15px;
+  min-height: 10px;
+  background-image: url("../img/filter.svg");
+  background-repeat: no-repeat;
+  background-size: 15px, 10px;
+}
+
+.filter-country__pushbutton {
+  min-width: 17px;
+  min-height: 3px;
+  font-size: 0;
+  background-image: url("../img/dots.svg");
+  background-repeat: no-repeat;
+  background-size: 17px, 3px;
+}
+
+.filter-country__other {
+  display: none;
+}

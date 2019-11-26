@@ -30,9 +30,26 @@
   padding-top: 15px;
 }
 
+.traveler__main {
+  width: 100%;
+  // display: flex;
+  // flex-wrap: wrap;
+}
+
 .traveler__name {
   @include fontBS (20px, bold, #1d2e5b);
+  width: 40%;
 }
+
+.traveler__name::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #f97676;
+}
+// это абсалют делать или как ?
 
 .traveler__heart {
   @include fontBS (14px, bold, #161c35);
@@ -40,25 +57,37 @@
 
 .traveler__item .traveler__tegs {
   @include fontBS (15px, normal, #444444);
-  width: 175px;
+  width: 62%;
+  justify-content: start;
   margin-bottom: 20px;
 }
 
 .traveler__wish {
-  @include fontBS (15px, 500, #444444);
+  width: 100%;
 }
 
-.traveler-list__country {
+.traveler__countries {
   @include fontBS (15px, 500, #1d2e5b);
   text-transform: uppercase;
   padding-left: 0;
   margin-bottom: 10px;
 }
 
+.traveler__list--transport li {
+  background-color: #edeff6;
+}
 
 .traveler__transport {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.traveler__text {
   @include fontBS (15px, 500, #444444);
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  width: 100%;
 }
 
 .traveler__transport p {

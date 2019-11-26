@@ -5,23 +5,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Погнали</title>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
-  <header class="page-header">
-    <a class="page-header__logo">
-      Погнали?
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle">Показать меню</button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+    <header class="page-header">
+        <a class="page-header__logo">
+          Погнали?
+          <img src="../img/logo-mobile-white@1x.png" alt="логотип сервиса" width="100" height="19">
+        </a>
+        <nav class="main-nav">
+          <button class="main-nav__toggle">Показать меню</button>
+          <div class="main-nav__wrapper visually-hidden">
+            <ul class="main-nav__list site-list">
+              <li></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
 
   <main>
 
@@ -31,31 +35,32 @@
 
   </main>
 
-    <footer class="footer">
+  <footer class="footer">
       <a class="footer__logo">
-        <img class="footer__logo-image logotip" src="#" alt="Сервис для выбора попутчиков" width="100" height="19">
-        <!-- логотип Погнали -->
+        Погнали?
+        <img src="../img/logo-mobile-blue@1x.png" alt="логотип сервиса" width="100" height="19">
       </a>
       <div class="footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+            <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в
               Инстаграме</a>
           </li>
         </ul>
+        <div class="footer__made">
+          <p>Разработано</p>
+          <a href="https://htmlacademy.ru" class="footer__htmlacademy" target="_blank">
+            <img src="../img/htmlacademy.svg" alt="Логотип академии." width="27" height="34">
+          </a>
+        </div>
       </div>
-      <p>Разработано</p>
-      <a href="https://htmlacademy.ru" class="footer-htmlacademy" target="_blank">
-        <img src="https://via.placeholder.com/45x45" alt="Логотип академии." width="27" height="34">
-      </a>
     </footer>
-
 
 </body>
 

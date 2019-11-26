@@ -1,0 +1,94 @@
+.companions {
+  @include center;
+  @include margin-auto;
+  background-color: $indexColor;
+  background-image: url("../img/smolov-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.companions__slogan {
+  @include center;
+  align-items: flex-start;
+  width: 66%;
+  margin-bottom: 60px;
+  margin-top: 71px;
+}
+
+.companions h2 {
+  @include fontBS(24px, bold, #ff8d30);
+}
+
+.companions__slogan b {
+  @include fontBS(16px, bold, #ffffff);
+}
+
+.companions__slogan p {
+  @include fontBS(16px, 300, #ffffff);
+  opacity: 0.8;
+}
+
+.companions__lvl {
+  @include center;
+  @include fontBS(16px, 300, white);
+  width: 60px;
+  height: 60px;
+  flex-wrap: wrap;
+  border-radius: 50%;
+  background-color: black;
+  border: 3px solid #ff8d30;
+}
+
+.companions-list {
+  @include margin-auto;
+  padding: 0;
+  width: 85%;
+}
+
+.companions__personal p {
+  @include fontBS(21px, bold, #1d2e5b);
+  text-align: center;
+}
+
+.companions-list > li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.companions__personal {
+  @include margin-auto;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 22px;
+}
+
+.companions__personal ul {
+  width: 76%;
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.companions__personal .companions__teg {
+  margin-bottom: 17px;
+}
+
+.companions__personal .companions__transport {
+  margin-bottom: 17px;
+}
+
+.companions .index-button {
+  margin-bottom: 25px;
+}

@@ -1,0 +1,61 @@
+.page-header {
+  width: 100%;
+  min-height: 73px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: $indexColor;
+  color: white;
+}
+
+.page-header__main {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 73px;
+}
+
+.page-header__logo {
+  font-size: 0;
+}
+
+.page-header__toggle {
+  display: block;
+  width: 25px;
+  height: 11px;
+  background-image: url("../img/menu.svg");
+  background-color: inherit;
+  // незнаю как залить свг
+  border: none;
+  font-size: 0;
+  // list-style: none;
+}
+
+
+.page-header__slogan h2 {
+  @include fontBS (36px, bold, white);
+  width: 87%;
+  text-align: center;
+}
+
+.page-header__slogan {
+  @include center;
+  // min-height: 114px;
+  padding-bottom: 247px;
+  background-position: center;
+  background-image: url("../img/globe-back-mobile@1x.jpg");
+  background-position-y: 100%;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+
+.page-header__autho {
+  margin-bottom: 30px;
+}
+
+.page-header__list {
+  @include reset-list;
+}

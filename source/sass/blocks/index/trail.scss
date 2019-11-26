@@ -1,0 +1,57 @@
+.trail {
+  // width: 100%;
+  @include center;
+  @include margin-auto;
+  padding-top: 35px;
+  background-color: #ffd74b;
+  //   border-bottom-right-radius: 20px;
+  //   border-bottom-left-radius: 20px;
+  // overflow: hidden;
+}
+
+.trail__gprs {
+  @include fontBS (16px, bold, #192144);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+}
+
+.trail__gprs::before {
+  content: "";
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  background-image: url("../img/contacts-location.svg");
+  background-repeat: no-repeat;
+  background-color: yellowgreen;
+  // #121936 узнать как заливать свг
+  border-radius: 50%;
+  background-position: center;
+  background-size: 50%;
+  margin-right: 15px;
+}
+
+.trail__run {
+  @include center;
+  border-radius: 10px;
+  border: solid 3px #192144;
+  margin-bottom: 35px;
+}
+
+
+.trail-map {
+  @include padding25px;
+  width: 85%;
+  // border-bottom-right-radius: 20px;
+  // border-bottom-left-radius: 20px;
+}
+
+.trail__position {
+  width: 100%;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+}

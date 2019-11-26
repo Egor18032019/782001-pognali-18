@@ -1,0 +1,31 @@
+.footer {
+  @include center;
+  @include margin-auto;
+  // width: 320px;
+  background-color: white;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  overflow: hidden;
+}
+
+.footer__logo {
+  margin-bottom: 40px;
+  margin-top: 40px;
+  font-size: 0;
+}
+
+.footer__social {
+  width: 100%;
+}
+
+.footer__made {
+  @include fontBS ($color:#444444);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.footer__htmlacademy {
+  margin-left: 151px;
+}

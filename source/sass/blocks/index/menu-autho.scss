@@ -1,0 +1,82 @@
+.menu-autho {
+  @include center;
+  @include margin-auto;
+  background-color: white;
+}
+
+.menu-autho__logo {
+  font-size: 0;
+  align-self: flex-start;
+}
+
+.menu-autho__close {
+  width: 19px;
+  height: 19px;
+  border: none;
+  background-image: url("../img/menu-close.svg");
+  align-self: flex-end;
+}
+
+.menu-autho__us {
+  @include margin-auto;
+  width: 183px;
+  height: 95px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 58px;
+  margin-top: 120px;
+  // обдумать позже
+}
+
+.menu-autho__us a {
+  @include fontBS(30px, 500, #192144);
+}
+
+.menu-autho__button {
+  @include margin-auto;
+  @include fontBS(18px, bold, #161c35);
+  width: 270px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: $indexButton;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 51px;
+}
+
+.menu-autho__register {
+  @include fontBS(16px, bold, #192144);
+}
+
+.menu-autho__register::before {
+  content: " ";
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  margin-right: 16px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.menu-autho__register--telephone::before {
+  content: "";
+  display: inline-block;
+  background-image: url("../img/contacts-phone.svg");
+  // незаню как залить свг в бэкграунде
+  fill-rule: green;
+  background-repeat: no-repeat;
+}
+
+.menu-autho__register--mail::before {
+  background-image: url("../img/contacts-mail.svg");
+  background-repeat: no-repeat;
+}
+
+.menu-autho__contacts {
+  @include center;
+  width: 250px;
+  align-items: flex-start;
+  margin-bottom: 41px;
+}

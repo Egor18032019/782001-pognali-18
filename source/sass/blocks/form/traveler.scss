@@ -1,0 +1,108 @@
+.traveler {
+  @include center;
+  @include margin-auto;
+}
+
+.traveler__list {
+  width: 100%;
+  padding: 0;
+}
+
+.traveler__list li {
+  @include reset-list;
+}
+
+.traveler__list > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  margin-bottom: 10px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 22px;
+  padding-top: 15px;
+}
+
+.traveler__name {
+  @include fontBS (20px, bold, #1d2e5b);
+}
+
+.traveler__heart {
+  @include fontBS (14px, bold, #161c35);
+}
+
+.traveler__item .traveler__tegs {
+  @include fontBS (15px, normal, #444444);
+  width: 175px;
+  margin-bottom: 20px;
+}
+
+.traveler__wish {
+  @include fontBS (15px, 500, #444444);
+}
+
+.traveler-list__country {
+  @include fontBS (15px, 500, #1d2e5b);
+  text-transform: uppercase;
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+
+
+.traveler__transport {
+  @include fontBS (15px, 500, #444444);
+  margin-bottom: 20px;
+}
+
+.traveler__transport p {
+  display: inline-block;
+  width: 100%;
+}
+
+.traveler__transport span {
+  float: right;
+}
+
+.traveler__transport .traveler__lvl {
+  @include fontBS (24px, bold, #1d2e5b);
+  border-radius: 50%;
+  border: 3px solid #ff8d30;
+  width: 45px;
+  height: 45px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.traveler__btn--show-more {
+  @include center;
+}
+
+.traveler__btn {
+  @include fontBS ($fsize:17px, $fweight:bold, $color:#1d2e5b);
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  background-color: inherit;
+  margin-bottom: 27px;
+}
+
+.traveler__btn::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 15px;
+  vertical-align: middle;
+  background-image: url("../img/show-more-plus.svg");
+}
+
+.traveler__toggle-btns {
+  margin-bottom: 46px;
+}

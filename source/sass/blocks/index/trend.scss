@@ -1,0 +1,84 @@
+.trend {
+  @include center;
+  @include margin-auto;
+  padding-bottom: 30px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  // overflow: hidden;
+  padding-top: 72px;
+}
+
+.trend-slogan {
+  width: 60%;
+}
+
+.trend h2 {
+  @include fontBS(24px, bold, #ff8d30);
+}
+
+.trend-list {
+  width: 85%;
+  list-style: none;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+}
+
+.trend-list li {
+  width: 100%;
+  // height: 200px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.trend__item {
+  margin-bottom: 28px;
+}
+
+.trend__text {
+  background-color: white;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  padding-left: 28px;
+  padding-right: 26px;
+  padding-top: 28px;
+  padding-bottom: 24px;
+}
+
+.trend__text p {
+  @include fontBS(21px, bold, #161c35);
+  margin-bottom: 5px;
+}
+
+.trend__text small {
+  @include fontBS(16px, 500, rgba(68, 68, 68, 0.3));
+}
+
+.trend__text span {
+  @include fontBS(16px, 500, rgba(68, 68, 68, 0.3));
+  float: right;
+}
+
+.trend__text span::before {
+  content: "";
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  margin-right: 5px;
+  background-image: url("../img/user.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+// .trend--thailand {
+//   background-image: url("../img/flag.svg");
+//   background-size: 35px,14px;
+//   background-repeat: no-repeat;
+//   background-position: center;
+// }

@@ -1,0 +1,48 @@
+@media (min-width: $tablet-width) {
+  .page-header {
+    flex-direction: row-reverse;
+  }
+
+  .page-header__autho {
+    // align-self: flex-end;
+    order: -1;
+    margin-bottom: 0;
+  }
+
+  .autho-icon {
+    display: none;
+  }
+
+  .page-header__main {
+    width: 60%;
+  }
+
+  .steps-header__slogan h2 {
+    font-size: 60px;
+  }
+
+  .steps-quote q {
+    font-size: 28px;
+  }
+
+  .steps-quote {
+    margin-top: -310px;
+  }
+
+  .steps__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .steps__list .steps__item {
+    width: 50%;
+  }
+}
+
+
+// @media (min-width: $desktop-width) {
+//   body {
+//     background: url("../img/pognali-all-preview/pognali-index-desktop.jpg") no-repeat 50% 0;
+//     background-size: 1391px auto;
+//   }
+// }

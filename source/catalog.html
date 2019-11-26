@@ -11,20 +11,34 @@
 <body>
 
     <header class="page-header">
-        <a class="page-header__logo">
-          Погнали?
-          <img src="../img/logo-mobile-white@1x.png" alt="логотип сервиса" width="100" height="19">
-        </a>
-        <nav class="main-nav">
-          <button class="main-nav__toggle">Показать меню</button>
-          <div class="main-nav__wrapper visually-hidden">
-            <ul class="main-nav__list site-list">
-              <li></li>
-            </ul>
-          </div>
-        </nav>
+        <div class="page-header__main">
+          <a class="page-header__logo" href="index.html">
+            Погнали?
+            <img src="img/logo-mobile-white@1x.png" alt="логотип сервиса" width="100" height="19">
+          </a>
+          <nav class="page-header__nav">
+            <button class="page-header__toggle">Показать меню</button>
+            <div class="page-header__wrapper visually-hidden">
+              <ul class="page-header__list">
+                <li></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="page-header__slogan visually-hidden">
+          <h2>В путешествие с крутыми попутчиками!</h2>
+        </div>
+        <div class="page-header__autho autho visually-hidden">
+          <a href="tel:+74954959595" class="autho__telephone autho-icon" title="Телефон">
+            Звонок
+          </a>
+          <a href="#" class="autho__mail autho-icon" title="Написать">
+            Почта
+          </a>
+          <!-- или списком это сделать? -->
+          <button class="autho__button">Авторизация</button>
+        </div>
       </header>
-
 
   <main>
 
@@ -35,31 +49,31 @@
   </main>
 
   <footer class="footer">
-      <a class="footer__logo">
-        Погнали?
-        <img src="../img/logo-mobile-blue@1x.png" alt="логотип сервиса" width="100" height="19">
-      </a>
-      <div class="footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в
-              Инстаграме</a>
-          </li>
-        </ul>
-        <div class="footer__made">
-          <p>Разработано</p>
-          <a href="https://htmlacademy.ru" class="footer__htmlacademy" target="_blank">
-            <img src="../img/htmlacademy.svg" alt="Логотип академии." width="27" height="34">
-          </a>
-        </div>
+    <a class="footer__logo" href="index.html">
+      Погнали?
+      <img src="img/logo-mobile-blue@1x.png" alt="логотип сервиса" width="96" height="15">
+    </a>
+    <div class="footer__social social">
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в
+            Инстаграме</a>
+        </li>
+      </ul>
+      <div class="footer__made">
+        <p>Разработано</p>
+        <a href="https://htmlacademy.ru" class="footer__htmlacademy" target="_blank">
+          <img src="../img/htmlacademy.svg" alt="Логотип академии." width="27" height="34">
+        </a>
       </div>
-    </footer>
+    </div>
+  </footer>
 
 </body>
 

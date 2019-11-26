@@ -72,34 +72,34 @@
   background-color: inherit;
 }
 
-#music:checked ~ .selection-musiс__list {
-  display: none;
-}
+// #music:checked ~ .selection-musiс__list {
+//   display: none;
+// }
 
 #music:checked ~ .selection-music__name .selection-musiс--toggle {
   transform: rotate(180deg);
 }
 
-#food:checked ~ .selection-food__list {
-  display: none;
-}
+// #food:checked ~ .selection-food__list {
+//   display: none;
+// }
 
 #food:checked ~ .selection-food__name .selection-food--toggle {
   transform: rotate(180deg);
 }
 
 
-#transport:checked ~ .selection-transport__list {
-  display: none;
-}
+// #transport:checked ~ .selection-transport__list {
+//   display: none;
+// }
 
 #transport:checked ~ .selection-transport__name .selection-transport--toggle {
   transform: rotate(180deg);
 }
 
-#lvl:checked ~ .selection-lvl__controls {
-  display: none;
-}
+// #lvl:checked ~ .selection-lvl__controls {
+//   display: none;
+// }
 
 #lvl:checked ~ .selection-lvl__name .selection-lvl--toggle {
   transform: rotate(180deg);

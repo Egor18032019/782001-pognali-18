@@ -1,0 +1,126 @@
+.explorer-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.explorer-main h2 {
+  @include fontBS(24px, bold, #1d2e5b);
+}
+
+.explorer-main h3 {
+  @include fontBS(20px, bold, #1d2e5b);
+}
+
+.explorer-choise legend {
+  @include fontBS (16px, bold, #1d2e5b);
+  text-align: center;
+}
+
+
+.explorer__main {
+  width: 32%;
+  min-height: 100px;
+  border-radius: 50%;
+}
+
+.explorer-foto {
+  background-image: url("../img/photo-account-mobile@1x.jpg");
+  font-size: 0;
+  align-self: flex-end;
+}
+
+// не получаеться их в ряд сделать
+.explorer-lvl {
+  align-self: flex-start;
+  text-align: center;
+  border: 3px solid #ff8d30;
+}
+
+.explorer-main__button {
+  margin-bottom: 31px;
+}
+
+.explorer__tegs {
+  width: 85%;
+  min-height: 89px;
+  margin-bottom: 31px;
+}
+
+.explorer__tegs .teg {
+  justify-content: start;
+}
+
+.explorer__transport {
+  margin-bottom: 31px;
+}
+
+.explorer__transport--type li {
+  background-color: white;
+}
+
+.explorer-plan {
+  @include center;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-color: #dfe3f0;
+}
+
+.explorer-plan_country {
+  width: 85%;
+}
+
+.explorer-plan_country li {
+  min-height: 154px;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+.explorer-plan_country p {
+  @include fontBS (16px, bold, #1d2e5b)
+}
+
+.explorer-add {
+  @include center;
+  background-color: #d4d9eb;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  overflow: hidden;
+}
+
+.explorer__date {
+  width: 85%;
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.explorer-add p {
+  @include fontBS (20px, normal, #444444);
+}
+
+.explorer-add label {
+  @include fontBS (16px, 500, #1d2e5b);
+  display: block;
+}
+
+.explorer-add b {
+  @include fontBS (16px, 500, #1d2e5b);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 21px;
+}
+
+.explorer-add__choise span {
+  float: right;
+}
+
+.explorer__calendar {
+  width: 82%;
+}
+
+.explorer__month {
+  display: flex;
+  justify-content: space-between;
+}

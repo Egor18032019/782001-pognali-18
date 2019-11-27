@@ -4,46 +4,140 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HTML Academy: Погнали</title>
+  <title>HTML Academy: Погнали-Направления</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <header class="page-header">
-        <div class="page-header__main">
-          <a class="page-header__logo" href="index.html">
-            Погнали?
-            <img src="img/logo-mobile-white@1x.png" alt="логотип сервиса" width="100" height="19">
-          </a>
-          <nav class="page-header__nav">
-            <button class="page-header__toggle">Показать меню</button>
-            <div class="page-header__wrapper visually-hidden">
-              <ul class="page-header__list">
-                <li></li>
-              </ul>
-            </div>
-          </nav>
+  <header class="page-header">
+    <div class="page-header__main">
+      <a class="page-header__logo" href="index.html">
+        Погнали?
+        <img src="img/logo-mobile-white@1x.png" alt="логотип сервиса" width="100" height="19">
+      </a>
+      <nav class="page-header__nav">
+        <button class="page-header__toggle">Показать меню</button>
+        <div class="page-header__wrapper visually-hidden">
+          <ul class="page-header__list">
+            <li></li>
+          </ul>
         </div>
-        <div class="page-header__slogan visually-hidden">
-          <h2>В путешествие с крутыми попутчиками!</h2>
-        </div>
-        <div class="page-header__autho autho visually-hidden">
-          <a href="tel:+74954959595" class="autho__telephone autho-icon" title="Телефон">
-            Звонок
-          </a>
-          <a href="#" class="autho__mail autho-icon" title="Написать">
-            Почта
-          </a>
-          <!-- или списком это сделать? -->
-          <button class="autho__button">Авторизация</button>
-        </div>
-      </header>
+      </nav>
+    </div>
+    <div class="page-header__slogan visually-hidden">
+      <h2>В путешествие с крутыми попутчиками!</h2>
+    </div>
+    <div class="page-header__autho autho visually-hidden">
+      <a href="tel:+74954959595" class="autho__telephone autho-icon" title="Телефон">
+        Звонок
+      </a>
+      <a href="#" class="autho__mail autho-icon" title="Написать">
+        Почта
+      </a>
+      <!-- или списком это сделать? -->
+      <button class="autho__button">Авторизация</button>
+    </div>
+  </header>
 
   <main>
 
     <h1>Направления</h1>
+    <section class="explorer">
+      <form action="https://echo.htmlacademy.ru" method="GET" class="explorer-choise">
+        <div class="explorer-main">
+          <h2 class="visually-hiden">Профиль путешественика</h2>
+          <div class="explorer-lvl explorer__main">
+            <p>80 </p>
+            <span>level</span>
+          </div>
+          <div class="explorer-foto explorer__main">Петя Демин</div>
+          <button class="form-button explorer-main__button"> Сменить фото</button>
 
+          <fieldset class="explorer__tegs">
+            <legend> Тэги </legend>
+            <ul class="teg">
+              <li>#бургер </li>
+              <li>#бар</li>
+              <li>#футбол</li>
+              <li>#концерт</li>
+              <li>#крафт</li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="explorer__transport">
+            <legend>Транспорт</legend>
+            <ul class="explorer__transport--type transport">
+              <li class="favorite">Самолет</li>
+              <li class="favorite">Автобус</li>
+              <li>Велосипед</li>
+              <li class="favorite">Пешие прогулки</li>
+            </ul>
+          </fieldset>
+
+        </div>
+
+        <div class="explorer-plan">
+          <h2>Мои планы:</h2>
+          <ol class="explorer-plan_country">
+            <li>
+              <p>Франция, Италия</p>
+              <input type="text" name="europa" id="franse">
+            </li>
+            <li>
+              <p>Таиланд, Индонезия </p>
+            </li>
+          </ol>
+        </div>
+
+        <div class="explorer-add">
+          <h2>Добавить план:</h2>
+          <fieldset class="explorer__date">
+            <h3>Шаг 1.
+              Даты пребывания</h3>
+            <p>Укажите предпочтительное количество попутчиков, которых
+              вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+            <!-- обсудить как это делать - 2 + -->
+            <b class="explorer-add__choise">Ищу попутчиков: <span>Чел</span></b>
+
+            <b class="explorer-add__choise">Длительность: <span>Чел</span></b>
+
+            <label for="children">
+              <input type="checkbox" name="children" id="children">
+              Можно с детьми
+            </label>
+<div class="explorer__calendar">
+    <p class="explorer__month"><span> < </span> март <span> > </span> </p>
+  <!-- обсудить как делать календарь -->
+
+  <input type="submit" value="23">
+  <input type="submit" value="24">
+
+</div>
+
+            <button class="form-button">Следующий шаг</button>
+          </fieldset>
+        </div>
+        <fieldset>
+          <h3>Шаг 2.
+            Маршрут</h3>
+          <p>Укажите страны, которые вы хотели по посетить.
+            Это может быть одна или сразу несколько.</p>
+        </fieldset>
+
+        <fieldset>
+          <h3>Шаг 3.
+            Развлечения</h3>
+          <p>Наконец, расскажите о своих планах времяпровождения.
+            Можно писать в свободной форме и ставить тэги.
+          </p>
+          <div>
+
+          </div>
+          <button class="form-button">Отправить</button>
+        </fieldset>
+      </form>
+    </section>
     <!-- direction -->
 
   </main>
@@ -69,7 +163,7 @@
       <div class="footer__made">
         <p>Разработано</p>
         <a href="https://htmlacademy.ru" class="footer__htmlacademy" target="_blank">
-          <img src="../img/htmlacademy.svg" alt="Логотип академии." width="27" height="34">
+          <img src="img/htmlacademy.svg" alt="Логотип академии." width="27" height="34">
         </a>
       </div>
     </div>

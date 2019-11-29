@@ -10,7 +10,6 @@
   border-bottom-right-radius: 20px;
   background-color: #161c35;
   margin: 0;
-
 }
 
 .explorer-main h2 {
@@ -83,19 +82,19 @@
   height: 100%;
 }
 
-.explorer__bus:checked~.explorer__transport--type .explorer__bus--favorite {
+.explorer__bus:checked ~ .explorer__transport--type .explorer__bus--favorite {
   opacity: 0.2;
 }
 
-.explorer__air:checked~.explorer__transport--type .explorer__air--favorite {
+.explorer__air:checked ~ .explorer__transport--type .explorer__air--favorite {
   opacity: 0.2;
 }
 
-.explorer__cycle:checked~.explorer__transport--type .explorer__cycle--favorite {
+.explorer__cycle:checked ~ .explorer__transport--type .explorer__cycle--favorite {
   opacity: 0.2;
 }
 
-.explorer__walk:checked~.explorer__transport--type .explorer__walk--favorite {
+.explorer__walk:checked ~ .explorer__transport--type .explorer__walk--favorite {
   opacity: 0.2;
 }
 
@@ -123,11 +122,11 @@
 }
 
 .explorer-plan__country b {
-  @include fontBS (16px, bold, #1d2e5b)
+  @include fontBS (16px, bold, #1d2e5b);
 }
 
 .explorer-plan__country p {
-  @include fontBS (14px, 500, #1d2e5b)
+  @include fontBS (14px, 500, #1d2e5b);
 }
 
 .explorer-plan__country a {
@@ -218,13 +217,10 @@
 }
 
 .explorer__month {
-  border-bottom: 1px solid #d4d9eb;
-  border-top: 1px solid #d4d9eb;
-}
-
-.explorer__month {
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid #d4d9eb;
+  border-top: 1px solid #d4d9eb;
 }
 
 .explorer__calendar input {
@@ -232,8 +228,8 @@
 }
 
 .explorer__calendar label {
-  display: inline;
   @include fontBS (14px, normal, rgba(68, 68, 68, 0.3));
+  display: inline;
   width: 30px;
   height: 30px;
   background-color: white;
@@ -248,27 +244,27 @@
   width: 100%;
 }
 
-.explorer-data--031:checked~.explorer-data__day .explorer-data__choise--031 {
+.explorer-data--031:checked ~ .explorer-data__day .explorer-data__choise--031 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0327:checked~.explorer-data__day .explorer-data__choise--0327 {
+.explorer-data--0327:checked ~ .explorer-data__day .explorer-data__choise--0327 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0326:checked~.explorer-data__day .explorer-data__choise--0327 {
+.explorer-data--0326:checked ~ .explorer-data__day .explorer-data__choise--0327 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0328:checked~.explorer-data__day .explorer-data__choise--0328 {
+.explorer-data--0328:checked ~ .explorer-data__day .explorer-data__choise--0328 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0329:checked~.explorer-data__day .explorer-data__choise--0329 {
+.explorer-data--0329:checked ~ .explorer-data__day .explorer-data__choise--0329 {
   background-color: #1d2e5b;
   color: white;
 }

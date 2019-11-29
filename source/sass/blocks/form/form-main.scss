@@ -1,0 +1,14 @@
+.form-main {
+  background-color: #edeff6;
+}
+
+.form-main__slogan {
+  background-color: #161c35;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.form-main__slogan h1 {
+  @include fontBS (36px, bold, #ffffff);
+  margin: 0;
+}

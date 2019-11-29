@@ -1,0 +1,348 @@
+.explorer-main {
+  @include center;
+  background-color: #edeff6;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 21px;
+}
+
+.explorer__idea {
+  @include fontBS (36px, bold, #ffffff);
+  min-height: 73px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #161c35;
+  margin: 0;
+}
+
+.explorer-main h2 {
+  @include fontBS(24px, bold, #1d2e5b);
+}
+
+.explorer-main h3,
+.explorer-add h3 {
+  @include fontBS(20px, bold, #1d2e5b);
+}
+
+.explorer-main legend {
+  @include fontBS (16px, bold, #1d2e5b);
+  text-align: center;
+}
+
+
+.explorer__main {
+  width: 32%;
+  min-height: 100px;
+  border-radius: 50%;
+  margin-bottom: 19px;
+}
+
+.explorer-foto {
+  background-image: url("../img/photo-account-mobile@1x.jpg");
+  font-size: 0;
+  align-self: flex-end;
+}
+
+// не получаеться их в ряд сделать
+.explorer-lvl {
+  align-self: flex-start;
+  text-align: center;
+  border: 3px solid #ff8d30;
+}
+
+.explorer-main__button {
+  margin-bottom: 31px;
+}
+
+.explorer__tegs {
+  width: 85%;
+  min-height: 89px;
+  margin-bottom: 31px;
+}
+
+.explorer__tegs textarea {
+  @include fontBS (16px, normal, #444444);
+  background-color: inherit;
+  border: none;
+  resize: none;
+}
+
+.explorer__transport {
+  width: 85%;
+  margin-bottom: 30px;
+}
+
+.explorer__transport--type li {
+  background-color: white;
+}
+
+.explorer__transport input {
+  display: none;
+}
+
+.explorer__transport label {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.explorer__bus:checked ~ .explorer__transport--type .explorer__bus--favorite {
+  opacity: 0.2;
+}
+
+.explorer__air:checked ~ .explorer__transport--type .explorer__air--favorite {
+  opacity: 0.2;
+}
+
+.explorer__cycle:checked ~ .explorer__transport--type .explorer__cycle--favorite {
+  opacity: 0.2;
+}
+
+.explorer__walk:checked ~ .explorer__transport--type .explorer__walk--favorite {
+  opacity: 0.2;
+}
+
+
+.explorer-plan {
+  @include center;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-color: #dfe3f0;
+}
+
+.explorer-plan__country {
+  width: 85%;
+}
+
+.explorer-plan__country li {
+  min-height: 154px;
+  margin-bottom: 10px;
+  padding: 24px;
+  background-color: white;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.explorer-plan__country b {
+  @include fontBS (16px, bold, #1d2e5b);
+}
+
+.explorer-plan__country p {
+  @include fontBS (14px, 500, #1d2e5b);
+}
+
+.explorer-plan__country a {
+  @include reset-list;
+  @include fontBS (14px, 500, rgba(0, 0, 0, 0.3));
+}
+
+.explorer-add {
+  @include center;
+  background-color: #d4d9eb;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.explorer-step {
+  @include center;
+}
+
+.explorer-step__first,
+.explorer-step__second,
+.explorer-step__three {
+  @include center;
+  background-color: white;
+  width: 85%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.explorer-date {
+  @include center;
+  width: 82%;
+  margin-bottom: 21px;
+}
+
+.explorer-add p {
+  @include fontBS (16px, normal, #444444);
+}
+
+.explorer-add label {
+  @include fontBS (16px, 500, #1d2e5b);
+  display: block;
+}
+
+.explorer-add b {
+  @include fontBS (16px, 500, #1d2e5b);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 9px;
+  width: 100%;
+}
+
+.explorer-add__choise span {
+  float: right;
+}
+
+.explorer-add__score {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-left: 14px;
+  padding-right: 14px;
+  border: solid 1px #cbced9;
+  margin-bottom: 21px;
+}
+
+.explorer-add__score input {
+  border: none;
+  background-color: inherit;
+}
+
+.explorer-add__score--children {
+  align-self: flex-start;
+}
+
+.explorer__calendar {
+  width: 82%;
+  margin-bottom: 21px;
+}
+
+.explorer__month button {
+  border: none;
+  background-color: inherit;
+}
+
+.explorer__month {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #d4d9eb;
+  border-top: 1px solid #d4d9eb;
+}
+
+.explorer__calendar input {
+  display: none;
+}
+
+.explorer__calendar label {
+  @include fontBS (14px, normal, rgba(68, 68, 68, 0.3));
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: 1px solid #d4d9eb;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.explorer-data__day {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.explorer-data--031:checked ~ .explorer-data__day .explorer-data__choise--031 {
+  background-color: #1d2e5b;
+  color: white;
+}
+
+.explorer-data--0327:checked ~ .explorer-data__day .explorer-data__choise--0327 {
+  background-color: #1d2e5b;
+  color: white;
+}
+
+.explorer-data--0326:checked ~ .explorer-data__day .explorer-data__choise--0327 {
+  background-color: #1d2e5b;
+  color: white;
+}
+
+.explorer-data--0328:checked ~ .explorer-data__day .explorer-data__choise--0328 {
+  background-color: #1d2e5b;
+  color: white;
+}
+
+.explorer-data--0329:checked ~ .explorer-data__day .explorer-data__choise--0329 {
+  background-color: #1d2e5b;
+  color: white;
+}
+
+.explorer-step__second--choise {
+  @include fontBS (14px, 500, #1d2e5b);
+  display: flex;
+  width: 80%;
+  align-items: center;
+  // justify-content: center;
+  margin-bottom: 21px;
+  min-height: 42px;
+  text-transform: uppercase;
+}
+
+.explorer-step__second--choise ul {
+  @include reset-list;
+  min-height: 42px;
+  border-radius: 4px;
+  border: 1px solid #cbced9;
+}
+
+.explorer-step__second--country {
+  width: 100%;
+}
+
+.explorer-step__second--flag {
+  width: 33%;
+  font-size: 0;
+}
+
+.explorer-step__second--add {
+  width: 100%;
+  height: 100%;
+  background-color: #edeff6;
+  border-radius: 4px;
+  border: 1px solid #cbced9;
+}
+
+.explorer-step__second--flag li:first-child {
+  width: 100%;
+  min-height: 42px;
+  background-color: blueviolet;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35px, 24px;
+  background-image: url("../img/flags-back@1x.png");
+  // отсюда каким образом флаги тащить??
+}
+
+.explorer-step .explorer-step--back {
+  background-color: inherit;
+}
+
+.explorer-step__three textarea {
+  @include fontBS(16px, normal, #444444);
+  resize: none;
+}
+
+.explorer-step__three--plan {
+  margin-bottom: 23px;
+}
+
+.explorer-step__second--choise p {
+  width: 100%;
+}
+
+.explorer-step__second--choise .explorer-step__second--country::after {
+  display: block;
+  content: "";
+  width: 12px;
+  height: 7px;
+  background-image: url("../img/dropdown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: auto;
+}

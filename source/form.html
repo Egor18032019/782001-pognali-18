@@ -4,117 +4,137 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HTML Academy: Погнали</title>
-  <link href="css/normalize.css" rel="stylesheet">
+  <title>HTML Academy: Погнали-Попутчики</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <header class="page-header">
-        <a class="page-header__logo">
-          Погнали?
-          <img src="img/logo-mobile-white@1x.png" alt="логотип сервиса" width="100" height="19">
-        </a>
-        <nav class="page-header__nav">
-          <button class="page-header__toggle">Показать меню</button>
-          <div class="page-header__wrapper visually-hidden">
-            <ul class="page-header__list">
-              <li></li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-
-  <main class="form-main">
-
-    <h1>Попутчики</h1>
-
-    <section class="filter-country">
-      <nav class="filter-nav">
-        <button class="filter-nav__toggle">Показать меню</button>
-        <div class="filter-nav__wrapper visually-hidden">
-          <ul class="filter-nav__list">
+  <header class="page-header">
+    <div class="page-header__main">
+      <a class="page-header__logo" href="index.html">
+        Погнали?
+        <img src="img/logo-mobile-white@1x.png" alt="логотип сервиса" width="100" height="19">
+      </a>
+      <nav class="page-header__nav">
+        <button class="page-header__toggle">Показать меню</button>
+        <div class="page-header__wrapper visually-hidden">
+          <ul class="page-header__list">
             <li></li>
           </ul>
         </div>
       </nav>
-      <h2>Фильтрация по странам</h2>
-      <button type="reset" name="button" class="filter-country__close">
-        <span class="visually-hidden">Закрыть</span>
-      </button>
-      <ul class="filter-country__continent">
-        <li>
-          <a href="country/europe.html" class="europa choose">Европа</a>
-        </li>
-        <li>
-          <a href="#" class="asia">Азия</a>
-        </li>
-        <li>
-          <a href="#" class="america">Америка</a>
-        </li>
-        <li>
-          <a href="#" class="island">Острова</a>
-        </li>
-      </ul>
-      <ul class="filter-country__selection">
-        <li>а
-          <ul class="chosen-country">
-            <li><a href=" country/europe/afganistan.html"> Афганистан</a></li>
-            <!-- обсудить как делать и сделать осталные по образцу -->
-            <li><a href="#">Албания</a></li>
-            <li><a href="#">Алжир</a></li>
-            <li><a href="#">Андорра</a></li>
-            <li><a href="#">Аргентина</a></li>
-            <li><a href="#">Армения</a></li>
-            <li><a href="#">Австралия</a></li>
-            <li><a href="#">Австрия</a></li>
-            <li><a href="#">Азербайджан</a></li>
-          </ul>
-        </li>
-        <li>б</li>
-        <li>в</li>
-        <li>г</li>
-        <li>д</li>
-        <li>е</li>
-        <li>з</li>
-        <li>и</li>
-        <li>к</li>
-        <li>л</li>
-        <li>м</li>
-        <li>н</li>
-        <li>о</li>
-        <li>п</li>
-        <li>р</li>
-        <li>с</li>
-        <li>т</li>
-        <li>у</li>
-        <li>ф</li>
-        <li>х</li>
-        <li>ч</li>
-        <li>ш</li>
-        <li>э</li>
-        <li>ю</li>
-        <li>я</li>
-      </ul>
+    </div>
+  </header>
 
-      <button class="filter-country__button">Свернуть</button>
+  <main class="form-main">
+    <div class="form-main__slogan">
+      <h1>Попутчики</h1>
+    </div>
+
+    <section class="filter-country">
+      <div class="filter-country__main">
+        <nav class="filter-nav">
+          <button class="filter-nav__toggle">Показать меню</button>
+          <div class="filter-nav__wrapper visually-hidden">
+            <ul class="filter-nav__list">
+              <li></li>
+            </ul>
+          </div>
+        </nav>
+        <h2>Фильтрация по странам</h2>
+        <button type="reset" name="button" class="filter-country__pushbutton">
+          <span class="visually-hidden">Открыть или Закрыть</span>
+        </button>
+      </div>
+
+      <form class="filter-country__other" action="https://echo.htmlacademy.ru" method="GET">
+        <ul class="filter-country__continent">
+          <li class="filter-country__continent--choose">
+            <!-- радио батоны или сылки -как тут делать ? -->
+            Европа
+          </li>
+          <li>
+            <a href="#" class="asia">Азия</a>
+          </li>
+          <li>
+            <a href="#" class="america">Америка</a>
+          </li>
+          <li>
+            <a href="#" class="island">Острова</a>
+          </li>
+        </ul>
+        <ul class="filter-country__selection">
+          <li><button type="button">а</button></li>
+          <li><button type="button">б</button> </li>
+          <li><button type="button">в</button> </li>
+          <li><button type="button">г</button> </li>
+          <li><button type="button">д</button> </li>
+          <li><button type="button">e</button> </li>
+          <!-- <li><button type="button">ё</button> </li> -->
+          <!-- <li><button type="button">ж</button> </li> -->
+          <li><button type="button">з</button> </li>
+          <li><button type="button">и</button> </li>
+          <!-- <li><button type="button">й</button> </li> -->
+          <li><button type="button">к</button> </li>
+          <li><button type="button">л</button> </li>
+          <li><button type="button">м</button> </li>
+          <li><button type="button">н</button> </li>
+          <li><button type="button">о</button> </li>
+          <li><button type="button">п</button> </li>
+          <li><button type="button">р</button> </li>
+          <li><button type="button">с</button> </li>
+          <li><button type="button">т</button> </li>
+          <li><button type="button">у</button> </li>
+          <li><button type="button">ф</button> </li>
+          <li><button type="button">х</button> </li>
+          <li><button type="button">ч</button> </li>
+          <li><button type="button">ш</button> </li>
+          <li><button type="button">э</button> </li>
+          <li><button type="button">ю</button> </li>
+          <li><button type="button">я</button> </li>
+        </ul>
+
+        <ul class="chosen-country">
+          <li><a href=" country/europe/afganistan.html"> Афганистан</a></li>
+          <!-- обсудить как делать и сделать осталные по образцу -->
+          <li><a href="#">Албания</a></li>
+          <li><a href="#">Алжир</a></li>
+          <li><a href="#">Андорра</a></li>
+          <li><a href="#">Аргентина</a></li>
+          <li><a href="#">Армения</a></li>
+          <li><a href="#">Австралия</a></li>
+          <li><a href="#">Австрия</a></li>
+          <li><a href="#">Азербайджан</a></li>
+        </ul>
+
+        <button class="filter-country__button form-button">
+          <p>Свернуть</p>
+        </button>
+
+      </form>
     </section>
 
     <section class="selection">
-      <form action="https://echo.htmlacademy.ru" method="GET">
+      <form action="https://echo.htmlacademy.ru" method="GET" class="selection-companion">
         <h2>Подберите идеального попутчика</h2>
 
-        <fieldset class="selection__hobby">
+        <fieldset class="selection-hobby">
           <legend>Хобби</legend>
-          <button class="selection__toggle hobby-open">Раскрыть список</button>
-          <button class="selection__toggle hobby-close visually-hidden">Скрыть список</button>
+          <p> Хобби</p>
+          <button class="selection__toggle selection-hobby--open">Раскрыть список</button>
+          <button class="selection__toggle selection-hobby--close visually-hidden">Скрыть список</button>
           <!-- сделать чтобы небыло элемнтов элемнтов -->
         </fieldset>
 
-        <fieldset class="selection__musiс">
+        <fieldset class="selection-musiс">
           <legend>Музыка</legend>
-          <ul class="selection__musiс__list">
+          <input type="checkbox" id="music" name="music-group" class="selection-musiс__id">
+          <p class="selection-music__name">Музыка
+            <label class="selection-musiс--toggle" for="music">Открыть или Закрыть</label>
+          </p>
+
+          <ul class="selection-musiс__list">
             <li>
               <input class="check-input" type="checkbox" name="rock" id="hard-rock" checked>
               <label class="check" for="hard-rock">Тяжелый рок</label>
@@ -128,53 +148,86 @@
               <label class="check" for="eurodance">Евроденс</label>
             </li>
           </ul>
-          <input type="radio" id="music" name="music-group">
-          <label class="music-toggle" for="music">!</label>
-          <!-- обсудить как лучше сделать -->
+
         </fieldset>
 
-        <fieldset class="selection__food">
+        <fieldset class="selection-food">
           <legend>Еда</legend>
-          <button class="selection__toggle food-open">Раскрыть список</button>
-          <button class="selection__toggle food-close visually-hidden">Скрыть список</button>
+          <input type="checkbox" id="food" name="food-group" class="selection-food__id" checked>
+          <p class="selection-food__name">Еда
+            <label class="selection-food--toggle" for="food">Открыть или Закрыть</label>
+          </p>
+
+          <ul class="selection-food__list">
+            <li>
+              <input class="check-input" type="checkbox" name="food" id="meet" checked>
+              <label class="check" for="meet">Мясоед</label>
+            </li>
+            <li>
+              <input class="check-input" type="checkbox" name="food" id="product">
+              <label class="check" for="product">Сидит на ПП</label>
+            </li>
+            <li>
+              <input class="check-input" type="checkbox" name="food" id="cheese">
+              <label class="check" for="cheese">Веган-сыроед</label>
+            </li>
+          </ul>
         </fieldset>
 
-        <div class="selection__transport">
-          <p class="selection__transport">транспорт: <span>левел:</span></p>
-          <ul class="selection__list__favorite transport">
-            <li class="favorite">Самолет</li>
-            <li class="favorite">Автобус</li>
-            <li>Велосипед</li>
-            <li class="favorite">Пешие прогулки</li>
+        <fieldset class="selection-transport">
+          <input type="checkbox" id="transport" name="transport-group" class="selection-transport__id">
+          <p class="selection-transport__name">транспорт:
+            <label class="selection-transport--toggle" for="transport">Открыть или Закрыть</label>
+          </p>
+          <input type="checkbox" name="walks" id="walk" class="selection__walk">
+          <input type="checkbox" name="cycle" id="cycle" class="selection__cycle">
+          <input type="checkbox" name="air" id="air" class="selection__air">
+          <input type="checkbox" id="bus" name="bus" class="selection__bus">
+          <ul class="selection-transport__list transport">
+            <li class="selection__air--favorite">
+              <label for="air">Самолет</label>
+            </li>
+            <li class="selection__bus--favorite">
+              <label for="bus">Автобус</label>
+            </li>
+            <li class="selection__cycle--favorite">
+              <label for="cycle">Велосипед</label>
+            </li>
+            <li class="selection__walk--favorite">
+              <label for="walk">Пешие прогулки</label>
+            </li>
           </ul>
-        </div>
+        </fieldset>
 
-        <fieldset class="selection__lvl">
+        <fieldset class="selection-lvl">
           <legend>Левел</legend>
-          <div class="selection__lvl__range">
-            <div class="selection__lvl__range">
-              <div class="selection__lvl_scale">
-                <!-- незаполненая линия -->
-                <div class="selection__lvl_bar"></div>
+          <input type="checkbox" id="lvl" name="lvl-group" class="selection-lvl__id">
+          <p class="selection-lvl__name">Левел:
+            <label class="selection-lvl--toggle" for="lvl">Открыть или Закрыть</label>
+          </p>
+
+          <div class="selection-lvl__controls">
+            <div class="selection-lvl__range">
+              <div class="selection-lvl__scale">
                 <!-- а это заполненая линия -->
+                <div class="selection-lvl__bar"></div>
+                <!-- незаполненая линия -->
               </div>
-              <div class="range-toogle range-toogle-min">Выбрать минимальный уровень.</div>
+              <div class="selection-lvl__range--toogle range--toogle-min">Выбрать минимальный уровень.</div>
               <!-- ползунок слева -->
-              <div class="range-toogle range-toogle-max">Выбрать максимальный уровень. </div>
+              <div class="selection-lvl__range--toogle range--toogle-max">Выбрать максимальный уровень. </div>
               <!-- ползунок справа -->
             </div>
             <!-- или ползунки в спаны и п обернуть ? -->
-            <div class="selection__lvl__controls">
 
+            <div class="selection-lvl__input">
               <input type="text" id="lvl-start" name="start" value="30">
               <input type="text" id="lvl-end" name="end" value="100">
-
             </div>
           </div>
-          <button class="selection__toggle lvl-open visually-hidden">Раскрыть список</button>
-          <button class="selection__toggle lvl-close">Скрыть список</button>
         </fieldset>
-        <a href="#" class="form-button">Показать всех</a>
+        <button class="form-button">Показать
+        </button>
       </form>
     </section>
 
@@ -182,9 +235,11 @@
       <h2 class="visually-hidden">Выбор попутчиков</h2>
       <ul class="traveler__list">
         <li class="traveler__item">
-          <!-- как картинку ставить -->
-          <p class="traveler__name">Таня Фирсова</p>
-          <span class="traveler__heart">1,5 M</span>
+          <div class="traveler__main">
+            <img src="img/firsova-mobile@1x.jpg" alt="Фото попутчика.">
+            <p class="traveler__name">Таня Фирсова</p>
+            <span class="traveler__heart">1,5 M</span>
+          </div>
           <ul class="traveler__tegs teg">
             <li>#ЗОЖ </li>
             <li>#ПП </li>
@@ -193,30 +248,36 @@
             <li>#авокадо</li>
             <li> #смузи</li>
           </ul>
-          <div class="traveler__countries">
-            <p class="traveler__wish">хочет посетить:</p>
+          <div class="traveler__wish">
+            <p class="traveler__text">хочет посетить:</p>
             <ul class="traveler__countries country">
-              <li class="country__item">ШриЛанка</li>
+              <li class="country__item">Шри-Ланка</li>
               <li class="country__item">Тайланд</li>
               <li class="country__item">Сейшелы</li>
             </ul>
           </div>
           <div class="traveler__transport">
-            <p class="traveler__transport">транспорт: <span>левел:</span></p>
-            <p class="traveler__lvl">99</p>
-            <ul class="traveler__list__favorite transport">
-              <li class="favorite">Самолет</li>
+            <p class="traveler__text">транспорт: <span>левел:</span></p>
+            <ul class="traveler__list--transport transport">
+              <li class="favorite">
+                Самолет
+              </li>
               <li>Автобус</li>
               <li>Велосипед</li>
               <li>Пешие прогулки</li>
             </ul>
+            <p class="traveler__lvl">99</p>
           </div>
           <a href="#" class="traveler__call form-button ">Позвать</a>
         </li>
         <li class="traveler__item">
 
-          <p class="traveler__name">Петя Демин</p>
-          <span class="traveler__heart">150</span>
+          <div class="traveler__main">
+            <img src="img/demin-mobile@1x.jpg" width="70px" height="70px" alt="Демин">
+            <p class="traveler__name"> Петя Демин</p>
+            <span class="traveler__heart">150</span>
+          </div>
+
           <ul class="traveler__tegs teg">
             <li>#бургер </li>
             <li>#бар</li>
@@ -224,16 +285,16 @@
             <li>#концерт</li>
             <li>#крафт</li>
           </ul>
-          <div class="traveler__countries">
-            <p class="traveler__wish">хочет посетить:</p>
+          <div class="traveler__wish">
+            <p class="traveler__text">хочет посетить:</p>
             <ul class="traveler__countries country">
               <li class="country__item">Бельгия</li>
               <li class="country__item">Чехия</li>
             </ul>
           </div>
           <div class="traveler__transport">
-            <p class="traveler__transport">транспорт: <span>левел:</span></p>
-            <ul class="traveler__list__favorite transport">
+            <p class="traveler__text">транспорт: <span>левел:</span></p>
+            <ul class="traveler__list--transport transport">
               <li class="favorite">Самолет</li>
               <li class="favorite">Автобус</li>
               <li>Велосипед</li>
@@ -244,9 +305,11 @@
           <a href="#" class="traveler__call form-button ">Позвать</a>
         </li>
         <li class="traveler__item">
-
-          <p class="traveler__name">Марк Смолов</p>
-          <span class="traveler__heart">1700</span>
+          <div class="traveler__main">
+            <img src="img/smolov-mobile@1x.jpg" width="70px" height="70px" alt="Фото попутчика.">
+            <p class="traveler__name">Марк Смолов</p>
+            <span class="traveler__heart">1700</span>
+          </div>
           <ul class="traveler__tegs teg">
             <li>#рэп </li>
             <li>#тату</li>
@@ -254,8 +317,8 @@
             <li> #кроссовки </li>
             <li>#суприм</li>
           </ul>
-          <div class="traveler__countries">
-            <p class="traveler__wish">хочет посетить:</p>
+          <div class="traveler__wish">
+            <p class="traveler__text">хочет посетить:</p>
             <ul class="traveler__countries country">
               <li class="country__item">США</li>
               <li class="country__item">Австралия</li>
@@ -263,8 +326,8 @@
             </ul>
           </div>
           <div class="traveler__transport">
-            <p class="traveler__transport">транспорт: <span>левел:</span></p>
-            <ul class="traveler__list__favorite transport">
+            <p class="traveler__text">транспорт: <span>левел:</span></p>
+            <ul class="traveler__list--transport transport">
               <li class="favorite">Самолет</li>
               <li>Автобус</li>
               <li class="favorite">Велосипед</li>
@@ -275,25 +338,27 @@
           <a href="#" class="traveler__call form-button ">Позвать</a>
         </li>
         <li class="traveler__item">
-
-          <p class="traveler__name">Лариса Роговая</p>
-          <span class="traveler__heart">23</span>
+          <div class="traveler__main">
+            <img src="img/rogovaya-mobile@1x.jpg" width="70px" height="70px" alt="Фото попутчика.">
+            <p class="traveler__name">Лариса Роговая</p>
+            <span class="traveler__heart">23</span>
+          </div>
           <ul class="traveler__tegs teg">
             <li>#образования </li>
             <li>#карьера</li>
             <li>#учеба</li>
             <li>#линкедин</li>
           </ul>
-          <div class="traveler__countries">
-            <p class="traveler__wish">хочет посетить:</p>
-            <ul class="traveler__list__country country">
+          <div class="traveler__wish">
+            <p class="traveler__text">хочет посетить:</p>
+            <ul class="traveler__list__countries country">
               <li class="country__item">Великобритания</li>
               <li class="country__item">Германия</li>
             </ul>
           </div>
           <div class="traveler__transport">
-            <p class="traveler__transport">транспорт: <span>левел:</span></p>
-            <ul class="traveler__list__favorite transport">
+            <p class="traveler__text">транспорт: <span>левел:</span></p>
+            <ul class="traveler__list--transport transport">
               <li class="favorite">Самолет</li>
               <li class="favorite">Автобус</li>
               <li>Велосипед</li>
@@ -317,31 +382,31 @@
   </main>
 
   <footer class="footer">
-      <a class="footer__logo">
-        Погнали?
-        <img src="img/logo-mobile-blue@1x.png" alt="логотип сервиса" width="100" height="19">
-      </a>
-      <div class="footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в
-              Инстаграме</a>
-          </li>
-        </ul>
-        <div class="footer__made">
-          <p>Разработано</p>
-          <a href="https://htmlacademy.ru" class="footer__htmlacademy" target="_blank">
-            <img src="img/htmlacademy.svg" alt="Логотип академии." width="27" height="34">
-          </a>
-        </div>
+    <a class="footer__logo" href="index.html">
+      Погнали?
+      <img src="img/logo-mobile-blue@1x.png" alt="логотип сервиса" width="100" height="19">
+    </a>
+    <div class="footer__social social">
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в
+            Инстаграме</a>
+        </li>
+      </ul>
+      <div class="footer__made">
+        <p>Разработано</p>
+        <a href="https://htmlacademy.ru" class="footer__htmlacademy" target="_blank">
+          <img src="img/htmlacademy.svg" alt="Логотип академии." width="27" height="34">
+        </a>
       </div>
-    </footer>
+    </div>
+  </footer>
 
 </body>
 

@@ -11,6 +11,10 @@
   border-top-right-radius: 20px;
 }
 
+.selection ul {
+  @include reset-list;
+}
+
 .selection-companion h2 {
   @include fontBS (23px, bold, #1d2e5b);
   width: 50%;
@@ -52,10 +56,10 @@
   margin-bottom: 21px;
 }
 
-.selection-musiс > input,
-.selection-food > input,
-.selection-transport > input,
-.selection-lvl > input {
+.selection-musiс>input,
+.selection-food>input,
+.selection-transport>input,
+.selection-lvl>input {
   display: none;
 }
 
@@ -72,38 +76,65 @@
   background-color: inherit;
 }
 
-// #music:checked ~ .selection-musiс__list {
-//   display: none;
-// }
+.selection-transport__list li {
+  background-color: white;
+}
 
-#music:checked ~ .selection-music__name .selection-musiс--toggle {
+.selection-transport__list label {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.selection-musiс__id:checked~.selection-musiс__list {
+  display: none;
+}
+
+.selection-musiс__id:checked~.selection-music__name .selection-musiс--toggle {
   transform: rotate(180deg);
 }
 
-// #food:checked ~ .selection-food__list {
-//   display: none;
-// }
+.selection-food__id:checked~.selection-food__list {
+  display: none;
+}
 
-#food:checked ~ .selection-food__name .selection-food--toggle {
+.selection-food__id:checked~.selection-food__name .selection-food--toggle {
   transform: rotate(180deg);
 }
 
 
-// #transport:checked ~ .selection-transport__list {
-//   display: none;
-// }
+.selection-transport__id:checked~.selection-transport__list {
+  display: none;
+}
 
-#transport:checked ~ .selection-transport__name .selection-transport--toggle {
+.selection-transport__id:checked~.selection-transport__name .selection-transport--toggle {
   transform: rotate(180deg);
 }
 
-// #lvl:checked ~ .selection-lvl__controls {
-//   display: none;
-// }
+.selection-lvl__id:checked~.selection-lvl__controls {
+  display: none;
+}
 
-#lvl:checked ~ .selection-lvl__name .selection-lvl--toggle {
+.selection-lvl__id:checked~.selection-lvl__name .selection-lvl--toggle {
   transform: rotate(180deg);
 }
+
+.selection__bus:checked~.selection-transport__list .selection__bus--favorite {
+  opacity: 0.2;
+}
+
+.selection__air:checked~.selection-transport__list .selection__air--favorite {
+  opacity: 0.2;
+}
+
+.selection__cycle:checked~.selection-transport__list .selection__cycle--favorite {
+  opacity: 0.2;
+}
+
+.selection__walk:checked~.selection-transport__list .selection__walk--favorite {
+  opacity: 0.2;
+}
+
 
 .selection-lvl__controls {
   width: 80%;

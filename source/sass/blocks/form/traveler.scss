@@ -4,6 +4,7 @@
 }
 
 .traveler__list {
+  @include center;
   width: 100%;
   padding: 0;
 }
@@ -12,10 +13,11 @@
   @include reset-list;
 }
 
-.traveler__list > li {
+.traveler__list>li {
   display: flex;
+  width: 85%;
   flex-direction: column;
-  align-items: center;
+  // align-items: center;
   justify-content: space-between;
   list-style: none;
   margin-bottom: 10px;
@@ -31,15 +33,27 @@
 }
 
 .traveler__main {
-  width: 100%;
-  // display: flex;
-  // flex-wrap: wrap;
+  width: 65%;
+  display: flex;
+  flex-wrap: wrap;
+  // flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.traveler__main img {
+  width: 50%;
+  border-radius: 50%;
 }
 
 .traveler__name {
   @include fontBS (20px, bold, #1d2e5b);
   width: 40%;
+  min-height: 37px;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
+
 
 .traveler__name::after {
   content: "";
@@ -49,10 +63,12 @@
   border-radius: 50%;
   background-color: #f97676;
 }
+
 // это абсалют делать или как ?
 
 .traveler__heart {
   @include fontBS (14px, bold, #161c35);
+  width: 13%;
 }
 
 .traveler__item .traveler__tegs {

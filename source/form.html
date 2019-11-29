@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HTML Academy: Погнали</title>
+  <title>HTML Academy: Погнали-Попутчики</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -47,10 +47,12 @@
           <span class="visually-hidden">Открыть или Закрыть</span>
         </button>
       </div>
-      <div class="filter-country__other">
+
+      <form class="filter-country__other" action="https://echo.htmlacademy.ru" method="GET">
         <ul class="filter-country__continent">
-          <li>
-            <a href="country/europe.html" class="europa choose">Европа</a>
+          <li class="filter-country__continent--choose">
+            <!-- радио батоны или сылки -как тут делать ? -->
+            Европа
           </li>
           <li>
             <a href="#" class="asia">Азия</a>
@@ -63,49 +65,54 @@
           </li>
         </ul>
         <ul class="filter-country__selection">
-          <li>а
-            <ul class="chosen-country">
-              <li><a href=" country/europe/afganistan.html"> Афганистан</a></li>
-              <!-- обсудить как делать и сделать осталные по образцу -->
-              <li><a href="#">Албания</a></li>
-              <li><a href="#">Алжир</a></li>
-              <li><a href="#">Андорра</a></li>
-              <li><a href="#">Аргентина</a></li>
-              <li><a href="#">Армения</a></li>
-              <li><a href="#">Австралия</a></li>
-              <li><a href="#">Австрия</a></li>
-              <li><a href="#">Азербайджан</a></li>
-            </ul>
-          </li>
-          <li>б</li>
-          <li>в</li>
-          <li>г</li>
-          <li>д</li>
-          <li>е</li>
-          <li>з</li>
-          <li>и</li>
-          <li>к</li>
-          <li>л</li>
-          <li>м</li>
-          <li>н</li>
-          <li>о</li>
-          <li>п</li>
-          <li>р</li>
-          <li>с</li>
-          <li>т</li>
-          <li>у</li>
-          <li>ф</li>
-          <li>х</li>
-          <li>ч</li>
-          <li>ш</li>
-          <li>э</li>
-          <li>ю</li>
-          <li>я</li>
+          <li><button type="button">а</button></li>
+          <li><button type="button">б</button> </li>
+          <li><button type="button">в</button> </li>
+          <li><button type="button">г</button> </li>
+          <li><button type="button">д</button> </li>
+          <li><button type="button">e</button> </li>
+          <!-- <li><button type="button">ё</button> </li> -->
+          <!-- <li><button type="button">ж</button> </li> -->
+          <li><button type="button">з</button> </li>
+          <li><button type="button">и</button> </li>
+          <!-- <li><button type="button">й</button> </li> -->
+          <li><button type="button">к</button> </li>
+          <li><button type="button">л</button> </li>
+          <li><button type="button">м</button> </li>
+          <li><button type="button">н</button> </li>
+          <li><button type="button">о</button> </li>
+          <li><button type="button">п</button> </li>
+          <li><button type="button">р</button> </li>
+          <li><button type="button">с</button> </li>
+          <li><button type="button">т</button> </li>
+          <li><button type="button">у</button> </li>
+          <li><button type="button">ф</button> </li>
+          <li><button type="button">х</button> </li>
+          <li><button type="button">ч</button> </li>
+          <li><button type="button">ш</button> </li>
+          <li><button type="button">э</button> </li>
+          <li><button type="button">ю</button> </li>
+          <li><button type="button">я</button> </li>
         </ul>
 
-        <button class="filter-country__button">Свернуть</button>
+        <ul class="chosen-country">
+          <li><a href=" country/europe/afganistan.html"> Афганистан</a></li>
+          <!-- обсудить как делать и сделать осталные по образцу -->
+          <li><a href="#">Албания</a></li>
+          <li><a href="#">Алжир</a></li>
+          <li><a href="#">Андорра</a></li>
+          <li><a href="#">Аргентина</a></li>
+          <li><a href="#">Армения</a></li>
+          <li><a href="#">Австралия</a></li>
+          <li><a href="#">Австрия</a></li>
+          <li><a href="#">Азербайджан</a></li>
+        </ul>
 
-      </div>
+        <button class="filter-country__button form-button">
+          <p>Свернуть</p>
+        </button>
+
+      </form>
     </section>
 
     <section class="selection">
@@ -122,7 +129,7 @@
 
         <fieldset class="selection-musiс">
           <legend>Музыка</legend>
-          <input type="checkbox" id="music" name="music-group">
+          <input type="checkbox" id="music" name="music-group" class="selection-musiс__id">
           <p class="selection-music__name">Музыка
             <label class="selection-musiс--toggle" for="music">Открыть или Закрыть</label>
           </p>
@@ -142,12 +149,11 @@
             </li>
           </ul>
 
-          <!-- обсудить как лучше сделать -->
         </fieldset>
 
         <fieldset class="selection-food">
           <legend>Еда</legend>
-          <input type="checkbox" id="food" name="food-group" checked>
+          <input type="checkbox" id="food" name="food-group" class="selection-food__id" checked>
           <p class="selection-food__name">Еда
             <label class="selection-food--toggle" for="food">Открыть или Закрыть</label>
           </p>
@@ -169,21 +175,33 @@
         </fieldset>
 
         <fieldset class="selection-transport">
-          <input type="checkbox" id="transport" name="transport-group">
+          <input type="checkbox" id="transport" name="transport-group" class="selection-transport__id">
           <p class="selection-transport__name">транспорт:
             <label class="selection-transport--toggle" for="transport">Открыть или Закрыть</label>
           </p>
+          <input type="checkbox" name="walks" id="walk" class="selection__walk">
+          <input type="checkbox" name="cycle" id="cycle" class="selection__cycle">
+          <input type="checkbox" name="air" id="air" class="selection__air">
+          <input type="checkbox" id="bus" name="bus" class="selection__bus">
           <ul class="selection-transport__list transport">
-            <li class="favorite">Самолет</li>
-            <li class="favorite">Автобус</li>
-            <li>Велосипед</li>
-            <li class="favorite">Пешие прогулки</li>
+            <li class="selection__air--favorite">
+              <label for="air">Самолет</label>
+            </li>
+            <li class="selection__bus--favorite">
+              <label for="bus">Автобус</label>
+            </li>
+            <li class="selection__cycle--favorite">
+              <label for="cycle">Велосипед</label>
+            </li>
+            <li class="selection__walk--favorite">
+              <label for="walk">Пешие прогулки</label>
+            </li>
           </ul>
         </fieldset>
 
         <fieldset class="selection-lvl">
           <legend>Левел</legend>
-          <input type="checkbox" id="lvl" name="lvl-group">
+          <input type="checkbox" id="lvl" name="lvl-group" class="selection-lvl__id">
           <p class="selection-lvl__name">Левел:
             <label class="selection-lvl--toggle" for="lvl">Открыть или Закрыть</label>
           </p>
@@ -208,7 +226,8 @@
             </div>
           </div>
         </fieldset>
-        <a href="#" class="form-button">Показать всех</a>
+        <button class="form-button">Показать
+        </button>
       </form>
     </section>
 
@@ -217,7 +236,7 @@
       <ul class="traveler__list">
         <li class="traveler__item">
           <div class="traveler__main">
-            <!-- как картинку ставить -->
+           <img src="img/firsova-mobile@1x.jpg" alt="Фото попутчика.">
             <p class="traveler__name">Таня Фирсова</p>
             <span class="traveler__heart">1,5 M</span>
           </div>
@@ -240,7 +259,9 @@
           <div class="traveler__transport">
             <p class="traveler__text">транспорт: <span>левел:</span></p>
             <ul class="traveler__list--transport transport">
-              <li class="favorite">Самолет</li>
+              <li class="favorite">
+                Самолет
+              </li>
               <li>Автобус</li>
               <li>Велосипед</li>
               <li>Пешие прогулки</li>
@@ -250,10 +271,13 @@
           <a href="#" class="traveler__call form-button ">Позвать</a>
         </li>
         <li class="traveler__item">
+
           <div class="traveler__main">
-            <p class="traveler__name">Петя Демин</p>
+            <img src="img/demin-mobile@1x.jpg" width="70px" height="70px" alt="Демин">
+            <p class="traveler__name"> Петя Демин</p>
             <span class="traveler__heart">150</span>
           </div>
+
           <ul class="traveler__tegs teg">
             <li>#бургер </li>
             <li>#бар</li>
@@ -282,6 +306,7 @@
         </li>
         <li class="traveler__item">
           <div class="traveler__main">
+              <img src="img/smolov-mobile@1x.jpg" width="70px" height="70px" alt="Фото попутчика.">
             <p class="traveler__name">Марк Смолов</p>
             <span class="traveler__heart">1700</span>
           </div>
@@ -314,6 +339,7 @@
         </li>
         <li class="traveler__item">
           <div class="traveler__main">
+              <img src="img/rogovaya-mobile@1x.jpg" width="70px" height="70px" alt="Фото попутчика.">
             <p class="traveler__name">Лариса Роговая</p>
             <span class="traveler__heart">23</span>
           </div>

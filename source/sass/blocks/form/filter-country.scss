@@ -40,6 +40,66 @@
   background-size: 17px, 3px;
 }
 
+.filter-country__other .filter-country__continent {
+  margin-bottom: 25px;
+}
+
+.filter-country__other .chosen-country {
+  margin-bottom: 24px;
+}
+
+.filter-country__continent a {
+  @include fontBS (16px, bold, rgba(25, 33, 68, 0.3));
+}
+
+.filter-country__continent--choose {
+  @include fontBS (16px, bold, #192144);
+}
+
 .filter-country__other {
-  display: none;
+  @include center;
+  // display: none;
+  padding-top: 30px;
+}
+
+.filter-country__other ul {
+  @include reset-list;
+}
+
+.filter-country__selection button {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border: 0 none;
+}
+
+.filter-country__other .filter-country__selection {
+  width: 71%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 67px;
+}
+
+.filter-country__selection li {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #cbced9;
+}
+
+.filter-country__other .filter-country__button {
+  background-color: #d6daed;
+  margin-bottom: 27px;
+}
+
+.filter-country__button p {
+  @include reset-list;
+}
+
+.filter-country__button p::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url("../img/filter-close.svg");
+  margin-right: 12px;
 }

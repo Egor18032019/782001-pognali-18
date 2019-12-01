@@ -56,8 +56,8 @@ img {
 .index-button {
   @include margin-auto;
   @include fontBS(18px, bold, #1d2e5b);
-  width: 270px;
-  height: 62px;
+  width: 85%;
+  min-height: 62px;
   border-radius: 10px;
   background-color: $indexButton;
   text-decoration: none;

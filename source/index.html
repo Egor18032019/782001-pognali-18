@@ -103,11 +103,6 @@
     <h1 class="visually-hidden">Сервис для выбора попутчиков "Погнали"</h1>
 
     <section class="steps">
-
-      <!-- <header class="steps-header">
-нужен ли он ?
-      </header> -->
-
       <div class="steps-quote">
         <q>
           Лучшее приложение, что я видел в жизни!
@@ -137,11 +132,14 @@
 
     <section class="about-us">
       <div class="about-us__wrapper">
-        <h2 class="steps-about">О сервисе</h2>
+        <h2>О сервисе</h2>
         <p>Любое путешествие веселее
           с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в
           чужих. </p>
         <b>А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</b>
+        <a href="catalog.html" class="about-us__button">
+          Подробнее
+        </a>
       </div>
     </section>
 
@@ -156,7 +154,8 @@
         <li class="trend__item trend--thailand">
           <img src="img/thailand-mobile@1x.jpg" alt="Тайланд" width="100%" height="110">
           <div class="trend__text">
-            <p>Тайланд <span>18321</span></p>
+            <p>Тайланд </p>
+            <span>18321</span>
             <small>Джунгли зовут!</small>
             <!-- как добавить флаги ? -->
           </div>
@@ -164,19 +163,21 @@
         <li class="trend__item">
           <img src="img/france-mobile@1x.jpg" alt="Франция" width="100%" height="110">
           <div class="trend__text">
-            <p>Франция <span>12815</span></p>
+            <p>Франция </p>
+            <span>12815</span>
             <small>Трэ бьен, манифик!</small>
           </div>
         </li>
         <li class="trend__item">
           <img src="img/czech-mobile@1x.jpg" alt="Чехия" width="100%" height="110">
           <div class="trend__text">
-            <p>Чехия <span>5326</span></p>
+            <p>Чехия</p>
+            <span>5326</span>
             <small>Закоулки старой Европы</small>
           </div>
         </li>
       </ul>
-      <a href="catalog.html" class="index-button">
+      <a href="form.html" class="index-button trend__button">
         <p>Показать все</p>
       </a>
     </section>
@@ -259,12 +260,13 @@
     </section>
 
     <section class="rate">
-      <div class="rate__slogan">
-        <h2>Добавьте свой профиль</h2>
-      </div>
+      <!-- <div class="rate__slogan">
+      </div> -->
+      <h2>Добавьте свой профиль</h2>
+      <img src="img/rates@1x.png" alt="Денежка" width="99" height="99" class="rate__money">
       <ol class="rate__list">
         <li>Базовое размещение
-          <span> Бесплатно</span>
+          <span class="rate__prise"> Бесплатно</span>
         </li>
         <li> Вывод на первых позициях
           <span>99 руб./мес</span>
@@ -274,7 +276,7 @@
           <span> 59 руб./мес</span>
         </li>
       </ol>
-      <button class="index-button">Показать тарифы для бизнеса</button>
+      <button class="index-button rate__button">Показать тарифы для бизнеса</button>
     </section>
 
     <section class="rate-modal visually-hidden">
@@ -282,7 +284,7 @@
       <div class="rate-modal__text">
         <a href="#" class="rate-modal__blog">
           Реклама у блоггера
-          <span> 300 000 руб./пост</span>
+          <span class="rate-modal__price"> 300 000 руб./пост</span>
         </a>
         <a href="#" class="rate-modal__cheat">
           Накрутка подписчиков
@@ -290,11 +292,11 @@
         </a>
         <a href="#" class="rate-modal__bot">
           Лайки от ботов
-          <span>от 20 коп./лайк</span>
+          <span class="rate-modal__price">от 20 коп./лайк</span>
         </a>
         <a href="#" class="rate-modal__prodact">
           Ваш продакт-плейсмент
-          <span>Индивидуально</span>
+          <span class="rate-modal__price">Индивидуально</span>
         </a>
       </div>
       <button class="rate-modal__close">Закрыть окно</button>
@@ -303,16 +305,15 @@
     <section class="register">
       <div class="register__slogan">
         <h2>Заинтересовались?</h2>
-        <p>Зарегистрируйтесь, это быстро и бесплатно!
-          Уже зарегистрированы? Тогда скорее <a href="#" class="register__login">авторизуйтесь</a>.
-        </p>
+        <p>Зарегистрируйтесь, это быстро и бесплатно!</p>
+        <b> Уже зарегистрированы? Тогда скорее <a href="#" class="register__login">авторизуйтесь</a>.
+        </b>
       </div>
       <div class="register__container">
         <form action="https://echo.htmlacademy.ru" method="GET">
           <input type="text" name="login" placeholder="E-mail">
           <button>></button>
         </form>
-
         <p>Остались вопросы? Мы с радостью на них ответим!</p>
         <p class="register__contact">
           <a href="tel:+78005558628" class="register__item register__item--telephone">
@@ -329,26 +330,27 @@
 
     <section class="trail">
       <div class="trail-map">
-        <p> <a href="#" class="trail__gprs ">ул. Большая Конюшенная, 19/8</a>
+        <p>
+          <a href="#" class="trail__gprs ">ул. Большая Конюшенная, 19/8</a>
         </p>
         <a href="#" class="trail__run index-button">Проложить маршрут</a>
       </div>
       <a href="https://yandex.ru/maps/?um=constructor%3A8983dc39bf9f718b0af751a69bbe953fbe35870d8c2f381cae16f84b6ed2210d&source=constructorLinkя"
         target="_blank" class="trail__position">
-        <img src="https://via.placeholder.com/320x320" alt="карта где нас искать." width="720" height="320">
-      </a>
 
+        <img src="https://via.placeholder.com/320x320" alt="карта где нас искать." width="320" height="320">
+      </a>
     </section>
 
   </main>
 
   <footer class="footer">
-    <a class="footer__logo">
-      Погнали?
-      <img src="img/logo-mobile-blue@1x.png" alt="логотип сервиса" width="96" height="15">
-    </a>
-    <div class="footer__social social">
-      <ul class="social__list">
+    <div class="footer__container social">
+      <a class="footer__logo">
+        Погнали?
+        <img src="img/logo-mobile-blue@1x.png" alt="логотип сервиса" width="96" height="15">
+      </a>
+      <ul class="footer__social social__list">
         <li class="social__item">
           <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
         </li>

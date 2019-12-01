@@ -10,7 +10,7 @@
 }
 
 .page-header__main {
-  width: 100%;
+  width: 85%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,6 +19,10 @@
 
 .page-header__logo {
   font-size: 0;
+}
+
+.page-header__nav {
+  width: 20%;
 }
 
 .page-header__toggle {

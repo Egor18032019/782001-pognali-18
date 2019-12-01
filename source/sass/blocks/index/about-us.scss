@@ -2,7 +2,6 @@
   @include center;
   @include margin-auto;
   @include bgIndexColor;
-  height: 352px;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
   background-image: url("../img/about-mobile@1x.png");
@@ -26,4 +25,21 @@
 
 .about-us b {
   @include fontBS (16px, bold, #ffffff);
+  display: block;
+  margin-bottom: 84px;
+}
+
+.about-us__button {
+  @include fontBS (24px, bold, #1d2e5b);
+  align-self: flex-start;
+  display: none;
+  width: 45%;
+  min-height: 81px;
+  margin: 0;
+  margin-bottom: 88px;
+  border-radius: 10px;
+  background-color: $indexButton;
+  text-decoration: none;
+  vertical-align: middle;
+  padding-left: 25px;
 }

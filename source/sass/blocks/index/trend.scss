@@ -9,11 +9,15 @@
 }
 
 .trend-slogan {
-  width: 60%;
+  width: 85%;
 }
 
 .trend h2 {
   @include fontBS(24px, bold, #ff8d30);
+}
+
+.trend-slogan p {
+  @include fontBS (16px, 300, #444444)
 }
 
 .trend-list {
@@ -40,6 +44,9 @@
 }
 
 .trend__text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
   background-color: white;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -53,6 +60,7 @@
 
 .trend__text p {
   @include fontBS(21px, bold, #161c35);
+  width: 70%;
   margin-bottom: 5px;
 }
 

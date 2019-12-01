@@ -11,7 +11,7 @@
 .companions__slogan {
   @include center;
   align-items: flex-start;
-  width: 66%;
+  width: 85%;
   margin-bottom: 60px;
   margin-top: 71px;
 }
@@ -51,7 +51,7 @@
   text-align: center;
 }
 
-.companions-list > li {
+.companions-list .companions__item {
   width: 100%;
   display: flex;
   justify-content: center;

@@ -14,18 +14,24 @@
   font-size: 0;
 }
 
-.footer__social {
+.footer__container {
+  @include center;
   width: 100%;
 }
 
 .footer__made {
-  @include fontBS ($color:#444444);
+  @include fontBS (16px, normal, #444444);
   display: flex;
+  width: 80%;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 14px;
 }
 
 .footer__htmlacademy {
-  margin-left: 151px;
+  margin-left: auto;
+}
+
+.footer__social {
+  margin-bottom: 60px;
 }

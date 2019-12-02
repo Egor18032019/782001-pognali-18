@@ -13,12 +13,12 @@
   @include reset-list;
 }
 
-.traveler__list > li {
+.traveler__list .traveler__item {
   display: flex;
   width: 85%;
-  flex-direction: column;
   // align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between;
+  flex-wrap: wrap;
   list-style: none;
   margin-bottom: 10px;
   border-bottom-right-radius: 20px;
@@ -32,17 +32,10 @@
   padding-top: 15px;
 }
 
-.traveler__main {
-  width: 65%;
-  display: flex;
-  flex-wrap: wrap;
-  // flex-direction: column;
-  margin-bottom: 16px;
-}
-
-.traveler__main img {
+.traveler__item img {
   width: 50%;
   border-radius: 50%;
+  margin-bottom: 16px;
 }
 
 .traveler__name {
@@ -50,6 +43,7 @@
   width: 40%;
   min-height: 37px;
   display: flex;
+  align-self: baseline;
   margin: 0;
   padding: 0;
 }
@@ -68,12 +62,12 @@
 
 .traveler__heart {
   @include fontBS (14px, bold, #161c35);
-  width: 13%;
+  width: auto;
 }
 
 .traveler__item .traveler__tegs {
   @include fontBS (15px, normal, #444444);
-  width: 62%;
+  width: 99%;
   justify-content: start;
   margin-bottom: 20px;
 }
@@ -106,7 +100,7 @@
   width: 100%;
 }
 
-.traveler__transport p {
+.traveler__text {
   display: inline-block;
   width: 100%;
 }

@@ -278,6 +278,68 @@
     width: 60px;
     height: 60px;
   }
+
+  .traveler__transport {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .traveler__list--transport {
+    flex-direction: column;
+  }
+
+  .traveler__lvl {
+    margin: 0;
+  }
+
+  .traveler__transport .traveler__text {
+    display: none;
+  }
+
+  .traveler__countries {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .traveler__item img {
+    border-radius: 0;
+  }
+
+  // расположение внутри карточки
+
+  .traveler__main {
+    order: 0;
+    align-self: flex-start;
+    width: 30%;
+  }
+
+  .traveler__heart {
+    width: 10%;
+    order: 4;
+  }
+
+  .traveler__tegs {
+    align-self: flex-start;
+    order: 2;
+  }
+
+  .traveler__wish {
+    order: 6;
+  }
+
+  .traveler__transport {
+    order: 2;
+    width: auto;
+  }
+
+  .traveler__item .traveler__call {
+    order: 3;
+    width: auto;
+    align-self: baseline;
+    margin: 0;
+
+  }
+
 }
 
 

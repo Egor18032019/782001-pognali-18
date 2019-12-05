@@ -77,15 +77,20 @@
       </a>
       <nav class="page-header__nav">
         <button class="page-header__toggle">Показать меню</button>
-        <div class="page-header__wrapper visually-hidden">
+        <div class="page-header__wrapper">
           <ul class="page-header__list">
-            <li></li>
+            <li class="page-header__item"><a href="#">--------</a></li>
+            <li class="page-header__item"><a href="#">О сервисе</a></li>
+            <li class="page-header__item"><a href="#">Направления</a></li>
+            <li class="page-header__item"><a href="#">Попутчики</a></li>
           </ul>
         </div>
       </nav>
     </div>
     <div class="page-header__slogan">
-      <h2>В путешествие с крутыми попутчиками!</h2>
+      <div class="page-header__slogan--wrapper">
+        <h2>В путешествие с крутыми попутчиками!</h2>
+      </div>
     </div>
     <div class="page-header__autho autho">
       <a href="tel:+74954959595" class="autho__telephone autho-icon" title="Телефон">
@@ -131,132 +136,138 @@
     </section>
 
     <section class="about-us">
-      <div class="about-us__wrapper">
-        <h2>О сервисе</h2>
-        <p>Любое путешествие веселее
-          с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в
-          чужих. </p>
-        <b>А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</b>
-        <a href="catalog.html" class="about-us__button">
-          Подробнее
-        </a>
+      <div class="about-us__container container">
+        <div class="about-us__wrapper">
+          <h2>О сервисе</h2>
+          <p>Любое путешествие веселее
+            с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в
+            чужих. </p>
+          <b>А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</b>
+          <a href="catalog.html" class="about-us__button">
+            Подробнее
+          </a>
+        </div>
       </div>
     </section>
 
     <section class="trend">
-      <div class="trend-slogan">
-        <h2>Направления</h2>
-        <p>Мы не продаем туры и ничего не рекламируем.
-          Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
-        </p>
+      <div class="trend-wrapper">
+        <div class="trend-slogan">
+          <h2>Направления</h2>
+          <p>Мы не продаем туры и ничего не рекламируем.
+            Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
+          </p>
+        </div>
+        <ul class="trend-list">
+          <li class="trend__item trend--thailand">
+            <img src="img/thailand-mobile@1x.jpg" alt="Тайланд" width="100%" height="110">
+            <div class="trend__text">
+              <p>Тайланд </p>
+              <span>18321</span>
+              <small>Джунгли зовут!</small>
+              <!-- как добавить флаги ? -->
+            </div>
+          </li>
+          <li class="trend__item">
+            <img src="img/france-mobile@1x.jpg" alt="Франция" width="100%" height="110">
+            <div class="trend__text">
+              <p>Франция </p>
+              <span>12815</span>
+              <small>Трэ бьен, манифик!</small>
+            </div>
+          </li>
+          <li class="trend__item">
+            <img src="img/czech-mobile@1x.jpg" alt="Чехия" width="100%" height="110">
+            <div class="trend__text">
+              <p>Чехия</p>
+              <span>5326</span>
+              <small>Закоулки старой Европы</small>
+            </div>
+          </li>
+        </ul>
+        <a href="form.html" class="index-button trend__button">
+          <p>Показать все</p>
+        </a>
       </div>
-      <ul class="trend-list">
-        <li class="trend__item trend--thailand">
-          <img src="img/thailand-mobile@1x.jpg" alt="Тайланд" width="100%" height="110">
-          <div class="trend__text">
-            <p>Тайланд </p>
-            <span>18321</span>
-            <small>Джунгли зовут!</small>
-            <!-- как добавить флаги ? -->
-          </div>
-        </li>
-        <li class="trend__item">
-          <img src="img/france-mobile@1x.jpg" alt="Франция" width="100%" height="110">
-          <div class="trend__text">
-            <p>Франция </p>
-            <span>12815</span>
-            <small>Трэ бьен, манифик!</small>
-          </div>
-        </li>
-        <li class="trend__item">
-          <img src="img/czech-mobile@1x.jpg" alt="Чехия" width="100%" height="110">
-          <div class="trend__text">
-            <p>Чехия</p>
-            <span>5326</span>
-            <small>Закоулки старой Европы</small>
-          </div>
-        </li>
-      </ul>
-      <a href="form.html" class="index-button trend__button">
-        <p>Показать все</p>
-      </a>
     </section>
 
     <section class="companions">
-      <div class="companions__slogan">
-        <h2>Попутчики</h2>
-        <p>Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому
-          маршрут для хайкинга. </p>
-        <b>Теперь можно легко найти единомышленников!</b>
+      <div class="companions-wrapper">
+        <div class="companions__slogan">
+          <h2>Попутчики</h2>
+          <p>Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому
+            маршрут для хайкинга. </p>
+          <b>Теперь можно легко найти единомышленников!</b>
+        </div>
+        <ul class="companions-list">
+          <li class="companions__item">
+            <div class="companions__lvl">
+              <p>99</p>
+              <span>level</span>
+            </div>
+            <img src="img/firsova-mobile@1x.jpg" alt="Фото в бассейне" width="100%" height="270">
+
+            <div class="companions__personal">
+              <p class="visually-hidden">хочет посетить:</p>
+              <ul class="companions___countries">
+                <li class="companions___countries--shrilanka">ШриЛанка</li>
+                <li class="companions___countries--thailand">Тайланд</li>
+                <li class="companions___countries--seycheles">Сейшелы</li>
+              </ul>
+              <p>Таня Фирсова</p>
+              <ul class="companions__teg teg">
+                <li>#ЗОЖ </li>
+                <li>#ПП </li>
+                <li>#Фитнес</li>
+                <li> #пляж </li>
+                <li>#авокадо</li>
+                <li> #смузи</li>
+              </ul>
+              <p class="visually-hidden">Предпочитаемый транспорт:</p>
+              <ul class="companions__transport transport">
+                <li class="favorite">Самолет</li>
+                <li>Автобус</li>
+                <li>Велосипед</li>
+                <li>Пешие прогулки</li>
+              </ul>
+            </div>
+          </li>
+          <li class="companions__item">
+            <div class="companions__lvl">
+              <p>80</p>
+              <span>level</span>
+            </div>
+            <img src="img/demin-mobile@1x.jpg" alt="Зимнее фото" width="100%" height="270">
+
+            <div class="companions__personal">
+              <p class="visually-hidden">хочет посетить:</p>
+              <ul class="companions__countries">
+                <li class="companions___countries--belgium">Бельгия</li>
+                <li class="companions___countries--czech">Чехия</li>
+              </ul>
+              <p>Петя Демин</p>
+              <ul class="companions__list__teg teg">
+                <li>#бургер </li>
+                <li>#бар</li>
+                <li>#футбол</li>
+                <li>#концерт</li>
+                <li>#крафт</li>
+              </ul>
+              <p class="visually-hidden">Предпочитаемый транспорт:</p>
+              <ul class="companions__list__favorite transport">
+                <li class="favorite">Самолет</li>
+                <li class="favorite">Автобус</li>
+                <li>Велосипед</li>
+                <li class="favorite">Пешие прогулки</li>
+              </ul>
+            </div>
+
+          </li>
+        </ul>
+        <a href="form.html" class="index-button companions__button">
+          <p>Показать всех</p>
+        </a>
       </div>
-      <ul class="companions-list">
-        <li class="companions__item">
-          <div class="companions__lvl">
-            <p>99</p>
-            <span>level</span>
-          </div>
-          <img src="img/firsova-mobile@1x.jpg" alt="Фото в бассейне" width="100%" height="270">
-
-          <div class="companions__personal">
-            <p class="visually-hidden">хочет посетить:</p>
-            <ul class="companions___countries">
-              <li class="companions___countries--shrilanka">ШриЛанка</li>
-              <li class="companions___countries--thailand">Тайланд</li>
-              <li class="companions___countries--seycheles">Сейшелы</li>
-            </ul>
-            <p>Таня Фирсова</p>
-            <ul class="companions__teg teg">
-              <li>#ЗОЖ </li>
-              <li>#ПП </li>
-              <li>#Фитнес</li>
-              <li> #пляж </li>
-              <li>#авокадо</li>
-              <li> #смузи</li>
-            </ul>
-            <p class="visually-hidden">Предпочитаемый транспорт:</p>
-            <ul class="companions__transport transport">
-              <li class="favorite">Самолет</li>
-              <li>Автобус</li>
-              <li>Велосипед</li>
-              <li>Пешие прогулки</li>
-            </ul>
-          </div>
-        </li>
-        <li class="companions__item">
-          <div class="companions__lvl">
-            <p>80</p>
-            <span>level</span>
-          </div>
-          <img src="img/demin-mobile@1x.jpg" alt="Зимнее фото" width="100%" height="270">
-
-          <div class="companions__personal">
-            <p class="visually-hidden">хочет посетить:</p>
-            <ul class="companions__countries">
-              <li class="companions___countries--belgium">Бельгия</li>
-              <li class="companions___countries--czech">Чехия</li>
-            </ul>
-            <p>Петя Демин</p>
-            <ul class="companions__list__teg teg">
-              <li>#бургер </li>
-              <li>#бар</li>
-              <li>#футбол</li>
-              <li>#концерт</li>
-              <li>#крафт</li>
-            </ul>
-            <p class="visually-hidden">Предпочитаемый транспорт:</p>
-            <ul class="companions__list__favorite transport">
-              <li class="favorite">Самолет</li>
-              <li class="favorite">Автобус</li>
-              <li>Велосипед</li>
-              <li class="favorite">Пешие прогулки</li>
-            </ul>
-          </div>
-
-        </li>
-      </ul>
-      <a href="form.html" class="index-button">
-        <p>Показать всех</p>
-      </a>
     </section>
 
     <section class="rate">
@@ -312,7 +323,7 @@
       <div class="register__container">
         <form action="https://echo.htmlacademy.ru" method="GET">
           <input type="text" name="login" placeholder="E-mail">
-          <button>></button>
+          <button class="register__button"><span>Регистрация</span></button>
         </form>
         <p>Остались вопросы? Мы с радостью на них ответим!</p>
         <p class="register__contact">
@@ -333,7 +344,7 @@
         <p>
           <a href="#" class="trail__gprs ">ул. Большая Конюшенная, 19/8</a>
         </p>
-        <a href="#" class="trail__run index-button">Проложить маршрут</a>
+        <a href="#" class="trail__run index-button"><span>Проложить маршрут</span></a>
       </div>
       <a href="https://yandex.ru/maps/?um=constructor%3A8983dc39bf9f718b0af751a69bbe953fbe35870d8c2f381cae16f84b6ed2210d&source=constructorLinkя"
         target="_blank" class="trail__position">

@@ -1,6 +1,7 @@
 .trend {
   @include center;
   @include margin-auto;
+  background-color: #edeff6;
   padding-bottom: 30px;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
@@ -9,6 +10,12 @@
 }
 
 .trend-slogan {
+  width: 100%;
+}
+
+.trend-wrapper {
+  @include center;
+  display: flex;
   width: 85%;
 }
 
@@ -18,6 +25,17 @@
 
 .trend-slogan p {
   @include fontBS (16px, 300, #444444)
+}
+
+.trend-list::before {
+  position: absolute;
+  width: 141px;
+  height: 141px;
+  content: " ";
+  border-radius: 20px;
+  background-color: #e2e5f2;
+  // z-index: -1;
+  // не работает с этим
 }
 
 .trend-list {

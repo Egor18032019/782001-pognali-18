@@ -41,9 +41,10 @@
 
 .trail-map .trail__run {
   @include center;
+  flex-direction: row;
   width: 100%;
-  align-items: flex-start;
-  border-radius: 10px;
+  align-items: center;
+  border-radius: 20px;
   border: solid 3px #192144;
   margin-bottom: 35px;
 }

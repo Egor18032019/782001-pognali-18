@@ -4,10 +4,22 @@
   @include bgIndexColor;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
+}
+
+.about-us::before {
+  content: "";
+  position: absolute;
+  width: 292px;
+  height: 352px;
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 90%;
+  background-position: right;
+  background-size: 100%;
+}
+
+.about-us__container {
+  width: 85%;
+  z-index: 1;
 }
 
 .about-us__wrapper {
@@ -42,4 +54,15 @@
   text-decoration: none;
   vertical-align: middle;
   padding-left: 25px;
+  padding-right: 25px;
+}
+
+.about-us__button::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  min-height: 14px;
+  background-image: url("/img/triangle-arrow-right.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 }

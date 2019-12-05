@@ -14,7 +14,7 @@
   }
 
   .page-header__main {
-    width: 60%;
+    width: 66%;
   }
 
   .page-header__slogan h2 {
@@ -22,10 +22,14 @@
     font-size: 60px;
   }
 
+  .page-header__slogan--wrapper {
+    display: flex;
+    justify-content: center;
+  }
 
   .steps-quote {
     width: 85%;
-    margin-top: -257px;
+    margin-top: -30%;
   }
 
   .steps-quote q {
@@ -50,6 +54,42 @@
     padding-left: 31px;
   }
 
+  .about-us {
+    position: relative;
+  }
+
+  .about-us::before {
+    width: 313px;
+    height: 422px;
+    right: 50px;
+    // спросить у наставника - как сделать ярким
+    z-index: 3;
+  }
+
+  .about-us::after {
+    content: "";
+    position: absolute;
+    width: 308px;
+    height: 204px;
+    background-color: #141b3b;
+    top: 1035px;
+    right: 80px;
+  }
+
+  .about-us__container {
+    position: relative;
+  }
+
+  .about-us__container::before {
+    content: "";
+    position: absolute;
+    width: 688px;
+    height: 213px;
+    background-color: #141b3b;
+    z-index: -1;
+    left: 25px;
+  }
+
   .about-us h2 {
     font-size: 45px;
   }
@@ -71,15 +111,34 @@
   .about-us__wrapper .about-us__button {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+  }
+
+  .trend-slogan {
+    position: relative;
+  }
+
+  .trend-slogan::before {
+    position: absolute;
+    width: 289px;
+    height: 575px;
+    content: " ";
+    border-radius: 20px;
+    background-image: url("/img/flags-back@1x.png");
+    right: 95px;
+  }
+
+  .trend-list {
+    z-index: 1;
   }
 
   .trend h2 {
-    width: 57%;
+    width: 65%;
     font-size: 45px;
   }
 
   .trend-slogan p {
-    width: 65%;
+    width: 51%;
     font-size: 28px;
   }
 
@@ -137,7 +196,7 @@
     width: 47%;
   }
 
-  .rate__slogan h2 {
+  .rate h2 {
     font-size: 45px;
   }
 
@@ -173,9 +232,9 @@
     order: 3;
   }
 
-  .rate__prise {
-    background-color: #e2e5f2;
-  }
+  // .rate__prise {
+  //   background-color: #e2e5f2;
+  // }
 
   // Обговорить с наставников как можно сделать так цвет
   .rate-modal h2 {
@@ -214,7 +273,7 @@
     margin-bottom: 61px;
   }
 
-  .register__container button {
+  .register__button {
     width: 10%;
     margin-left: -10%;
     min-height: 81px;
@@ -337,15 +396,278 @@
     width: auto;
     align-self: baseline;
     margin: 0;
+  }
 
+  .filter-country__chosen {
+    font-size: 20px;
+  }
+
+  .filter-country__selection button {
+    font-size: 24px;
+    background-color: inherit;
+    border: none;
   }
 
 }
 
+// --------------------------для пк ------------------------
 
-// @media (min-width: $desktop-width) {
-//   body {
-//     background: url("../img/pognali-all-preview/pognali-index-desktop.jpg") no-repeat 50% 0;
-//     background-size: 1391px auto;
-//   }
-// }
+@media (min-width: $desktop-width) {
+  .page-header__wrapper {
+    display: block;
+    width: 80%;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+
+  .page-header__nav {
+    width: 70%;
+  }
+
+  .page-header__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // временоо
+  .page-header__logo img {
+    width: 200px;
+    height: 52px;
+  }
+
+  .page-header {
+    min-height: 100px;
+  }
+
+  .autho__button {
+    min-height: 50px;
+    font-size: 20px;
+  }
+
+  .autho-icon {
+    display: inline-block;
+    width: 50px;
+    min-height: 50px;
+  }
+
+  .page-header__slogan h2 {
+    width: 37%;
+    text-align: left;
+  }
+
+  .page-header__slogan {
+    min-height: 640px;
+    padding: 0;
+  }
+
+  .page-header__slogan--wrapper {
+    width: 85%;
+    justify-content: start;
+  }
+
+  .steps-quote {
+    width: 30%;
+    margin-left: auto;
+    margin-top: -28%;
+    margin-bottom: 117px;
+  }
+
+  .steps-quote q {
+    width: 75%;
+    font-size: 28px;
+  }
+
+  .steps-quote cite {
+    width: 75%;
+    font-size: 21px;
+  }
+
+  .steps__list {
+    flex-wrap: nowrap;
+  }
+
+  .steps-wrapper {
+    padding-bottom: 123px;
+  }
+
+  // высота времммено
+  .about-us {
+    min-height: 750px;
+  }
+
+  // картинка карточек
+  .about-us::before {
+    width: 630px;
+    height: 665px;
+    // спросить у наставника - как сделать ярким
+  }
+
+  .about-us::after {
+    width: 630px;
+    height: 204px;
+    top: 0;
+  }
+
+  .about-us__container::before {
+    width: 213px;
+    height: 213px;
+    left: 50px;
+  }
+
+  .about-us b {
+    font-size: 21px;
+  }
+
+  .about-us__wrapper {
+    width: 60%;
+  }
+
+  .about-us__wrapper p {
+    width: 81%;
+  }
+
+  .about-us__wrapper b {
+    width: 60%;
+  }
+
+  .trend {
+    // высота временно
+    min-height: 840px;
+  }
+
+  .trend h2 {
+    margin: 0;
+  }
+
+  .trend-wrapper {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .trend-slogan {
+    width: 35%;
+    align-self: flex-start;
+    order: 1;
+  }
+
+  .trend-list {
+    width: 40%;
+    order: 0;
+    margin: 0;
+  }
+
+  .trend .trend__button {
+    position: absolute;
+    width: 25%;
+    order: 3;
+    align-self: flex-end;
+    z-index: 1;
+    right: 255px;
+  }
+
+  // спросить у Даши - почему даже если оутлайн подключен последаним
+  // приходиться  назначать по два класа что бы переопреелить значения
+  .companions {
+    min-height: 840px;
+    // высота времмено
+  }
+
+  .companions__slogan {
+    margin: 0;
+  }
+
+  .companions__slogan p {
+    width: 75%;
+  }
+
+  .companions__slogan b {
+    width: 75%;
+  }
+
+  .companions-wrapper {
+    flex-direction: row;
+  }
+
+  .companions {
+    position: relative;
+  }
+
+  .companions .companions__button {
+    width: 20%;
+    align-self: flex-start;
+    margin: 0;
+    position: absolute;
+    bottom: 105px;
+    left: 110px;
+  }
+
+  .rate {
+    min-height: 840px;
+    // наверное всетаки убрать высоту
+    position: relative;
+  }
+
+  .rate__money {
+    order: 3;
+    align-self: center;
+    width: 198px;
+    height: 198px;
+  }
+
+  .rate__button {
+    order: 5;
+  }
+
+  // здесь будут стили для rate-modal____________
+
+  .register {
+    min-height: 840px;
+    // обговорить с Дашей про высоту
+  }
+
+  .register__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .register__button span {
+    @include fontBS (24px, bold, #1d2e5b);
+  }
+
+  //  почему маргином  я не могу толкать спан от псевдоэлемента ?
+
+  .register__button {
+    width: 22%;
+    margin-left: -22%;
+  }
+
+  .register__item--telephone::before,
+  .register__item--mail::before,
+  .trail__gprs::before {
+    width: 90px;
+    height: 90px;
+  }
+
+  .register__container .register__contact {
+    width: 50%;
+  }
+
+  .register__container input {
+    font-size: 28px;
+    padding-left: 35px;
+  }
+
+  .trail-map {
+    display: flex;
+  }
+
+  .trail-map .trail__run {
+    width: 50%;
+    flex-direction: row;
+    align-items: center;
+  }
+
+
+}

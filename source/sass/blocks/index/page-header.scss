@@ -9,6 +9,14 @@
   color: white;
 }
 
+.page-header__wrapper {
+  display: none;
+}
+
+.page-header__item a {
+  @include fontBS (20px,500, #ffffff)
+}
+
 .page-header__main {
   width: 85%;
   display: flex;

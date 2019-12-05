@@ -56,6 +56,8 @@ img {
 .index-button {
   @include margin-auto;
   @include fontBS(18px, bold, #1d2e5b);
+  display: flex;
+  align-items: center;
   width: 85%;
   min-height: 62px;
   border-radius: 10px;
@@ -63,7 +65,21 @@ img {
   text-decoration: none;
   vertical-align: middle;
   padding-left: 25px;
+  padding-right: 25px;
 }
+
+.index-button::after {
+  content: "";
+  width: 10px;
+  height: 14px;
+  display: inline-block;
+  background-image: url("../img/triangle-arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  margin-left: auto;
+}
+
 
 .form-button {
   @include margin-auto;

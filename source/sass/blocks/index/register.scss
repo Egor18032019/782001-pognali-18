@@ -39,6 +39,23 @@
   width: 85%;
 }
 
+.register__button span {
+  font-size: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.register__button::after {
+  content: "";
+  width: 10px;
+  height: 14px;
+  display: inline-block;
+  background-image: url("../img/triangle-arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
 .register__container p {
   @include fontBS(16px, 300, #ffffff);
   width: 100%;
@@ -96,15 +113,17 @@
 }
 
 .register__container input {
+  @include fontBS (16px, bold, rgba(68, 68, 68, 0.3));
   width: 98%;
   min-height: 62px;
+  padding-left: 10px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
-.register__container button {
+.register__button {
   width: 25%;
   margin-left: -25%;
   min-height: 62px;

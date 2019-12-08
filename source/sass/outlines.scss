@@ -338,9 +338,54 @@
     height: 60px;
   }
 
+  // _______________form html ______________
+
+  .traveler__item {
+    position: relative;
+    // align-items: flex-start;
+    justify-content: start;
+  }
+
+  .traveler__heart--wrapp {
+    position: relative;
+    order: 4;
+    margin-bottom: 55px;
+    left: 0;
+    top: 0;
+  }
+
+  .traveler__item .traveler__tegs {
+    width: 55%;
+    // margin-left: 200px;
+    // align-self: baseline;
+    // Только абсалют
+    position: absolute;
+    left: 220px;
+    top: 75px;
+  }
+
+  .traveler__item .traveler__call {
+    width: 40%;
+    margin-left: 200px;
+    align-self: baseline;
+    margin-right: 0;
+    // margin-left: 111px;
+  }
+
+  .traveler__lvl--wrapp {
+    width: 60px;
+    height: 60px;
+    order: 5;
+    margin-left: auto;
+    padding-top: 8px;
+  }
+
   .traveler__transport {
+    margin-left: auto;
     flex-direction: column;
     align-items: center;
+    order: -1;
+    width: auto;
   }
 
   .traveler__list--transport {
@@ -348,10 +393,18 @@
   }
 
   .traveler__lvl {
-    margin: 0;
+    padding: 0;
   }
 
   .traveler__transport .traveler__text {
+    display: none;
+  }
+
+  .traveler__lvl--eng {
+    display: inline-block;
+  }
+
+  .traveler__lvl--rus {
     display: none;
   }
 
@@ -361,10 +414,18 @@
   }
 
   .traveler__item img {
-    border-radius: 0;
+    position: absolute;
+    width: 190px;
+    left: 25px;
+    border-radius: 10px;
   }
 
-  // расположение внутри карточки
+  .traveler__name {
+    margin-bottom: 20px;
+    width: 55%;
+    margin-left: 200px;
+    order: -2;
+  }
 
   .traveler__main {
     order: 0;
@@ -377,25 +438,47 @@
     order: 4;
   }
 
-  .traveler__tegs {
-    align-self: flex-start;
-    order: 2;
-  }
-
   .traveler__wish {
     order: 6;
   }
 
-  .traveler__transport {
-    order: 2;
-    width: auto;
+  .traveler__toggle--list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  .traveler__item .traveler__call {
-    order: 3;
-    width: auto;
-    align-self: baseline;
-    margin: 0;
+  .traveler-wrapper__slider {
+    width: 20%;
+    margin-left: auto;
+  }
+
+  .traveler__btn--show-more .traveler__toggle--btns {
+    width: 688px;
+    height: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 54px;
+  }
+
+  .traveler__btn {
+    font-size: 20px;
+  }
+
+  .traveler__toggle--list li {
+    @include fontBS (20px, bold, #161c35);
+    width: 50px;
+    height: 50px;
+    // или в процентах ?
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+  }
+
+  .traveler__toggle--item {
+    border-radius: 50%;
+    background-color: #ffd74b;
   }
 
   .filter-country__chosen {
@@ -407,11 +490,9 @@
     background-color: inherit;
     border: none;
   }
-
 }
 
 // --------------------------для пк ------------------------
-
 @media (min-width: $desktop-width) {
   .page-header__wrapper {
     display: block;
@@ -572,6 +653,7 @@
   .companions {
     min-height: 840px;
     // высота времмено
+    position: relative;
   }
 
   .companions__slogan {
@@ -588,10 +670,6 @@
 
   .companions-wrapper {
     flex-direction: row;
-  }
-
-  .companions {
-    position: relative;
   }
 
   .companions .companions__button {
@@ -669,5 +747,87 @@
     align-items: center;
   }
 
+  // для файла form.html нужно делатьчто  отдельно или тут писать?__________________________
+  .main-selection {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 
+  .selection {
+    width: 25%;
+    align-self: baseline;
+  }
+
+  .traveler {
+    width: 65%;
+  }
+
+  .selection-companion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .traveler__item img {
+    width: 285px;
+    height: 285px;
+  }
+
+  .traveler__name {
+    width: 35%;
+    margin: 0;
+    margin-left: 285px;
+    align-self: baseline;
+  }
+
+  .traveler__heart--wrapp {
+    order: 5;
+  }
+
+  .traveler__item .traveler__tegs {
+    position: static;
+    width: 24%;
+    margin-left: 300px;
+    margin-right: auto;
+    order: 1;
+  }
+
+  .traveler__wish {
+    width: 25%;
+    order: 0;
+    margin-left: auto;
+  }
+
+  .traveler__countries {
+    flex-direction: column;
+  }
+
+  .traveler__transport {
+    width: 27%;
+    order: 5;
+    margin: 0;
+    flex-direction: row;
+  }
+
+
+  .traveler__list--transport {
+    flex-direction: row;
+    align-items: baseline;
+    align-self: flex-start;
+  }
+
+  .traveler__item .traveler__call {
+    order: 4;
+    width: 15%;
+    margin-left: 300px;
+  }
+
+  .selection-transport .selection-transport__list {
+    width: 100%;
+  }
+
+  .selection-lvl__controls {
+    margin: auto;
+  }
 }

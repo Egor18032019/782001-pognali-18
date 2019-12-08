@@ -146,10 +146,8 @@ img {
 }
 
 .slider__toggle {
-  width: 270px;
-  height: 40px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   border-radius: 20px;
   background-color: #ffffff;
@@ -158,8 +156,6 @@ img {
 .slider__toggle button {
   width: 10px;
   height: 20px;
-  margin-left: 60px;
-  margin-right: 60px;
   border: none;
   background-color: inherit;
   font-size: 0;

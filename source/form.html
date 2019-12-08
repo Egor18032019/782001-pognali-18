@@ -115,278 +115,339 @@
       </form>
     </section>
 
-    <section class="selection">
-      <form action="https://echo.htmlacademy.ru" method="GET" class="selection-companion">
-        <h2>Подберите идеального попутчика</h2>
+    <div class="main-selection">
+      <section class="selection">
+        <form action="https://echo.htmlacademy.ru" method="GET" class="selection-companion">
+          <h2>Подберите идеального попутчика</h2>
 
-        <fieldset class="selection-hobby">
-          <legend>Хобби</legend>
-          <p> Хобби</p>
-          <button class="selection__toggle selection-hobby--open">Раскрыть список</button>
-          <button class="selection__toggle selection-hobby--close visually-hidden">Скрыть список</button>
-          <!-- сделать чтобы небыло элемнтов элемнтов -->
-        </fieldset>
+          <fieldset class="selection-hobby">
+            <legend>Хобби</legend>
+            <p> Хобби</p>
+            <button class="selection__toggle selection-hobby--open">Раскрыть список</button>
+            <button class="selection__toggle selection-hobby--close visually-hidden">Скрыть список</button>
+            <!-- сделать чтобы небыло элемнтов элемнтов -->
+          </fieldset>
 
-        <fieldset class="selection-musiс">
-          <legend>Музыка</legend>
-          <input type="checkbox" id="music" name="music-group" class="selection-musiс__id">
-          <p class="selection-music__name">Музыка
-            <label class="selection-musiс--toggle" for="music">Открыть или Закрыть</label>
-          </p>
+          <fieldset class="selection-musiс">
+            <legend>Музыка</legend>
+            <input type="checkbox" id="music" name="music-group" class="selection-musiс__id">
+            <p class="selection-music__name">Музыка
+              <label class="selection-musiс--toggle" for="music">Открыть или Закрыть</label>
+            </p>
 
-          <ul class="selection-musiс__list">
-            <li>
-              <input class="check-input" type="checkbox" name="rock" id="hard-rock" checked>
-              <label class="check" for="hard-rock">Тяжелый рок</label>
-            </li>
-            <li>
-              <input class="check-input" type="checkbox" name="rock" id="rus-rap">
-              <label class="check" for="rus-rap">Русский рэп</label>
-            </li>
-            <li>
-              <input class="check-input" type="checkbox" name="rock" id="eurodance">
-              <label class="check" for="eurodance">Евроденс</label>
-            </li>
-          </ul>
-
-        </fieldset>
-
-        <fieldset class="selection-food">
-          <legend>Еда</legend>
-          <input type="checkbox" id="food" name="food-group" class="selection-food__id" checked>
-          <p class="selection-food__name">Еда
-            <label class="selection-food--toggle" for="food">Открыть или Закрыть</label>
-          </p>
-
-          <ul class="selection-food__list">
-            <li>
-              <input class="check-input" type="checkbox" name="food" id="meet" checked>
-              <label class="check" for="meet">Мясоед</label>
-            </li>
-            <li>
-              <input class="check-input" type="checkbox" name="food" id="product">
-              <label class="check" for="product">Сидит на ПП</label>
-            </li>
-            <li>
-              <input class="check-input" type="checkbox" name="food" id="cheese">
-              <label class="check" for="cheese">Веган-сыроед</label>
-            </li>
-          </ul>
-        </fieldset>
-
-        <fieldset class="selection-transport">
-          <input type="checkbox" id="transport" name="transport-group" class="selection-transport__id">
-          <p class="selection-transport__name">транспорт:
-            <label class="selection-transport--toggle" for="transport">Открыть или Закрыть</label>
-          </p>
-          <input type="checkbox" name="walks" id="walk" class="selection__walk">
-          <input type="checkbox" name="cycle" id="cycle" class="selection__cycle">
-          <input type="checkbox" name="air" id="air" class="selection__air">
-          <input type="checkbox" id="bus" name="bus" class="selection__bus">
-          <ul class="selection-transport__list transport">
-            <li class="selection__air--favorite">
-              <label for="air">Самолет</label>
-            </li>
-            <li class="selection__bus--favorite">
-              <label for="bus">Автобус</label>
-            </li>
-            <li class="selection__cycle--favorite">
-              <label for="cycle">Велосипед</label>
-            </li>
-            <li class="selection__walk--favorite">
-              <label for="walk">Пешие прогулки</label>
-            </li>
-          </ul>
-        </fieldset>
-
-        <fieldset class="selection-lvl">
-          <legend>Левел</legend>
-          <input type="checkbox" id="lvl" name="lvl-group" class="selection-lvl__id">
-          <p class="selection-lvl__name">Левел:
-            <label class="selection-lvl--toggle" for="lvl">Открыть или Закрыть</label>
-          </p>
-
-          <div class="selection-lvl__controls">
-            <div class="selection-lvl__range">
-              <div class="selection-lvl__scale">
-                <!-- а это заполненая линия -->
-                <div class="selection-lvl__bar"></div>
-                <!-- незаполненая линия -->
-              </div>
-              <div class="selection-lvl__range--toogle range--toogle-min">Выбрать минимальный уровень.</div>
-              <!-- ползунок слева -->
-              <div class="selection-lvl__range--toogle range--toogle-max">Выбрать максимальный уровень. </div>
-              <!-- ползунок справа -->
-            </div>
-            <!-- или ползунки в спаны и п обернуть ? -->
-
-            <div class="selection-lvl__input">
-              <input type="text" id="lvl-start" name="start" value="30">
-              <input type="text" id="lvl-end" name="end" value="100">
-            </div>
-          </div>
-        </fieldset>
-        <button class="form-button">Показать
-        </button>
-      </form>
-    </section>
-
-    <section class="traveler">
-      <h2 class="visually-hidden">Выбор попутчиков</h2>
-      <ul class="traveler__list">
-        <li class="traveler__item">
-
-          <img src="img/firsova-mobile@1x.jpg" alt="Фото попутчика.">
-            <p class="traveler__name">Таня Фирсова</p>
-            <span class="traveler__heart">1,5 M</span>
-            <!-- Спросить у наставника как его поставить правильно. не получается -->
-          <ul class="traveler__tegs teg">
-            <li>#ЗОЖ </li>
-            <li>#ПП </li>
-            <li>#Фитнес</li>
-            <li> #пляж </li>
-            <li>#авокадо</li>
-            <li> #смузи</li>
-          </ul>
-          <div class="traveler__wish">
-            <p class="traveler__text">хочет посетить:</p>
-            <ul class="traveler__countries">
-              <li class="country__item">Шри-Ланка</li>
-              <li class="country__item">Тайланд</li>
-              <li class="country__item">Сейшелы</li>
-            </ul>
-          </div>
-          <div class="traveler__transport">
-            <p class="traveler__text">транспорт: <span>левел:</span></p>
-            <ul class="traveler__list--transport transport">
-              <li class="favorite">
-                Самолет
+            <ul class="selection-musiс__list">
+              <li>
+                <input class="check-input" type="checkbox" name="rock" id="hard-rock" checked>
+                <label class="check" for="hard-rock">Тяжелый рок</label>
               </li>
-              <li>Автобус</li>
-              <li>Велосипед</li>
-              <li>Пешие прогулки</li>
+              <li>
+                <input class="check-input" type="checkbox" name="rock" id="rus-rap">
+                <label class="check" for="rus-rap">Русский рэп</label>
+              </li>
+              <li>
+                <input class="check-input" type="checkbox" name="rock" id="eurodance">
+                <label class="check" for="eurodance">Евроденс</label>
+              </li>
             </ul>
-            <p class="traveler__lvl">99</p>
-          </div>
-          <a href="#" class="traveler__call form-button ">Позвать</a>
-        </li>
 
-        <li class="traveler__item">
+          </fieldset>
+
+          <fieldset class="selection-food">
+            <legend>Еда</legend>
+            <input type="checkbox" id="food" name="food-group" class="selection-food__id" checked>
+            <p class="selection-food__name">Еда
+              <label class="selection-food--toggle" for="food">Открыть или Закрыть</label>
+            </p>
+
+            <ul class="selection-food__list">
+              <li>
+                <input class="check-input" type="checkbox" name="food" id="meet" checked>
+                <label class="check" for="meet">Мясоед</label>
+              </li>
+              <li>
+                <input class="check-input" type="checkbox" name="food" id="product">
+                <label class="check" for="product">Сидит на ПП</label>
+              </li>
+              <li>
+                <input class="check-input" type="checkbox" name="food" id="cheese">
+                <label class="check" for="cheese">Веган-сыроед</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="selection-transport">
+            <input type="checkbox" id="transport" name="transport-group" class="selection-transport__id">
+            <p class="selection-transport__name">транспорт:
+              <label class="selection-transport--toggle" for="transport">Открыть или Закрыть</label>
+            </p>
+            <input type="checkbox" name="walks" id="walk" class="selection__walk">
+            <input type="checkbox" name="cycle" id="cycle" class="selection__cycle">
+            <input type="checkbox" name="air" id="air" class="selection__air">
+            <input type="checkbox" id="bus" name="bus" class="selection__bus">
+            <ul class="selection-transport__list transport">
+              <li class="selection__air--favorite">
+                <label for="air">Самолет</label>
+              </li>
+              <li class="selection__bus--favorite">
+                <label for="bus">Автобус</label>
+              </li>
+              <li class="selection__cycle--favorite">
+                <label for="cycle">Велосипед</label>
+              </li>
+              <li class="selection__walk--favorite">
+                <label for="walk">Пешие прогулки</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="selection-lvl">
+            <legend>Левел</legend>
+            <input type="checkbox" id="lvl" name="lvl-group" class="selection-lvl__id">
+            <p class="selection-lvl__name">Левел:
+              <label class="selection-lvl--toggle" for="lvl">Открыть или Закрыть</label>
+            </p>
+
+            <div class="selection-lvl__controls">
+              <div class="selection-lvl__range">
+                <div class="selection-lvl__scale">
+                  <!-- а это заполненая линия -->
+                  <div class="selection-lvl__bar"></div>
+                  <!-- незаполненая линия -->
+                </div>
+                <div class="selection-lvl__range--toogle range--toogle-min">Выбрать минимальный уровень.</div>
+                <!-- ползунок слева -->
+                <div class="selection-lvl__range--toogle range--toogle-max">Выбрать максимальный уровень. </div>
+                <!-- ползунок справа -->
+              </div>
+              <!-- или ползунки в спаны и п обернуть ? -->
+
+              <div class="selection-lvl__input">
+                <input type="text" id="lvl-start" name="start" value="30">
+                <input type="text" id="lvl-end" name="end" value="100">
+              </div>
+            </div>
+          </fieldset>
+          <button class="form-button">Показать
+          </button>
+        </form>
+      </section>
+      <section class="traveler">
+        <h2 class="visually-hidden">Выбор попутчиков</h2>
+        <ul class="traveler__list">
+
+          <li class="traveler__item">
+
+            <img src="img/firsova-mobile@1x.jpg" alt="Фото попутчика.">
+            <h3 class="traveler__name">Таня Фирсова</h3>
+            <div class="traveler__heart--wrapp">
+              <button class="traveler__heart--btn">
+                <svg width="13" height="11" class="traveler__heart--btn-img" version="1.1" id="heart"
+                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 13 11" style="enable-background:new 0 0 13 11;" xml:space="preserve">
+                  <path d="M12,1c-1.3-1.3-3.4-1.3-4.7,0L6.5,1.7L5.7,1C4.4-0.3,2.3-0.3,1,1c-1.3,1.3-1.3,3.4,0,4.6l0.8,0.8L6.5,11l4.7-4.6L12,5.6
+              C13.3,4.3,13.3,2.2,12,1z"></path>
+                </svg>
+              </button>
+              <span class="traveler__heart">1,5 M</span>
+            </div>
+            <ul class="traveler__tegs teg traveler__tegs--firsova">
+              <li>#ЗОЖ </li>
+              <li>#ПП </li>
+              <li>#Фитнес</li>
+              <li> #пляж </li>
+              <li>#авокадо</li>
+              <li> #смузи</li>
+            </ul>
+            <div class="traveler__wish">
+              <p class="traveler__text">хочет посетить:</p>
+              <ul class="traveler__countries">
+                <li class="country__item">Шри-Ланка</li>
+                <li class="country__item">Тайланд</li>
+                <li class="country__item">Сейшелы</li>
+              </ul>
+            </div>
+            <div class="traveler__transport">
+              <p class="traveler__text">транспорт:</p>
+              <ul class="traveler__list--transport transport">
+                <li class="favorite">
+                  Самолет
+                </li>
+                <li>Автобус</li>
+                <li>Велосипед</li>
+                <li>Пешие прогулки</li>
+              </ul>
+            </div>
+            <div class="traveler__lvl--wrapp traveler__lvl--firsova">
+              <p class="traveler__lvl">99</p>
+              <span class="traveler__lvl--rus">левел:</span>
+              <span class="traveler__lvl--eng">level</span>
+            </div>
+            <button class="traveler__call traveler__call--firsova form-button ">Позвать!</button>
+          </li>
+
+          <li class="traveler__item">
 
             <img src="img/demin-mobile@1x.jpg" width="70px" height="70px" alt="Демин">
-            <p class="traveler__name"> Петя Демин</p>
-            <span class="traveler__heart">150</span>
-
-          <ul class="traveler__tegs teg">
-            <li>#бургер </li>
-            <li>#бар</li>
-            <li>#футбол</li>
-            <li>#концерт</li>
-            <li>#крафт</li>
-          </ul>
-          <div class="traveler__wish">
-            <p class="traveler__text">хочет посетить:</p>
-            <ul class="traveler__countries country">
-              <li class="country__item">Бельгия</li>
-              <li class="country__item">Чехия</li>
+            <h3 class="traveler__name"> Петя Демин</h3>
+            <div class="traveler__heart--wrapp traveler__heart--demin">
+              <button class="traveler__heart--btn">
+                <svg width="13" height="11" class="traveler__heart--btn-img" version="1.1" id="heart"
+                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 13 11" style="enable-background:new 0 0 13 11;" xml:space="preserve">
+                  <path d="M12,1c-1.3-1.3-3.4-1.3-4.7,0L6.5,1.7L5.7,1C4.4-0.3,2.3-0.3,1,1c-1.3,1.3-1.3,3.4,0,4.6l0.8,0.8L6.5,11l4.7-4.6L12,5.6
+              C13.3,4.3,13.3,2.2,12,1z"></path>
+                </svg>
+              </button>
+              <span class="traveler__heart">150</span>
+            </div>
+            <ul class="traveler__tegs teg traveler__tegs--demin">
+              <li>#бургер </li>
+              <li>#бар</li>
+              <li>#футбол</li>
+              <li>#концерт</li>
+              <li>#крафт</li>
             </ul>
-          </div>
-          <div class="traveler__transport">
-            <p class="traveler__text">транспорт: <span>левел:</span></p>
-            <ul class="traveler__list--transport transport">
-              <li class="favorite">Самолет</li>
-              <li class="favorite">Автобус</li>
-              <li>Велосипед</li>
-              <li class="favorite">Пешие прогулки</li>
-            </ul>
-            <p class="traveler__lvl">80</p>
-          </div>
-          <a href="#" class="traveler__call form-button ">Позвать</a>
-        </li>
-        <li class="traveler__item">
+            <div class="traveler__wish">
+              <p class="traveler__text">хочет посетить:</p>
+              <ul class="traveler__countries country">
+                <li class="country__item">Бельгия</li>
+                <li class="country__item">Чехия</li>
+              </ul>
+            </div>
+            <div class="traveler__transport">
+              <p class="traveler__text">транспорт:</p>
+              <ul class="traveler__list--transport transport">
+                <li class="favorite">Самолет</li>
+                <li class="favorite">Автобус</li>
+                <li>Велосипед</li>
+                <li class="favorite">Пешие прогулки</li>
+              </ul>
+            </div>
+            <div class="traveler__lvl--wrapp traveler__lvl--firsova">
+              <p class="traveler__lvl">80</p>
+              <span class="traveler__lvl--rus">левел:</span>
+              <span class="traveler__lvl--eng">level</span>
+            </div>
+            <a href="#" class="traveler__call form-button ">Позвать!</a>
+          </li>
 
+          <li class="traveler__item">
             <img src="img/smolov-mobile@1x.jpg" width="70px" height="70px" alt="Фото попутчика.">
             <p class="traveler__name">Марк Смолов</p>
-            <span class="traveler__heart">1700</span>
+            <div class="traveler__heart--wrapp">
+              <button class="traveler__heart--btn">
+                <svg width="13" height="11" class="traveler__heart--btn-img" version="1.1" id="heart"
+                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 13 11" style="enable-background:new 0 0 13 11;" xml:space="preserve">
+                  <path d="M12,1c-1.3-1.3-3.4-1.3-4.7,0L6.5,1.7L5.7,1C4.4-0.3,2.3-0.3,1,1c-1.3,1.3-1.3,3.4,0,4.6l0.8,0.8L6.5,11l4.7-4.6L12,5.6
+              C13.3,4.3,13.3,2.2,12,1z"></path>
+                </svg>
+              </button>
+              <span class="traveler__heart">1700</span>
+            </div>
+            <ul class="traveler__tegs teg">
+              <li>#рэп </li>
+              <li>#тату</li>
+              <li>#хайпбист</li>
+              <li> #кроссовки </li>
+              <li>#суприм</li>
+            </ul>
+            <div class="traveler__wish">
+              <p class="traveler__text">хочет посетить:</p>
+              <ul class="traveler__countries country">
+                <li class="country__item">США</li>
+                <li class="country__item">Австралия</li>
+                <li class="country__item">Доминикана</li>
+              </ul>
+            </div>
+            <div class="traveler__transport">
+              <p class="traveler__text">транспорт:</p>
+              <ul class="traveler__list--transport transport">
+                <li class="favorite">Самолет</li>
+                <li>Автобус</li>
+                <li class="favorite">Велосипед</li>
+                <li>Пешие прогулки</li>
+              </ul>
+            </div>
+            <div class="traveler__lvl--wrapp">
+              <p class="traveler__lvl">25</p>
+              <span class="traveler__lvl--rus">левел:</span>
+              <span class="traveler__lvl--eng">level</span>
+            </div>
+            <a href="#" class="traveler__call form-button ">Позвать</a>
+          </li>
 
-          <ul class="traveler__tegs teg">
-            <li>#рэп </li>
-            <li>#тату</li>
-            <li>#хайпбист</li>
-            <li> #кроссовки </li>
-            <li>#суприм</li>
-          </ul>
-          <div class="traveler__wish">
-            <p class="traveler__text">хочет посетить:</p>
-            <ul class="traveler__countries country">
-              <li class="country__item">США</li>
-              <li class="country__item">Австралия</li>
-              <li class="country__item">Доминикана</li>
+          <li class="traveler__item">
+            <img src="img/rogovaya-mobile@1x.jpg" width="70" height="70" alt="Фото попутчика.">
+            <p class="traveler__name traveler__name--online">Лариса Роговая</p>
+            <div class="traveler__heart--wrapp traveler__heart--firsova">
+              <button class="traveler__heart--btn">
+                <svg width="13" height="11" class="traveler__heart--btn-img" version="1.1" id="heart"
+                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 13 11" style="enable-background:new 0 0 13 11;" xml:space="preserve">
+                  <path d="M12,1c-1.3-1.3-3.4-1.3-4.7,0L6.5,1.7L5.7,1C4.4-0.3,2.3-0.3,1,1c-1.3,1.3-1.3,3.4,0,4.6l0.8,0.8L6.5,11l4.7-4.6L12,5.6
+              C13.3,4.3,13.3,2.2,12,1z"></path>
+                </svg>
+              </button>
+              <span class="traveler__heart">23</span>
+            </div>
+            <ul class="traveler__tegs teg">
+              <li>#образования </li>
+              <li>#карьера</li>
+              <li>#учеба</li>
+              <li>#линкедин</li>
             </ul>
-          </div>
-          <div class="traveler__transport">
-            <p class="traveler__text">транспорт: <span>левел:</span></p>
-            <ul class="traveler__list--transport transport">
-              <li class="favorite">Самолет</li>
-              <li>Автобус</li>
-              <li class="favorite">Велосипед</li>
-              <li>Пешие прогулки</li>
-            </ul>
-            <p class="traveler__lvl">25</p>
-          </div>
-          <a href="#" class="traveler__call form-button ">Позвать</a>
-        </li>
-        <li class="traveler__item">
+            <div class="traveler__wish">
+              <p class="traveler__text">хочет посетить:</p>
+              <ul class="traveler__list__countries country">
+                <li class="country__item">Великобритания</li>
+                <li class="country__item">Германия</li>
+              </ul>
+            </div>
+            <div class="traveler__transport">
+              <p class="traveler__text">транспорт:</p>
+              <ul class="traveler__list--transport transport">
+                <li class="favorite">Самолет</li>
+                <li class="favorite">Автобус</li>
+                <li>Велосипед</li>
+                <li>Пешие прогулки</li>
+              </ul>
+            </div>
+            <div class="traveler__lvl--wrapp">
+              <p class="traveler__lvl">23</p>
+              <span class="traveler__lvl--rus">левел:</span>
+              <span class="traveler__lvl--eng">level</span>
+            </div>
+            <a href="#" class="traveler__call form-button ">Позвать!</a>
+          </li>
+        </ul>
 
-            <img src="img/rogovaya-mobile@1x.jpg" width="70px" height="70px" alt="Фото попутчика.">
-            <p class="traveler__name">Лариса Роговая</p>
-            <span class="traveler__heart">23</span>
-
-          <ul class="traveler__tegs teg">
-            <li>#образования </li>
-            <li>#карьера</li>
-            <li>#учеба</li>
-            <li>#линкедин</li>
-          </ul>
-          <div class="traveler__wish">
-            <p class="traveler__text">хочет посетить:</p>
-            <ul class="traveler__list__countries country">
-              <li class="country__item">Великобритания</li>
-              <li class="country__item">Германия</li>
+        <div class="traveler__btn--show-more">
+          <button class="traveler__btn">Показать ещё</button>
+          <div class="traveler__toggle--btns slider__toggle">
+            <ul class="traveler__toggle--list">
+              <li class="traveler__toggle--item">1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
             </ul>
+            <div class="traveler-wrapper__slider">
+              <button class="slider__toggle--left">Влево</button>
+              <button class="slider__toggle--right">Вправо</button>
+            </div>
           </div>
-          <div class="traveler__transport">
-            <p class="traveler__text">транспорт: <span>левел:</span></p>
-            <ul class="traveler__list--transport transport">
-              <li class="favorite">Самолет</li>
-              <li class="favorite">Автобус</li>
-              <li>Велосипед</li>
-              <li>Пешие прогулки</li>
-            </ul>
-            <p class="traveler__lvl">50</p>
-            <span class="traveler-item__heart">23</span>
-          </div>
-          <a href="#" class="traveler__call form-button ">Позвать</a>
-        </li>
-      </ul>
-      <div class="traveler__btn--show-more">
-        <button class="traveler__btn">Показать ещё</button>
-        <div class="traveler__toggle-btns slider__toggle">
-          <button class="slider__toggle--left">Влево</button>
-          <button class="slider__toggle--right">Вправо</button>
         </div>
-      </div>
-    </section>
-
+      </section>
+    </div>
   </main>
 
   <footer class="footer">
-    <a class="footer__logo" href="index.html">
-      Погнали?
-      <img src="img/logo-mobile-blue@1x.png" alt="логотип сервиса" width="100" height="19">
-    </a>
-    <div class="footer__social social">
-      <ul class="social__list">
+    <div class="footer__container social">
+      <a class="footer__logo">
+        Погнали?
+        <img src="img/logo-mobile-blue@1x.png" alt="логотип сервиса" width="96" height="15">
+      </a>
+      <ul class="footer__social social__list">
         <li class="social__item">
           <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
         </li>

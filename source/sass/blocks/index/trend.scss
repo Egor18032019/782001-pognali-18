@@ -6,7 +6,6 @@
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
   // overflow: hidden;
-  padding-top: 72px;
 }
 
 .trend-slogan {
@@ -15,8 +14,8 @@
 
 .trend-wrapper {
   @include center;
-  display: flex;
   width: 85%;
+  padding-top: 72px;
 }
 
 .trend h2 {

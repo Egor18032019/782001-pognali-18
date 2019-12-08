@@ -9,6 +9,14 @@
     margin-bottom: 0;
   }
 
+  .page-header__slogan {
+    padding-bottom: 586px;
+    background-image: url("../img/traveller-illustration-tablet@1x.png"), url("../img/globe-back-tablet@1x.jpg");
+    background-position: bottom 140px right 112px, bottom center;
+    background-size: 372px 451px, auto 610px;
+    background-repeat: no-repeat, no-repeat;
+  }
+
   .autho-icon {
     display: none;
   }
@@ -66,16 +74,6 @@
     z-index: 3;
   }
 
-  .about-us::after {
-    content: "";
-    position: absolute;
-    width: 308px;
-    height: 204px;
-    background-color: #141b3b;
-    top: 1035px;
-    right: 80px;
-  }
-
   .about-us__container {
     position: relative;
   }
@@ -114,19 +112,23 @@
     justify-content: space-between;
   }
 
-  .trend-slogan {
+  .trend-wrapper {
     position: relative;
+    background-image: url("../img/flags-back@1x.png");
+    background-repeat: no-repeat;
+    background-position: top 80px right 40px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
   }
 
-  .trend-slogan::before {
-    position: absolute;
-    width: 289px;
-    height: 575px;
-    content: " ";
-    border-radius: 20px;
-    background-image: url("/img/flags-back@1x.png");
-    right: 95px;
-  }
+  // .trend-slogan::before {
+  //   position: absolute;
+  //   width: 289px;
+  //   height: 575px;
+  //   content: " ";
+  //   background-image: url("/img/flags-back@1x.png");
+  //   right: 95px;
+  // }
 
   .trend-list {
     z-index: 1;
@@ -162,6 +164,8 @@
     width: 33%;
     order: 2;
   }
+
+  // обсудить с Дашей ак должен меняться рисунок
 
   .trend__text {
     flex-direction: column;
@@ -221,10 +225,13 @@
     display: inline-block;
     width: 67px;
     height: 67px;
-    background-image: url("../img/rates@1x.png");
+    background-image: url("../img/business.svg");
     background-repeat: no-repeat;
-    background-size: 50%;
+    background-size: 30%;
     background-position: center;
+    border-radius: 50%;
+    background-color: #e2e5f2;
+    // Спросить у Даши -как сделать его синим
   }
 
   .rate__money {
@@ -339,6 +346,15 @@
   }
 
   // _______________form html ______________
+  .form-main__slogan {
+    display: flex;
+    justify-content: space-between;
+    padding: 65px 129px;
+  }
+
+  .form-main__home-link {
+    display: block;
+  }
 
   .traveler__item {
     position: relative;
@@ -499,6 +515,12 @@
     width: 80%;
   }
 
+  .page-header__slogan {
+    background-image: url("../img/traveller-illustration-desktop@1x.png"), url("../img/globe-back-desktop@1x.jpg");
+    background-position: bottom right 480px, bottom left -180px;
+    background-size: 431px 640px, 1800px 750px;
+  }
+
   .page-header__toggle {
     display: none;
   }
@@ -539,6 +561,7 @@
   }
 
   .page-header__slogan {
+    justify-content: start;
     min-height: 640px;
     padding: 0;
   }
@@ -551,7 +574,7 @@
   .steps-quote {
     width: 30%;
     margin-left: auto;
-    margin-top: -28%;
+    margin-top: -35%;
     margin-bottom: 117px;
   }
 
@@ -576,6 +599,10 @@
   // высота времммено
   .about-us {
     min-height: 750px;
+  }
+
+  .about-us::before {
+    background-image: url("../img/about-desktop@1x.png");
   }
 
   // картинка карточек
@@ -613,18 +640,15 @@
     width: 60%;
   }
 
-  .trend {
-    // высота временно
-    min-height: 840px;
-  }
-
   .trend h2 {
     margin: 0;
   }
 
   .trend-wrapper {
+    padding-top: 161px;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-evenly;
   }
 
   .trend-slogan {
@@ -633,10 +657,15 @@
     order: 1;
   }
 
+  .trend-slogan p {
+    width: 85%;
+  }
+
   .trend-list {
     width: 40%;
     order: 0;
     margin: 0;
+    margin-bottom: 149px;
   }
 
   .trend .trend__button {
@@ -646,6 +675,7 @@
     align-self: flex-end;
     z-index: 1;
     right: 255px;
+    bottom: 140px;
   }
 
   // спросить у Даши - почему даже если оутлайн подключен последаним
@@ -712,6 +742,8 @@
 
   .register__button span {
     @include fontBS (24px, bold, #1d2e5b);
+    display: inline-block;
+    width: 85%;
   }
 
   //  почему маргином  я не могу толкать спан от псевдоэлемента ?
@@ -733,7 +765,7 @@
   }
 
   .register__container input {
-    font-size: 28px;
+    font-size: 22px;
     padding-left: 35px;
   }
 

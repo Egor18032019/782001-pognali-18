@@ -12,3 +12,16 @@
   @include fontBS (36px, bold, #ffffff);
   margin: 0;
 }
+
+.form-main__home-link {
+  @include reset-list;
+  @include fontBS(20px, 700, #ffffff);
+  display: none;
+  padding-right: 61px;
+  text-transform: uppercase;
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 32px 16px;
+  background-image: url("../img/return.svg");
+  // Как залить свг  ?
+}

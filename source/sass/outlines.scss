@@ -9,24 +9,45 @@
     margin-bottom: 0;
   }
 
+  .page-header__slogan {
+    padding-bottom: 586px;
+    background-image: url("../img/traveller-illustration-tablet@1x.png"), url("../img/globe-back-tablet@1x.jpg");
+    background-position: bottom 140px right 112px, bottom center;
+    background-size: 372px 451px, auto 610px;
+    background-repeat: no-repeat, no-repeat;
+  }
+
   .autho-icon {
     display: none;
   }
 
   .page-header__main {
-    width: 60%;
+    width: 66%;
   }
 
-  .steps-header__slogan h2 {
+  .page-header__slogan h2 {
+    width: 60%;
     font-size: 60px;
   }
 
-  .steps-quote q {
-    font-size: 28px;
+  .page-header__slogan--wrapper {
+    display: flex;
+    justify-content: center;
   }
 
   .steps-quote {
-    margin-top: -310px;
+    width: 85%;
+    margin-top: -30%;
+  }
+
+  .steps-quote q {
+    width: 50%;
+    font-size: 28px;
+  }
+
+  .steps-quote cite {
+    width: 50%;
+    font-size: 21px;
   }
 
   .steps__list {
@@ -36,13 +57,803 @@
 
   .steps__list .steps__item {
     width: 50%;
+    height: 140px;
+    font-size: 24px;
+    padding-left: 31px;
+  }
+
+  .about-us {
+    position: relative;
+  }
+
+  .about-us::before {
+    width: 313px;
+    height: 422px;
+    right: 50px;
+    // спросить у наставника - как сделать ярким
+    z-index: 3;
+  }
+
+  .about-us__container {
+    position: relative;
+  }
+
+  .about-us__container::before {
+    content: "";
+    position: absolute;
+    width: 688px;
+    height: 213px;
+    background-color: #141b3b;
+    z-index: -1;
+    left: 25px;
+  }
+
+  .about-us h2 {
+    font-size: 45px;
+  }
+
+  .about-us p {
+    width: 65%;
+    font-size: 28px;
+  }
+
+  .about-us b {
+    width: 65%;
+    font-size: 21px;
+  }
+
+  .about-us__wrapper {
+    margin-bottom: 53px;
+  }
+
+  .about-us__wrapper .about-us__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .trend-wrapper {
+    position: relative;
+    background-image: url("../img/flags-back@1x.png");
+    background-repeat: no-repeat;
+    background-position: top 80px right 40px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+  }
+
+  // .trend-slogan::before {
+  //   position: absolute;
+  //   width: 289px;
+  //   height: 575px;
+  //   content: " ";
+  //   background-image: url("/img/flags-back@1x.png");
+  //   right: 95px;
+  // }
+
+  .trend-list {
+    z-index: 1;
+  }
+
+  .trend h2 {
+    width: 65%;
+    font-size: 45px;
+  }
+
+  .trend-slogan p {
+    width: 51%;
+    font-size: 28px;
+  }
+
+  .trend__text p {
+    font-size: 24px;
+  }
+
+  .trend__text small {
+    font-size: 20px;
+  }
+
+  .trend__text span {
+    font-size: 20px;
+  }
+
+  .trend__item {
+    display: flex;
+  }
+
+  .trend__item img {
+    width: 33%;
+    order: 2;
+  }
+
+  // обсудить с Дашей ак должен меняться рисунок
+
+  .trend__text {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .trend__button {
+    font-size: 24px;
+  }
+
+  .companions__slogan h2 {
+    font-size: 45px;
+  }
+
+  .companions__slogan p {
+    width: 65%;
+    font-size: 28px;
+  }
+
+  .companions__slogan b {
+    width: 45%;
+    font-size: 21px;
+  }
+
+  .companions-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .companions-list .companions__item {
+    width: 47%;
+  }
+
+  .rate h2 {
+    font-size: 45px;
+  }
+
+  .rate__list li {
+    font-size: 28px;
+    justify-content: space-between;
+  }
+
+  .rate .rate__button {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: #132576;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  // немогу найти такую в картинку
+  .rate__button::before {
+    content: "";
+    display: inline-block;
+    width: 67px;
+    height: 67px;
+    background-image: url("../img/business.svg");
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: center;
+    border-radius: 50%;
+    background-color: #e2e5f2;
+    // Спросить у Даши -как сделать его синим
+  }
+
+  .rate__money {
+    align-self: baseline;
+    order: 3;
+  }
+
+  // .rate__prise {
+  //   background-color: #e2e5f2;
+  // }
+
+  // Обговорить с наставников как можно сделать так цвет
+  .rate-modal h2 {
+    font-size: 45px;
+  }
+
+  .rate-modal a {
+    font-size: 22px;
+    margin-bottom: 35px;
+  }
+
+  .rate-modal__price {
+    float: right;
+  }
+
+  .rate-modal__close {
+    font-size: 24px;
+    background-color: #f3f4f8;
+    min-height: 108px;
+  }
+
+  .register__slogan h2 {
+    font-size: 45px;
+  }
+
+  .register__slogan p {
+    font-size: 28px;
+  }
+
+  .register__slogan b {
+    font-size: 28px;
+    margin-bottom: 67px;
+  }
+
+  .register__container form {
+    margin-bottom: 61px;
+  }
+
+  .register__button {
+    width: 10%;
+    margin-left: -10%;
+    min-height: 81px;
+  }
+
+  .register__container input {
+    min-height: 81px;
+  }
+
+  .register__container p {
+    font-size: 28px;
+    width: 100%;
+  }
+
+  .register__item {
+    font-size: 28px;
+    width: 100%;
+  }
+
+  .register__item--telephone::before,
+  .register__item--mail::before,
+  .trail__gprs::before {
+    width: 67px;
+    height: 67px;
+  }
+
+  .trail__gprs {
+    font-size: 28px;
+  }
+
+  .trail-map .trail__run {
+    font-size: 24px;
+    min-height: 81px;
+  }
+
+  section .index-button {
+    min-height: 81px;
+  }
+
+  .footer__made p {
+    font-size: 20px;
+  }
+
+  .footer__container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 46px;
+    padding-top: 46px;
+  }
+
+  .footer__social {
+    margin-bottom: 0;
+  }
+
+  .footer__made {
+    width: 21%;
+  }
+
+  .social__item a {
+    width: 60px;
+    height: 60px;
+  }
+
+  // _______________form html ______________
+  .form-main__slogan {
+    display: flex;
+    justify-content: space-between;
+    padding: 65px 129px;
+  }
+
+  .form-main__home-link {
+    display: block;
+  }
+
+  .traveler__item {
+    position: relative;
+    // align-items: flex-start;
+    justify-content: start;
+  }
+
+  .traveler__heart--wrapp {
+    position: relative;
+    order: 4;
+    margin-bottom: 55px;
+    left: 0;
+    top: 0;
+  }
+
+  .traveler__item .traveler__tegs {
+    width: 55%;
+    // margin-left: 200px;
+    // align-self: baseline;
+    // Только абсалют
+    position: absolute;
+    left: 220px;
+    top: 75px;
+  }
+
+  .traveler__item .traveler__call {
+    width: 40%;
+    margin-left: 200px;
+    align-self: baseline;
+    margin-right: 0;
+    // margin-left: 111px;
+  }
+
+  .traveler__lvl--wrapp {
+    width: 60px;
+    height: 60px;
+    order: 5;
+    margin-left: auto;
+    padding-top: 8px;
+  }
+
+  .traveler__transport {
+    margin-left: auto;
+    flex-direction: column;
+    align-items: center;
+    order: -1;
+    width: auto;
+  }
+
+  .traveler__list--transport {
+    flex-direction: column;
+  }
+
+  .traveler__lvl {
+    padding: 0;
+  }
+
+  .traveler__transport .traveler__text {
+    display: none;
+  }
+
+  .traveler__lvl--eng {
+    display: inline-block;
+  }
+
+  .traveler__lvl--rus {
+    display: none;
+  }
+
+  .traveler__countries {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .traveler__item img {
+    position: absolute;
+    width: 190px;
+    left: 25px;
+    border-radius: 10px;
+  }
+
+  .traveler__name {
+    margin-bottom: 20px;
+    width: 55%;
+    margin-left: 200px;
+    order: -2;
+  }
+
+  .traveler__main {
+    order: 0;
+    align-self: flex-start;
+    width: 30%;
+  }
+
+  .traveler__heart {
+    width: 10%;
+    order: 4;
+  }
+
+  .traveler__wish {
+    order: 6;
+  }
+
+  .traveler__toggle--list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .traveler-wrapper__slider {
+    width: 20%;
+    margin-left: auto;
+  }
+
+  .traveler__btn--show-more .traveler__toggle--btns {
+    width: 688px;
+    height: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 54px;
+  }
+
+  .traveler__btn {
+    font-size: 20px;
+  }
+
+  .traveler__toggle--list li {
+    @include fontBS (20px, bold, #161c35);
+    width: 50px;
+    height: 50px;
+    // или в процентах ?
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+  }
+
+  .traveler__toggle--item {
+    border-radius: 50%;
+    background-color: #ffd74b;
+  }
+
+  .filter-country__chosen {
+    font-size: 20px;
+  }
+
+  .filter-country__selection button {
+    font-size: 24px;
+    background-color: inherit;
+    border: none;
   }
 }
 
+// --------------------------для пк ------------------------
+@media (min-width: $desktop-width) {
+  .page-header__wrapper {
+    display: block;
+    width: 80%;
+  }
 
-// @media (min-width: $desktop-width) {
-//   body {
-//     background: url("../img/pognali-all-preview/pognali-index-desktop.jpg") no-repeat 50% 0;
-//     background-size: 1391px auto;
-//   }
-// }
+  .page-header__slogan {
+    background-image: url("../img/traveller-illustration-desktop@1x.png"), url("../img/globe-back-desktop@1x.jpg");
+    background-position: bottom right 480px, bottom left -180px;
+    background-size: 431px 640px, 1800px 750px;
+    justify-content: start;
+    min-height: 640px;
+    padding: 0;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+
+  .page-header__nav {
+    width: 70%;
+  }
+
+  .page-header__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // временоо
+  .page-header__logo img {
+    width: 200px;
+    height: 52px;
+  }
+
+  .page-header {
+    min-height: 100px;
+  }
+
+  .autho__button {
+    min-height: 50px;
+    font-size: 20px;
+  }
+
+  .autho-icon {
+    display: inline-block;
+    width: 50px;
+    min-height: 50px;
+  }
+
+  .page-header__slogan h2 {
+    width: 37%;
+    text-align: left;
+  }
+
+  .page-header__slogan--wrapper {
+    width: 85%;
+    justify-content: start;
+  }
+
+  .steps-quote {
+    width: 30%;
+    margin-left: auto;
+    margin-top: -35%;
+    margin-bottom: 117px;
+  }
+
+  .steps-quote q {
+    width: 75%;
+    font-size: 28px;
+  }
+
+  .steps-quote cite {
+    width: 75%;
+    font-size: 21px;
+  }
+
+  .steps__list {
+    flex-wrap: nowrap;
+  }
+
+  .steps-wrapper {
+    padding-bottom: 123px;
+  }
+
+  // высота времммено
+  .about-us {
+    min-height: 750px;
+  }
+
+  // картинка карточек
+  .about-us::before {
+    background-image: url("../img/about-desktop@1x.png");
+    width: 630px;
+    height: 665px;
+    // спросить у наставника - как сделать ярким
+  }
+
+  .about-us::after {
+    width: 630px;
+    height: 204px;
+    top: 0;
+  }
+
+  .about-us__container::before {
+    width: 213px;
+    height: 213px;
+    left: 50px;
+  }
+
+  .about-us b {
+    font-size: 21px;
+  }
+
+  .about-us__wrapper {
+    width: 60%;
+  }
+
+  .about-us__wrapper p {
+    width: 81%;
+  }
+
+  .about-us__wrapper b {
+    width: 60%;
+  }
+
+  .trend h2 {
+    margin: 0;
+  }
+
+  .trend-wrapper {
+    padding-top: 161px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .trend-slogan {
+    width: 35%;
+    align-self: flex-start;
+    order: 1;
+  }
+
+  .trend-slogan p {
+    width: 85%;
+  }
+
+  .trend-list {
+    width: 40%;
+    order: 0;
+    margin: 0;
+    margin-bottom: 149px;
+  }
+
+  .trend .trend__button {
+    position: absolute;
+    width: 25%;
+    order: 3;
+    align-self: flex-end;
+    z-index: 1;
+    right: 255px;
+    bottom: 140px;
+  }
+
+  // спросить у Даши - почему даже если оутлайн подключен последаним
+  // приходиться  назначать по два класа что бы переопреелить значения
+  .companions {
+    min-height: 840px;
+    // высота времмено
+    position: relative;
+  }
+
+  .companions__slogan {
+    margin: 0;
+  }
+
+  .companions__slogan p {
+    width: 75%;
+  }
+
+  .companions__slogan b {
+    width: 75%;
+  }
+
+  .companions-wrapper {
+    flex-direction: row;
+  }
+
+  .companions .companions__button {
+    width: 20%;
+    align-self: flex-start;
+    margin: 0;
+    position: absolute;
+    bottom: 105px;
+    left: 110px;
+  }
+
+  .rate {
+    min-height: 840px;
+    // наверное всетаки убрать высоту
+    position: relative;
+  }
+
+  .rate__money {
+    order: 3;
+    align-self: center;
+    width: 198px;
+    height: 198px;
+  }
+
+  .rate__button {
+    order: 5;
+  }
+
+  // здесь будут стили для rate-modal____________
+
+  .register {
+    min-height: 840px;
+    // обговорить с Дашей про высоту
+  }
+
+  .register__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .register__button span {
+    @include fontBS (24px, bold, #1d2e5b);
+    display: inline-block;
+    width: 85%;
+  }
+
+  //  почему маргином  я не могу толкать спан от псевдоэлемента ?
+
+  .register__button {
+    width: 22%;
+    margin-left: -22%;
+  }
+
+  .register__item--telephone::before,
+  .register__item--mail::before,
+  .trail__gprs::before {
+    width: 90px;
+    height: 90px;
+  }
+
+  .register__container .register__contact {
+    width: 50%;
+  }
+
+  .register__container input {
+    font-size: 22px;
+    padding-left: 35px;
+  }
+
+  .trail-map {
+    display: flex;
+  }
+
+  .trail-map .trail__run {
+    width: 50%;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  // для файла form.html нужно делатьчто  отдельно или тут писать?__________________________
+  .main-selection {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .selection {
+    width: 25%;
+    align-self: baseline;
+  }
+
+  .traveler {
+    width: 65%;
+  }
+
+  .selection-companion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .traveler__item img {
+    width: 285px;
+    height: 285px;
+  }
+
+  .traveler__name {
+    width: 35%;
+    margin: 0;
+    margin-left: 285px;
+    align-self: baseline;
+  }
+
+  .traveler__heart--wrapp {
+    order: 5;
+  }
+
+  .traveler__item .traveler__tegs {
+    position: static;
+    width: 24%;
+    margin-left: 300px;
+    margin-right: auto;
+    order: 1;
+  }
+
+  .traveler__wish {
+    width: 25%;
+    order: 0;
+    margin-left: auto;
+  }
+
+  .traveler__countries {
+    flex-direction: column;
+  }
+
+  .traveler__transport {
+    width: 27%;
+    order: 5;
+    margin: 0;
+    flex-direction: row;
+  }
+
+
+  .traveler__list--transport {
+    flex-direction: row;
+    align-items: baseline;
+    align-self: flex-start;
+  }
+
+  .traveler__item .traveler__call {
+    order: 4;
+    width: 15%;
+    margin-left: 300px;
+  }
+
+  .selection-transport .selection-transport__list {
+    width: 100%;
+  }
+
+  .selection-lvl__controls {
+    margin: auto;
+  }
+}

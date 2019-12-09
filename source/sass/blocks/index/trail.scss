@@ -9,6 +9,11 @@
   // overflow: hidden;
 }
 
+.trail-map p {
+  width: 100%;
+  margin: 0;
+}
+
 .trail__gprs {
   @include fontBS (16px, bold, #192144);
   width: 100%;
@@ -34,16 +39,18 @@
   margin-right: 15px;
 }
 
-.trail__run {
+.trail-map .trail__run {
   @include center;
-  border-radius: 10px;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  border-radius: 20px;
   border: solid 3px #192144;
   margin-bottom: 35px;
 }
 
 
 .trail-map {
-  @include padding25px;
   width: 85%;
   // border-bottom-right-radius: 20px;
   // border-bottom-left-radius: 20px;
@@ -51,7 +58,12 @@
 
 .trail__position {
   width: 100%;
-  height: 320px;
+  // height: 320px;
   display: flex;
   justify-content: center;
+}
+
+
+.trail__position img {
+  width: 100%;
 }

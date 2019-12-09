@@ -13,12 +13,16 @@
   @include reset-list;
 }
 
-.traveler__list > li {
+.traveler__item {
+  position: relative;
+}
+
+.traveler__list .traveler__item {
   display: flex;
   width: 85%;
-  flex-direction: column;
   // align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between;
+  flex-wrap: wrap;
   list-style: none;
   margin-bottom: 10px;
   border-bottom-right-radius: 20px;
@@ -32,28 +36,22 @@
   padding-top: 15px;
 }
 
-.traveler__main {
-  width: 65%;
-  display: flex;
-  flex-wrap: wrap;
-  // flex-direction: column;
-  margin-bottom: 16px;
-}
-
-.traveler__main img {
+.traveler__item img {
   width: 50%;
   border-radius: 50%;
+  margin-bottom: 16px;
 }
 
 .traveler__name {
   @include fontBS (20px, bold, #1d2e5b);
+  position: relative;
   width: 40%;
   min-height: 37px;
   display: flex;
+  align-self: baseline;
   margin: 0;
   padding: 0;
 }
-
 
 .traveler__name::after {
   content: "";
@@ -64,16 +62,41 @@
   background-color: #f97676;
 }
 
-// это абсалют делать или как ?
+.traveler__name--online::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #81e31e;
+}
+
+.traveler__heart--wrapp {
+  position: absolute;
+  left: 105px;
+  top: 115px;
+}
+
+.traveler__heart--btn {
+  border: none;
+  background-color: #f9eaea;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+}
 
 .traveler__heart {
   @include fontBS (14px, bold, #161c35);
-  width: 13%;
+  width: auto;
+}
+
+.traveler__heart--btn-img {
+  fill: #f02323;
 }
 
 .traveler__item .traveler__tegs {
   @include fontBS (15px, normal, #444444);
-  width: 62%;
+  width: 99%;
   justify-content: start;
   margin-bottom: 20px;
 }
@@ -98,16 +121,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  flex-grow: 0;
 }
 
 .traveler__text {
   @include fontBS (15px, 500, #444444);
-  margin-bottom: 16px;
-  width: 100%;
-}
-
-.traveler__transport p {
   display: inline-block;
+  margin-bottom: 16px;
   width: 100%;
 }
 
@@ -115,8 +135,7 @@
   float: right;
 }
 
-.traveler__transport .traveler__lvl {
-  @include fontBS (24px, bold, #1d2e5b);
+.traveler__lvl--wrapp {
   border-radius: 50%;
   border: 3px solid #ff8d30;
   width: 45px;
@@ -125,8 +144,27 @@
   text-align: center;
 }
 
+.traveler__lvl {
+  @include fontBS (18px, bold, #1d2e5b);
+  text-align: center;
+  margin: 0;
+  padding: 11px;
+}
+
+.traveler__lvl--rus {
+  @include fontBS (15px, normal, #444444);
+  display: none;
+}
+
+.traveler__lvl--eng {
+  @include fontBS (14px, normal, rgba(68, 68, 68, 0.4));
+  display: none;
+  border-top: 1px solid rgba(68, 68, 68, 0.2);
+}
+
 .traveler__btn--show-more {
   @include center;
+  margin-bottom: 46px;
 }
 
 .traveler__btn {
@@ -148,6 +186,21 @@
   background-image: url("../img/show-more-plus.svg");
 }
 
-.traveler__toggle-btns {
-  margin-bottom: 46px;
+.traveler__toggle--list {
+  @include reset-list;
+  display: none;
+}
+
+.traveler__toggle--btns {
+  width: 85%;
+  display: flex;
+  justify-content: center;
+}
+
+.traveler-wrapper__slider {
+  width: 55%;
+  min-height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

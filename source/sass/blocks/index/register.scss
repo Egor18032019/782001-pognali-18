@@ -21,6 +21,16 @@
 .register__slogan p {
   @include fontBS (16px, 300, #ffffff);
   text-align: center;
+  margin: 0;
+  line-height: 1.3;
+  opacity: 0.9;
+}
+
+.register__slogan b {
+  @include fontBS (16px, 300, #ffffff);
+  margin-bottom: 10px;
+  text-align: center;
+  line-height: 1.3;
   opacity: 0.9;
 }
 
@@ -29,8 +39,26 @@
   width: 85%;
 }
 
+.register__button span {
+  font-size: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.register__button::after {
+  content: "";
+  width: 10px;
+  height: 14px;
+  display: inline-block;
+  background-image: url("../img/triangle-arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
 .register__container p {
   @include fontBS(16px, 300, #ffffff);
+  width: 100%;
   text-align: center;
   margin-bottom: 32px;
   opacity: 0.9;
@@ -39,9 +67,10 @@
 .register__item {
   @include fontBS (16px, bold, $color:#ffd74b);
   @include center;
+  width: 100%;
   flex-direction: row;
   justify-content: flex-start;
-  width: 225px;
+  text-transform: uppercase;
 }
 
 .register__item--telephone::before {
@@ -72,7 +101,7 @@
   background-position: center;
   background-size: 50%;
   margin-right: 16px;
-  flex-grow: 1;
+  // flex-grow: 1;
 }
 
 .register__login {
@@ -84,23 +113,25 @@
 }
 
 .register__container input {
+  @include fontBS (16px, bold, rgba(68, 68, 68, 0.3));
   width: 98%;
-  height: 62px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  min-height: 62px;
+  padding-left: 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
-.register__container button {
+.register__button {
   width: 25%;
   margin-left: -25%;
-  height: 62px;
+  min-height: 62px;
   background-color: $indexButton;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .register__contact {

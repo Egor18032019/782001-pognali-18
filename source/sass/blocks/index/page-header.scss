@@ -9,8 +9,12 @@
   color: white;
 }
 
+.page-header__wrapper {
+  display: none;
+}
+
 .page-header__main {
-  width: 100%;
+  width: 85%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,6 +23,10 @@
 
 .page-header__logo {
   font-size: 0;
+}
+
+.page-header__nav {
+  width: 20%;
 }
 
 .page-header__toggle {
@@ -42,13 +50,13 @@
 
 .page-header__slogan {
   @include center;
-  // min-height: 114px;
   padding-bottom: 247px;
-  background-position: center;
-  background-image: url("../img/globe-back-mobile@1x.jpg");
-  background-position-y: 100%;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+  // max-width: 320px;
+  margin: 0 auto;
+  background-image: url("../img/traveller-illustration-mobile@1x.png"), url("../img/globe-back-mobile@1x.jpg");
+  background-position: bottom right 49px, bottom -91px center;
+  background-size: 192px 256px, 320px 569px;
+  background-repeat: no-repeat, no-repeat;
 }
 
 
@@ -58,4 +66,9 @@
 
 .page-header__list {
   @include reset-list;
+}
+
+.page-header__list a {
+  @include fontBS (20px, 500, #ffffff);
+  text-transform: uppercase;
 }

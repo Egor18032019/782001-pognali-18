@@ -1,19 +1,40 @@
 .trend {
   @include center;
   @include margin-auto;
+  background-color: #edeff6;
   padding-bottom: 30px;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
   // overflow: hidden;
-  padding-top: 72px;
 }
 
 .trend-slogan {
-  width: 60%;
+  width: 100%;
+}
+
+.trend-wrapper {
+  @include center;
+  width: 85%;
+  padding-top: 72px;
 }
 
 .trend h2 {
   @include fontBS(24px, bold, #ff8d30);
+}
+
+.trend-slogan p {
+  @include fontBS (16px, 300, #444444);
+}
+
+.trend-list::before {
+  position: absolute;
+  width: 141px;
+  height: 141px;
+  content: " ";
+  border-radius: 20px;
+  background-color: #e2e5f2;
+  // z-index: -1;
+  // не работает с этим
 }
 
 .trend-list {
@@ -40,6 +61,9 @@
 }
 
 .trend__text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
   background-color: white;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -53,6 +77,7 @@
 
 .trend__text p {
   @include fontBS(21px, bold, #161c35);
+  width: 70%;
   margin-bottom: 5px;
 }
 

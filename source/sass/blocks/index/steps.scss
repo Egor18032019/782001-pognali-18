@@ -12,7 +12,7 @@
 .steps-quote q {
   @include fontBS (16px, 300, white);
   display: block;
-  width: 70%;
+  width: 80%;
   line-height: 1.4;
   margin-bottom: 25px;
 }
@@ -20,7 +20,7 @@
 .steps-quote cite {
   @include fontBS (16px, bold, white);
   display: inline-block;
-  width: 70%;
+  width: 80%;
   line-height: 1.4;
 }
 
@@ -34,12 +34,12 @@
 .steps__list {
   @include reset-list;
   width: 85%;
-  height: 320px;
+  // height: 320px;
   // перенести номера в правую часть ли
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
   overflow: hidden;
 }
 
@@ -49,6 +49,7 @@
   height: 80px;
   display: flex;
   align-items: center;
+  padding-left: 25px;
 }
 
 .steps__list li:first-child {

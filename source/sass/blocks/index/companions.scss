@@ -2,16 +2,19 @@
   @include center;
   @include margin-auto;
   background-color: $indexColor;
-  background-image: url("../img/smolov-mobile@1x.jpg");
-  background-repeat: no-repeat;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+}
+
+.companions-wrapper {
+  @include center;
+  width: 85%;
 }
 
 .companions__slogan {
   @include center;
   align-items: flex-start;
-  width: 66%;
+  width: 85%;
   margin-bottom: 60px;
   margin-top: 71px;
 }
@@ -46,12 +49,21 @@
   width: 85%;
 }
 
+.companions-list::before {
+  position: absolute;
+  content: " ";
+  width: 143px;
+  height: 143px;
+  background-image: url("../img/smolov-mobile@1x.jpg");
+  background-repeat: no-repeat;
+}
+
 .companions__personal p {
   @include fontBS(21px, bold, #1d2e5b);
   text-align: center;
 }
 
-.companions-list > li {
+.companions-list .companions__item {
   width: 100%;
   display: flex;
   justify-content: center;

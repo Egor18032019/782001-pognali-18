@@ -1,29 +1,29 @@
 @import "../../node_modules/normalize.scss/normalize.scss",
-  "variables.scss",
-  "mixin.scss",
-  "fonts.scss",
-  "stels.scss",
-  "blocks/index/companions.scss",
-  "blocks/index/menu-autho.scss",
-  "blocks/index/scroll-menu.scss",
-  "blocks/index/page-header.scss",
-  "blocks/index/steps.scss",
-  "blocks/index/autho.scss",
-  "blocks/index/trend.scss",
-  "blocks/index/about-us.scss",
-  "blocks/index/rate.scss",
-  "blocks/index/rate-modal.scss",
-  "blocks/index/register.scss",
-  "blocks/index/trail.scss",
-  "blocks/footer.scss",
-  "blocks/form/filter-country.scss",
-  "blocks/form/form-main.scss",
-  "blocks/form/selection.scss",
-  "blocks/form/traveler.scss",
-  "blocks/index/social.scss",
-  "blocks/index/social-autho.scss",
-  "blocks/catalog/explorer.scss",
-  "outlines.scss";
+"variables.scss",
+"mixin.scss",
+"fonts.scss",
+"stels.scss",
+"blocks/index/companions.scss",
+"blocks/index/menu-autho.scss",
+"blocks/index/scroll-menu.scss",
+"blocks/index/page-header.scss",
+"blocks/index/steps.scss",
+"blocks/index/autho.scss",
+"blocks/index/trend.scss",
+"blocks/index/about-us.scss",
+"blocks/index/rate.scss",
+"blocks/index/rate-modal.scss",
+"blocks/index/register.scss",
+"blocks/index/trail.scss",
+"blocks/footer.scss",
+"blocks/form/filter-country.scss",
+"blocks/form/form-main.scss",
+"blocks/form/selection.scss",
+"blocks/form/traveler.scss",
+"blocks/index/social.scss",
+"blocks/index/social-autho.scss",
+"blocks/catalog/explorer.scss",
+"outlines.scss";
 
 *,
 *::after,
@@ -168,5 +168,33 @@ img {
 
 .slider__toggle--left {
   background-image: url("../img/triangle-arrow-left.svg");
+  background-repeat: no-repeat;
+}
+
+
+.check::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  vertical-align: middle;
+  background-color: #ffffff;
+  // background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.check-input {
+  display: none;
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.check-input:checked+.check::before {
+  background-image: url("../img/tick.svg");
+  background-size: 50%;
+  background-position: center;
   background-repeat: no-repeat;
 }

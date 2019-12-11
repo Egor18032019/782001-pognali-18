@@ -1,21 +1,60 @@
 .filter-country {
   @include center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .filter-country__main {
   display: flex;
-  width: 100%;
+  width: 86%;
   min-height: 50px;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #e2e5f2;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+
 }
 
 .filter-country__main button {
   border: none;
 }
+
+.filter-country__pushbutton {
+  width: 13%;
+  height: 16px;
+  align-self: center;
+  border: none;
+}
+
+.filter-country__pushbutton--close,
+.filter-country__pushbutton--open {
+  @include fontBS (0, bold, #192144);
+  display: none;
+  text-transform: uppercase;
+}
+
+.filter-country__pushbutton--close {
+  display: inline-block;
+}
+
+.filter-country__pushbutton--close::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/filter-close.svg");
+  background-position: center;
+}
+
+.filter-country__pushbutton--open::after {
+  content: "";
+  display: inline-block;
+  min-width: 17px;
+  min-height: 3px;
+  background-image: url("../img/dots.svg");
+  background-repeat: no-repeat;
+  background-size: 17px, 3px;
+  background-position: center;
+}
+
 
 .filter-country__main h2 {
   @include fontBS (16px, bold, #192144);
@@ -32,16 +71,8 @@
   background-size: 15px, 10px;
 }
 
-.filter-country__pushbutton {
-  min-width: 17px;
-  min-height: 3px;
-  font-size: 0;
-  background-image: url("../img/dots.svg");
-  background-repeat: no-repeat;
-  background-size: 17px, 3px;
-}
-
-.filter-country__other .filter-country__continent {
+.filter-country__continent {
+  @include reset-list;
   margin-bottom: 25px;
 }
 
@@ -53,13 +84,18 @@
   @include fontBS(16px, normal, #444444);
 }
 
-.filter-country__continent a {
+.filter-country__continent--radio {
   @include fontBS (16px, bold, rgba(25, 33, 68, 0.3));
+  text-transform: uppercase;
 }
 
 // не могу понять страны это сылки или нет ?
 
 .filter-country__continent--choose {
+  display: none;
+}
+
+.filter-country__continent--choose:checked + .filter-country__continent--radio {
   @include fontBS (16px, bold, #192144);
 }
 
@@ -87,13 +123,18 @@
   width: 71%;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 67px;
+  margin-bottom: 230px;
 }
 
-.filter-country__selection li {
+.filter-country__selection--items,
+.filter-country__selection--items button {
   width: 45px;
   height: 45px;
   border: 1px solid #cbced9;
+}
+
+.filter-country__selection button {
+  margin-bottom: 205px;
 }
 
 .filter-country__other .filter-country__button {
@@ -112,4 +153,31 @@
   height: 12px;
   background-image: url("../img/filter-close.svg");
   margin-right: 12px;
+}
+
+
+.filter-country__chosen--2,
+.filter-country__chosen--3,
+.filter-country__chosen--4,
+.filter-country__chosen--5,
+.filter-country__chosen--6,
+.filter-country__chosen--7,
+.filter-country__chosen--8,
+.filter-country__chosen--9,
+.filter-country__chosen--10,
+.filter-country__chosen--11,
+.filter-country__chosen--12,
+.filter-country__chosen--13,
+.filter-country__chosen--14,
+.filter-country__chosen--15,
+.filter-country__chosen--16,
+.filter-country__chosen--17,
+.filter-country__chosen--18,
+.filter-country__chosen--19,
+.filter-country__chosen--20,
+.filter-country__chosen--21,
+.filter-country__chosen--22,
+.filter-country__chosen--23,
+.filter-country__chosen--24 {
+  display: none;
 }

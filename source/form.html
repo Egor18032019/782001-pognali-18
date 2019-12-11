@@ -20,7 +20,7 @@
         <button class="page-header__toggle">Показать меню</button>
         <div class="page-header__wrapper">
           <ul class="page-header__list">
-            <li class="page-header__item"><a href="#" >--------</a></li>
+            <li class="page-header__item"><a href="#">--------</a></li>
             <!-- спросиь что это такое ,,?? -->
             <li class="page-header__item"><a href="#">О сервисе</a></li>
             <li class="page-header__item"><a href="#">Направления</a></li>
@@ -48,69 +48,324 @@
           </div>
         </nav>
         <h2>Фильтрация по странам</h2>
-        <button type="reset" name="button" class="filter-country__pushbutton">
-          <span class="visually-hidden">Открыть или Закрыть</span>
-        </button>
       </div>
+      <button type="reset" name="button" class="filter-country__pushbutton">
+        <span class="filter-country__pushbutton--close"> Свернуть </span>
+        <span class="filter-country__pushbutton--open">Показать всё</span>
+      </button>
 
+      <ul class="filter-country__continent">
+        <li>
+          <input class="filter-country__continent--choose" type="radio" name="continent" value="Europe" id="Europe"
+            checked>
+          <label class="filter-country__continent--radio" for="Europe">Европа</label>
+        </li>
+        <li>
+          <input class="filter-country__continent--choose" type="radio" name="continent" value="Europe" id="Asia">
+          <label class="filter-country__continent--radio" for="Asia">Азия</label>
+        </li>
+        <li>
+          <input class="filter-country__continent--choose" type="radio" name="continent" value="Europe" id="America">
+          <label class="filter-country__continent--radio" for="America">Америка</label>
+        </li>
+        <li>
+          <input class="filter-country__continent--choose" type="radio" name="continent" value="Europe" id="islands">
+          <label class="filter-country__continent--radio" for="islands">Острова</label>
+        </li>
+      </ul>
+      <!-- Получаеться три разные формы ? при нажатие на континент -показывает нужную форму выбора стран -->
       <form class="filter-country__other" action="https://echo.htmlacademy.ru" method="GET">
-        <ul class="filter-country__continent">
-          <li class="filter-country__continent--choose">
-            <!-- радио батоны или сылки -как тут делать ? -->
-            Европа
-          </li>
-          <li>
-            <a href="#" class="asia">Азия</a>
-          </li>
-          <li>
-            <a href="#" class="america">Америка</a>
-          </li>
-          <li>
-            <a href="#" class="island">Острова</a>
-          </li>
-        </ul>
         <ul class="filter-country__selection">
-          <li><button type="button">а</button></li>
-          <li><button type="button">б</button> </li>
-          <li><button type="button">в</button> </li>
-          <li><button type="button">г</button> </li>
-          <li><button type="button">д</button> </li>
-          <li><button type="button">e</button> </li>
-          <!-- <li><button type="button">ё</button> </li> -->
-          <!-- <li><button type="button">ж</button> </li> -->
-          <li><button type="button">з</button> </li>
-          <li><button type="button">и</button> </li>
-          <!-- <li><button type="button">й</button> </li> -->
-          <li><button type="button">к</button> </li>
-          <li><button type="button">л</button> </li>
-          <li><button type="button">м</button> </li>
-          <li><button type="button">н</button> </li>
-          <li><button type="button">о</button> </li>
-          <li><button type="button">п</button> </li>
-          <li><button type="button">р</button> </li>
-          <li><button type="button">с</button> </li>
-          <li><button type="button">т</button> </li>
-          <li><button type="button">у</button> </li>
-          <li><button type="button">ф</button> </li>
-          <li><button type="button">х</button> </li>
-          <li><button type="button">ч</button> </li>
-          <li><button type="button">ш</button> </li>
-          <li><button type="button">э</button> </li>
-          <li><button type="button">ю</button> </li>
-          <li><button type="button">я</button> </li>
-        </ul>
-
-        <ul class="filter-country__chosen">
-          <li><a href=" country/europe/afganistan.html"> Афганистан</a></li>
-          <!-- обсудить как делать и сделать осталные по образцу -->
-          <li><a href="#">Албания</a></li>
-          <li><a href="#">Алжир</a></li>
-          <li><a href="#">Андорра</a></li>
-          <li><a href="#">Аргентина</a></li>
-          <li><a href="#">Армения</a></li>
-          <li><a href="#">Австралия</a></li>
-          <li><a href="#">Австрия</a></li>
-          <li><a href="#">Азербайджан</a></li>
+          <li class="filter-country__selection--items"><button type="button">а</button>
+            <ul class="filter-country__chosen filter-country__chosen--1">
+              <li><a href=" country/europe/afganistan.html"> Афганистан</a></li>
+              <!-- обсудить как делать и сделать осталные по образцу -->
+              <li><a href="#">Албания</a></li>
+              <li><a href="#">Алжир</a></li>
+              <li><a href="#">Андорра</a></li>
+              <li><a href="#">Аргентина</a></li>
+              <li><a href="#">Армения</a></li>
+              <li><a href="#">Австралия</a></li>
+              <li><a href="#">Австрия</a></li>
+              <li><a href="#">Азербайджан</a></li>
+            </ul>
+          </li>
+          <li class="filter-country__selection--items"><button type="button">б</button>
+            <ul class="filter-country__chosen filter-country__chosen--2">
+              <li><a href="#">Багамские Острова </a></li>
+              <li><a href="#"> Бангладеш</a></li>
+              <li><a href="#">
+                  Барбадос
+                </a></li>
+              <li><a href="#"> Бахрейн
+                </a></li>
+              <li><a href="#"> Белоруссия
+                </a></li>
+              <li><a href="#">Белиз
+                </a></li>
+              <li><a href="#">Бельгия
+                </a></li>
+              <li><a href="#">Бенин
+                </a></li>
+              <li><a href="#">Болгария
+                </a></li>
+              <li><a href="#">Боливия
+                </a></li>
+              <li><a href="#">Босния и Герцеговина</a></li>
+              <li><a href="#"> Ботсвана
+                </a></li>
+              <li><a href="#"> Бразилия
+                </a></li>
+              <li><a href="#">Бруней
+                </a></li>
+              <li><a href="#">Буркина-Фасо
+                </a></li>
+              <li><a href="#">Бурунди
+                </a></li>
+              <li><a href="#">Бутан</a></li>
+            </ul>
+          </li>
+          <li class="filter-country__selection--items"><button type="button">в</button>
+            <!-- расписать список нормально -->
+            <ul class="filter-country__chosen filter-country__chosen--3">
+              <li><a href="#">Вануату</a></li>
+              <li><a href="#">Великобритания
+                  Венгрия
+                  Венесуэла
+                  Восточный Тимор
+                  Вьетнам</a></li>
+            </ul>
+          </li>
+          <li class="filter-country__selection--items"><button type="button">г</button>
+            <ul class="filter-country__chosen filter-country__chosen--4">
+              <li><a href="#">Габон
+                  Гаити
+                  Гайана
+                  Гамбия
+                  Гана
+                  Гватемала
+                  Гвинея
+                  Гвинея-Бисау
+                  Германия
+                  Гондурас
+                  Гренада
+                  Греция
+                  Грузия</a></li>
+            </ul>
+          </li>
+          <li class="filter-country__selection--items"><button type="button">д</button>
+            <ul class="filter-country__chosen filter-country__chosen--5">
+              <li><a href="#">Дания
+                  Джибути
+                  Доминика
+                  Доминикана</a></li>
+            </ul>
+          </li>
+          <li class="filter-country__selection--items"><button type="button">e</button>
+            <ul class="filter-country__chosen filter-country__chosen--5">
+              <li> <a href="#">Египет</a></li>
+            </ul>
+          </li>
+          <!--  <li class="filter-country__selection--items"><button type="button">ё</button>  <ul class="filter-country__chosen filter-country__chosen--3"></ul>
+          </li> -->
+          <!--  <li class="filter-country__selection--items"><button type="button">ж</button>  <ul class="filter-country__chosen filter-country__chosen--3"></ul>
+          </li> -->
+          <li class="filter-country__selection--items"><button type="button">з</button>
+            <ul class="filter-country__chosen filter-country__chosen--6">
+              <li><a href="#">Замбия</a></li>
+              <li><a href="#">Зимбабве</a></li>
+            </ul>
+          </li>
+          <li class="filter-country__selection--items"><button type="button">и</button>
+            <ul class="filter-country__chosen filter-country__chosen--7">
+              <li><a href="#"> Израиль
+                  Индия
+                  Индонезия
+                  Иордания
+                  Ирак
+                  Иран
+                  Ирландия
+                  Исландия
+                  Испания
+                  Италия</a></li>
+            </ul>
+          </li>
+          <!--  <li class="filter-country__selection--items"><button type="button">й</button>  <ul class="filter-country__chosen filter-country__chosen--3"></ul>
+          </li> -->
+          <li class="filter-country__selection--items"><button type="button">к</button>
+            <ul class="filter-country__chosen filter-country__chosen--8">
+              <li><a href="#">Кабо-Верде
+                  Казахстан
+                  Камбоджа
+                  Камерун
+                  Канада
+                  Катар
+                  Кения
+                  Кипр
+                  Киргизия
+                  Кирибати
+                  Китай
+                  Колумбия
+                </a></li>
+            </ul>
+          </li>
+          <li class="filter-country__selection--items"><button type="button">л</button>
+            <ul class="filter-country__chosen filter-country__chosen--9">
+              <li><a href="#">Лаос
+                  Латвия
+                  Лесото
+                  Либерия
+                  Ливан
+                  Ливия
+                  Литва
+                  Лихтенштейн
+                  Люксембург</a></li>
+            </ul>
+          </li>
+          <li class="filter-country__selection--items"><button type="button">м</button>
+            <ul class="filter-country__chosen filter-country__chosen--10">
+              <li><a href="#">Маврикий
+                  Мавритания
+                  Мадагаскар
+                  Малави
+                  Малайзия
+                  Мали
+                  Мальдивы
+                  Мальта
+                  Марокко
+                  Мексика
+                </a></li>
+            </ul>
+          </li>
+          <li class="filter-country__selection--items"><button type="button">н</button>
+            <ul class="filter-country__chosen filter-country__chosen--11">
+              <li><a href="#">Намибия
+                  Науру
+                  Непал
+                  Нигер
+                  Нигерия
+                  Нидерланды
+                  Никарагуа
+                  Новая Зеландия
+                  Норвегия</a></li>
+            </ul>
+          </li>
+          <li class="filter-country__selection--items"><button type="button">о</button>
+            <ul class="filter-country__chosen filter-country__chosen--12">
+              <li><a href="#">ОАЭ</a></li>
+              <li><a href="#">Оман</a></li>
+            </ul>
+          </li>
+          <li class="filter-country__selection--items"><button type="button">п</button>
+            <ul class="filter-country__chosen filter-country__chosen--13">
+              <li><a href="#">Пакистан
+                  Палау
+                  Панама
+                  Папуа — Новая Гвинея
+                  Парагвай
+                  Перу
+                  Польша
+                  Португалия</a></li>
+            </ul>
+          </li>
+          <li class="filter-country__selection--items"><button type="button">р</button>
+            <ul class="filter-country__chosen filter-country__chosen--14">
+              <li><a href="#">Руанда</a></li>
+              <li><a href="#"> Румыния</a></li>
+              <li><a href="#">Россия</a></li>
+            </ul>
+          </li>
+          <li class="filter-country__selection--items"><button type="button">с</button>
+            <ul class="filter-country__chosen filter-country__chosen--15">
+              <li><a href="#">Сальвадор
+                  Самоа
+                  Сан-Марино
+                  Саудовская Аравия
+                  Сейшелы
+                  Сенегал
+                  Сербия
+                  Сингапур
+                  Сирия
+                  Словакия
+                  Словения
+                  США
+                </a></li>
+            </ul>
+          </li>
+          <li class="filter-country__selection--items"><button type="button">т</button>
+            <ul class="filter-country__chosen filter-country__chosen--16">
+              <li><a href="#">Таджикистан
+                  Таиланд
+                  Танзания
+                  Того
+                  Тонга
+                  Тринидад и Тобаго
+                  Тувалу
+                  Тунис
+                  Туркмения
+                  Турция</a></li>
+            </ul>
+          </li>
+          <li class="filter-country__selection--items"><button type="button">у</button>
+            <ul class="filter-country__chosen filter-country__chosen--17">
+              <li><a href="#">
+                  Уганда
+                  Узбекистан
+                  Украина
+                  Уругвай
+                </a></li>
+            </ul>
+          </li>
+          <li class="filter-country__selection--items"><button type="button">ф</button>
+            <ul class="filter-country__chosen filter-country__chosen--18">
+              <li><a href="#">Фиджи
+                  Филиппины
+                  Финляндия
+                  Франция</a></li>
+            </ul>
+          </li>
+          <li class="filter-country__selection--items"><button type="button">х</button>
+            <ul class="filter-country__chosen filter-country__chosen--19">
+              <li><a href="#">Хорватия</a></li>
+            </ul>
+          </li>
+          <li class="filter-country__selection--items filter-country__selection--last"><button type="button">ч</button>
+            <ul class="filter-country__chosen filter-country__chosen--20">
+              <li><a href="#">Чад
+                  Черногория
+                  Чехия
+                  Чили</a></li>
+            </ul>
+          </li>
+          <li class="filter-country__selection--items filter-country__selection--last"><button type="button">ш</button>
+            <ul class="filter-country__chosen filter-country__chosen--21">
+              <li><a href="#">Швейцария
+                  Швеция
+                  Шри-Ланка</a></li>
+            </ul>
+          </li>
+          <li class="filter-country__selection--items filter-country__selection--last"><button type="button">э</button>
+            <ul class="filter-country__chosen filter-country__chosen--22">
+              <li><a href="#">Эквадор
+                  Эритрея
+                  Эсватини
+                  Эстония
+                  Эфиопия</a></li>
+            </ul>
+          </li>
+          <li class="filter-country__selection--items filter-country__selection--last"><button type="button">ю</button>
+            <ul class="filter-country__chosen filter-country__chosen--23">
+              <li><a href="#">ЮАР</a></li>
+              <li><a href="#">Южный Судан</a></li>
+            </ul>
+          </li>
+          <li class="filter-country__selection--items filter-country__selection--last"><button type="button">я</button>
+            <ul class="filter-country__chosen filter-country__chosen--24">
+              <li><a href="#">Ямайка
+                </a></li>
+              <li><a href="#">Япония</a></li>
+            </ul>
+          </li>
         </ul>
 
         <button class="filter-country__button form-button">
@@ -127,10 +382,24 @@
 
           <fieldset class="selection-hobby">
             <legend>Хобби</legend>
-            <p> Хобби</p>
-            <button class="selection__toggle selection-hobby--open">Раскрыть список</button>
-            <button class="selection__toggle selection-hobby--close visually-hidden">Скрыть список</button>
-            <!-- сделать чтобы небыло элемнтов элемнтов -->
+            <input type="checkbox" id="hobby" name="hobby-group" class="selection-hobby__id">
+            <p class="selection-hobby__name"> Хобби
+              <label class="selection-hobby--toggle" for="hobby">Открыть или Закрыть</label>
+            </p>
+            <ul class="selection-hobby__list">
+              <li>
+                <input class="check-input" type="radio" name="hobby" id="Sport" checked>
+                <label class="check" for="Sport">Спортзал</label>
+              </li>
+              <li>
+                <input class="check-input" type="radio" name="hobby" id="Sofa">
+                <label class="check" for="Sofa">Диван</label>
+              </li>
+              <li>
+                <input class="check-input" type="radio" name="hobby" id="Relax">
+                <label class="check" for="Relax">Кальян</label>
+              </li>
+            </ul>
           </fieldset>
 
           <fieldset class="selection-musiс">
@@ -154,7 +423,6 @@
                 <label class="check" for="eurodance">Евроденс</label>
               </li>
             </ul>
-
           </fieldset>
 
           <fieldset class="selection-food">
@@ -228,7 +496,7 @@
 
               <div class="selection-lvl__input">
                 <input type="text" id="lvl-start" name="start" value="30">
-                <input type="text" id="lvl-end" name="end" value="100">
+                <input type="text" id="lvl-end" name="end" value="100" class="lvl-end">
               </div>
             </div>
           </fieldset>

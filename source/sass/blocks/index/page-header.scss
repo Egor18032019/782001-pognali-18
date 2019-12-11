@@ -68,6 +68,7 @@
   @include reset-list;
 }
 
+.page-header__list,
 .page-header__list a {
   @include fontBS (20px, 500, #ffffff);
   text-transform: uppercase;

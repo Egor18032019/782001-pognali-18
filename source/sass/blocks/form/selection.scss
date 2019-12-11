@@ -39,39 +39,41 @@
   min-height: 4px;
 }
 
-.selection-hobby {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.selection-hobby--open {
-  background-image: url("../img/dropdown-form.svg");
-  background-repeat: no-repeat;
-  background-color: inherit;
+.selection-musiс__list li,
+.selection-hobby__list li,
+.selection-food__list li {
+  margin-bottom: 12px;
 }
 
 .selection-companion .form-button {
+  width: 85%;
   background-color: white;
   margin-bottom: 21px;
 }
 
-.selection-musiс > input,
-.selection-food > input,
-.selection-transport > input,
-.selection-lvl > input {
+.selection-companion fieldset {
+  width: 85%;
+  border: 0;
+}
+
+.selection-musiс>input,
+.selection-food>input,
+.selection-transport>input,
+.selection-lvl>input,
+.selection-hobby__id {
   display: none;
 }
 
-.selection-musiс--toggle,
-.selection-food--toggle,
-.selection-transport--toggle,
-.selection-lvl--toggle {
+.selection-musiс .selection-musiс--toggle,
+.selection-food .selection-food--toggle,
+.selection-transport .selection-transport--toggle,
+.selection-lvl .selection-lvl--toggle,
+.selection-hobby--toggle {
   width: 8px;
   min-height: 4px;
   display: inline-block;
   font-size: 0;
-  background-image: url("../img/dropdown-form.svg");
+  background-image: url("../img/dropdown.svg");
   background-repeat: no-repeat;
   background-color: inherit;
 }
@@ -86,55 +88,66 @@
   height: 100%;
 }
 
-.selection-musiс__id:checked ~ .selection-musiс__list {
+.selection-hobby__id:checked~.selection-hobby__list {
   display: none;
 }
 
-.selection-musiс__id:checked ~ .selection-music__name .selection-musiс--toggle {
+.selection-hobby__id:checked~.selection-hobby__name .selection-hobby--toggle {
   transform: rotate(180deg);
 }
 
-.selection-food__id:checked ~ .selection-food__list {
+.selection-musiс__id:checked~.selection-music__name .selection-musiс--toggle {
+  transform: rotate(180deg);
+}
+
+.selection-musiс__id:checked~.selection-musiс__list {
   display: none;
 }
 
-.selection-food__id:checked ~ .selection-food__name .selection-food--toggle {
+.selection-musiс__id:checked~.selection-music__name .selection-musiс--toggle {
   transform: rotate(180deg);
 }
 
-
-.selection-transport__id:checked ~ .selection-transport__list {
+.selection-food__id:checked~.selection-food__list {
   display: none;
 }
 
-.selection-transport__id:checked ~ .selection-transport__name .selection-transport--toggle {
+.selection-food__id:checked~.selection-food__name .selection-food--toggle {
   transform: rotate(180deg);
 }
 
-.selection-lvl__id:checked ~ .selection-lvl__controls {
+
+.selection-transport__id:checked~.selection-transport__list {
   display: none;
 }
 
-.selection-lvl__id:checked ~ .selection-lvl__name .selection-lvl--toggle {
+.selection-transport__id:checked~.selection-transport__name .selection-transport--toggle {
   transform: rotate(180deg);
 }
 
-.selection__bus:checked ~ .selection-transport__list .selection__bus--favorite {
+.selection-lvl__id:checked~.selection-lvl__controls {
+  display: none;
+}
+
+.selection-lvl__id:checked~.selection-lvl__name .selection-lvl--toggle {
+  transform: rotate(180deg);
+}
+
+.selection__bus:checked~.selection-transport__list .selection__bus--favorite {
   opacity: 0.2;
 }
 
-.selection__air:checked ~ .selection-transport__list .selection__air--favorite {
+.selection__air:checked~.selection-transport__list .selection__air--favorite {
   opacity: 0.2;
 }
 
-.selection__cycle:checked ~ .selection-transport__list .selection__cycle--favorite {
+.selection__cycle:checked~.selection-transport__list .selection__cycle--favorite {
   opacity: 0.2;
 }
 
-.selection__walk:checked ~ .selection-transport__list .selection__walk--favorite {
+.selection__walk:checked~.selection-transport__list .selection__walk--favorite {
   opacity: 0.2;
 }
-
 
 .selection-lvl__controls {
   width: 80%;
@@ -163,7 +176,8 @@
   background-color: #1d2e5b;
   width: 10px;
   height: 10px;
-  top: -5px;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 0;
 }
 
@@ -177,9 +191,28 @@
 }
 
 .selection-lvl__input {
+  @include fontBS (15px, bold, #1d2e5b);
   display: flex;
 }
 
 .selection-lvl__input input {
   width: 50%;
+  border: 0;
+  text-align: center;
+}
+
+
+// как сделать эту полосчку в середке ???
+.selection-lvl__input input::after,
+.lvl-end::before {
+  content: " ";
+  display: inline-block;
+  width: 15px;
+  height: 2px;
+  background-color: brown;
+}
+
+.lvl-start {
+  border: 1px solid red;
+  border-right-width: 2px;
 }

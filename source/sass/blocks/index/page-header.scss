@@ -59,9 +59,13 @@
   background-repeat: no-repeat, no-repeat;
 }
 
-
 .page-header__autho {
   margin-bottom: 30px;
+}
+
+.page-header .explorer__autho {
+  display: none;
+  margin: 0;
 }
 
 .page-header__list {

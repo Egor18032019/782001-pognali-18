@@ -21,6 +21,7 @@
   height: 16px;
   align-self: center;
   border: none;
+  background-color: inherit;
 }
 
 .filter-country__pushbutton--close,
@@ -126,7 +127,7 @@
   @include fontBS (14px, 500, #1d2e5b);
   text-align: center;
   width: 100%;
-  height: 100%;
+  // height: 100%;
   text-transform: uppercase;
   background-color: white;
   border: 0 none;
@@ -176,4 +177,152 @@
 .filter-country__chosen--23,
 .filter-country__chosen--24 {
   display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .filter-country__chosen {
+    font-size: 20px;
+  }
+
+  .filter-country__selection--items {
+    margin-right: 46px;
+    margin-bottom: 40px;
+    border: 0;
+  }
+
+  .filter-country__other .filter-country__selection {
+    width: 70%;
+  }
+
+  .filter-country__selection--items button {
+    font-size: 60px;
+    background-color: inherit;
+    border: 0;
+  }
+
+  .filter-country__chosen a {
+    font-size: 20px;
+  }
+
+  .filter-country__selection button {
+    margin: 0;
+  }
+
+  .filter-country__selection--items .filter-country__chosen {
+    margin-left: 480px;
+  }
+}
+
+// --------------------------для пк ------------------------
+@media (min-width: $desktop-width) {
+  .filter-country__selection--items .filter-country__chosen {
+    margin-left: 0;
+    // margin-bottom: 550px;
+  }
+
+  .filter-country__selection--items {
+    // width: auto;
+    height: auto;
+    margin-right: 150px;
+    border: 0;
+  }
+
+  .filter-country__selection--last {
+    margin-bottom: 200px;
+  }
+
+  // как сделать чтобы последня строка была без маргинов ? + пренаполнение
+
+  .filter-country__selection button {
+    font-size: 60px;
+    margin-bottom: 48px;
+  }
+
+  .filter-country__chosen--2,
+  .filter-country__chosen--3,
+  .filter-country__chosen--4,
+  .filter-country__chosen--5,
+  .filter-country__chosen--6,
+  .filter-country__chosen--7,
+  .filter-country__chosen--8,
+  .filter-country__chosen--9,
+  .filter-country__chosen--10,
+  .filter-country__chosen--11,
+  .filter-country__chosen--12,
+  .filter-country__chosen--13,
+  .filter-country__chosen--14,
+  .filter-country__chosen--15,
+  .filter-country__chosen--16,
+  .filter-country__chosen--17,
+  .filter-country__chosen--18,
+  .filter-country__chosen--19,
+  .filter-country__chosen--20,
+  .filter-country__chosen--21,
+  .filter-country__chosen--22,
+  .filter-country__chosen--23,
+  .filter-country__chosen--24 {
+    display: block;
+  }
+
+  .filter-country__main h2 {
+    font-size: 20px;
+  }
+
+  .filter-nav {
+    width: 23px;
+    height: 15px;
+  }
+
+  .filter-country__pushbutton {
+    width: 20%;
+    height: 18px;
+    margin-left: auto;
+  }
+
+  .filter-country__pushbutton--close {
+    display: inline-block;
+    font-size: 20px;
+  }
+
+  .filter-country__continent {
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    order: -1;
+  }
+
+  .filter-country__main {
+    width: 30%;
+    order: -2;
+  }
+
+  .filter-country__other .filter-country__button {
+    min-height: 100px;
+    font-size: 20px;
+  }
+
+  .filter-country__button p::before {
+    width: 18px;
+    height: 18px;
+  }
+
+  .filter-country__pushbutton--close::after,
+  .filter-country__pushbutton--open::after {
+    margin-left: 64px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .filter-country__other .filter-country__selection {
+    margin-bottom: 0;
+  }
+
+  .filter-country__continent--radio {
+    font-size: 20px;
+  }
+
+  .filter-country__continent--choose:checked + .filter-country__continent--radio {
+    font-size: 20px;
+  }
 }

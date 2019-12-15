@@ -137,3 +137,90 @@
 .register__contact {
   align-self: flex-start;
 }
+
+@media (min-width: $tablet-width) {
+  .register__slogan h2 {
+    font-size: 45px;
+  }
+
+  .register__slogan p {
+    font-size: 28px;
+  }
+
+  .register__slogan b {
+    font-size: 28px;
+    margin-bottom: 67px;
+  }
+
+  .register__container form {
+    margin-bottom: 61px;
+  }
+
+  .register__button {
+    width: 10%;
+    margin-left: -10%;
+    min-height: 81px;
+  }
+
+  .register__container input {
+    min-height: 81px;
+  }
+
+  .register__container p {
+    font-size: 28px;
+    width: 100%;
+  }
+
+  .register__item {
+    font-size: 28px;
+    width: 100%;
+  }
+
+  .register__item--telephone::before,
+  .register__item--mail::before {
+    width: 67px;
+    height: 67px;
+  }
+}
+
+// --------------------------для пк ------------------------
+@media (min-width: $desktop-width) {
+  .register {
+    min-height: 840px;
+    // обговорить с Дашей про высоту
+  }
+
+  .register__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .register__button span {
+    @include fontBS (24px, bold, #1d2e5b);
+    display: inline-block;
+    width: 85%;
+  }
+
+  //  почему маргином  я не могу толкать спан от псевдоэлемента ?
+
+  .register__button {
+    width: 22%;
+    margin-left: -22%;
+  }
+
+  .register__item--telephone::before,
+  .register__item--mail::before,
+  .trail__gprs::before {
+    width: 90px;
+    height: 90px;
+  }
+
+  .register__container .register__contact {
+    width: 50%;
+  }
+
+  .register__container input {
+    font-size: 22px;
+    padding-left: 35px;
+  }
+}

@@ -67,3 +67,32 @@
 .trail__position img {
   width: 100%;
 }
+
+@media (min-width: $tablet-width) {
+  .trail__gprs::before {
+    width: 67px;
+    height: 67px;
+  }
+
+  .trail__gprs {
+    font-size: 28px;
+  }
+
+  .trail-map .trail__run {
+    font-size: 24px;
+    min-height: 81px;
+  }
+}
+
+// --------------------------для пк ------------------------
+@media (min-width: $desktop-width) {
+  .trail-map {
+    display: flex;
+  }
+
+  .trail-map .trail__run {
+    width: 50%;
+    flex-direction: row;
+    align-items: center;
+  }
+}

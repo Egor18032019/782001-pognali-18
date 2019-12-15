@@ -67,3 +67,63 @@
 .steps__list li:last-child {
   background-color: #ffd74b;
 }
+
+@media (min-width: $tablet-width) {
+  .steps-quote {
+    width: 85%;
+    margin-top: -515px;
+    margin-bottom: 213px;
+  }
+
+  .steps-quote q {
+    width: 50%;
+    font-size: 28px;
+  }
+
+  .steps-quote cite {
+    width: 50%;
+    font-size: 21px;
+  }
+
+  .steps__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .steps__list .steps__item {
+    width: 50%;
+    height: 140px;
+    font-size: 24px;
+    padding-left: 31px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+}
+
+// --------------------------для пк ------------------------
+@media (min-width: $desktop-width) {
+  .steps-quote {
+    width: 30%;
+    margin-left: auto;
+    margin-top: -35%;
+    margin-bottom: 117px;
+  }
+
+  .steps-quote q {
+    width: 75%;
+    font-size: 28px;
+  }
+
+  .steps-quote cite {
+    width: 75%;
+    font-size: 21px;
+  }
+
+  .steps__list {
+    flex-wrap: nowrap;
+  }
+
+  .steps-wrapper {
+    padding-bottom: 123px;
+  }
+}

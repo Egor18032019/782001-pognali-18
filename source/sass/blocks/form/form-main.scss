@@ -25,3 +25,15 @@
   background-image: url("../img/return.svg");
   // Как залить свг  ?
 }
+
+@media (min-width: $tablet-width) {
+  .form-main__slogan {
+    display: flex;
+    justify-content: space-between;
+    padding: 65px 129px;
+  }
+
+  .form-main__home-link {
+    display: block;
+  }
+}

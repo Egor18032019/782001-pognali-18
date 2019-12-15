@@ -36,3 +36,23 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+@media (min-width: $tablet-width) {
+  .autho-icon {
+    display: none;
+  }
+}
+
+// --------------------------для пк ------------------------
+@media (min-width: $desktop-width) {
+  .autho__button {
+    min-height: 50px;
+    font-size: 20px;
+  }
+
+  .autho-icon {
+    display: inline-block;
+    width: 50px;
+    min-height: 50px;
+  }
+}

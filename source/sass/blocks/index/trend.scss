@@ -96,3 +96,113 @@
 //   background-repeat: no-repeat;
 //   background-position: center;
 // }
+
+@media (min-width: $tablet-width) {
+  .trend-wrapper {
+    position: relative;
+    background-image: url("../img/flags-back@1x.png");
+    background-repeat: no-repeat;
+    background-position: top 80px right 40px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+  }
+
+  .trend-list {
+    z-index: 1;
+  }
+
+  .trend h2 {
+    width: 65%;
+    font-size: 45px;
+  }
+
+  .trend-slogan p {
+    font-size: 28px;
+    width: 57%;
+  }
+
+  .trend__text p {
+    margin-top: 0;
+    font-size: 24px;
+  }
+
+  .trend__text small {
+    font-size: 20px;
+    margin-bottom: 21px;
+  }
+
+  .trend__text span {
+    font-size: 20px;
+    order: 1  ;
+  }
+
+  .trend__item {
+    display: flex;
+  }
+
+  .trend__item img {
+    width: 33%;
+    order: 2;
+  }
+
+  // обсудить с Дашей как должен меняться рисунок
+
+  .trend__text {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .trend__button {
+    font-size: 24px;
+  }
+}
+
+// --------------------------для пк ------------------------
+@media (min-width: $desktop-width) {
+  .trend h2 {
+    margin: 0;
+  }
+
+  .trend-list::before {
+    position: absolute;
+    width: 141px;
+    height: 141px;
+    content: " ";
+    border-radius: 20px;
+    background-color: #e2e5f2;
+  }
+
+  .trend-wrapper {
+    padding-top: 161px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .trend-slogan {
+    width: 35%;
+    align-self: flex-start;
+    order: 1;
+  }
+
+  .trend-slogan p {
+    width: 85%;
+  }
+
+  .trend-list {
+    width: 40%;
+    order: 0;
+    margin: 0;
+    margin-bottom: 149px;
+  }
+
+  .trend .trend__button {
+    position: absolute;
+    width: 25%;
+    order: 3;
+    align-self: flex-end;
+    z-index: 1;
+    right: 255px;
+    bottom: 140px;
+  }
+}

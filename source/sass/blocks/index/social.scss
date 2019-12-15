@@ -33,3 +33,10 @@
   background-position: center;
   background-size: 18px;
 }
+
+@media (min-width: $tablet-width) {
+  .social__item a {
+    width: 60px;
+    height: 60px;
+  }
+}

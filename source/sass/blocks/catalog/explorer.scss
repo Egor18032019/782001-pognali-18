@@ -457,3 +457,442 @@
   display: flex;
   flex-direction: column;
 }
+
+   // _____________________Направления_____________________________________________
+
+@media (min-width: $tablet-width) {
+  .explorer__idea {
+    min-height: 170px;
+    padding-left: 71px;
+  }
+
+  .explorer-main {
+    justify-content: space-evenly;
+  }
+
+  .explorer-foto {
+    border-radius: 0;
+    width: 94px;
+    height: 94px;
+  }
+
+  .explorer-lvl {
+    width: 94px;
+    height: 94px;
+    order: -2;
+  }
+
+  .page-header .explorer__autho {
+    display: flex;
+  }
+
+  .explorer-main__button p {
+    font-size: 20px;
+    line-height: 2;
+    text-align: center;
+    margin: 0;
+    padding: 9px;
+  }
+
+  .explorer-main .explorer-main__button {
+    background-color: #dfe3f0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .explorer__transport {
+    width: 33%;
+    order: -1;
+  }
+
+  .explorer__tegs {
+    min-height: 94px;
+  }
+
+  .explorer__tegs textarea {
+    font-size: 24px;
+    width: 100%;
+  }
+
+  .explorer-plan h2 {
+    font-size: 36px;
+  }
+
+  .explorer-plan__country li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .explorer-plan__country b {
+    width: 100%;
+  }
+
+  .explorer-step__first--container,
+  .explorer-step__second--container,
+  .explorer-step__three--container {
+    width: 85%;
+    align-items: flex-start;
+  }
+
+  .explorer-step h3 {
+    font-size: 36px;
+  }
+
+  .explorer-step__text {
+    font-size: 20px;
+  }
+
+  .explorer-add b {
+    font-size: 20px;
+  }
+
+  .explorer-add__base span {
+    color: rgba(29, 46, 91, 0.3);
+    font-size: 20px;
+  }
+
+  .explorer-add__score--children {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  .explorer--count {
+    font-size: 36px;
+  }
+
+  .explorer-data__day {
+    width: 550px;
+  }
+
+  .explorer-data__day button,
+  .explorer-data__day label {
+    width: 77px;
+    height: 70px;
+  }
+
+  .explorer-add .form-button {
+    width: 285px;
+    height: 81px;
+    align-self: flex-start;
+    font-size: 24px;
+    text-transform: unset;
+    margin: 0;
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+
+  .explorer-add .form-button::after {
+    content: "";
+    width: 10px;
+    height: 14px;
+    display: inline-block;
+    background-image: url("../img/triangle-arrow-right.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    margin-left: auto;
+  }
+
+  .explorer-step__three textarea {
+    @include fontBS (20px, normal, #444444);
+    width: 100%;
+    padding: 20px;
+  }
+
+  .explorer-step__three--plan {
+    width: 100%;
+  }
+
+  .explorer-step__three--plan p {
+    font-size: 30px;
+  }
+}
+
+// --------------------------для пк ------------------------
+
+@media (min-width: $desktop-width) {
+
+  .explorer {
+    margin-bottom: 72px;
+  }
+
+  .explorer-main {
+    position: relative;
+    padding-top: 73px;
+    justify-content: space-evenly;
+  }
+
+  .page-header .explorer__autho {
+    display: flex;
+  }
+
+  .explorer__idea {
+    align-items: center;
+    padding-left: 129px;
+    min-height: 190px;
+    font-size: 60px;
+  }
+
+  .explorer-foto {
+    border-radius: 0;
+    width: 190px;
+    height: 190px;
+    position: absolute;
+    bottom: 188px;
+    right: 200px;
+    z-index: 1;
+  }
+
+  .explorer-lvl {
+    position: absolute;
+    bottom: 250px;
+    right: 422px;
+    width: 94px;
+    min-height: 94px;
+    margin: 0;
+  }
+
+  .explorer-lvl p {
+    color: #ffffff;
+  }
+
+  .explorer-lvl span {
+    color: #ffffff;
+  }
+
+  .explorer-main__button p {
+    width: 80px;
+    font-size: 20px;
+    line-height: 2;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .explorer-main .explorer-main__button {
+    position: absolute;
+    width: 190px;
+    height: 90px;
+    align-items: flex-end;
+    background-color: #dfe3f0;
+    margin: 0;
+    padding: 0;
+    right: 200px;
+    bottom: 170px;
+    border-radius: 0;
+  }
+
+  .explorer__tegs {
+    width: 40%;
+  }
+
+  .explorer__transport {
+    width: 20%;
+  }
+
+  .explorer-plan {
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+  }
+
+  .explorer__tegs textarea {
+    font-size: 20px;
+  }
+
+  .explorer-main legend {
+    font-size: 20px;
+  }
+
+  .explorer-plan__country b {
+    font-size: 24px;
+  }
+
+  .explorer-plan__country p {
+    font-size: 20px;
+  }
+
+  .explorer-plan__country a {
+    font-size: 20px;
+  }
+
+  .explorer-plan__country li {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .explorer-add {
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+  }
+
+  .explorer-add h2 {
+    font-size: 36px;
+  }
+
+  .explorer-date h3 {
+    font-size: 36px;
+    align-self: flex-start;
+  }
+
+  .explorer-step__text {
+    width: 58%;
+    align-self: flex-start;
+    font-size: 20px;
+  }
+
+  .explorer-add b {
+    width: 20%;
+    font-size: 18px;
+  }
+
+  .explorer-add__score {
+    width: 181px;
+  }
+
+  .explorer-add__choise--day {
+    order: 7;
+  }
+
+  .explorer-add__score--day {
+    order: 6;
+  }
+
+  .explorer-add__choise--time {
+    order: 5;
+  }
+
+  .explorer-add__choise--man {
+    order: 3;
+    margin-right: auto;
+  }
+
+  .explorer-add__score--children {
+    width: 31%;
+    order: 4;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  // спросить у Дарьи что делать со слайдером и как его ставить
+
+  .explorer-path {
+    width: 180px;
+    flex-direction: column;
+    font-size: 20px;
+    height: auto;
+    background-color: inherit;
+  }
+
+  .explorer--count {
+    font-size: 36px;
+  }
+
+  .explorer__month--arrow {
+    width: 18px;
+    height: 34px;
+  }
+
+  .explorer-data__day {
+    width: 100%;
+    max-width: 1110px;
+  }
+
+  .explorer-data__day label,
+  .explorer-data__day button {
+    width: 143px;
+    height: 72px;
+    font-size: 18px;
+  }
+
+  .explorer-step__first,
+  .explorer-step__second,
+  .explorer-step__three {
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  .explorer-step__first--container,
+  .explorer-step__second--container,
+  .explorer-step__three--container {
+    width: 85%;
+    align-items: start;
+  }
+
+  .explorer-add .form-button {
+    width: 28%;
+    height: 81px;
+    align-self: flex-start;
+    font-size: 24px;
+    text-transform: none;
+    margin: 0;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  .explorer-add .form-button::after {
+    content: "";
+    width: 10px;
+    height: 14px;
+    display: inline-block;
+    background-image: url("../img/triangle-arrow-right.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    margin-left: auto;
+  }
+
+  .explorer-step--back {
+    width: 26%;
+    text-transform: none;
+    margin: 0;
+    font-size: 24px;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  .explorer-step--back::before {
+    content: "";
+    width: 10px;
+    height: 14px;
+    display: inline-block;
+    background-image: url("../img/triangle-arrow-left.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    margin-right: auto;
+  }
+
+  .explorer-step__second--container h3,
+  .explorer-step__three--container h3 {
+    font-size: 36px;
+    align-self: flex-start;
+  }
+
+  .explorer-step__second--choise {
+    width: 75%;
+    min-height: 70px;
+  }
+
+  .explorer-step__second--add {
+    font-size: 20px;
+  }
+
+  .explorer-step__second--anchor,
+  .explorer-step__three--anchor {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .explorer-step__three--plan p {
+    font-size: 30px;
+  }
+
+  .explorer-step__three--plan textarea {
+    font-size: 20px;
+  }
+}

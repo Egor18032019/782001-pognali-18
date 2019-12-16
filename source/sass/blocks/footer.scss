@@ -35,3 +35,38 @@
 .footer__social {
   margin-bottom: 60px;
 }
+
+@media (min-width: $tablet-width) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .footer__made p {
+    font-size: 20px;
+  }
+
+  .footer__container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 46px;
+    padding-top: 46px;
+  }
+
+  .footer__social {
+    margin-bottom: 0;
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+  }
+
+  .footer__made {
+    width: 21%;
+  }
+}
+
+// // --------------------------для пк ------------------------
+// @media (min-width: $desktop-width) {
+
+// }

@@ -8,7 +8,10 @@
 
 .explorer__idea {
   @include fontBS (36px, bold, #ffffff);
+  display: flex;
+  align-items: center;
   min-height: 73px;
+  padding-left: 10px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   background-color: #161c35;
@@ -29,25 +32,38 @@
   text-align: center;
 }
 
-
-.explorer__main {
+.explorer-foto {
   width: 32%;
-  min-height: 100px;
+  height: 100px;
   border-radius: 50%;
   margin-bottom: 19px;
-}
-
-.explorer-foto {
-  background-image: url("../img/photo-account-mobile@1x.jpg");
+  // background-image: url("../img/photo-account-mobile@1x.jpg");
   font-size: 0;
-  align-self: flex-end;
 }
 
-// не получаеться их в ряд сделать
 .explorer-lvl {
-  align-self: flex-start;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 19px;
   text-align: center;
   border: 3px solid #ff8d30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.explorer-lvl p {
+  @include fontBS (38px, bold, #161c35);
+  text-align: center;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.explorer-lvl span {
+  @include fontBS (18px, normal, #444444);
+  text-align: center;
 }
 
 .explorer-main__button {
@@ -110,8 +126,13 @@
   background-color: #dfe3f0;
 }
 
+.explorer-plan h2 {
+  @include fontBS (18px, bold, #1d2e5b);
+}
+
 .explorer-plan__country {
   width: 85%;
+  padding: 0;
 }
 
 .explorer-plan__country li {
@@ -147,6 +168,10 @@
   margin-bottom: 10px;
 }
 
+.explorer-add h2 {
+  @include fontBS (22px, bold, #1d2e5b);
+}
+
 .explorer-step {
   @include center;
 }
@@ -163,13 +188,18 @@
   border-bottom-right-radius: 10px;
 }
 
+.explorer-step__first--container,
+.explorer-step__second--container,
+.explorer-step__three--container {
+  @include center;
+}
+
 .explorer-date {
   @include center;
-  width: 82%;
   margin-bottom: 21px;
 }
 
-.explorer-add p {
+.explorer-step__text {
   @include fontBS (16px, normal, #444444);
 }
 
@@ -182,12 +212,30 @@
   @include fontBS (16px, 500, #1d2e5b);
   text-transform: uppercase;
   display: block;
-  margin-bottom: 9px;
-  width: 100%;
+  // margin-bottom: 9px;
+  width: 80%;
 }
 
-.explorer-add__choise span {
+.explorer-add__base span {
+  @include fontBS (16px, 500, #1d2e5b);
+  width: 10%;
+  text-transform: uppercase;
+  // margin-bottom: 9px;
   float: right;
+}
+
+.explorer-add__base {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.explorer-path {
+  display: flex;
+  width: 40px;
+  height: 2px;
+  background-color: orange;
+  font-size: 0;
 }
 
 .explorer-add__score {
@@ -211,7 +259,6 @@
 }
 
 .explorer__calendar {
-  width: 82%;
   margin-bottom: 21px;
 }
 
@@ -222,20 +269,43 @@
 
 .explorer__month {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #d4d9eb;
   border-top: 1px solid #d4d9eb;
+}
+
+.explorer__month--arrow {
+  font-size: 0;
+}
+
+.explorer__month--left {
+  background-image: url("../img/month-arrow-left.svg");
+  background-repeat: no-repeat;
+}
+
+.explorer__month--right {
+  background-image: url("../img/month-arrow-right.svg");
+  background-repeat: no-repeat;
+}
+
+.explorer--count {
+  @include fontBS (20px, bold, #1d2e5b);
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .explorer__calendar input {
   display: none;
 }
 
+.explorer-data__day button:last-child {
+  color: red;
+}
+
 .explorer__calendar label {
   @include fontBS (14px, normal, rgba(68, 68, 68, 0.3));
   display: inline-block;
-  width: 30px;
-  height: 30px;
   background-color: white;
   border: 1px solid #d4d9eb;
   text-align: center;
@@ -245,20 +315,27 @@
 .explorer-data__day {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 221px;
 }
 
-.explorer-data--031:checked ~ .explorer-data__day .explorer-data__choise--031 {
+.explorer-data__day p {
+  margin: 0;
+}
+
+.explorer-data__day label,
+.explorer-data__day button {
+  width: 30px;
+  height: 30px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.explorer-data--0331:checked ~ .explorer-data__day .explorer-data__choise--0331 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0327:checked ~ .explorer-data__day .explorer-data__choise--0327 {
-  background-color: #1d2e5b;
-  color: white;
-}
-
-.explorer-data--0326:checked ~ .explorer-data__day .explorer-data__choise--0327 {
+.explorer-data--0329:checked ~ .explorer-data__day .explorer-data__choise--0329 {
   background-color: #1d2e5b;
   color: white;
 }
@@ -268,9 +345,22 @@
   color: white;
 }
 
-.explorer-data--0329:checked ~ .explorer-data__day .explorer-data__choise--0329 {
+.explorer-data--0327:checked ~ .explorer-data__day .explorer-data__choise--0327 {
   background-color: #1d2e5b;
   color: white;
+}
+
+.explorer-data--0326:checked ~ .explorer-data__day .explorer-data__choise--0326 {
+  background-color: #1d2e5b;
+  color: white;
+}
+
+.explorer-data--0326:checked ~ .explorer-data__day .explorer-data__choise--0326::after {
+  content: "Заезд";
+}
+
+.explorer-data--0328:checked ~ .explorer-data__day .explorer-data__choise--0328::after {
+  content: "Выезд";
 }
 
 .explorer-step__second--choise {
@@ -301,6 +391,7 @@
 }
 
 .explorer-step__second--add {
+  @include fontBS (14px, 500, #1d2e5b);
   width: 100%;
   height: 100%;
   background-color: #edeff6;
@@ -319,7 +410,16 @@
   // отсюда каким образом флаги тащить??
 }
 
-.explorer-step .explorer-step--back {
+.explorer-step--back {
+  @include margin-auto;
+  @include fontBS($fsize:17px, $fweight:bold, $color:#161c35);
+  width: 85%;
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  text-transform: uppercase;
   background-color: inherit;
 }
 
@@ -330,6 +430,10 @@
 
 .explorer-step__three--plan {
   margin-bottom: 23px;
+}
+
+.explorer-step__three--plan p {
+  @include fontBS (17px, bold, #1d2e5b);
 }
 
 .explorer-step__second--choise p {
@@ -345,4 +449,450 @@
   background-repeat: no-repeat;
   background-position: center;
   margin-left: auto;
+}
+
+.explorer-step__second--anchor,
+.explorer-step__three--anchor {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+   // _____________________Направления_____________________________________________
+
+@media (min-width: $tablet-width) {
+  .explorer__idea {
+    min-height: 170px;
+    padding-left: 71px;
+  }
+
+  .explorer-main {
+    justify-content: space-evenly;
+  }
+
+  .explorer-foto {
+    border-radius: 0;
+    width: 94px;
+    height: 94px;
+  }
+
+  .explorer-lvl {
+    width: 94px;
+    height: 94px;
+    order: -2;
+  }
+
+  .page-header .explorer__autho {
+    display: flex;
+  }
+
+  .explorer-main__button p {
+    font-size: 20px;
+    line-height: 2;
+    text-align: center;
+    margin: 0;
+    padding: 9px;
+  }
+
+  .explorer-main .explorer-main__button {
+    background-color: #dfe3f0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .explorer__transport {
+    width: 33%;
+    order: -1;
+  }
+
+  .explorer__tegs {
+    min-height: 94px;
+  }
+
+  .explorer__tegs textarea {
+    font-size: 24px;
+    width: 100%;
+  }
+
+  .explorer-plan h2 {
+    font-size: 36px;
+  }
+
+  .explorer-plan__country li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .explorer-plan__country b {
+    width: 100%;
+  }
+
+  .explorer-step__first--container,
+  .explorer-step__second--container,
+  .explorer-step__three--container {
+    width: 85%;
+    align-items: flex-start;
+  }
+
+  .explorer-step h3 {
+    font-size: 36px;
+  }
+
+  .explorer-step__text {
+    font-size: 20px;
+  }
+
+  .explorer-add b {
+    font-size: 20px;
+  }
+
+  .explorer-add__base span {
+    color: rgba(29, 46, 91, 0.3);
+    font-size: 20px;
+  }
+
+  .explorer-add__score--children {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  .explorer--count {
+    font-size: 36px;
+  }
+
+  .explorer-data__day {
+    width: 550px;
+  }
+
+  .explorer-data__day button,
+  .explorer-data__day label {
+    width: 77px;
+    height: 70px;
+  }
+
+  .explorer-add .form-button {
+    width: 285px;
+    height: 81px;
+    align-self: flex-start;
+    font-size: 24px;
+    text-transform: unset;
+    margin: 0;
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+
+  .explorer-add .form-button::after {
+    content: "";
+    width: 10px;
+    height: 14px;
+    display: inline-block;
+    background-image: url("../img/triangle-arrow-right.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    margin-left: auto;
+  }
+
+  .explorer-step__three textarea {
+    @include fontBS (20px, normal, #444444);
+    width: 100%;
+    padding: 20px;
+  }
+
+  .explorer-step__three--plan {
+    width: 100%;
+  }
+
+  .explorer-step__three--plan p {
+    font-size: 30px;
+  }
+}
+
+// --------------------------для пк ------------------------
+
+@media (min-width: $desktop-width) {
+
+  .explorer {
+    margin-bottom: 72px;
+  }
+
+  .explorer-main {
+    position: relative;
+    padding-top: 73px;
+    justify-content: space-evenly;
+  }
+
+  .page-header .explorer__autho {
+    display: flex;
+  }
+
+  .explorer__idea {
+    align-items: center;
+    padding-left: 129px;
+    min-height: 190px;
+    font-size: 60px;
+  }
+
+  .explorer-foto {
+    border-radius: 0;
+    width: 190px;
+    height: 190px;
+    position: absolute;
+    bottom: 188px;
+    right: 200px;
+    z-index: 1;
+  }
+
+  .explorer-lvl {
+    position: absolute;
+    bottom: 250px;
+    right: 422px;
+    width: 94px;
+    min-height: 94px;
+    margin: 0;
+  }
+
+  .explorer-lvl p {
+    color: #ffffff;
+  }
+
+  .explorer-lvl span {
+    color: #ffffff;
+  }
+
+  .explorer-main__button p {
+    width: 80px;
+    font-size: 20px;
+    line-height: 2;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .explorer-main .explorer-main__button {
+    position: absolute;
+    width: 190px;
+    height: 90px;
+    align-items: flex-end;
+    background-color: #dfe3f0;
+    margin: 0;
+    padding: 0;
+    right: 200px;
+    bottom: 170px;
+    border-radius: 0;
+  }
+
+  .explorer__tegs {
+    width: 40%;
+  }
+
+  .explorer__transport {
+    width: 20%;
+  }
+
+  .explorer-plan {
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+  }
+
+  .explorer__tegs textarea {
+    font-size: 20px;
+  }
+
+  .explorer-main legend {
+    font-size: 20px;
+  }
+
+  .explorer-plan__country b {
+    font-size: 24px;
+  }
+
+  .explorer-plan__country p {
+    font-size: 20px;
+  }
+
+  .explorer-plan__country a {
+    font-size: 20px;
+  }
+
+  .explorer-plan__country li {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .explorer-add {
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+  }
+
+  .explorer-add h2 {
+    font-size: 36px;
+  }
+
+  .explorer-date h3 {
+    font-size: 36px;
+    align-self: flex-start;
+  }
+
+  .explorer-step__text {
+    width: 58%;
+    align-self: flex-start;
+    font-size: 20px;
+  }
+
+  .explorer-add b {
+    width: 20%;
+    font-size: 18px;
+  }
+
+  .explorer-add__score {
+    width: 181px;
+  }
+
+  .explorer-add__choise--day {
+    order: 7;
+  }
+
+  .explorer-add__score--day {
+    order: 6;
+  }
+
+  .explorer-add__choise--time {
+    order: 5;
+  }
+
+  .explorer-add__choise--man {
+    order: 3;
+    margin-right: auto;
+  }
+
+  .explorer-add__score--children {
+    width: 31%;
+    order: 4;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  // спросить у Дарьи что делать со слайдером и как его ставить
+
+  .explorer-path {
+    width: 180px;
+    flex-direction: column;
+    font-size: 20px;
+    height: auto;
+    background-color: inherit;
+  }
+
+  .explorer--count {
+    font-size: 36px;
+  }
+
+  .explorer__month--arrow {
+    width: 18px;
+    height: 34px;
+  }
+
+  .explorer-data__day {
+    width: 100%;
+    max-width: 1110px;
+  }
+
+  .explorer-data__day label,
+  .explorer-data__day button {
+    width: 143px;
+    height: 72px;
+    font-size: 18px;
+  }
+
+  .explorer-step__first,
+  .explorer-step__second,
+  .explorer-step__three {
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  .explorer-step__first--container,
+  .explorer-step__second--container,
+  .explorer-step__three--container {
+    width: 85%;
+    align-items: start;
+  }
+
+  .explorer-add .form-button {
+    width: 28%;
+    height: 81px;
+    align-self: flex-start;
+    font-size: 24px;
+    text-transform: none;
+    margin: 0;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  .explorer-add .form-button::after {
+    content: "";
+    width: 10px;
+    height: 14px;
+    display: inline-block;
+    background-image: url("../img/triangle-arrow-right.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    margin-left: auto;
+  }
+
+  .explorer-step--back {
+    width: 26%;
+    text-transform: none;
+    margin: 0;
+    font-size: 24px;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  .explorer-step--back::before {
+    content: "";
+    width: 10px;
+    height: 14px;
+    display: inline-block;
+    background-image: url("../img/triangle-arrow-left.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    margin-right: auto;
+  }
+
+  .explorer-step__second--container h3,
+  .explorer-step__three--container h3 {
+    font-size: 36px;
+    align-self: flex-start;
+  }
+
+  .explorer-step__second--choise {
+    width: 75%;
+    min-height: 70px;
+  }
+
+  .explorer-step__second--add {
+    font-size: 20px;
+  }
+
+  .explorer-step__second--anchor,
+  .explorer-step__three--anchor {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .explorer-step__three--plan p {
+    font-size: 30px;
+  }
+
+  .explorer-step__three--plan textarea {
+    font-size: 20px;
+  }
 }

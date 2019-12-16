@@ -104,3 +104,65 @@
 .companions .index-button {
   margin-bottom: 25px;
 }
+
+@media (min-width: $tablet-width) {
+  .companions__slogan h2 {
+    font-size: 45px;
+  }
+
+  .companions__slogan p {
+    width: 65%;
+    font-size: 28px;
+  }
+
+  .companions__slogan b {
+    width: 45%;
+    font-size: 21px;
+  }
+
+  .companions-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .companions-list .companions__item {
+    width: 47%;
+  }
+}
+
+// --------------------------для пк ------------------------
+@media (min-width: $desktop-width) {
+ // спросить у Даши - почему даже если оутлайн подключен последаним
+  // приходиться  назначать по два класа что бы переопреелить значения
+  .companions {
+    min-height: 840px;
+    // высота времмено
+    position: relative;
+  }
+
+  .companions__slogan {
+    margin: 0;
+  }
+
+  .companions__slogan p {
+    width: 75%;
+  }
+
+  .companions__slogan b {
+    width: 75%;
+  }
+
+  .companions-wrapper {
+    flex-direction: row;
+  }
+
+  .companions .companions__button {
+    width: 20%;
+    align-self: flex-start;
+    margin: 0;
+    position: absolute;
+    bottom: 105px;
+    left: 110px;
+  }
+}

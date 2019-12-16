@@ -12,23 +12,23 @@
 
   <header class="page-header">
     <div class="page-header__main">
-      <a class="page-header__logo" href="index.html">
+      <a class="page-header__logo">
         Погнали?
         <img src="img/logo-mobile-white@1x.png" alt="логотип сервиса" width="100" height="19">
       </a>
       <nav class="page-header__nav">
         <button class="page-header__toggle">Показать меню</button>
-        <div class="page-header__wrapper visually-hidden">
+        <div class="page-header__wrapper">
           <ul class="page-header__list">
-            <li></li>
+            <li class="page-header__item"><a href="#">--------</a></li>
+            <li class="page-header__item"><a href="#">О сервисе</a></li>
+            <li class="page-header__item"><a href="#">Направления</a></li>
+            <li class="page-header__item"><a href="#">Попутчики</a></li>
           </ul>
         </div>
       </nav>
     </div>
-    <div class="page-header__slogan visually-hidden">
-      <h2>В путешествие с крутыми попутчиками!</h2>
-    </div>
-    <div class="page-header__autho autho visually-hidden">
+    <div class="page-header__autho autho explorer__autho">
       <a href="tel:+74954959595" class="autho__telephone autho-icon" title="Телефон">
         Звонок
       </a>
@@ -40,18 +40,22 @@
     </div>
   </header>
 
+
   <main>
     <section class="explorer">
       <h1 class="explorer__idea">Направления</h1>
 
       <form class="explorer-main" action="https://echo.htmlacademy.ru" method="GET">
         <h2 class="visually-hidden">Профиль путешественика</h2>
-        <div class="explorer-lvl explorer__main">
+        <div class="explorer-lvl">
           <p>80 </p>
           <span>level</span>
         </div>
-        <div class="explorer-foto explorer__main">Петя Демин</div>
-        <button class="form-button explorer-main__button"> Сменить фото</button>
+
+        <img src="img/demin-mobile@1x.jpg" class="explorer-foto" alt="Photo Demin" width="99" height="100">
+        <button class="form-button explorer-main__button">
+          <p>Сменить фото</p>
+        </button>
 
         <fieldset class="explorer__tegs">
           <legend> Тэги </legend>
@@ -98,192 +102,215 @@
             <b>Таиланд, Индонезия</b>
             <p>1 попутчик </p>
             <p>1 июл — 15 июля</p>
+            <a href="#">Изменить</a>
           </li>
         </ol>
       </div>
 
       <div class="explorer-add">
         <h2 id="step__first">Добавить план:</h2>
+        <!-- слайдер это переключательшагов -пока забить -->
+        <ul class="explorer-path">
+          <li><a href="#">Даты</a></li>
+          <li><a href="#">Маршрут</a></li>
+          <li><a href="#">Развлечения</a></li>
+        </ul>
         <form action="https://echo.htmlacademy.ru" method="GET" class="explorer-step">
-          <!-- слайдер это переключательшагов -пока забить -->
           <fieldset class="explorer-step__first">
-            <div class="explorer-date">
-              <h3>Шаг 1.
-                Даты пребывания</h3>
-              <p>Укажите предпочтительное количество попутчиков, которых
-                вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
-              <!-- обсудить как это делать - 2 + -->
-              <!-- инпут-тект и псевдо -->
-              <b class="explorer-add__choise">Ищу попутчиков: <span>Чел</span></b>
-              <div class="explorer-add__score">
-                <input type="button" value="+">
-                <p class="explorer--count">2</p>
-                <input type="button" value="-">
-              </div>
-              <b class="explorer-add__choise">Длительность: <span>Чел</span></b>
-              <div class="explorer-add__score">
-                <input type="button" value="+">
-                <p class="explorer--count">2</p>
-                <input type="button" value="-">
-              </div>
-              <label for="children" class="explorer-add__score--children">
-                <input type="checkbox" name="children" id="children">
-                Можно с детьми
-              </label>
-            </div>
-            <div class="explorer__calendar">
+            <div class="explorer-step__first--container">
+              <div class="explorer-date">
+                <h3>Шаг 1.
+                  Даты пребывания</h3>
+                <p class="explorer-date__btn explorer-step__text">Укажите предпочтительное количество попутчиков,
+                  которых
+                  вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
 
-              <div class="explorer__month">
-                <button type="button">
-                  < </button> <p class="explorer--count">Март 2019</p>
-                    <button type="button">></button>
+                <div class="explorer-add__base">
+                  <b class="explorer-add__choise">Ищу попутчиков: </b>
+                  <span class="explorer-add__choise--man">Чел.</span>
+                  <div class="explorer-add__score">
+                    <input type="button" value="+">
+                    <p class="explorer--count">2</p>
+                    <input type="button" value="-">
+                  </div>
+                  <b class="explorer-add__choise explorer-add__choise--time">Длительность:</b>
+                  <span class="explorer-add__choise--day">Дн.</span>
+                  <div class="explorer-add__score explorer-add__score--day">
+                    <input type="button" value="+">
+                    <p class="explorer--count">2</p>
+                    <input type="button" value="-">
+                  </div>
+                  <label for="children" class="explorer-add__score--children">
+                    <input type="checkbox" name="children" id="children">
+                    Можно с детьми
+                  </label>
+                </div>
               </div>
-              <!-- обсудить как делать календарь  = месяцы -->
-              <input type="checkbox" name="031" id="031" class="explorer-data--031">
-              <input type="checkbox" name="032" id="032" class="explorer-data--032">
-              <input type="checkbox" name="033" id="033" class="explorer-data--033">
-              <input type="checkbox" name="034" id="034" class="explorer-data--034">
-              <input type="checkbox" name="035" id="035" class="explorer-data--035">
-              <input type="checkbox" name="036" id="036" class="explorer-data--036">
-              <input type="checkbox" name="037" id="037" class="explorer-data--037">
-              <input type="checkbox" name="038" id="038" class="explorer-data--038">
-              <input type="checkbox" name="039" id="039" class="explorer-data--039">
-              <input type="checkbox" name="0326" id="0326" class="explorer-data--0327" checked>
-              <input type="checkbox" name="0327" id="0327" class="explorer-data--0328" checked>
-              <input type="checkbox" name="0328" id="0328" class="explorer-data--0329" checked>
-              <input type="checkbox" name="0329" id="0329" class="explorer-data--0330" checked>
-              <div class="explorer-data__day">
-                <label class="explorer-data__choise--0223" for="0223">23</label>
-                <label class="explorer-data__choise--0224" for="0224">24</label>
-                <label class="explorer-data__choise--0225" for="0225">25</label>
-                <label class="explorer-data__choise--0226" for="0226">26</label>
-                <label class="explorer-data__choise--0227" for="0227">27</label>
-                <label class="explorer-data__choise--0228" for="0228">28</label>
-                <label class="explorer-data__choise--031" for="031">1</label>
-                <label class="explorer-data__choise--032" for="032">2</label>
-                <label class="explorer-data__choise--033" for="033">3</label>
-                <label class="explorer-data__choise--034" for="034">4</label>
-                <label class="explorer-data__choise--035" for="035">5</label>
-                <label class="explorer-data__choise--036" for="036">6</label>
-                <label class="explorer-data__choise--037" for="037">7</label>
-                <label class="explorer-data__choise--038" for="038">8</label>
-                <label class="explorer-data__choise--039" for="039">9</label>
-                <label class="explorer-data__choise--1" for="1">10</label>
-                <label class="explorer-data__choise--1" for="1">11</label>
-                <label class="explorer-data__choise--1" for="1">12</label>
-                <label class="explorer-data__choise--1" for="1">13</label>
-                <label class="explorer-data__choise--1" for="1">14</label>
-                <label class="explorer-data__choise--1" for="1">15</label>
-                <label class="explorer-data__choise--1" for="1">16</label>
-                <label class="explorer-data__choise--1" for="1">17</label>
-                <label class="explorer-data__choise--1" for="1">18</label>
-                <label class="explorer-data__choise--1" for="1">19</label>
-                <label class="explorer-data__choise--1" for="1">20</label>
-                <label class="explorer-data__choise--1" for="1">21</label>
-                <label class="explorer-data__choise--1" for="1">22</label>
-                <label class="explorer-data__choise--1" for="1">23</label>
-                <label class="explorer-data__choise--1" for="1">24</label>
-                <label class="explorer-data__choise--1" for="1">25</label>
-                <label class="explorer-data__choise--0326" for="0326">26</label>
-                <label class="explorer-data__choise--0327" for="0327">27</label>
-                <label class="explorer-data__choise--0328" for="0328">28</label>
-                <label class="explorer-data__choise--0329" for="0329">29</label>
-                <label class="explorer-data__choise--0330" for="0330">29</label>
-                <label class="explorer-data__choise--0331" for="0331">31</label>
-                <label class="explorer-data__choise--041" for="041">1</label>
-                <label class="explorer-data__choise--042" for="042">2</label>
-                <label class="explorer-data__choise--043" for="043">4</label>
-                <label class="explorer-data__choise--044" for="044">4</label>
-                <label class="explorer-data__choise--045" for="045">5</label>
+              <div class="explorer__calendar">
+                <div class="explorer__month">
+                  <button type="button" class="explorer__month--arrow explorer__month--left">
+                    предыдущий месяц </button>
+                  <p class="explorer--count">Март 2019</p>
+                  <button type="button" class="explorer__month--right explorer__month--arrow">следующий месяц</button>
+                </div>
+                <!-- обсудить как делать календарь  = месяцы -->
+                <input type="checkbox" name="031" id="031" class="explorer-data--031">
+                <input type="checkbox" name="032" id="032" class="explorer-data--032">
+                <input type="checkbox" name="033" id="033" class="explorer-data--033">
+                <input type="checkbox" name="034" id="034" class="explorer-data--034">
+                <input type="checkbox" name="035" id="035" class="explorer-data--035">
+                <input type="checkbox" name="036" id="036" class="explorer-data--036">
+                <input type="checkbox" name="037" id="037" class="explorer-data--037">
+                <input type="checkbox" name="038" id="038" class="explorer-data--038">
+                <input type="checkbox" name="039" id="039" class="explorer-data--039">
+                <input type="checkbox" name="0326" id="0326" class="explorer-data--0326" checked>
+                <input type="checkbox" name="0327" id="0327" class="explorer-data--0327" checked>
+                <input type="checkbox" name="0328" id="0328" class="explorer-data--0328" checked>
+                <input type="checkbox" name="0329" id="0329" class="explorer-data--0329" checked>
+                <input type="checkbox" name="0331" id="0331" class="explorer-data--0331">
+                <div class="explorer-data__day">
+                  <!-- чем делать дни неделе ? посто кнопками ? сылками ? -->
+                  <button>П</button>
+                  <button>В</button>
+                  <button>С</button>
+                  <button>Ч</button>
+                  <button>П</button>
+                  <button class="weekends">С</button>
+                  <button class="weekends">В</button>
+                  <label class="explorer-data__choise--0223" for="0223">23</label>
+                  <label class="explorer-data__choise--0224" for="0224">24</label>
+                  <label class="explorer-data__choise--0225" for="0225">25</label>
+                  <label class="explorer-data__choise--0226" for="0226">26</label>
+                  <label class="explorer-data__choise--0227" for="0227">27</label>
+                  <label class="explorer-data__choise--0228" for="0228">28</label>
+                  <label class="explorer-data__choise--031" for="031">1</label>
+                  <label class="explorer-data__choise--032" for="032">2</label>
+                  <label class="explorer-data__choise--033" for="033">3</label>
+                  <label class="explorer-data__choise--034" for="034">4</label>
+                  <label class="explorer-data__choise--035" for="035">5</label>
+                  <label class="explorer-data__choise--036" for="036">6</label>
+                  <label class="explorer-data__choise--037" for="037">7</label>
+                  <label class="explorer-data__choise--038" for="038">8</label>
+                  <label class="explorer-data__choise--039" for="039">9</label>
+                  <label class="explorer-data__choise--1" for="1">10</label>
+                  <label class="explorer-data__choise--1" for="1">11</label>
+                  <label class="explorer-data__choise--1" for="1">12</label>
+                  <label class="explorer-data__choise--1" for="1">13</label>
+                  <label class="explorer-data__choise--1" for="1">14</label>
+                  <label class="explorer-data__choise--1" for="1">15</label>
+                  <label class="explorer-data__choise--1" for="1">16</label>
+                  <label class="explorer-data__choise--1" for="1">17</label>
+                  <label class="explorer-data__choise--1" for="1">18</label>
+                  <label class="explorer-data__choise--1" for="1">19</label>
+                  <label class="explorer-data__choise--1" for="1">20</label>
+                  <label class="explorer-data__choise--1" for="1">21</label>
+                  <label class="explorer-data__choise--1" for="1">22</label>
+                  <label class="explorer-data__choise--1" for="1">23</label>
+                  <label class="explorer-data__choise--1" for="1">24</label>
+                  <label class="explorer-data__choise--1" for="1">25</label>
+                  <label class="explorer-data__choise--0326" for="0326">
+                    <p>26</p>
+                  </label>
+                  <label class="explorer-data__choise--0327" for="0327">27</label>
+                  <label class="explorer-data__choise--0328" for="0328">
+                    <p>28</p>
+                  </label>
+                  <label class="explorer-data__choise--0329" for="0329">29</label>
+                  <label class="explorer-data__choise--0330" for="0330">29</label>
+                  <label class="explorer-data__choise--0331" for="0331">31</label>
+                  <label class="explorer-data__choise--041" for="041">1</label>
+                  <label class="explorer-data__choise--042" for="042">2</label>
+                  <label class="explorer-data__choise--043" for="043">4</label>
+                  <label class="explorer-data__choise--044" for="044">4</label>
+                  <label class="explorer-data__choise--045" for="045">5</label>
+                </div>
               </div>
+              <a href="#step__second" class="form-button">Следующий шаг</a>
             </div>
-            <a href="#" class="form-button">Следующий шаг</a>
-            <!-- доделать
-              5.9. Ссылка «Следующий шаг» — это якорная ссылка к следующему блоку. Ссылки в блоках «Даты пребывания», «Маршрут», «Развлечения» и «На шаг назад» тоже являются якорными и прокручивают страницу к соответствующим блокам. С помощью JavaScript можно реализовать плавный скрол к блокам, но это не обязательно.n> -->
           </fieldset>
 
           <fieldset class="explorer-step__second">
-            <!-- <a name="step__second"></a> -->
-            <h3 id="step__second">Шаг 2.
-              Маршрут</h3>
-            <p>Укажите страны, которые вы хотели по посетить.
-              Это может быть одна или сразу несколько.</p>
-            <!-- черный кружочек и кружочек с крестиком аболютное прозиционирование-->
-            <div class="explorer-step__second--choise">
-              <p class="visually-hidden">Выберите страну</p>
-              <ul class="explorer-step__second--country">
-                <li>Босния и Герце</li>
-                <li class="visually-hidden">другая страна</li>
-              </ul>
-              <ul class="explorer-step__second--flag">
-                <li>флаг Боснии и Герцоговины</li>
-                <li class="visually-hidden">флаг другой страны</li>
-              </ul>
+            <div class="explorer-step__second--container">
+              <h3 id="step__second">Шаг 2.
+                Маршрут</h3>
+              <p class="explorer-route__btn explorer-step__text">Укажите страны, которые вы хотели по посетить.
+                Это может быть одна или сразу несколько.</p>
+              <!-- черный кружочек и кружочек с крестиком аболютное прозиционирование-->
+              <div class="explorer-step__second--choise">
+                <p class="visually-hidden">Выберите страну</p>
+                <ul class="explorer-step__second--country">
+                  <li>Босния и Герце</li>
+                  <li class="visually-hidden">другая страна</li>
+                </ul>
+                <ul class="explorer-step__second--flag">
+                  <li>флаг Боснии и Герцоговины</li>
+                  <li class="visually-hidden">флаг другой страны</li>
+                </ul>
+              </div>
+
+              <div class="explorer-step__second--choise">
+                <p class="visually-hidden">Выберите страну</p>
+                <ul class="explorer-step__second--country">
+                  <li>
+                    Чехия
+                  </li>
+                  <li class="visually-hidden">другая страна</li>
+                </ul>
+                <ul class="explorer-step__second--flag">
+                  <li>флаг Чехии</li>
+                  <li class="visually-hidden">флаг другой страны</li>
+                </ul>
+              </div>
+
+              <div class="explorer-step__second--choise">
+                <ul class="explorer-step__second--country">
+                  Выберите страну
+                  <li class="visually-hidden">Чехия</li>
+                  <li class="visually-hidden">другая страна</li>
+                </ul>
+                <ul class="explorer-step__second--flag visually-hidden">
+                  <li class="visually-hidden">флаг Боснии и Герцоговины</li>
+                  <li class="visually-hidden">флаг Чехии</li>
+                  <li class="visually-hidden">флаг другой страны</li>
+                </ul>
+              </div>
+
+
+              <div class="explorer-step__second--choise">
+                <button type="button" class="explorer-step__second--add">
+                  Добавить страну</button>
+              </div>
+
+              <div class="explorer-step__second--anchor">
+                <a href="#step__three" class="form-button">Следующий шаг</a>
+                <a href="#step__first" class="explorer-step--back">Шаг назад</a>
+              </div>
             </div>
-
-            <div class="explorer-step__second--choise">
-              <p class="visually-hidden">Выберите страну</p>
-              <ul class="explorer-step__second--country">
-                <li>
-                  Чехия
-                </li>
-                <li class="visually-hidden">другая страна</li>
-              </ul>
-              <ul class="explorer-step__second--flag">
-                <li>флаг Чехии</li>
-                <li class="visually-hidden">флаг другой страны</li>
-              </ul>
-            </div>
-
-            <div class="explorer-step__second--choise">
-              <ul class="explorer-step__second--country">
-                Выберите страну
-                <li class="visually-hidden">Чехия</li>
-                <li class="visually-hidden">другая страна</li>
-              </ul>
-              <ul class="explorer-step__second--flag visually-hidden">
-                <li class="visually-hidden">флаг Боснии и Герцоговины</li>
-                <li class="visually-hidden">флаг Чехии</li>
-                <li class="visually-hidden">флаг другой страны</li>
-              </ul>
-            </div>
-
-
-            <div class="explorer-step__second--choise">
-              <button type="button" class="explorer-step__second--add">
-                Добавить страну</button>
-            </div>
-
-            <a href="#" class="form-button">Следующий шаг</a>
-            <!-- доделать
-          5.9. Ссылка «Следующий шаг» — это якорная ссылка к следующему блоку. Ссылки в блоках «Даты пребывания», «Маршрут», «Развлечения» и «На шаг назад» тоже являются якорными и прокручивают страницу к соответствующим блокам. С помощью JavaScript можно реализовать плавный скрол к блокам, но это не обязательно.n> -->
-            <a href="#step__first" class="form-button explorer-step--back">Шаг назад</a>
-
           </fieldset>
 
           <fieldset class="explorer-step__three">
-            <h3>Шаг 3.
-              Развлечения</h3>
-            <p>Наконец, расскажите о своих планах времяпровождения.
-              Можно писать в свободной форме и ставить тэги.
-            </p>
-            <div class="explorer-step__three--plan">
-              <!-- на линию забить -->
-              <p>Босния и Герцоговина</p>
-              <textarea name="plan" id="step-plan-1" cols="30" rows="10" placeholder="План действий">
+            <div class="explorer-step__three--container">
+              <h3 id="step__three">Шаг 3.
+                Развлечения</h3>
+              <p class="explorer-step__text">Наконец, расскажите о своих планах времяпровождения.
+                Можно писать в свободной форме и ставить тэги.
+              </p>
+              <div class="explorer-step__three--plan">
+                <!-- на линию забить -->
+                <p>Босния и Герцоговина</p>
+                <textarea name="plan" id="step-plan-1" cols="30" rows="10" placeholder="План действий">
             </textarea>
-            </div>
-            <div class="explorer-step__three--plan">
-              <p>Чехия</p>
-              <textarea name="plan" id="step-plan-2" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+              </div>
+              <div class="explorer-step__three--plan">
+                <p>Чехия</p>
+                <textarea name="plan" id="step-plan-2" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
               </textarea>
+              </div>
+              <div class="explorer-step__three--anchor">
+                <button class="form-button">Отправить</button>
+                <a href="#step__second" class="explorer-step--back">Шаг назад</a>
+              </div>
             </div>
-            <button class="form-button">Отправить</button>
-            <!-- шаг проставльять ид маршрут и href # маршрут -->
-            <!-- доделать
-          5.9. Ссылка «Следующий шаг» — это якорная ссылка к следующему блоку. Ссылки в блоках «Даты пребывания», «Маршрут», «Развлечения» и «На шаг назад» тоже являются якорными и прокручивают страницу к соответствующим блокам. С помощью JavaScript можно реализовать плавный скрол к блокам, но это не обязательно.n> -->
-            <a href="#step__second" class="form-button explorer-step--back">Шаг назад</a>
-
           </fieldset>
 
         </form>

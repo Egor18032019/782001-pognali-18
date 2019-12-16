@@ -66,3 +66,99 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+@media (min-width: $tablet-width) {
+  .about-us {
+    position: relative;
+  }
+
+  .about-us::before {
+    width: 313px;
+    height: 422px;
+    right: 50px;
+    // спросить у наставника - как сделать ярким
+    z-index: 3;
+  }
+
+  .about-us__container {
+    position: relative;
+  }
+
+  .about-us__container::before {
+    content: "";
+    position: absolute;
+    width: 688px;
+    height: 213px;
+    background-color: #141b3b;
+    z-index: -1;
+    left: 25px;
+  }
+
+  .about-us h2 {
+    font-size: 45px;
+  }
+
+  .about-us p {
+    width: 79%;
+    font-size: 28px;
+  }
+
+  .about-us b {
+    width: 79%;
+    font-size: 21px;
+  }
+
+  .about-us__wrapper {
+    margin-bottom: 53px;
+  }
+
+  .about-us__wrapper .about-us__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+// --------------------------для пк ------------------------
+@media (min-width: $desktop-width) {
+// высота времммено
+.about-us {
+  min-height: 750px;
+}
+
+// картинка карточек
+.about-us::before {
+  background-image: url("../img/about-desktop@1x.png");
+  width: 630px;
+  height: 665px;
+  // спросить у наставника - как сделать ярким
+}
+
+.about-us::after {
+  width: 630px;
+  height: 204px;
+  top: 0;
+}
+
+.about-us__container::before {
+  width: 213px;
+  height: 213px;
+  left: 50px;
+}
+
+.about-us b {
+  font-size: 21px;
+}
+
+.about-us__wrapper {
+  width: 60%;
+}
+
+.about-us__wrapper p {
+  width: 81%;
+}
+
+.about-us__wrapper b {
+  width: 60%;
+}
+}

@@ -43,3 +43,24 @@
   border: none;
   border-bottom-left-radius: 10px;
 }
+
+@media (min-width: $tablet-width) {
+  .rate-modal h2 {
+    font-size: 45px;
+  }
+
+  .rate-modal a {
+    font-size: 22px;
+    margin-bottom: 35px;
+  }
+
+  .rate-modal__price {
+    float: right;
+  }
+
+  .rate-modal__close {
+    font-size: 24px;
+    background-color: #f3f4f8;
+    min-height: 108px;
+  }
+}

@@ -45,3 +45,68 @@
   border: none;
   margin-bottom: 30px;
 }
+
+@media (min-width: $tablet-width) {
+   .rate h2 {
+    font-size: 45px;
+  }
+
+  .rate__list li {
+    font-size: 28px;
+    justify-content: space-between;
+  }
+
+  .rate .rate__button {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: #132576;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  // немогу найти такую в картинку
+  .rate__button::before {
+    content: "";
+    display: inline-block;
+    width: 67px;
+    height: 67px;
+    background-image: url("../img/business.svg");
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: center;
+    border-radius: 50%;
+    background-color: #e2e5f2;
+    // Спросить у Даши -как сделать его синим
+  }
+
+  .rate__money {
+    align-self: baseline;
+    order: 3;
+  }
+
+  // .rate__prise {
+  //   background-color: #e2e5f2;
+  // }
+}
+
+// --------------------------для пк ------------------------
+@media (min-width: $desktop-width) {
+  .rate {
+    min-height: 840px;
+    // наверное всетаки убрать высоту
+    position: relative;
+  }
+
+  .rate__money {
+    order: 3;
+    align-self: center;
+    width: 198px;
+    height: 198px;
+  }
+
+  .rate__button {
+    order: 5;
+  }
+}

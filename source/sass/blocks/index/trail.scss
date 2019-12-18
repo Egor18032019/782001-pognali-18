@@ -24,19 +24,17 @@
   text-transform: uppercase;
 }
 
-.trail__gprs::before {
-  content: "";
+.trail__gprs span {
   width: 45px;
   height: 45px;
-  display: inline-block;
-  background-image: url("../img/contacts-location.svg");
-  background-repeat: no-repeat;
-  background-color: yellowgreen;
-  // #121936 узнать как заливать свг
+  flex-shrink: 0;
+  background-color: #121936;
   border-radius: 50%;
   background-position: center;
-  background-size: 50%;
-  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
 }
 
 .trail-map .trail__run {
@@ -44,7 +42,7 @@
   flex-direction: row;
   width: 100%;
   align-items: center;
-  border-radius: 20px;
+  border-radius: 10px;
   border: solid 3px #192144;
   margin-bottom: 35px;
 }
@@ -94,5 +92,15 @@
     width: 50%;
     flex-direction: row;
     align-items: center;
+  }
+
+  .trail__gprs span {
+    width: 90px;
+    height: 90px;
+  }
+
+  .trail__gprs--icon {
+    width: 45px;
+    height: 45px;
   }
 }

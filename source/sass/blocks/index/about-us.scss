@@ -1,9 +1,7 @@
 .about-us {
   @include center;
   @include margin-auto;
-  @include bgIndexColor;
-  border-bottom-right-radius: 30px;
-  border-bottom-left-radius: 30px;
+  background-color: #edeff6;
 }
 
 .about-us::before {
@@ -18,20 +16,33 @@
 }
 
 .about-us__container {
-  width: 85%;
+  @include bgIndexColor;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background-image: url("../img/about-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 95%;
   z-index: 1;
 }
 
 .about-us__wrapper {
-  width: 66%;
+  width: 70%;
+  padding-top: 10px;
+  padding-bottom: 14px;
 }
 
 .about-us h2 {
   @include fontBS (24px, bold, #ff8d30);
+  margin-bottom: 25px;
 }
 
 .about-us p {
   @include fontBS (16px, 300, #ffffff);
+  margin-bottom: 33px;
   opacity: 0.8;
 }
 
@@ -121,44 +132,50 @@
 
 // --------------------------для пк ------------------------
 @media (min-width: $desktop-width) {
-// высота времммено
-.about-us {
-  min-height: 750px;
-}
 
-// картинка карточек
-.about-us::before {
-  background-image: url("../img/about-desktop@1x.png");
-  width: 630px;
-  height: 665px;
-  // спросить у наставника - как сделать ярким
-}
 
-.about-us::after {
-  width: 630px;
-  height: 204px;
-  top: 0;
-}
 
-.about-us__container::before {
-  width: 213px;
-  height: 213px;
-  left: 50px;
-}
+  // картинка карточек
+  .about-us::before {
+    background-image: url("../img/about-desktop@1x.png");
+    width: 630px;
+    height: 665px;
+    // спросить у наставника - как сделать ярким
+  }
 
-.about-us b {
-  font-size: 21px;
-}
+  .about-us::after {
+    width: 630px;
+    height: 204px;
+    top: 0;
+  }
 
-.about-us__wrapper {
-  width: 60%;
-}
+  .about-us__container::before {
+    width: 213px;
+    height: 213px;
+    left: 50px;
+  }
 
-.about-us__wrapper p {
-  width: 81%;
-}
+  .about-us h2 {
+    margin-bottom: 62px;
+  }
 
-.about-us__wrapper b {
-  width: 60%;
-}
+  .about-us b {
+    font-size: 21px;
+  }
+
+  .about-us__wrapper {
+    width: 82%;
+  }
+
+  .about-us__wrapper p {
+    width: 59%;
+  }
+
+  .about-us__wrapper b {
+    width: 60%;
+  }
+
+  .about-us__container {
+    padding-top: 80px;
+  }
 }

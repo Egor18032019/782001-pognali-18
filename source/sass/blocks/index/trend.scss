@@ -1,21 +1,23 @@
 .trend {
   @include center;
   @include margin-auto;
-  background-color: #edeff6;
-  padding-bottom: 30px;
-  border-bottom-right-radius: 30px;
-  border-bottom-left-radius: 30px;
+  background-color: #192144;
   // overflow: hidden;
 }
 
 .trend-slogan {
-  width: 100%;
+  width: 70%;
+  margin-bottom: 31px;
 }
 
 .trend-wrapper {
   @include center;
-  width: 85%;
-  padding-top: 72px;
+  width: 100%;
+  padding-top: 49px;
+  background-color: #edeff6;
+  padding-bottom: 30px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 
 .trend h2 {
@@ -24,6 +26,7 @@
 
 .trend-slogan p {
   @include fontBS (16px, 300, #444444);
+  line-height: 1.38;
 }
 
 .trend-list {
@@ -31,6 +34,7 @@
   list-style: none;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 11px;
   padding: 0;
 }
 
@@ -49,7 +53,17 @@
   margin-bottom: 28px;
 }
 
+.trend__text::before {
+  content: "";
+  position: absolute;
+  background-image: url("https://via.placeholder.com/35x24");
+  width: 35px;
+  height: 24px;
+  top: -29px;
+}
+
 .trend__text {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
@@ -58,9 +72,8 @@
   border-bottom-left-radius: 10px;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  padding-left: 28px;
+  padding-left: 22px;
   padding-right: 26px;
-  padding-top: 28px;
   padding-bottom: 24px;
 }
 
@@ -68,6 +81,7 @@
   @include fontBS(21px, bold, #161c35);
   width: 70%;
   margin-bottom: 5px;
+  margin-top: 10px;
 }
 
 .trend__text small {
@@ -133,7 +147,7 @@
 
   .trend__text span {
     font-size: 20px;
-    order: 1  ;
+    order: 1;
   }
 
   .trend__item {

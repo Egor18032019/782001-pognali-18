@@ -164,12 +164,12 @@
 .selection-lvl__scale {
   min-height: 2px;
   background-color: #1d2e5b;
-  opacity: 0.2;
 }
 
 .selection-lvl__bar {
   width: 30%;
-  background-color: #1d2e5b;
+  background-color: red;
+  // цвет временно
   min-height: 2px;
 }
 
@@ -191,6 +191,7 @@
 
 .range--toogle-max {
   left: 100%;
+  // ОБСудить как сделать так чтобы не выходил right: 5px; неработает- идей больше нет
 }
 
 .selection-lvl__input {
@@ -252,10 +253,6 @@
     width: 80%;
   }
 
-  .selection-companion .selection-hobby .selection-hobby__list {
-    display: flex;
-  }
-
   .selection-musiс .selection-musiс--toggle,
   .selection-food .selection-food--toggle,
   .selection-transport .selection-transport--toggle,
@@ -295,6 +292,15 @@
 
   .selection-companion fieldset {
     width: 85%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+  }
+
+  .selection-companion p {
+    width: 100%;
   }
 
   .selection-transport .selection-transport__list {
@@ -303,6 +309,7 @@
 
   .selection-lvl__controls {
     margin: auto;
+    flex-direction: column-reverse;
   }
 
   .selection-lvl__input {
@@ -320,4 +327,39 @@
     justify-content: center;
     align-items: center;
   }
+
+  .selection-musiс .selection-musiс--toggle,
+  .selection-food .selection-food--toggle,
+  .selection-transport .selection-transport--toggle,
+  .selection-lvl .selection-lvl--toggle,
+  .selection-hobby--toggle {
+    display: inline-block;
+  }
+
+  .selection-hobby__list,
+  .selection-musiс__list,
+  .selection-food__list {
+    flex-direction: column;
+  }
+
+  .selection-musiс__list li,
+  .selection-hobby__list li,
+  .selection-food__list li {
+    margin-bottom: 16px;
+    width: 100%;
+  }
+
+  .selection-lvl__range,
+  .selection-lvl__input {
+    width: 100%;
+  }
+
+  .selection-lvl__range {
+    margin: 0;
+  }
+
+  .selection-lvl__input {
+    margin-bottom: 24px;
+  }
+
 }

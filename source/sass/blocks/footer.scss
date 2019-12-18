@@ -22,7 +22,7 @@
 .footer__made {
   @include fontBS (16px, normal, #444444);
   display: flex;
-  width: 80%;
+  width: 85%;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 14px;
@@ -33,7 +33,7 @@
 }
 
 .footer__social {
-  margin-bottom: 60px;
+  margin-bottom: 41px;
 }
 
 @media (min-width: $tablet-width) {

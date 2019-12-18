@@ -13,8 +13,8 @@
   @include fontBS (16px, 300, white);
   display: block;
   width: 80%;
-  line-height: 1.4;
-  margin-bottom: 25px;
+  line-height: 1.2;
+  margin-bottom: 18px;
 }
 
 .steps-quote cite {
@@ -28,7 +28,7 @@
   display: flex;
   width: 100%;
   justify-content: center;
-  padding-bottom: 30px;
+  padding-bottom: 36px;
 }
 
 .steps__list {
@@ -36,10 +36,10 @@
   width: 85%;
   // height: 320px;
   // перенести номера в правую часть ли
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
   overflow: hidden;
 }
 
@@ -103,15 +103,16 @@
 // --------------------------для пк ------------------------
 @media (min-width: $desktop-width) {
   .steps-quote {
-    width: 30%;
+    width: 25%;
     margin-left: auto;
-    margin-top: -35%;
-    margin-bottom: 117px;
+    margin-top: -532px;
+    margin-bottom: 113px;
   }
 
   .steps-quote q {
-    width: 75%;
+    width: 84%;
     font-size: 28px;
+    margin-bottom: 35px;
   }
 
   .steps-quote cite {
@@ -120,7 +121,12 @@
   }
 
   .steps__list {
+    width: 92%;
     flex-wrap: nowrap;
+  }
+
+  .steps__list .steps__item {
+    height: 108px;
   }
 
   .steps-wrapper {

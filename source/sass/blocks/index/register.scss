@@ -1,8 +1,13 @@
 .register {
   @include center;
   @include margin-auto;
+  background-color: #ffd74b;
+}
+
+.register-wrapper {
+  @include center;
   @include bgIndexColor;
-  padding-top: 72px;
+  padding-top: 52px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 }
@@ -10,12 +15,13 @@
 .register__slogan {
   @include center;
   width: 75%;
+  margin-bottom: 22px;
 }
 
 .register__slogan h2 {
   @include fontBS ($fsize:24px, $fweight:bold, $color:#ff8d30);
   text-align: center;
-  margin-bottom: 23px;
+  margin-bottom: 21px;
 }
 
 .register__slogan p {
@@ -37,6 +43,7 @@
 .register__container {
   @include center;
   width: 85%;
+  margin-bottom: 28px;
 }
 
 .register__button span {
@@ -59,9 +66,10 @@
 .register__container p {
   @include fontBS(16px, 300, #ffffff);
   width: 100%;
+  margin-bottom: 0;
   text-align: center;
-  margin-bottom: 32px;
   opacity: 0.9;
+  line-height: 1.38;
 }
 
 .register__item {
@@ -73,36 +81,36 @@
   text-transform: uppercase;
 }
 
-.register__item--telephone::before {
-  content: "";
+.register__item span {
   width: 45px;
   height: 45px;
   display: inline-block;
-  background-image: url("../img/contacts-phone.svg");
-  background-repeat: no-repeat;
-  background-color: yellowgreen;
-  // #121936 узнать как заливать свг
+  background-color: #121936;
   border-radius: 50%;
   background-position: center;
-  background-size: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-right: 16px;
 }
 
-.register__item--mail::before {
-  content: "";
-  width: 45px;
-  height: 45px;
-  display: inline-block;
-  background-image: url("../img/contacts-mail.svg");
-  background-repeat: no-repeat;
-  background-color: yellowgreen;
-  // #121936 узнать как заливать свг
-  border-radius: 50%;
-  background-position: center;
-  background-size: 50%;
-  margin-right: 16px;
-  // flex-grow: 1;
-}
+// .register__item--mail::before {
+//   content: "";
+//   width: 45px;
+//   height: 45px;
+//   display: inline-block;
+//   background-image: url("../img/contacts-mail.svg");
+//   background-repeat: no-repeat;
+//   background-color: yellowgreen;
+//   // #121936 узнать как заливать свг
+//   border-radius: 50%;
+//   background-position: center;
+//   background-size: 50%;
+//   margin-right: 16px;
+//   // flex-grow: 1;
+// }
+
+
 
 .register__login {
   color: #ffd74b;
@@ -110,6 +118,7 @@
 
 .register__container form {
   width: 100%;
+  margin-bottom: 16px;
 }
 
 .register__container input {
@@ -117,25 +126,31 @@
   width: 98%;
   min-height: 62px;
   padding-left: 10px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .register__button {
-  width: 25%;
-  margin-left: -25%;
+  width: 21%;
+  margin-left: -21%;
+  border: 0;
   min-height: 62px;
   background-color: $indexButton;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .register__contact {
   align-self: flex-start;
+}
+
+.register__contact--mail {
+  margin-top: 0;
 }
 
 @media (min-width: $tablet-width) {
@@ -188,6 +203,16 @@
   .register {
     min-height: 840px;
     // обговорить с Дашей про высоту
+  }
+
+  .register__item span {
+    width: 90px;
+    height: 90px;
+  }
+
+  .register__contact--icon {
+    width: 45px;
+    height: 45px;
   }
 
   .register__container {

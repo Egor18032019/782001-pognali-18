@@ -128,39 +128,72 @@
 }
 
 .companions___countries li {
-  background-image: url("https://via.placeholder.com/35x24");
+  background-color: grey;
   width: 35px;
   height: 24px;
   font-size: 0;
 }
 
 .companions .index-button {
-  margin-bottom: 25px;
+  margin-bottom: 90px;
 }
 
+// ________________________________________________________
+
 @media (min-width: $tablet-width) {
+  .companions__slogan {
+    width: 80%;
+    padding-top: 52px;
+  }
+
+  .companions-wrapper {
+    border-radius: 60px;
+  }
+
   .companions__slogan h2 {
     font-size: 45px;
+    margin-bottom: 27px;
   }
 
   .companions__slogan p {
-    width: 65%;
+    width: 76%;
     font-size: 28px;
   }
 
   .companions__slogan b {
-    width: 45%;
+    width: 50%;
     font-size: 21px;
   }
 
   .companions-list {
+    width: 80%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 81px;
+  }
+
+  .companions__personal .companions__teg {
+    margin-bottom: 32px;
+  }
+
+  .companions__personal .companions__transport {
+    margin-bottom: 22px;
+  }
+
+  .companions__personal p {
+    margin-bottom: 23px;
+  }
+
+  .companions__personal {
+    padding-top: 10px;
+    padding-bottom: 0;
   }
 
   .companions-list .companions__item {
-    width: 47%;
+    width: 285px;
+    border-radius: 20px;
+    overflow: hidden;
   }
 }
 
@@ -170,13 +203,13 @@
   // спросить у Даши - почему даже если оутлайн подключен последаним
   // приходиться  назначать по два класа что бы переопреелить значения
   .companions {
-    min-height: 840px;
-    // высота времмено
     position: relative;
   }
 
   .companions__slogan {
     margin: 0;
+    align-self: self-start;
+    align-items: center;
   }
 
   .companions__slogan p {
@@ -189,6 +222,26 @@
 
   .companions-wrapper {
     flex-direction: row;
+    padding-right: 59px;
+    padding-left: 59px;
+    padding-top: 133px;
+    padding-bottom: 134px;
+    border-radius: 60px;
+  }
+
+  .companions__slogan h2 {
+    margin: 0;
+  }
+
+  .companions-list {
+    width: 64%;
+    margin: 0;
+  }
+
+  .companions-list .companions__item {
+    width: 285px;
+    border-radius: 20px;
+    overflow: hidden;
   }
 
   .companions .companions__button {
@@ -196,7 +249,34 @@
     align-self: flex-start;
     margin: 0;
     position: absolute;
-    bottom: 105px;
-    left: 110px;
+    bottom: 133px;
+    left: 133px;
+    border-radius: 20px;
+  }
+
+  .companions__item img {
+    width: 285px;
+    height: 285px;
+  }
+
+  .companions__personal {
+    padding-top: 10px;
+  }
+
+  .companions__personal p {
+    margin-bottom: 25px;
+  }
+
+  .companions__personal .companions__teg {
+    margin-bottom: 26px;
+  }
+
+  .companions__personal .companions___countries {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .companions___countries li {
+    margin-right: 17px;
   }
 }

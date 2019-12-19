@@ -99,13 +99,14 @@
   .page-header__slogan {
     padding-bottom: 586px;
     background-image: url("../img/traveller-illustration-tablet@1x.png"), url("../img/globe-back-tablet@1x.jpg");
-    background-position: bottom 140px right 112px, bottom center;
+    background-position: bottom 130px right 112px, bottom center;
     background-size: 372px 451px, auto 610px;
     background-repeat: no-repeat, no-repeat;
   }
 
   .page-header__main {
     width: 66%;
+    justify-content: space-around;
   }
 
   .page-header__slogan h2 {
@@ -116,6 +117,7 @@
   .page-header__slogan--wrapper {
     display: flex;
     justify-content: center;
+    padding-top: 45px;
   }
 
 }

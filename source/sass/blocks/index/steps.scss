@@ -86,8 +86,10 @@
   }
 
   .steps__list {
+    width: 88%;
     display: flex;
     flex-wrap: wrap;
+    border-radius: 20px;
   }
 
   .steps__list .steps__item {
@@ -95,8 +97,7 @@
     height: 140px;
     font-size: 24px;
     padding-left: 31px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-radius: 0;
   }
 }
 

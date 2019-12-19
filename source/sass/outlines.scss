@@ -1,6 +1,8 @@
 @media (min-width: $tablet-width) {
     section .index-button {
     min-height: 81px;
+    width: 80%;
+    border-radius: 20px;
   }
 
   .check::before {

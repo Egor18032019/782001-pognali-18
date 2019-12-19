@@ -200,24 +200,49 @@
 
 // --------------------------для пк ------------------------
 @media (min-width: $desktop-width) {
-  .register {
-    min-height: 840px;
-    // обговорить с Дашей про высоту
-  }
+  // .register {
+  // }
 
   .register__item span {
     width: 90px;
     height: 90px;
+    flex-shrink: 0;
+    margin-right: 34px;
+  }
+
+  .register-wrapper {
+    padding-top: 66px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
   }
 
   .register__contact--icon {
-    width: 45px;
-    height: 45px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .register__slogan {
+    margin-bottom: 0;
+  }
+
+  .register__slogan br,
+  .register__container br {
+    display: none;
+  }
+
+  .register__slogan h2 {
+    margin-bottom: 54px;
+  }
+
+  .register__slogan b {
+    margin-bottom: 52px;
   }
 
   .register__container {
     flex-direction: row;
     flex-wrap: wrap;
+    padding-bottom: 28px;
+    border-radius: 60px;
   }
 
   .register__button span {
@@ -229,8 +254,24 @@
   //  почему маргином  я не могу толкать спан от псевдоэлемента ?
 
   .register__button {
-    width: 22%;
-    margin-left: -22%;
+    width: 26%;
+    margin-left: -26%;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    border: none;
+  }
+
+  .register__container form {
+    padding-left: 26px;
+    margin-bottom: 37px;
+  }
+
+  .register__container p {
+    margin-bottom: 44px;
+  }
+
+  .register__contact {
+    margin-top: 0;
   }
 
   .register__item--telephone::before,
@@ -241,11 +282,13 @@
   }
 
   .register__container .register__contact {
-    width: 50%;
+    width: 36%;
   }
 
   .register__container input {
     font-size: 22px;
     padding-left: 35px;
+    border-radius: 20px;
+    width: 97%;
   }
 }

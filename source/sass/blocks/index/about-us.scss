@@ -4,17 +4,6 @@
   background-color: #edeff6;
 }
 
-.about-us::before {
-  content: "";
-  position: absolute;
-  width: 292px;
-  height: 352px;
-  background-image: url("../img/about-mobile@1x.png");
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: 100%;
-}
-
 .about-us__container {
   @include bgIndexColor;
   width: 100%;
@@ -84,50 +73,66 @@
   }
 
   .about-us::before {
-    width: 313px;
-    height: 422px;
-    right: 50px;
-    // спросить у наставника - как сделать ярким
-    z-index: 3;
-  }
-
-  .about-us__container {
-    position: relative;
-  }
-
-  .about-us__container::before {
     content: "";
+    width: 404px;
+    height: 548px;
+    right: -11px;
+    bottom: 86px;
+    z-index: 3;
     position: absolute;
-    width: 688px;
-    height: 213px;
-    background-color: #141b3b;
-    z-index: -1;
-    left: 25px;
-  }
+    background-image: url("../img/about-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 100%;
+}
 
-  .about-us h2 {
-    font-size: 45px;
-  }
+.about-us__container {
+  position: relative;
+  border-radius: 60px;
+  background-image: none;
+}
 
-  .about-us p {
-    width: 79%;
-    font-size: 28px;
-  }
+.about-us__container::before {
+  content: "";
+  position: absolute;
+  width: 688px;
+  height: 213px;
+  background-color: #141b3b;
+  z-index: -1;
+  left: 25px;
+}
 
-  .about-us b {
-    width: 79%;
-    font-size: 21px;
-  }
+.about-us__wrapper {
+  width: 80%;
+  padding-top: 57px;
+}
 
-  .about-us__wrapper {
-    margin-bottom: 53px;
-  }
+.about-us h2 {
+  font-size: 45px;
+  margin-bottom: 45px;
+}
 
-  .about-us__wrapper .about-us__button {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+.about-us p {
+  width: 55%;
+  font-size: 28px;
+  margin-bottom: 65px;
+}
+
+.about-us b {
+  width: 55%;
+  font-size: 21px;
+  margin-bottom: 65px;
+}
+
+.about-us__wrapper .about-us__button {
+  width: 44%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  margin-bottom: 74px;
+}
+
 }
 
 // --------------------------для пк ------------------------
@@ -140,7 +145,8 @@
     background-image: url("../img/about-desktop@1x.png");
     width: 630px;
     height: 665px;
-    // спросить у наставника - как сделать ярким
+    background-position-y: 46px;
+    background-position-x: -10px;
   }
 
   .about-us::after {
@@ -169,13 +175,20 @@
 
   .about-us__wrapper p {
     width: 59%;
+    margin-bottom: 54px;
   }
 
   .about-us__wrapper b {
-    width: 60%;
+    width: 40%;
+    margin-bottom: 88px;
   }
 
   .about-us__container {
     padding-top: 80px;
+  }
+
+  .about-us__wrapper .about-us__button {
+    width: 23%;
+    border-radius: 20px;
   }
 }

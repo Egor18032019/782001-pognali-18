@@ -7,7 +7,7 @@
 
 .trend-slogan {
   width: 70%;
-  margin-bottom: 31px;
+  padding-bottom: 31px;
 }
 
 .trend-wrapper {
@@ -60,6 +60,7 @@
   width: 35px;
   height: 24px;
   top: -29px;
+  background-color: hotpink;
 }
 
 .trend__text {
@@ -119,25 +120,43 @@
     background-position: top 80px right 40px;
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 60px;
+    padding-bottom: 78px;
   }
 
   .trend-list {
+    width: 80%;
     z-index: 1;
+    margin-bottom: 31px;
   }
 
   .trend h2 {
     width: 65%;
     font-size: 45px;
+    margin-top: 24px;
+    margin-bottom: 56px;
+  }
+
+  .trend-slogan {
+    width: 80%;
+    padding-bottom: 63px;
   }
 
   .trend-slogan p {
+    width: 61%;
     font-size: 28px;
-    width: 57%;
+    line-height: 1.2;
   }
 
   .trend__text p {
     margin-top: 0;
     font-size: 24px;
+  }
+
+  .trend__text::before {
+    width: 70px;
+    height: 47px;
+    top: 16px;
+    right: -36px;
   }
 
   .trend__text small {
@@ -155,15 +174,18 @@
   }
 
   .trend__item img {
-    width: 33%;
+    width: 186px;
+    height: 140px;
     order: 2;
   }
 
   // обсудить с Дашей как должен меняться рисунок
 
   .trend__text {
-    flex-direction: column;
     width: 100%;
+    flex-direction: column;
+    padding-top: 28px;
+    padding-left: 28px;
   }
 
   .trend__button {
@@ -175,6 +197,7 @@
 @media (min-width: $desktop-width) {
   .trend h2 {
     margin: 0;
+    margin-bottom: 60px;
   }
 
   .trend-list::before {
@@ -187,16 +210,18 @@
   }
 
   .trend-wrapper {
-    padding-top: 161px;
+    padding-top: 169px;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
+    padding-bottom: 140px;
   }
 
   .trend-slogan {
     width: 35%;
     align-self: flex-start;
     order: 1;
+    padding-left: 43px;
   }
 
   .trend-slogan p {
@@ -204,19 +229,39 @@
   }
 
   .trend-list {
-    width: 40%;
+    width: 39%;
     order: 0;
     margin: 0;
-    margin-bottom: 149px;
+  }
+
+  .trend-list li {
+    border-radius: 20px;
+  }
+
+  .trend__text {
+    padding-top: 24px;
+    padding-left: 35px;
+  }
+
+  .trend__text span::before {
+    width: 20px;
+    height: 20px;
+    opacity: 0.3;
+  }
+
+  .trend__item img {
+    width: 186px;
+    height: 140px;
   }
 
   .trend .trend__button {
     position: absolute;
-    width: 25%;
+    width: 18%;
     order: 3;
     align-self: flex-end;
     z-index: 1;
-    right: 255px;
-    bottom: 140px;
+    right: 314px;
+    bottom: 138px;
+    border-radius: 20px;
   }
 }

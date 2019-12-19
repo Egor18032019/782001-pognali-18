@@ -67,6 +67,18 @@
 }
 
 // // --------------------------для пк ------------------------
-// @media (min-width: $desktop-width) {
+@media (min-width: $desktop-width) {
+  .footer {
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+  }
 
-// }
+  .footer__made {
+    width: 15%;
+    justify-content: space-between;
+  }
+
+  .footer__container {
+    justify-content: space-around;
+  }
+}

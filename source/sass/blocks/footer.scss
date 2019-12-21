@@ -2,9 +2,7 @@
   @include center;
   @include margin-auto;
   // width: 320px;
-  background-color: white;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+  background-color: #edeff6;
   overflow: hidden;
 }
 
@@ -17,6 +15,9 @@
 .footer__container {
   @include center;
   width: 100%;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  background-color: #ffffff;
 }
 
 .footer__made {
@@ -47,6 +48,7 @@
   }
 
   .footer__container {
+    width: 97%;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;

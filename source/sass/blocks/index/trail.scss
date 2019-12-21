@@ -67,6 +67,19 @@
 }
 
 @media (min-width: $tablet-width) {
+  .trail {
+    padding-top: 50px;
+  }
+
+  .trail-map {
+    width: 80%;
+  }
+
+  .trail__gprs span {
+    width: 60px;
+    height: 60px;
+  }
+
   .trail__gprs::before {
     width: 67px;
     height: 67px;
@@ -74,11 +87,21 @@
 
   .trail__gprs {
     font-size: 28px;
+    justify-content: start;
+    margin-bottom: 50px;
   }
 
   .trail-map .trail__run {
     font-size: 24px;
     min-height: 81px;
+    border-radius: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .trail__position img {
+    width: 100%;
+    height: 497px;
   }
 }
 
@@ -118,5 +141,5 @@
   .trail__position img {
     width: 100%;
     height: 410px;
-}
+  }
 }

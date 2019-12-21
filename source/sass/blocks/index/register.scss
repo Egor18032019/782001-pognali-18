@@ -154,41 +154,89 @@
 }
 
 @media (min-width: $tablet-width) {
+  .register-wrapper {
+    padding-top: 35px;
+    border-radius: 60px;
+  }
+
+  .register__slogan {
+    width: 90%;
+  }
+
+  .register__slogan br {
+    display: none;
+  }
+
   .register__slogan h2 {
     font-size: 45px;
+    margin-bottom: 55px;
   }
 
   .register__slogan p {
     font-size: 28px;
+    width: auto;
   }
 
   .register__slogan b {
     font-size: 28px;
-    margin-bottom: 67px;
+    margin-bottom: 38px;
+    width: auto;
+  }
+
+  .register__container {
+    width: 90%;
+    margin-bottom: 60px;
   }
 
   .register__container form {
-    margin-bottom: 61px;
+    width: 89%;
+    margin-bottom: 26px;
+  }
+
+  .register__container br {
+    display: none;
   }
 
   .register__button {
-    width: 10%;
-    margin-left: -10%;
+    width: 13%;
+    margin-left: -12%;
     min-height: 81px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
 
   .register__container input {
     min-height: 81px;
+    border-radius: 20px;
   }
 
   .register__container p {
     font-size: 28px;
-    width: 100%;
+    width: auto;
+    margin-bottom: 18px;
+  }
+
+  .register__contact {
+    padding-left: 52px;
+  }
+
+  .register__container .register__contact {
+    margin-bottom: 5px;
   }
 
   .register__item {
     font-size: 28px;
     width: 100%;
+  }
+
+  .register__item span {
+    width: 60px;
+    height: 60px;
+  }
+
+  .register__contact--icon {
+    width: 30px;
+    height: 30px;
   }
 
   .register__item--telephone::before,

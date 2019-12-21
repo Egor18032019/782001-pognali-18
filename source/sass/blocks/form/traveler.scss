@@ -37,7 +37,8 @@
 }
 
 .traveler__item img {
-  width: 50%;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   margin-bottom: 16px;
 }
@@ -51,10 +52,14 @@
   align-self: baseline;
   margin: 0;
   padding: 0;
+  margin-left: 13px;
 }
 
 .traveler__name::after {
   content: "";
+  position: absolute;
+  left: 140px;
+  top: 8px;
   display: inline-block;
   width: 6px;
   height: 6px;
@@ -73,8 +78,8 @@
 
 .traveler__heart--wrapp {
   position: absolute;
-  left: 105px;
-  top: 115px;
+  left: 68px;
+  top: 55px;
 }
 
 .traveler__heart--btn {
@@ -98,41 +103,73 @@
   @include fontBS (15px, normal, #444444);
   width: 99%;
   justify-content: start;
-  margin-bottom: 20px;
+  margin-bottom: 3px;
 }
 
 .traveler__wish {
   width: 100%;
 }
 
+.traveler__transport .traveler__list--transport {
+  width: auto;
+}
+
 .traveler__countries {
   @include fontBS (15px, 500, #1d2e5b);
   text-transform: uppercase;
   padding-left: 0;
+  line-height: 1.2;
   margin-bottom: 10px;
+}
+
+.traveler__countries li {
+  margin-bottom: 5px;
 }
 
 .traveler__list--transport li {
   background-color: #edeff6;
 }
 
+.country__item::before {
+  content: "";
+  width: 26px;
+  height: 18px;
+  display: inline-block;
+  background-color: coral;
+  margin-right: 20px;
+}
+
 .traveler__transport {
-  width: 100%;
+  width: 79%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
   flex-grow: 0;
+  margin-right: auto;
 }
 
 .traveler__text {
   @include fontBS (15px, 500, #444444);
   display: inline-block;
   margin-bottom: 16px;
+  // width: calc(100%+45px); как сделать чтобы работало
   width: 100%;
+}
+
+.traveler__text span {
+  float: right;
+}
+
+.traveler__text--car {
+  margin-top: 2px;
 }
 
 .traveler__transport span {
   float: right;
+}
+
+.traveler__item .traveler__call {
+  width: 98%;
+  margin-top: 10px;
 }
 
 .traveler__lvl--wrapp {

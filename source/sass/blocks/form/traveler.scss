@@ -7,6 +7,7 @@
   @include center;
   width: 100%;
   padding: 0;
+  margin-bottom: 0;
 }
 
 .traveler__list li {
@@ -113,10 +114,6 @@
 
 .traveler__heart--noactive {
   fill: #192144;
-}
-
-.traveler__list {
-  margin-bottom: 0;
 }
 
 .traveler__heart--none {
@@ -296,6 +293,7 @@
 
   .traveler__lvl {
     font-size: 24px;
+    padding: 0;
   }
 
   .traveler__item .traveler__call {
@@ -341,10 +339,6 @@
 
   .traveler__list--transport {
     flex-direction: column;
-  }
-
-  .traveler__lvl {
-    padding: 0;
   }
 
   .traveler__text {

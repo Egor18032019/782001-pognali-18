@@ -118,19 +118,19 @@
   height: 100%;
 }
 
-.explorer__bus:checked~.explorer__transport--type .explorer__bus--favorite {
+.explorer__bus:checked ~ .explorer__transport--type .explorer__bus--favorite {
   opacity: 0.2;
 }
 
-.explorer__air:checked~.explorer__transport--type .explorer__air--favorite {
+.explorer__air:checked ~ .explorer__transport--type .explorer__air--favorite {
   opacity: 0.2;
 }
 
-.explorer__cycle:checked~.explorer__transport--type .explorer__cycle--favorite {
+.explorer__cycle:checked ~ .explorer__transport--type .explorer__cycle--favorite {
   opacity: 0.2;
 }
 
-.explorer__walk:checked~.explorer__transport--type .explorer__walk--favorite {
+.explorer__walk:checked ~ .explorer__transport--type .explorer__walk--favorite {
   opacity: 0.2;
 }
 
@@ -346,36 +346,36 @@
   cursor: pointer;
 }
 
-.explorer-data--0331:checked~.explorer-data__day .explorer-data__choise--0331 {
+.explorer-data--0331:checked ~ .explorer-data__day .explorer-data__choise--0331 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0329:checked~.explorer-data__day .explorer-data__choise--0329 {
+.explorer-data--0329:checked ~ .explorer-data__day .explorer-data__choise--0329 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0328:checked~.explorer-data__day .explorer-data__choise--0328 {
+.explorer-data--0328:checked ~ .explorer-data__day .explorer-data__choise--0328 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0327:checked~.explorer-data__day .explorer-data__choise--0327 {
+.explorer-data--0327:checked ~ .explorer-data__day .explorer-data__choise--0327 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0326:checked~.explorer-data__day .explorer-data__choise--0326 {
+.explorer-data--0326:checked ~ .explorer-data__day .explorer-data__choise--0326 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0326:checked~.explorer-data__day .explorer-data__choise--0326::after {
+.explorer-data--0326:checked ~ .explorer-data__day .explorer-data__choise--0326::after {
   content: "Заезд";
 }
 
-.explorer-data--0328:checked~.explorer-data__day .explorer-data__choise--0328::after {
+.explorer-data--0328:checked ~ .explorer-data__day .explorer-data__choise--0328::after {
   content: "Выезд";
 }
 
@@ -633,7 +633,6 @@
 // --------------------------для пк ------------------------
 
 @media (min-width: $desktop-width) {
-
   .explorer {
     margin-bottom: 72px;
   }

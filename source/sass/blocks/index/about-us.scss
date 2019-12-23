@@ -84,63 +84,58 @@
     background-repeat: no-repeat;
     background-position: right;
     background-size: 100%;
-}
+  }
 
-.about-us__container {
-  position: relative;
-  border-radius: 60px;
-  background-image: none;
-}
+  .about-us__container {
+    position: relative;
+    border-radius: 60px;
+    background-image: none;
+  }
 
-.about-us__container::before {
-  content: "";
-  position: absolute;
-  width: 688px;
-  height: 213px;
-  background-color: #141b3b;
-  z-index: -1;
-  left: 25px;
-}
+  .about-us__container::before {
+    content: "";
+    position: absolute;
+    width: 688px;
+    height: 213px;
+    background-color: #141b3b;
+    z-index: -1;
+    left: 25px;
+  }
 
-.about-us__wrapper {
-  width: 80%;
-  padding-top: 57px;
-}
+  .about-us__wrapper {
+    width: 80%;
+    padding-top: 57px;
+  }
 
-.about-us h2 {
-  font-size: 45px;
-  margin-bottom: 45px;
-}
+  .about-us h2 {
+    font-size: 45px;
+    margin-bottom: 45px;
+  }
 
-.about-us p {
-  width: 55%;
-  font-size: 28px;
-  margin-bottom: 65px;
-}
+  .about-us p {
+    width: 55%;
+    font-size: 28px;
+    margin-bottom: 65px;
+  }
 
-.about-us b {
-  width: 55%;
-  font-size: 21px;
-  margin-bottom: 65px;
-}
+  .about-us b {
+    width: 55%;
+    font-size: 21px;
+    margin-bottom: 65px;
+  }
 
-.about-us__wrapper .about-us__button {
-  width: 44%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 20px;
-  margin-bottom: 74px;
-}
-
+  .about-us__wrapper .about-us__button {
+    width: 44%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    margin-bottom: 74px;
+  }
 }
 
 // --------------------------для пк ------------------------
 @media (min-width: $desktop-width) {
-
-
-
-  // картинка карточек
   .about-us::before {
     background-image: url("../img/about-desktop@1x.png");
     width: 630px;

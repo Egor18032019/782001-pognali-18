@@ -61,7 +61,6 @@
   .form-main__slogan {
     display: flex;
     justify-content: space-between;
-    padding: 65px 129px;
     min-height: 240px;
     padding: 0;
     padding-left: 75px;
@@ -86,10 +85,10 @@
   .form-main__idea::after {
     bottom: -70px;
   }
-
 }
 
 // для пк_________________________для пк ___________________________
+
 @media (min-width: $desktop-width) {
   .form-main__idea::after {
     bottom: -83px;

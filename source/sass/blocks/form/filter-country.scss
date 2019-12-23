@@ -10,7 +10,6 @@
   min-height: 50px;
   align-items: center;
   justify-content: space-evenly;
-
 }
 
 .filter-country__main button {
@@ -96,7 +95,7 @@
   display: none;
 }
 
-.filter-country__continent--choose:checked+.filter-country__continent--radio {
+.filter-country__continent--choose:checked + .filter-country__continent--radio {
   color: #192144;
 }
 
@@ -133,10 +132,6 @@
   width: 45px;
   height: 42px;
   border: 1px solid #cbced9;
-}
-
-.filter-country__chosen li {
-  @include fontBS (16px, normal, #444444);
 }
 
 .filter-country__selection button {
@@ -204,7 +199,7 @@
   }
 
   .filter-country__chosen,
-  .filter-country__continent .filter-country__continent--choose:checked+.filter-country__continent--radios {
+  .filter-country__continent .filter-country__continent--choose:checked + .filter-country__continent--radios {
     font-size: 20px;
   }
 
@@ -241,7 +236,9 @@
   }
 
   .filter-country__other .filter-country__selection {
-    width: 70%;
+    width: 400px;
+    height: 400px;
+    margin-bottom: 57px;
   }
 
   .filter-country__selection--items button {
@@ -258,12 +255,6 @@
     width: 83%;
     align-items: start;
     padding-top: 58px;
-  }
-
-  .filter-country__other .filter-country__selection {
-    width: 400px;
-    height: 400px;
-    margin-bottom: 57px;
   }
 
   .filter-country__other .filter-country__button {
@@ -313,7 +304,7 @@
   //   margin-bottom: 118px;
   // }
 
-  // как сделать чтобы последня строка была без маргинов ? + пренаполнение
+  // как сделать чтобы последня строка была без маргинов ?  +  пренаполнение
 
   .filter-country__selection button {
     font-size: 60px;
@@ -429,7 +420,7 @@
     font-size: 20px;
   }
 
-  .filter-country__continent--choose:checked+.filter-country__continent--radio {
+  .filter-country__continent--choose:checked + .filter-country__continent--radio {
     font-size: 20px;
   }
 }

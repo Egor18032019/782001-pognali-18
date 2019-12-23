@@ -135,6 +135,10 @@
   border: 1px solid #cbced9;
 }
 
+.filter-country__chosen li {
+  @include fontBS (16px, normal, #444444);
+}
+
 .filter-country__selection button {
   @include fontBS (14px, 500, #1d2e5b);
   text-align: center;
@@ -294,25 +298,28 @@
 @media (min-width: $desktop-width) {
   .filter-country__selection--items .filter-country__chosen {
     margin-left: 0;
-    // margin-bottom: 550px;
+    margin-top: 0;
+    margin-bottom: 55px;
   }
 
   .filter-country__selection--items {
-    // width: auto;
+    width: 205px;
     height: auto;
-    margin-right: 150px;
+    margin-bottom: 0;
     border: 0;
   }
 
-  .filter-country__selection--last {
-    margin-bottom: 200px;
-  }
+  // .filter-country__selection--last {
+  //   margin-bottom: 118px;
+  // }
 
   // как сделать чтобы последня строка была без маргинов ? + пренаполнение
 
   .filter-country__selection button {
     font-size: 60px;
-    margin-bottom: 48px;
+    text-align: left;
+    margin-bottom: 53px;
+    padding: 0;
   }
 
   .filter-country__chosen--2,
@@ -348,17 +355,29 @@
   .filter-nav {
     width: 23px;
     height: 15px;
+    background-size: 100%;
   }
 
   .filter-country__pushbutton {
     width: 20%;
     height: 18px;
     margin-left: auto;
+    align-self: center;
+    margin-right: 7%;
   }
 
   .filter-country__pushbutton--close {
     display: inline-block;
     font-size: 20px;
+  }
+
+  .filter-country__chosen li {
+    font-size: 20px;
+  }
+
+  .filter-country {
+    padding-top: 42px;
+    padding-bottom: 110px;
   }
 
   .filter-country__continent {
@@ -371,7 +390,15 @@
 
   .filter-country__main {
     width: 30%;
+    display: flex;
     order: -2;
+    margin-left: 3%;
+  }
+
+  .filter-country__other {
+    width: 92%;
+    justify-content: center;
+    align-items: center;
   }
 
   .filter-country__other .filter-country__button {
@@ -392,7 +419,10 @@
   }
 
   .filter-country__other .filter-country__selection {
-    margin-bottom: 0;
+    width: 1250px;
+    height: auto;
+    margin-bottom: 57px;
+    justify-content: space-between;
   }
 
   .filter-country__continent--radio {

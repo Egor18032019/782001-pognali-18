@@ -39,6 +39,12 @@
   text-transform: uppercase;
 }
 
+.selection-hobby__list,
+.selection-musiс__list,
+.selection-food__list {
+  @include fontBS (16px, normal, #444444);
+}
+
 .selection__toggle {
   font-size: 0;
   border: none;
@@ -221,6 +227,8 @@
   border-right-width: 2px;
 }
 
+// ______________________для планшета___________________________
+
 @media (min-width: $tablet-width) {
 
   .selection-musiс__list li,
@@ -231,8 +239,21 @@
   }
 
   .selection-companion {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .selection-companion fieldset {
+    width: 94%;
+  }
+
+  .selection-lvl__input input {
+    font-size: 20px;
+  }
+
+  .selection-companion p {
+    font-size: 20px;
   }
 
   .selection-hobby,
@@ -248,9 +269,14 @@
   .selection-hobby__list,
   .selection-musiс__list,
   .selection-food__list {
+    width: 80%;
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    font-size: 20px;
+  }
+
+  .selection .selection-companion .selection-food__list {
+    display: flex;
   }
 
   .selection-musiс .selection-musiс--toggle,
@@ -261,8 +287,17 @@
     display: none;
   }
 
+  .selection-transport__list .selection__walk--favorite,
+  .selection-transport__list .selection__cycle--favorite,
+  .selection-transport__list .selection__air--favorite,
+  .selection-transport__list .selection__bus--favorite {
+    width: 43px;
+    height: 43px;
+  }
+
   .selection-lvl__controls {
     display: flex;
+    justify-content: space-between;
   }
 
   .selection-lvl__range {
@@ -270,7 +305,7 @@
   }
 
   .selection-lvl__input {
-    width: 40%;
+    width: 32%;
   }
 
   .selection-lvl__input input {
@@ -288,6 +323,13 @@
   .selection {
     width: 20%;
     align-self: baseline;
+    margin-left: 85px;
+  }
+
+  .selection-companion h2 {
+    width: 67%;
+    font-size: 30px;
+    margin-bottom: 15px;
   }
 
   .selection-companion fieldset {
@@ -322,6 +364,7 @@
   }
 
   .selection-companion {
+    width: 285px;
     display: flex;
     flex-direction: column;
     justify-content: center;

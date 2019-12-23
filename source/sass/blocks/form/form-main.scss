@@ -56,7 +56,7 @@
 .form-main__autho {
   display: none;
 }
-
+// ---------------------------для планшета_______________________
 @media (min-width: $tablet-width) {
   .form-main__slogan {
     display: flex;
@@ -89,9 +89,22 @@
 
 }
 
+// для пк_________________________для пк ___________________________
 @media (min-width: $desktop-width) {
   .form-main__idea::after {
-    bottom: -70px;
+    bottom: -83px;
   }
 
+  .form-main__slogan {
+    padding-top: 20px;
+    padding-left: 129px;
+  }
+
+  .form-main__home--link {
+    width: 19%;
+  }
+
+  .form-main__home--link span {
+    margin-left: 29px;
+  }
 }

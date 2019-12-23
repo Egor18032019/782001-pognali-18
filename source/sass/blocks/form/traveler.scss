@@ -84,10 +84,14 @@
 
 .traveler__heart--btn {
   border: none;
-  background-color: #f9eaea;
+  background-color: #edeff6;
   width: 31px;
   height: 31px;
   border-radius: 50%;
+}
+
+.traveler__heart--red {
+  background-color: #f9eaea;
 }
 
 .traveler__heart {
@@ -95,8 +99,28 @@
   width: auto;
 }
 
-.traveler__heart--btn-img {
+.traveler__heart--img {
+  border-color: cadetblue;
+  fill: #edeff6;
+}
+
+.traveler__heart--active {
   fill: #f02323;
+  // position: absolute;
+  // top: 50%;
+  // transform: translateY(-50%);
+}
+
+.traveler__heart--noactive {
+  fill: #192144;
+}
+
+.traveler__list {
+  margin-bottom: 0;
+}
+
+.traveler__heart--none {
+  display: none;
 }
 
 .traveler__item .traveler__tegs {
@@ -211,6 +235,7 @@
   border: none;
   background-color: inherit;
   margin-bottom: 27px;
+  text-transform: uppercase;
 }
 
 .traveler__btn::before {
@@ -242,6 +267,8 @@
   align-items: center;
 }
 
+// _______________________________для планшета____________________________
+
 @media (min-width: $tablet-width) {
   .traveler__item {
     position: relative;
@@ -258,20 +285,26 @@
   }
 
   .traveler__item .traveler__tegs {
-    width: 30%;
-    // margin-left: 200px;
-    // align-self: baseline;
-    // Только абсалют
-    position: absolute;
-    left: 220px;
-    top: 75px;
+    width: 38%;
+    margin-left: 223px;
+    margin-bottom: 53px;
+  }
+
+  .traveler__tegs li {
+    font-size: 20px;
+  }
+
+  .traveler__lvl {
+    font-size: 24px;
   }
 
   .traveler__item .traveler__call {
-    width: 40%;
-    margin-left: 200px;
+    width: 23%;
+    margin-left: 234px;
+    min-height: 50px;
     align-self: baseline;
     margin-right: 0;
+    margin-top: 0;
     // margin-left: 111px;
   }
 
@@ -283,8 +316,23 @@
     padding-top: 8px;
   }
 
+  .traveler__name::after {
+    width: 7px;
+    height: 7px;
+    margin-left: 17px;
+    position: initial;
+  }
+
+  .traveler__list .traveler__item {
+    width: 89%;
+    padding-top: 28px;
+    margin-bottom: 40px;
+  }
+
   .traveler__transport {
-    margin-left: auto;
+    position: absolute;
+    right: 39px;
+    // margin-left: auto;
     flex-direction: column;
     align-items: center;
     order: -1;
@@ -299,7 +347,7 @@
     padding: 0;
   }
 
-  .traveler__transport .traveler__text {
+  .traveler__text {
     display: none;
   }
 
@@ -311,34 +359,68 @@
     display: none;
   }
 
+  .traveler__heart--btn {
+    width: 50px;
+    height: 50px;
+    position: relative;
+  }
+
+  .traveler__heart--btn svg {
+    width: 20px;
+    height: 17px;
+  }
+
+  .traveler__btn::before {
+    width: 27px;
+    height: 27px;
+    margin-right: 25px;
+  }
+
   .traveler__countries {
+    width: 83%;
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 0;
+  }
+
+  .traveler__countries li {
+    font-size: 20px;
+  }
+
+  .country__item::before {
+    width: 35px;
+    height: 24px;
   }
 
   .traveler__item img {
     position: absolute;
     width: 190px;
-    left: 25px;
+    height: 190px;
+    left: 33px;
     border-radius: 10px;
   }
 
   .traveler__name {
-    margin-bottom: 20px;
     width: 55%;
-    margin-left: 200px;
+    margin-bottom: 13px;
+    margin-left: 219px;
+    font-size: 30px;
     order: -2;
+    display: flex;
+    align-items: center;
   }
 
   .traveler__main {
-    order: 0;
-    align-self: flex-start;
     width: 30%;
+    align-self: flex-start;
+    font-size: 30px;
+    order: 0;
   }
 
   .traveler__heart {
     width: 10%;
     order: 4;
+    font-size: 20px;
   }
 
   .traveler__wish {
@@ -346,13 +428,14 @@
   }
 
   .traveler__toggle--list {
+    width: 33%;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
   .traveler-wrapper__slider {
-    width: 20%;
+    width: 10%;
     margin-left: auto;
   }
 
@@ -361,11 +444,16 @@
     height: 100px;
     padding-left: 30px;
     padding-right: 30px;
-    margin-bottom: 54px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 16px;
   }
 
   .traveler__btn {
+    width: 30%;
     font-size: 20px;
+    margin-bottom: 53px;
+    vertical-align: middle;
   }
 
   .traveler__toggle--list li {
@@ -380,6 +468,7 @@
   }
 
   .traveler__toggle--item {
+    flex-shrink: 0;
     border-radius: 50%;
     background-color: #ffd74b;
   }
@@ -388,37 +477,68 @@
 // --------------------------для пк ------------------------
 @media (min-width: $desktop-width) {
   .traveler {
-    width: 65%;
+    width: 70%;
+    margin: 0;
+    align-items: flex-end;
+  }
+
+  .traveler__list {
+    width: 94%;
+    margin-top: 0;
   }
 
   .traveler__item img {
     width: 285px;
     height: 285px;
+    left: 0;
+    top: 0;
+  }
+
+  .traveler__list .traveler__item {
+    width: 100%;
+    padding-top: 40px;
+    padding-right: 41px;
+    margin-bottom: 27px;
   }
 
   .traveler__name {
     width: 35%;
     margin: 0;
     margin-left: 285px;
+    margin-bottom: 15px;
     align-self: baseline;
+  }
+
+  .traveler__name::after {
+    order: -1;
+    margin-right: 17px;
   }
 
   .traveler__heart--wrapp {
     order: 5;
+    margin-bottom: 0;
+  }
+
+  .traveler__lvl--wrapp {
+    margin-bottom: 16px;
   }
 
   .traveler__item .traveler__tegs {
     position: static;
     width: 24%;
-    margin-left: 300px;
+    margin-left: 328px;
     margin-right: auto;
+    margin-bottom: 58px;
     order: 1;
   }
 
   .traveler__wish {
     width: 25%;
-    order: 0;
-    margin-left: auto;
+    position: absolute;
+    right: 35px;
+    top: 51px;
+    // order: 0;
+    // margin-left: auto;
   }
 
   .traveler__countries {
@@ -426,10 +546,12 @@
   }
 
   .traveler__transport {
-    width: 27%;
+    position: initial;
+    width: 140px;
     order: 5;
     margin: 0;
     flex-direction: row;
+    margin-left: 71px;
   }
 
 
@@ -441,7 +563,36 @@
 
   .traveler__item .traveler__call {
     order: 4;
-    width: 15%;
-    margin-left: 300px;
+    width: 16%;
+    margin-left: 328px;
+  }
+
+  .traveler__btn--show-more {
+    padding-top: 37px;
+  }
+
+  .traveler__btn {
+    text-align: center;
+    margin-bottom: 70px;
+  }
+
+  .traveler__btn--show-more .traveler__toggle--btns {
+    width: 100%;
+    padding-right: 40px;
+    padding-left: 88px;
+    padding-bottom: 12px;
+    margin-bottom: 28px;
+  }
+
+  .traveler-wrapper__slider {
+    width: 7%;
+  }
+
+  .traveler__toggle--list {
+    width: 23%;
+  }
+
+  .traveler__toggle--list li {
+    margin-right: 0;
   }
 }

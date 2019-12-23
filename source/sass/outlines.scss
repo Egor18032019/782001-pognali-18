@@ -1,5 +1,5 @@
 @media (min-width: $tablet-width) {
-    section .index-button {
+  section .index-button {
     min-height: 81px;
     width: 80%;
     border-radius: 20px;
@@ -9,6 +9,16 @@
     width: 24px;
     height: 24px;
   }
+
+  .selection-lvl__range--toogle {
+    width: 13px;
+    height: 13px;
+  }
+
+  .selection-lvl__scale,
+  .selection-lvl__bar {
+    height: 3px;
+  }
 }
 
 // --------------------------для пк ------------------------
@@ -16,6 +26,9 @@
   .main-selection {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
   }
 
   .check::before {

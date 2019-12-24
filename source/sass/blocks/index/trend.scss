@@ -7,7 +7,7 @@
 
 .trend-slogan {
   width: 70%;
-  padding-bottom: 31px;
+  padding-bottom: 28px;
 }
 
 .trend-wrapper {
@@ -15,7 +15,7 @@
   width: 100%;
   padding-top: 49px;
   background-color: #edeff6;
-  padding-bottom: 30px;
+  padding-bottom: 29px;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
 }
@@ -34,7 +34,7 @@
   list-style: none;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 11px;
+  margin-bottom: 10px;
   padding: 0;
 }
 
@@ -46,11 +46,6 @@
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   overflow: hidden;
-  margin-bottom: 10px;
-}
-
-.trend__item {
-  margin-bottom: 28px;
 }
 
 .trend__text::before {
@@ -59,12 +54,14 @@
   background-image: url("https://via.placeholder.com/35x24");
   width: 35px;
   height: 24px;
-  top: -29px;
+  top: -12px;
+  left: 27px;
   background-color: hotpink;
 }
 
 .trend__text {
   position: relative;
+  top: -15px;
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
@@ -75,14 +72,14 @@
   border-top-left-radius: 10px;
   padding-left: 22px;
   padding-right: 26px;
-  padding-bottom: 24px;
+  padding-bottom: 18px;
+  padding-top: 5px;
 }
 
 .trend__text p {
   @include fontBS(21px, bold, #161c35);
   width: 70%;
   margin-bottom: 5px;
-  margin-top: 10px;
 }
 
 .trend__text small {
@@ -155,8 +152,13 @@
   .trend__text::before {
     width: 70px;
     height: 47px;
-    top: 16px;
-    right: -36px;
+    top: 31px;
+    right: -38px;
+    left: unset;
+  }
+
+  .trend__text span::before {
+    opacity: 0.1;
   }
 
   .trend__text small {
@@ -184,8 +186,8 @@
   .trend__text {
     width: 100%;
     flex-direction: column;
-    padding-top: 28px;
-    padding-left: 28px;
+    padding-top: 45px;
+    padding-left: 24px;
   }
 
   .trend__button {

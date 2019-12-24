@@ -2,7 +2,7 @@
   @include center;
   @include margin-auto;
   background-color: #192144;
-  min-height: 480px;
+  // min-height: 480px;
 }
 
 .rate-wrapper {
@@ -11,15 +11,18 @@
   flex-direction: row;
   flex-wrap: wrap;
   background-color: #edeff6;
-  min-height: 480px;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+  padding-left: 25px;
+  padding-top: 25px;
+  // min-height: 480px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  overflow: hidden;
 }
 
 .rate h2 {
   @include fontBS(24px, bold, #ff8d30);
   width: 50%;
-  margin-bottom: 31px;
+  margin-bottom: 46px;
 }
 
 // .rate__slogan h2::after {
@@ -39,11 +42,27 @@
   border-top: 1px solid #e2e5f2;
   border-bottom: 1px solid #e2e5f2;
   min-height: 65px;
+  counter-increment: white-left-rate;
 }
 
 .rate__list {
-  width: 76%;
-  margin-bottom: 31px;
+  @include reset-list;
+  width: 84%;
+  margin-bottom: 19px;
+  counter-reset: white-left-rate;
+}
+
+.rate__list li::after {
+  @include fontBS (16px, normal, #ffffff);
+  content: " "counter(white-left-rate);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background-color: #ffa530;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .rate-wrapper .rate__button {
@@ -52,25 +71,60 @@
   background-color: inherit;
   text-align: center;
   border: none;
-  margin-bottom: 30px;
+  margin-bottom: 6px;
 }
 
 @media (min-width: $tablet-width) {
   .rate-wrapper {
-    padding-top: 25px;
-    padding-bottom: 26px;
-    border-radius: 60px;
+    padding-top: 30px;
+    padding-bottom: 43px;
+    padding-right: 40px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
   }
 
   .rate-wrapper h2 {
     font-size: 45px;
-    margin-bottom: 18px;
+    margin-bottom: 73px;
+    width: auto;
   }
 
   .rate__list li {
     font-size: 28px;
-    justify-content: space-between;
   }
+
+  .rate__list li::before {
+    @include fontBS (28px, normal, #ffffff);
+    content: " "counter(white-left-rate);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 67px;
+    height: 67px;
+    background-color: #ffa530;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-right: 21px;
+  }
+
+  .rate__list li::after {
+    display: none;
+  }
+
+  .rate__list {
+    width: 96%;
+  }
+
+  .rate__list--text {
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .rate__list--text span {
+    float: right;
+  }
+
 
   .rate-wrapper .rate__button {
     width: 50%;
@@ -79,7 +133,7 @@
     font-size: 20px;
     color: #132576;
     margin-left: 0;
-    margin-right: 0;
+    margin-right: auto;
   }
 
   .rate__button::before {
@@ -96,9 +150,14 @@
     flex-shrink: 0;
   }
 
+  .rate-wrapper .rate__button::after {
+    display: none;
+  }
+
   .rate__money {
     align-self: baseline;
     order: 3;
+    margin-right: 47px;
   }
 
   // .rate__prise {

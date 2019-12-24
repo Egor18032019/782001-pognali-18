@@ -153,7 +153,8 @@
 @media (min-width: $tablet-width) {
   .register-wrapper {
     padding-top: 35px;
-    border-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
   }
 
   .register__slogan {

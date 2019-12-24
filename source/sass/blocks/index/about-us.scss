@@ -19,26 +19,27 @@
 }
 
 .about-us__wrapper {
-  width: 70%;
+  width: 74%;
   padding-top: 10px;
-  padding-bottom: 14px;
 }
 
 .about-us h2 {
   @include fontBS (24px, bold, #ff8d30);
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 }
 
 .about-us p {
   @include fontBS (16px, 300, #ffffff);
-  margin-bottom: 33px;
+  line-height: 1.38;
+  margin-bottom: 17px;
   opacity: 0.8;
 }
 
 .about-us b {
   @include fontBS (16px, bold, #ffffff);
+  line-height: 1.38;
   display: block;
-  margin-bottom: 84px;
+  margin-bottom: 83px;
 }
 
 .about-us__button {
@@ -76,19 +77,20 @@
     content: "";
     width: 404px;
     height: 548px;
-    right: -11px;
-    bottom: 86px;
+    right: 0px;
+    bottom: 85px;
     z-index: 3;
     position: absolute;
     background-image: url("../img/about-tablet@1x.png");
     background-repeat: no-repeat;
     background-position: right;
-    background-size: 100%;
+    background-size: 95%;
   }
 
   .about-us__container {
     position: relative;
-    border-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
     background-image: none;
   }
 
@@ -115,13 +117,15 @@
   .about-us p {
     width: 55%;
     font-size: 28px;
-    margin-bottom: 65px;
+    margin-bottom: 29px;
+    line-height: 1.18;
   }
 
   .about-us b {
     width: 55%;
     font-size: 21px;
-    margin-bottom: 65px;
+    margin-bottom: 57px;
+    line-height: 1.19;
   }
 
   .about-us__wrapper .about-us__button {
@@ -130,7 +134,7 @@
     align-items: center;
     justify-content: space-between;
     border-radius: 20px;
-    margin-bottom: 74px;
+    margin-bottom: 85px;
   }
 }
 

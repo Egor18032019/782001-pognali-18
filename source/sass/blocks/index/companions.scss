@@ -15,8 +15,9 @@
 .companions__slogan {
   @include center;
   align-items: flex-start;
-  width: 70%;
-  margin-bottom: 44px;
+  width: 76%;
+  padding-left: 8px;
+  margin-bottom: 42px;
 }
 
 .companions h2 {
@@ -24,14 +25,21 @@
   margin-bottom: 6px;
 }
 
-.companions__slogan b {
+.companions__slogan--bold {
   @include fontBS(16px, bold, #ffffff);
+  width: 90%;
+  line-height: 1.38;
+}
+
+.companions__slogan--bold br {
+  display: none;
 }
 
 .companions__slogan p {
   @include fontBS(16px, 300, #ffffff);
   line-height: 1.38;
   opacity: 0.8;
+  margin-bottom: 19px;
 }
 
 .companions__lvl {
@@ -61,7 +69,7 @@
   @include margin-auto;
   padding: 0;
   width: 85%;
-  margin-bottom: 22px;
+  margin-bottom: 11px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
@@ -95,6 +103,7 @@
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .companions__personal {
@@ -104,7 +113,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding-bottom: 22px;
+  padding-bottom: 13px;
 }
 
 .companions__personal ul {
@@ -135,19 +144,21 @@
 }
 
 .companions .index-button {
-  margin-bottom: 90px;
+  margin-bottom: 87px;
 }
 
 // ________________________________________________________
 
 @media (min-width: $tablet-width) {
   .companions__slogan {
-    width: 80%;
+    width: 81%;
     padding-top: 52px;
+    padding-left: 0;
   }
 
   .companions-wrapper {
-    border-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
   }
 
   .companions__slogan h2 {
@@ -158,11 +169,15 @@
   .companions__slogan p {
     width: 76%;
     font-size: 28px;
+    line-height: 1.18;
+    margin-bottom: 40px;
   }
 
-  .companions__slogan b {
+  .companions__slogan--bold {
     width: 50%;
     font-size: 21px;
+    line-height: 1.19;
+    display: block;
   }
 
   .companions-list {
@@ -170,15 +185,15 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 81px;
+    margin-bottom: 73px;
   }
 
   .companions__personal .companions__teg {
-    margin-bottom: 32px;
+    margin-bottom: 23px;
   }
 
   .companions__personal .companions__transport {
-    margin-bottom: 22px;
+    margin-bottom: 23px;
   }
 
   .companions__personal p {

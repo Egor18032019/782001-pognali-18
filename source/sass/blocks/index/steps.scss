@@ -41,6 +41,8 @@
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   overflow: hidden;
+  // включаю нумерацию списка
+  counter-reset: white-left-counter;
 }
 
 .steps__list li {
@@ -50,6 +52,23 @@
   display: flex;
   align-items: center;
   padding-left: 25px;
+  padding-right: 25px;
+  // спсиок
+  counter-increment: white-left-counter;
+}
+
+.steps__list li::after {
+  @include fontBS (18px, bold, #ffffff);
+  content: " "counter(white-left-counter);
+  display: flex;
+  width: 7px;
+  height: 43px;
+  align-items: self-start;
+  margin-left: auto;
+}
+
+.steps__item--text {
+  width: 73%;
 }
 
 .steps__list li:first-child {
@@ -71,13 +90,14 @@
 @media (min-width: $tablet-width) {
   .steps-quote {
     width: 85%;
-    margin-top: -515px;
-    margin-bottom: 213px;
+    margin-top: -538px;
+    margin-bottom: 200px;
   }
 
   .steps-quote q {
     width: 50%;
     font-size: 28px;
+    margin-bottom: 44px;
   }
 
   .steps-quote cite {
@@ -86,10 +106,15 @@
   }
 
   .steps__list {
-    width: 88%;
+    width: 89%;
     display: flex;
     flex-wrap: wrap;
     border-radius: 20px;
+  }
+
+  .steps__list li::after {
+    font-size: 30px;
+    margin-left: 0;
   }
 
   .steps__list .steps__item {
@@ -98,6 +123,11 @@
     font-size: 24px;
     padding-left: 31px;
     border-radius: 0;
+    flex-wrap: wrap;
+  }
+
+  .steps__item--text {
+    width: 70%;
   }
 }
 

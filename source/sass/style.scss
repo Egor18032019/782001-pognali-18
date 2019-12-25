@@ -103,14 +103,19 @@ img {
   padding: 0;
 }
 
+.transport .transport--favorite {
+  opacity: 1;
+}
+
 .transport li {
   width: 33px;
   height: 33px;
   // margin-right: 17px;
   font-size: 0;
   border-radius: 50%;
-  // background-color: white;
+  background-color: #edeff6;
   background-size: 50%;
+  opacity: 0.2;
 }
 
 .transport li:first-child {

@@ -222,13 +222,16 @@
   }
 
   .companions__slogan {
+    width: 68%;
     margin: 0;
+    padding-top: 0;
     align-self: self-start;
-    align-items: center;
+    align-items: self-start;
+    padding-left: 71px;
   }
 
   .companions__slogan p {
-    width: 75%;
+    width: 76%;
   }
 
   .companions__slogan b {
@@ -239,13 +242,15 @@
     flex-direction: row;
     padding-right: 59px;
     padding-left: 59px;
-    padding-top: 133px;
-    padding-bottom: 134px;
-    border-radius: 60px;
+    padding-top: 132px;
+    padding-bottom: 123px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
   }
 
   .companions__slogan h2 {
     margin: 0;
+    margin-bottom: 22px;
   }
 
   .companions-list {

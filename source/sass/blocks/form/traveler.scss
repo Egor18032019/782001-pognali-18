@@ -147,10 +147,6 @@
   margin-bottom: 5px;
 }
 
-.traveler__list--transport li {
-  background-color: #edeff6;
-}
-
 .country__item::before {
   content: "";
   width: 26px;
@@ -296,6 +292,11 @@
     padding: 0;
   }
 
+  .traveler__list--transport li,
+  .transport .transport--favorite {
+    background-color: inherit;
+  }
+
   .traveler__item .traveler__call {
     width: 23%;
     margin-left: 234px;
@@ -371,14 +372,14 @@
   }
 
   .traveler__countries {
-    width: 83%;
+    width: auto;
     display: flex;
-    justify-content: space-evenly;
     margin-bottom: 0;
   }
 
   .traveler__countries li {
     font-size: 20px;
+    margin-right: 18px;
   }
 
   .country__item::before {
@@ -397,7 +398,7 @@
   .traveler__name {
     width: 55%;
     margin-bottom: 13px;
-    margin-left: 219px;
+    margin-left: 233px;
     font-size: 30px;
     order: -2;
     display: flex;
@@ -419,6 +420,7 @@
 
   .traveler__wish {
     order: 6;
+    padding-top: 4px;
   }
 
   .traveler__toggle--list {

@@ -115,6 +115,7 @@
   .steps__list li::after {
     font-size: 30px;
     margin-left: 0;
+    align-self: flex-start;
   }
 
   .steps__list .steps__item {
@@ -122,12 +123,16 @@
     height: 140px;
     font-size: 24px;
     padding-left: 31px;
+    padding-top: 10px;
     border-radius: 0;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
   }
 
   .steps__item--text {
-    width: 70%;
+    width: 100%;
+    margin-bottom: 5px;
   }
 }
 
@@ -158,9 +163,49 @@
 
   .steps__list .steps__item {
     height: 108px;
+    flex-direction: row;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-left: -14px;
+    padding-top: 2px;
+  }
+
+  .steps__list li:first-child {
+    width: 28%;
+    margin-left: 2px;
+  }
+
+  .steps__list li:nth-child(2) {
+    width: 28%;
+    margin-left: -56px;
+  }
+
+  .steps__list li:nth-child(3) {
+    width: 28%;
+    margin-left: -26px;
+  }
+
+  .steps__list li:last-child {
+    width: 24%;
+    border-radius: 20px;
+    margin-left: -27px;
+  }
+
+  .steps__list li::after {
+    align-self: center;
+    margin-left: 60px;
+    font-size: 24px;
   }
 
   .steps-wrapper {
     padding-bottom: 123px;
+  }
+
+  .steps__item--text {
+    width: 66%;
+  }
+
+  .steps__list li:first-child .steps__item--text {
+    width: 56%;
   }
 }

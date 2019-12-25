@@ -170,9 +170,20 @@
   .rate-wrapper {
     position: relative;
     padding-top: 66px;
-    padding-bottom: 130px;
+    padding-bottom: 153px;
+    padding-right: 20px;
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 60px;
+  }
+
+  .rate__list {
+    width: 68%;
+    margin-right: 27px;
+    padding-top: 11px;
+  }
+
+  .rate__list--text {
+    width: 87%;
   }
 
   .rate__money {
@@ -180,19 +191,21 @@
     align-self: center;
     width: 198px;
     height: 198px;
+    margin: 0;
   }
 
   .rate__button {
     order: 5;
   }
 
-  .rate-wrapper h2 {
-    text-align: center;
-    margin-bottom: 120px;
-  }
-
   .rate-wrapper .rate__button {
     width: 85%;
+    margin-left: 6%;
+  }
+
+  .rate-wrapper h2 {
+    text-align: center;
+    margin-bottom: 125px;
   }
 
   .rate-wrapper .index-button::after {

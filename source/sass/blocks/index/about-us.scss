@@ -77,7 +77,7 @@
     content: "";
     width: 404px;
     height: 548px;
-    right: 0px;
+    right: 0;
     bottom: 85px;
     z-index: 3;
     position: absolute;
@@ -144,8 +144,9 @@
     background-image: url("../img/about-desktop@1x.png");
     width: 630px;
     height: 665px;
-    background-position-y: 46px;
-    background-position-x: -10px;
+    right: 60px;
+    bottom: 0;
+    background-size: 100%;
   }
 
   .about-us::after {
@@ -161,7 +162,7 @@
   }
 
   .about-us h2 {
-    margin-bottom: 62px;
+    margin-bottom: 58px;
   }
 
   .about-us b {
@@ -170,11 +171,16 @@
 
   .about-us__wrapper {
     width: 82%;
+    padding-top: 10px;
   }
 
-  .about-us__wrapper p {
-    width: 59%;
-    margin-bottom: 54px;
+  .about-us .about-us__wrapper--text {
+    width: 60%;
+    margin-bottom: 40px;
+  }
+
+  .about-us__wrapper--text br {
+    display: none;
   }
 
   .about-us__wrapper b {
@@ -189,5 +195,6 @@
   .about-us__wrapper .about-us__button {
     width: 23%;
     border-radius: 20px;
+    margin-bottom: 160px;
   }
 }

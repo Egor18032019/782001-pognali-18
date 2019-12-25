@@ -199,7 +199,7 @@
 @media (min-width: $desktop-width) {
   .trend h2 {
     margin: 0;
-    margin-bottom: 60px;
+    margin-bottom: 58px;
   }
 
   .trend-list::before {
@@ -212,11 +212,11 @@
   }
 
   .trend-wrapper {
-    padding-top: 169px;
+    padding-top: 163px;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
-    padding-bottom: 140px;
+    padding-bottom: 168px;
   }
 
   .trend-slogan {
@@ -258,12 +258,12 @@
 
   .trend .trend__button {
     position: absolute;
-    width: 18%;
+    width: 19%;
     order: 3;
     align-self: flex-end;
     z-index: 1;
-    right: 314px;
-    bottom: 138px;
+    right: 302px;
+    bottom: 139px;
     border-radius: 20px;
   }
 }

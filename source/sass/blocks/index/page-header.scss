@@ -30,7 +30,8 @@
 }
 
 .page-header__autho {
-margin-top: -20px;
+  margin-top: -20px;
+  margin-bottom: 30px;
 }
 
 .page-header__nav {
@@ -70,10 +71,6 @@ margin-top: -20px;
   background-repeat: no-repeat, no-repeat;
 }
 
-.page-header__autho {
-  margin-bottom: 30px;
-}
-
 .page-header .explorer__autho {
   display: none;
   margin: 0;
@@ -103,6 +100,7 @@ margin-top: -20px;
 
   .page-header__autho .autho__button {
     height: 50px;
+    text-transform: uppercase;
   }
 
   .page-header__slogan {
@@ -146,7 +144,7 @@ margin-top: -20px;
     justify-content: start;
     min-height: 640px;
     padding: 0;
-    padding-top: 81px;
+    padding-top: 31px;
     max-width: 1440px;
   }
 

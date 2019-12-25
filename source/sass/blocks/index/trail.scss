@@ -67,6 +67,10 @@
   width: 100%;
 }
 
+.trail__position iframe {
+  position: absolute;
+}
+
 @media (min-width: $tablet-width) {
   .trail {
     padding-top: 50px;
@@ -101,6 +105,11 @@
   }
 
   .trail__position img {
+    width: 100%;
+    height: 497px;
+  }
+
+  .trail__position iframe {
     width: 100%;
     height: 497px;
   }
@@ -140,6 +149,11 @@
   }
 
   .trail__position img {
+    width: 100%;
+    height: 410px;
+  }
+
+  .trail__position iframe {
     width: 100%;
     height: 410px;
   }

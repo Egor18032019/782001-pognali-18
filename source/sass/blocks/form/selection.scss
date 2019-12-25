@@ -91,8 +91,50 @@
   background-color: inherit;
 }
 
+.selection-transport__list {
+  display: flex;
+  width: 65%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
 .selection-transport__list li {
+  width: 33px;
+  height: 33px;
+  // margin-right: 17px;
+  font-size: 0;
+  border-radius: 50%;
+  background-size: 50%;
   background-color: white;
+  opacity: 1;
+}
+
+
+.selection__air--favorite {
+  background-image: url("../img/plane.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.selection__bus--favorite {
+  background-image: url("../img/bus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.selection__cycle--favorite {
+  background-image: url("../img/bike.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+}
+
+.selection__walk--favorite {
+  background-image: url("../img/run.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .selection-transport__list label {
@@ -124,7 +166,6 @@
 .selection-food__id:checked ~ .selection-food__name .selection-food--toggle {
   transform: rotate(180deg);
 }
-
 
 .selection-transport__id:checked ~ .selection-transport__list {
   display: none;

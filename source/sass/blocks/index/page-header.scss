@@ -89,6 +89,7 @@
 @media (min-width: $tablet-width) {
   .page-header {
     flex-direction: row-reverse;
+    padding-top: 40px;
   }
 
   .page-header__autho {
@@ -170,6 +171,7 @@
   .page-header {
     min-height: 100px;
     justify-content: space-evenly;
+    padding-top: 49px;
   }
 
   .page-header__slogan h2 {

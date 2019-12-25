@@ -51,7 +51,6 @@
   left: 18px;
   border-radius: 50%;
   background-color: black;
-  border: 3px solid #ff8d30;
   opacity: 0.5;
 }
 
@@ -124,16 +123,33 @@
   padding: 0;
 }
 
+.companions__lvl--svg {
+  position: absolute;
+  flex-shrink: 0;
+}
+
+.companion__item--circle {
+  fill: #000000;
+  fill-opacity: 0.1;
+  stroke-width: 3px;
+  stroke: #ff8d30;
+}
+
+.companions__teg li {
+  margin-right: 2px;
+}
+
 .companions__personal .companions__teg {
   margin-bottom: 9px;
 }
 
 .companions__personal .companions___countries {
   position: absolute;
-  width: 53%;
+  display: flex;
+  width: auto;
   top: -14px;
-  left: 64px;
-  justify-content: space-between;
+  // left: 64px;
+  justify-content: center;
 }
 
 .companions___countries li {
@@ -141,6 +157,7 @@
   width: 35px;
   height: 24px;
   font-size: 0;
+  margin: 0 7px;
 }
 
 .companions .index-button {
@@ -192,6 +209,7 @@
     margin-bottom: 23px;
   }
 
+
   .companions__personal .companions__transport {
     margin-bottom: 23px;
   }
@@ -203,6 +221,10 @@
   .companions__personal {
     padding-top: 10px;
     padding-bottom: 0;
+  }
+
+  .companions__teg li {
+    margin-right: 3px;
   }
 
   .companions-list .companions__item {
@@ -251,6 +273,10 @@
   .companions__slogan h2 {
     margin: 0;
     margin-bottom: 22px;
+  }
+
+  .companions__teg li {
+    margin-right: 4px;
   }
 
   .companions-list {

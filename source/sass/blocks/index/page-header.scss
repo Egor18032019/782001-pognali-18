@@ -67,7 +67,8 @@
   margin: 0 auto;
   background-image: url("../img/traveller-illustration-mobile@1x.png"), url("../img/globe-back-mobile@1x.jpg");
   background-position: bottom right 49px, bottom -99px center;
-  background-size: 192px 256px, 320px 569px;
+  background-size: 192px 256px, auto 569px;
+  // 320px 569px было так решил изменить// не могу понять почему auto не работает
   background-repeat: no-repeat, no-repeat;
 }
 
@@ -110,6 +111,7 @@
     background-position: bottom 139px right 112px, bottom center;
     background-size: 372px 451px, auto 610px;
     background-repeat: no-repeat, no-repeat;
+    max-width: 1439px;
   }
 
   .page-header__main {

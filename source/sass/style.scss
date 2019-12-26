@@ -85,7 +85,7 @@ img {
   @include margin-auto;
   @include fontBS($fsize:17px, $fweight:bold, $color:#161c35);
   width: 85%;
-  min-height: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -3,7 +3,7 @@
   background-color: #edeff6;
   flex-direction: row;
   flex-wrap: wrap;
-  padding-top: 21px;
+  padding-top: 27px;
 }
 
 .explorer-slogan {
@@ -41,6 +41,9 @@
 .explorer-main h3,
 .explorer-add h3 {
   @include fontBS(20px, bold, #1d2e5b);
+  align-self: self-start;
+  width: 57%;
+  margin-bottom: 0;
 }
 
 .explorer-main legend {
@@ -63,11 +66,25 @@
   border-radius: 50%;
   margin-bottom: 19px;
   text-align: center;
-  border: 3px solid #ff8d30;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-right: 33px;
+}
+
+.explorer__lvl--svg {
+  position: absolute;
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+}
+
+.explorer__item--circle {
+  fill: #000000;
+  fill-opacity: 0.1;
+  stroke-width: 3px;
+  stroke: #ff8d30;
 }
 
 .explorer-lvl p {
@@ -118,19 +135,19 @@
   height: 100%;
 }
 
-.explorer__bus:checked ~ .explorer__transport--type .explorer__bus--favorite {
+.explorer__bus:checked~.explorer__transport--type .explorer__bus--favorite {
   opacity: 0.2;
 }
 
-.explorer__air:checked ~ .explorer__transport--type .explorer__air--favorite {
+.explorer__air:checked~.explorer__transport--type .explorer__air--favorite {
   opacity: 0.2;
 }
 
-.explorer__cycle:checked ~ .explorer__transport--type .explorer__cycle--favorite {
+.explorer__cycle:checked~.explorer__transport--type .explorer__cycle--favorite {
   opacity: 0.2;
 }
 
-.explorer__walk:checked ~ .explorer__transport--type .explorer__walk--favorite {
+.explorer__walk:checked~.explorer__transport--type .explorer__walk--favorite {
   opacity: 0.2;
 }
 
@@ -144,23 +161,37 @@
 
 .explorer-plan h2 {
   @include fontBS (18px, bold, #1d2e5b);
+  align-self: self-start;
+  margin-left: 8%;
+  margin-bottom: 31px;
 }
 
 .explorer-plan__country {
+  @include reset-list;
   width: 85%;
   padding: 0;
+  counter-reset: blue-left-country;
 }
 
 .explorer-plan__country li {
   min-height: 154px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   padding: 24px;
   background-color: white;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
+  counter-increment: blue-left-country;
 }
+
+.explorer-plan__country li::before {
+  @include fontBS (16px, normal, #1d2e5b);
+  content: counter(blue-left-country)". ";
+  display: inline-block;
+  margin-right: 5px;
+}
+
 
 .explorer-plan__country b {
   @include fontBS (16px, bold, #1d2e5b);
@@ -177,15 +208,20 @@
 
 .explorer-add {
   @include center;
+  position: relative;
   background-color: #d4d9eb;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   overflow: hidden;
   margin-bottom: 10px;
+  padding-top: 29px;
 }
 
 .explorer-add h2 {
   @include fontBS (22px, bold, #1d2e5b);
+  align-self: start;
+  margin-left: 7%;
+  margin-bottom: 29px;
 }
 
 .explorer-step {
@@ -202,26 +238,37 @@
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  margin-bottom: 8px;
+  padding-bottom: 21px;
 }
 
 .explorer-step__first--container,
 .explorer-step__second--container,
 .explorer-step__three--container {
   @include center;
+  width: 91%;
+  // ширина стоит для календаря
 }
 
 .explorer-date {
   @include center;
+  width: 91%;
   margin-bottom: 21px;
 }
 
 .explorer-step__text {
   @include fontBS (16px, normal, #444444);
+  line-height: 1.39;
 }
 
 .explorer-add label {
   @include fontBS (16px, 500, #1d2e5b);
-  display: block;
+  display: flex;
+  align-items: center;
+}
+
+.explorer-add__score--children input {
+  margin-right: 10px;
 }
 
 .explorer-add b {
@@ -247,6 +294,9 @@
 }
 
 .explorer-path {
+  position: absolute;
+  top: 57px;
+  right: 49px;
   display: flex;
   width: 40px;
   height: 2px;
@@ -263,6 +313,7 @@
   padding-right: 14px;
   border: solid 1px #cbced9;
   margin-bottom: 21px;
+  margin-top: 10px;
 }
 
 .explorer-add__score input {
@@ -289,6 +340,7 @@
   justify-content: space-between;
   border-bottom: 1px solid #d4d9eb;
   border-top: 1px solid #d4d9eb;
+  margin-bottom: 16px;
 }
 
 .explorer__month--arrow {
@@ -303,6 +355,10 @@
 .explorer__month--right {
   background-image: url("../img/month-arrow-right.svg");
   background-repeat: no-repeat;
+}
+
+.explorer-step__first--container .form-button {
+  width: 92%;
 }
 
 .explorer--count {
@@ -346,43 +402,43 @@
   cursor: pointer;
 }
 
-.explorer-data--0331:checked ~ .explorer-data__day .explorer-data__choise--0331 {
+.explorer-data--0331:checked~.explorer-data__day .explorer-data__choise--0331 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0329:checked ~ .explorer-data__day .explorer-data__choise--0329 {
+.explorer-data--0329:checked~.explorer-data__day .explorer-data__choise--0329 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0328:checked ~ .explorer-data__day .explorer-data__choise--0328 {
+.explorer-data--0328:checked~.explorer-data__day .explorer-data__choise--0328 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0327:checked ~ .explorer-data__day .explorer-data__choise--0327 {
+.explorer-data--0327:checked~.explorer-data__day .explorer-data__choise--0327 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0326:checked ~ .explorer-data__day .explorer-data__choise--0326 {
+.explorer-data--0326:checked~.explorer-data__day .explorer-data__choise--0326 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0326:checked ~ .explorer-data__day .explorer-data__choise--0326::after {
+.explorer-data--0326:checked~.explorer-data__day .explorer-data__choise--0326::after {
   content: "Заезд";
 }
 
-.explorer-data--0328:checked ~ .explorer-data__day .explorer-data__choise--0328::after {
+.explorer-data--0328:checked~.explorer-data__day .explorer-data__choise--0328::after {
   content: "Выезд";
 }
 
 .explorer-step__second--choise {
   @include fontBS (14px, 500, #1d2e5b);
   display: flex;
-  width: 80%;
+  width: 100%;
   align-items: center;
   // justify-content: center;
   margin-bottom: 21px;
@@ -392,6 +448,9 @@
 
 .explorer-step__second--choise ul {
   @include reset-list;
+}
+
+.explorer-step__second--country {
   min-height: 42px;
   border-radius: 4px;
   border: 1px solid #cbced9;
@@ -399,6 +458,7 @@
 
 .explorer-step__second--country {
   width: 100%;
+  max-width: 230px;
 }
 
 .explorer-step__second--flag {
@@ -437,6 +497,97 @@
   border-radius: 20px;
   text-transform: uppercase;
   background-color: inherit;
+}
+
+.explorer-country__other {
+  @include center;
+  // display: none;
+  padding-top: 21px;
+}
+
+.explorer-country__other ul {
+  @include reset-list;
+}
+
+.explorer-country__selection {
+  position: absolute;
+  width: 230px;
+  height: 210px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.explorer-country__selection--items,
+.explorer-country__selection--items button {
+  width: 45px;
+  height: 42px;
+  border: 1px solid #cbced9;
+}
+
+.explorer-country__selection button {
+  @include fontBS (14px, 500, #1d2e5b);
+  text-align: center;
+  width: 100%;
+  // height: 100%;
+  text-transform: uppercase;
+  background-color: white;
+  border: 0 none;
+}
+
+.explorer-country__chosen--2,
+.explorer-country__chosen--3,
+.explorer-country__chosen--4,
+.explorer-country__chosen--5,
+.explorer-country__chosen--6,
+.explorer-country__chosen--7,
+.explorer-country__chosen--8,
+.explorer-country__chosen--9,
+.explorer-country__chosen--10,
+.explorer-country__chosen--11,
+.explorer-country__chosen--12,
+.explorer-country__chosen--13,
+.explorer-country__chosen--14,
+.explorer-country__chosen--15,
+.explorer-country__chosen--16,
+.explorer-country__chosen--17,
+.explorer-country__chosen--18,
+.explorer-country__chosen--19,
+.explorer-country__chosen--20,
+.explorer-country__chosen--21,
+.explorer-country__chosen--22,
+.explorer-country__chosen--23,
+.explorer-country__chosen--24 {
+  display: none;
+}
+
+.explorer-country__chosen li {
+  @include fontBS(16px, normal, #444444);
+  line-height: 1.38;
+}
+
+.explorer-country__chosen a {
+  @include fontBS(16px, normal, #444444);
+}
+
+.explorer-country__selection--items .explorer-country__chosen {
+  width: 230px;
+  padding-top: 220px;
+  background-color: white;
+  padding-left: 20px;
+}
+
+
+.explorer-country__other .explorer-country__selection {
+  width: 230px;
+  height: 210px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 282px;
+}
+
+.explorer-country__other .explorer-country__button {
+  background-color: #d6daed;
+  margin-bottom: 27px;
 }
 
 .explorer-step__three textarea {

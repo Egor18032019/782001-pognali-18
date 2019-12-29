@@ -92,6 +92,7 @@ img {
   border-radius: 20px;
   background-color: $indexButton;
   text-transform: uppercase;
+  border: none;
 }
 
 .transport {
@@ -200,8 +201,4 @@ img {
   background-size: 50%;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.weekends {
-  color: #ff5c23;
 }

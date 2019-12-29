@@ -1,6 +1,6 @@
 .page-header {
   width: 100%;
-  min-height: 73px;
+  min-height: 58px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,16 +22,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 73px;
+  min-height: 58px;
 }
 
 .page-header__logo {
+  min-width: 100px;
+  min-height: 19px;
   font-size: 0;
+  background-image: url("../img/logo-mobile-white@1x.png");
+  background-repeat: no-repeat;
 }
 
 .page-header__autho {
   margin-top: -20px;
-  margin-bottom: 30px;
 }
 
 .page-header__nav {
@@ -91,6 +94,7 @@
   .page-header {
     flex-direction: row-reverse;
     padding-top: 40px;
+    background-color: #192144;
   }
 
   .page-header__autho {
@@ -103,6 +107,7 @@
   .page-header__autho .autho__button {
     height: 50px;
     text-transform: uppercase;
+    border-radius: 25px;
   }
 
   .page-header__slogan {
@@ -112,11 +117,12 @@
     background-size: 372px 451px, auto 610px;
     background-repeat: no-repeat, no-repeat;
     max-width: 1439px;
+    background-color: #192144;
   }
 
   .page-header__main {
     width: 66%;
-    justify-content: space-around;
+    justify-content: flex-start;
   }
 
   .page-header__slogan h2 {
@@ -128,7 +134,20 @@
   .page-header__slogan--wrapper {
     display: flex;
     justify-content: center;
-    padding-top: 45px;
+    padding-top: 37px;
+  }
+
+  .page-header__nav {
+    margin-right: 22%;
+    margin-left: auto;
+  }
+
+  .page-header__logo {
+    margin-left: 0;
+    min-width: 260px;
+    min-height: 44px;
+    font-size: 0;
+    background-image: url("../img/logo-tablet-white@1x.png");
   }
 }
 
@@ -137,7 +156,7 @@
 @media (min-width: $desktop-width) {
   .page-header__wrapper {
     display: block;
-    width: 80%;
+    width: auto;
   }
 
   .page-header__slogan {
@@ -149,6 +168,14 @@
     padding: 0;
     padding-top: 31px;
     max-width: 1440px;
+  }
+
+  .page-header__logo {
+    margin-left: 0;
+    min-width: 260px;
+    min-height: 44px;
+    font-size: 0;
+    background-image: url("../img/logo-desktop-white@1x.png");
   }
 
   .page-header__toggle {

@@ -6,10 +6,25 @@
 
 .companions-wrapper {
   @include center;
+  position: relative;
   padding-top: 50px;
   background-color: $indexColor;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  background-image: url("../img/smolov-back-desktop@1x.png"), url("../img/rogovaya-back-mobile@1x.png");
+  background-position: top 39px right 25px, top 305px left 1px;
+  background-repeat: no-repeat;
+}
+
+.companions-wrapper::before {
+  content: "";
+  width: 113px;
+  height: 132px;
+  background-color: #141b3b;
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  z-index: 0;
 }
 
 .companions__slogan {
@@ -18,6 +33,8 @@
   width: 76%;
   padding-left: 8px;
   margin-bottom: 42px;
+  z-index: 1
+  ;
 }
 
 .companions h2 {
@@ -136,7 +153,10 @@
 }
 
 .companions__teg li {
-  margin-right: 2px;
+  @include fontBS (16px, normal, #444444);
+  line-height: 1.13;
+  margin-right: 3px;
+  text-align: center;
 }
 
 .companions__personal .companions__teg {
@@ -176,6 +196,17 @@
   .companions-wrapper {
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
+    background-image: url(../img/smolov-back-desktop@1x.png), url(../img/rogovaya-back-desktop@1x.png);
+    background-position: top 430px left 56px, top 65px right 25px;
+  }
+
+  .companions-wrapper::before {
+    width: 213px;
+    height: 213px;
+    border-radius: 20px;
+    background-color: #141b3b;
+    left: 63px;
+    top: 70px;
   }
 
   .companions__slogan h2 {

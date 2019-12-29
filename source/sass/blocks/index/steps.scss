@@ -2,6 +2,7 @@
   @include center;
   @include margin-auto;
   background-color: $indexColor;
+  padding-top: 30px;
 }
 
 .steps-quote {
@@ -13,7 +14,7 @@
   @include fontBS (16px, 300, white);
   display: block;
   width: 80%;
-  line-height: 1.2;
+  line-height: 1.11;
   margin-bottom: 18px;
 }
 
@@ -90,7 +91,7 @@
 @media (min-width: $tablet-width) {
   .steps-quote {
     width: 85%;
-    margin-top: -538px;
+    margin-top: -562px;
     margin-bottom: 200px;
   }
 

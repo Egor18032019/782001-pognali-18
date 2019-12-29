@@ -120,10 +120,25 @@
     padding-bottom: 78px;
   }
 
+  .trend-wrapper::before {
+    content: "";
+    position: absolute;
+    left: 40px;
+    top: 408px;
+    width: 141px;
+    height: 141px;
+    border-radius: 20px;
+    background-color: #e2e5f2;
+  }
+
   .trend-list {
     width: 80%;
     z-index: 1;
     margin-bottom: 31px;
+  }
+
+  .trend-list li {
+    border-radius: 20px;
   }
 
   .trend h2 {
@@ -159,6 +174,8 @@
 
   .trend__text span::before {
     opacity: 0.1;
+    width: 21px;
+    height: 20px;
   }
 
   .trend__text small {

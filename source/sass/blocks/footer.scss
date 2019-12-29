@@ -10,6 +10,12 @@
   margin-bottom: 40px;
   margin-top: 40px;
   font-size: 0;
+  margin-left: 0;
+  min-width: 100px;
+  min-height: 20px;
+  font-size: 0;
+  background-image: url("../img/logo-mobile-blue@1x.png");
+  background-repeat: no-repeat;
 }
 
 .footer__container {
@@ -48,23 +54,31 @@
   }
 
   .footer__container {
-    width: 97%;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    padding-bottom: 46px;
-    padding-top: 35px;
+    padding-top: 18px;
+    padding-left: 36px;
+    padding-right: 41px;
   }
 
-  .footer__social {
+  .footer__logo {
+    min-width: 200px;
+    min-height: 40px;
+    background-image: url("../img/logo-tablet-blue@1x.png");
+  }
+
+
+  .footer__container .footer__social {
     margin-bottom: 0;
     display: flex;
     width: 50%;
-    justify-content: space-between;
+    padding-right: 41px;
   }
 
   .footer__made {
-    width: 21%;
+    width: 23%;
+    margin: 0;
   }
 }
 
@@ -78,9 +92,21 @@
   .footer__made {
     width: 15%;
     justify-content: space-between;
+    padding-left: 41px;
   }
 
   .footer__container {
     justify-content: space-around;
+    padding-top: 8px;
+  }
+
+  .footer__container .footer__social {
+    padding-right: 97px;
+  }
+
+  .footer__logo {
+    min-width: 300px;
+    min-height: 60px;
+    background-image: url("../img/logo-desktop-blue@1x.png");
   }
 }

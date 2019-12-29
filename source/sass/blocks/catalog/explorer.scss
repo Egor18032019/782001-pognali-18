@@ -1,20 +1,26 @@
+.explorer {
+  background-color: #edeff6;
+}
+
 .explorer-main {
   @include center;
   background-color: #edeff6;
   flex-direction: row;
   flex-wrap: wrap;
-  padding-top: 27px;
+  padding-top: 23px;
 }
 
 .explorer-slogan {
   display: flex;
   align-items: center;
-  min-height: 73px;
-  padding-left: 10px;
+  min-height: 85px;
+  padding-top: 20px;
+  padding-left: 22px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   background-color: #161c35;
   margin: 0;
+
 }
 
 .explorer__idea {
@@ -28,10 +34,11 @@
   position: absolute;
   content: "";
   right: 0;
-  bottom: -23px;
+  bottom: -17px;
   left: 0;
   background-color: #ff8d30;
   height: 5px;
+  border-radius: 2.4px;
 }
 
 .explorer-main h2 {
@@ -42,8 +49,13 @@
 .explorer-add h3 {
   @include fontBS(20px, bold, #1d2e5b);
   align-self: self-start;
-  width: 57%;
-  margin-bottom: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.step__first--date,
+.step__second--route {
+  @include fontBS(20px, bold, #1d2e5b);
 }
 
 .explorer-main legend {
@@ -83,7 +95,7 @@
 .explorer__item--circle {
   fill: #000000;
   fill-opacity: 0.1;
-  stroke-width: 3px;
+  stroke-width: 2px;
   stroke: #ff8d30;
 }
 
@@ -100,25 +112,43 @@
 }
 
 .explorer-main__button {
-  margin-bottom: 31px;
+  border: none;
+  margin-bottom: 26px;
+}
+
+.explorer-main__button p {
+  margin: 0;
 }
 
 .explorer__tegs {
   width: 85%;
-  min-height: 89px;
-  margin-bottom: 31px;
+  min-height: 97px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  padding: 0;
 }
 
 .explorer__tegs textarea {
   @include fontBS (16px, normal, #444444);
+  letter-spacing: -1px;
+  line-height: 21px;
+  width: 100%;
   background-color: inherit;
   border: none;
   resize: none;
+  padding-top: 14px;
+  padding-left: 23px;
 }
 
 .explorer__transport {
   width: 85%;
-  margin-bottom: 30px;
+  margin-bottom: 36px;
+}
+
+.explorer__transport--type {
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .explorer__transport--type li {
@@ -135,19 +165,19 @@
   height: 100%;
 }
 
-.explorer__bus:checked ~ .explorer__transport--type .explorer__bus--favorite {
+.explorer__bus:checked~.explorer__transport--type .explorer__bus--favorite {
   opacity: 0.2;
 }
 
-.explorer__air:checked ~ .explorer__transport--type .explorer__air--favorite {
+.explorer__air:checked~.explorer__transport--type .explorer__air--favorite {
   opacity: 0.2;
 }
 
-.explorer__cycle:checked ~ .explorer__transport--type .explorer__cycle--favorite {
+.explorer__cycle:checked~.explorer__transport--type .explorer__cycle--favorite {
   opacity: 0.2;
 }
 
-.explorer__walk:checked ~ .explorer__transport--type .explorer__walk--favorite {
+.explorer__walk:checked~.explorer__transport--type .explorer__walk--favorite {
   opacity: 0.2;
 }
 
@@ -157,10 +187,11 @@
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   background-color: #dfe3f0;
+  padding-top: 8px;
 }
 
 .explorer-plan h2 {
-  @include fontBS (18px, bold, #1d2e5b);
+  @include fontBS (24px, bold, #1d2e5b);
   align-self: self-start;
   margin-left: 8%;
   margin-bottom: 31px;
@@ -171,6 +202,7 @@
   width: 85%;
   padding: 0;
   counter-reset: blue-left-country;
+  margin-bottom: 21px;
 }
 
 .explorer-plan__country li {
@@ -206,7 +238,13 @@
   @include fontBS (14px, 500, rgba(0, 0, 0, 0.3));
 }
 
+// _____________________________________перекинуть в отдельный блок
 .explorer-add {
+  background-color: #dfe3f0;
+  margin-bottom: 48px;
+}
+
+.explorer-add--wrapper {
   @include center;
   position: relative;
   background-color: #d4d9eb;
@@ -214,7 +252,7 @@
   border-top-right-radius: 30px;
   overflow: hidden;
   margin-bottom: 10px;
-  padding-top: 29px;
+  padding-top: 12px;
 }
 
 .explorer-add h2 {
@@ -236,29 +274,50 @@
   width: 85%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  border: none;
+  padding-bottom: 21px;
+}
+
+.explorer-step__end {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  background-color: white;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  margin-bottom: 8px;
-  padding-bottom: 21px;
+  overflow: hidden;
 }
 
 .explorer-step__first--container,
 .explorer-step__second--container,
 .explorer-step__three--container {
   @include center;
-  width: 91%;
+  // width: 91%;
   // ширина стоит для календаря
+}
+
+.explorer-step__second--container {
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 17px;
+  padding-left: 13px;
 }
 
 .explorer-date {
   @include center;
-  width: 91%;
+  justify-content: left;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 97%;
   margin-bottom: 21px;
+  padding-top: 17px;
 }
 
 .explorer-step__text {
   @include fontBS (16px, normal, #444444);
   line-height: 1.39;
+  letter-spacing: -0.5px;
 }
 
 .explorer-add label {
@@ -291,17 +350,28 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  padding-top: 5px;
 }
 
 .explorer-path {
+  @include reset-list;
   position: absolute;
   top: 57px;
   right: 49px;
   display: flex;
+  // ставлю флех - он исчезает. чудеса какие-то
   width: 40px;
-  height: 2px;
-  background-color: orange;
+  height: 5px;
   font-size: 0;
+}
+
+.explorer-path li {
+  width: 6px;
+  height: 5px;
+  background-color: #1d2e5b;
+  margin-right: 15px;
+  border-radius: 50%;
+
 }
 
 .explorer-add__score {
@@ -316,6 +386,10 @@
   margin-top: 10px;
 }
 
+.explorer-add__score--day {
+  margin-bottom: 20px;
+}
+
 .explorer-add__score input {
   border: none;
   background-color: inherit;
@@ -323,6 +397,26 @@
 
 .explorer-add__score--children {
   align-self: flex-start;
+}
+
+.explorer-add__score--children::before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  border-radius: 4px;
+  margin-right: 10px;
+  vertical-align: middle;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  display: inline-block;
+  border: 1px solid #cbced9;
+}
+
+.explorer-add__score--children--check:checked+.explorer-add__score--children::before {
+  background-image: url("../img/tick.svg");
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .explorer__calendar {
@@ -396,42 +490,56 @@
 
 .explorer-data__day label,
 .explorer-data__day button {
-  width: 30px;
+  cursor: pointer;
+  width: 31px;
   height: 30px;
   text-align: left;
-  cursor: pointer;
+  border: 1px solid #d4d9eb;
+  margin-left: -1px;
+  margin-bottom: -1px;
 }
 
-.explorer-data--0331:checked ~ .explorer-data__day .explorer-data__choise--0331 {
+.explorer-data__day button {
+  @include fontBS (14px, normal, #444444);
+  border: none;
+  line-height: 1.29;
+  background-color: inherit;
+}
+
+.explorer__calendar .explorer__calendar--weekends {
+  color: #ff5c23;
+}
+
+.explorer-data--0331:checked~.explorer-data__day .explorer-data__choise--0331 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0329:checked ~ .explorer-data__day .explorer-data__choise--0329 {
+.explorer-data--0329:checked~.explorer-data__day .explorer-data__choise--0329 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0328:checked ~ .explorer-data__day .explorer-data__choise--0328 {
+.explorer-data--0328:checked~.explorer-data__day .explorer-data__choise--0328 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0327:checked ~ .explorer-data__day .explorer-data__choise--0327 {
+.explorer-data--0327:checked~.explorer-data__day .explorer-data__choise--0327 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0326:checked ~ .explorer-data__day .explorer-data__choise--0326 {
+.explorer-data--0326:checked~.explorer-data__day .explorer-data__choise--0326 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0326:checked ~ .explorer-data__day .explorer-data__choise--0326::after {
+.explorer-data--0326:checked~.explorer-data__day .explorer-data__choise--0326::after {
   content: "Заезд";
 }
 
-.explorer-data--0328:checked ~ .explorer-data__day .explorer-data__choise--0328::after {
+.explorer-data--0328:checked~.explorer-data__day .explorer-data__choise--0328::after {
   content: "Выезд";
 }
 
@@ -444,6 +552,7 @@
   margin-bottom: 21px;
   min-height: 42px;
   text-transform: uppercase;
+  position: relative;
 }
 
 .explorer-step__second--choise ul {
@@ -451,11 +560,16 @@
 }
 
 .explorer-step__second--country {
-  min-height: 42px;
-  border-radius: 4px;
-  border: 1px solid #cbced9;
+  position: relative;
+  cursor: pointer;
   width: 100%;
+  min-height: 42px;
   max-width: 230px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #cbced9;
+  border-radius: 4px;
 }
 
 .explorer-step__second--flag {
@@ -487,7 +601,8 @@
   @include margin-auto;
   @include fontBS($fsize:17px, $fweight:bold, $color:#161c35);
   width: 85%;
-  min-height: 40px;
+  min-height: 46px;
+  line-height: 1.76;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -498,8 +613,26 @@
 
 .explorer-country__other {
   @include center;
-  // display: none;
+  width: 230px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: none;
   padding-top: 21px;
+}
+
+.explorer-step__second--choise:hover .explorer-country__other {
+  display: flex;
+}
+
+.explorer-step__second--choise.explorer-step__second--choise--active .explorer-country__other {
+  display: flex;
+}
+// при добавление этого класа - показывает календарь
+
+.explorer-step__second--country:hover {
+  color: #ffffff;
+  background-color: #1d2e5b;
 }
 
 .explorer-country__other ul {
@@ -512,6 +645,7 @@
   height: 210px;
   display: flex;
   flex-wrap: wrap;
+  top: 42px;
 }
 
 .explorer-country__selection--items,
@@ -519,6 +653,7 @@
   width: 45px;
   height: 42px;
   border: 1px solid #cbced9;
+  margin-right: -1px;
 }
 
 .explorer-country__selection button {
@@ -575,11 +710,15 @@
 
 
 .explorer-country__other .explorer-country__selection {
+  position: absolute;
   width: 230px;
   height: 210px;
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 282px;
+  left: 0;
+  right: 0;
+  top: 100%;
 }
 
 .explorer-country__other .explorer-country__button {
@@ -589,18 +728,27 @@
 
 .explorer-step__three textarea {
   @include fontBS(16px, normal, #444444);
+  width: 96%;
+  line-height: 1.38;
+  // letter-spacing: -0.5px;
   resize: none;
+  border: 1px solid #cbced9;
+  padding-left: 13px;
+  padding-top: 9px;
 }
 
 .explorer-step__three--plan {
-  margin-bottom: 23px;
+  @include center;
+  width: 95%;
 }
 
 .explorer-step__three--plan p {
   @include fontBS (17px, bold, #1d2e5b);
+  align-self: flex-start;
 }
 
 .explorer-step__second--choise p {
+  padding-left: 13px;
   width: 100%;
 }
 
@@ -615,11 +763,11 @@
   margin-left: auto;
 }
 
-.explorer-step__second--anchor,
-.explorer-step__three--anchor {
+.explorer-step__second--anchor {
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding-top: 20px;
 }
 
 // _____________________Направления_____________________________________________
@@ -767,6 +915,7 @@
     @include fontBS (20px, normal, #444444);
     width: 100%;
     padding: 20px;
+    border: 1px solid #cbced9;
   }
 
   .explorer-step__three--plan {
@@ -1022,6 +1171,7 @@
     text-transform: none;
     margin: 0;
     font-size: 24px;
+
     padding-left: 36px;
     padding-right: 36px;
   }
@@ -1053,8 +1203,7 @@
     font-size: 20px;
   }
 
-  .explorer-step__second--anchor,
-  .explorer-step__three--anchor {
+  .explorer-step__second--anchor {
     flex-direction: row;
     justify-content: space-between;
   }

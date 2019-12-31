@@ -86,16 +86,16 @@
           <input type="checkbox" name="air" id="air" class="explorer__air">
           <input type="checkbox" id="bus" name="bus" class="explorer__bus">
           <ul class="explorer__transport--type transport">
-            <li class="explorer__air--favorite transport--favorite">
+            <li class="explorer__air--favorite">
               <label for="air">Самолет</label>
             </li>
-            <li class="explorer__bus--favorite transport--favorite">
+            <li class="explorer__bus--favorite">
               <label for="bus">Автобус</label>
             </li>
             <li class="explorer__cycle--favorite">
               <label for="cycle">Велосипед</label>
             </li>
-            <li class="explorer__walk--favorite transport--favorite">
+            <li class="explorer__walk--favorite">
               <label for="walk">Пешие прогулки</label>
             </li>
           </ul>
@@ -149,16 +149,16 @@
                   <b class="explorer-add__choise">Ищу попутчиков: </b>
                   <span class="explorer-add__choise--man">Чел.</span>
                   <div class="explorer-add__score">
-                    <input type="button" value="+">
+                    <input type="button" class="explorer--minus" value="-">
                     <p class="explorer--count">2</p>
-                    <input type="button" value="-">
+                    <input type="button" class="explorer--plus" value="+">
                   </div>
                   <b class="explorer-add__choise explorer-add__choise--time">Длительность:</b>
                   <span class="explorer-add__choise--day">Дн.</span>
                   <div class="explorer-add__score explorer-add__score--day">
-                    <input type="button" value="+">
+                    <input type="button" class="explorer--minus" value="-">
                     <p class="explorer--count">2</p>
-                    <input type="button" value="-">
+                    <input type="button" class="explorer--plus" value="+">
                   </div>
                   <input type="checkbox" name="children" id="children"
                     class="explorer-add__score--children--check visually-hidden">
@@ -171,7 +171,7 @@
                 <div class="explorer__month">
                   <button type="button" class="explorer__month--arrow explorer__month--left">
                     предыдущий месяц </button>
-                  <p class="explorer--count">Март 2019</p>
+                  <p class="explorer__month--count">Март 2019</p>
                   <button type="button" class="explorer__month--right explorer__month--arrow">следующий месяц</button>
                 </div>
                 <!-- обсудить как делать календарь  = месяцы -->
@@ -257,315 +257,929 @@
               <p class="explorer-route__btn explorer-step__text">Укажите страны, которые вы хотели по посетить.
                 Это может быть одна или сразу несколько.</p>
               <!-- черный кружочек и кружочек с крестиком аболютное прозиционирование-->
-              <div class="explorer-step__second--choise select">
-<!-- класс для показа  .explorer-step__second--choise--active  -->
-                <div class="explorer-step__second--country header">
-                  <p class="select__current"> Выберите страну</p>
-                  <div class="select__icon">X</div>
+
+              <div class="explorer-step__second--choise-wrapper">
+
+                <div class="explorer-step__second--choise select">
+                  <!-- класс для показа  .explorer-step__second--choise--active  -->
+                  <div class="explorer-step__second--country header">
+                    <p class="select__current"> Босния и Герцеговина</p>
+                  </div>
+                  <div class="explorer-country__other body">
+                    <ul class="explorer-country__selection">
+                      <li class="explorer-country__selection--items"><button type="button">а</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--1">
+                          <li><a href=" country/europe/afganistan.html"> Афганистан</a></li>
+                          <!-- обсудить как делать и сделать осталные по образцу -->
+                          <li><a href="#">Албания</a></li>
+                          <li><a href="#">Алжир</a></li>
+                          <li><a href="#">Андорра</a></li>
+                          <li><a href="#">Аргентина</a></li>
+                          <li><a href="#">Армения</a></li>
+                          <li><a href="#">Австралия</a></li>
+                          <li><a href="#">Австрия</a></li>
+                          <li><a href="#">Азербайджан</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">б</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--2">
+                          <li><a href="#">Багамские Острова </a></li>
+                          <li><a href="#"> Бангладеш</a></li>
+                          <li><a href="#"> Барбадос </a></li>
+                          <li><a href="#"> Бахрейн
+                            </a></li>
+                          <li><a href="#"> Белоруссия
+                            </a></li>
+                          <li><a href="#">Белиз
+                            </a></li>
+                          <li><a href="#">Бельгия
+                            </a></li>
+                          <li><a href="#">Бенин
+                            </a></li>
+                          <li><a href="#">Болгария
+                            </a></li>
+                          <li><a href="#">Боливия
+                            </a></li>
+                          <li><a href="#">Босния и Герцеговина</a></li>
+                          <li><a href="#"> Ботсвана
+                            </a></li>
+                          <li><a href="#"> Бразилия
+                            </a></li>
+                          <li><a href="#">Бруней
+                            </a></li>
+                          <li><a href="#">Буркина-Фасо
+                            </a></li>
+                          <li><a href="#">Бурунди
+                            </a></li>
+                          <li><a href="#">Бутан</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">в</button>
+                        <!-- расписать список нормально -->
+                        <ul class="explorer-country__chosen explorer-country__chosen--3">
+                          <li><a href="#">Вануату</a></li>
+                          <li><a href="#">Великобритания</a></li>
+                          <li><a href="#">Венгрия</a></li>
+                          <li><a href="#">Венесуэла</a></li>
+                          <li><a href="#">Восточный Тимор</a></li>
+                          <li><a href="#">Вьетнам</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">г</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--4">
+                          <li><a href="#">Габон</a></li>
+                          <li><a href="#"> Гаити</a></li>
+                          <li><a href="#">Гайана</a></li>
+                          <li><a href="#">Гамбия</a></li>
+                          <li><a href="#">Гана</a></li>
+                          <li><a href="#">Гватемала</a></li>
+                          <li><a href="#">Гвинея-Бисау</a></li>
+                          <li><a href="#">Германия</a></li>
+                          <li><a href="#">Гондурас</a></li>
+                          <li><a href="#">Гренада</a></li>
+                          <li><a href="#">Греция</a></li>
+                          <li><a href="#">Грузия</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">д</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--5">
+                          <li><a href="#">Дания</a></li>
+                          <li><a href="#"> Джибути</a></li>
+                          <li><a href="#">Доминика</a></li>
+                          <li><a href="#"> Доминикана</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">e</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--5">
+                          <li> <a href="#">Египет</a></li>
+                        </ul>
+                      </li>
+                      <!--  <li class="explorer-country__selection--items"><button type="button">ё</button>  <ul class="explorer-country__chosen explorer-country__chosen--3"></ul>
+                      </li> -->
+                      <!--  <li class="explorer-country__selection--items"><button type="button">ж</button>  <ul class="explorer-country__chosen explorer-country__chosen--3"></ul>
+                      </li> -->
+                      <li class="explorer-country__selection--items"><button type="button">з</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--6">
+                          <li><a href="#">Замбия</a></li>
+                          <li><a href="#">Зимбабве</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">и</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--7">
+                          <li><a href="#"> Израиль </a></li>
+                          <li><a href="#">Индия</a></li>
+                          <li><a href="#">Индонезия</a></li>
+                          <li><a href="#">Иордания</a></li>
+                          <li><a href="#">Ирак</a></li>
+                          <li><a href="#">Иран</a></li>
+                          <li><a href="#">Ирландия</a></li>
+                          <li><a href="#">Исландия</a></li>
+                          <li><a href="#">Испания</a></li>
+                          <li><a href="#">Италия</a></li>
+                        </ul>
+                      </li>
+                      <!--  <li class="explorer-country__selection--items"><button type="button">й</button>  <ul class="explorer-country__chosen explorer-country__chosen--3"></ul>
+                      </li> -->
+                      <li class="explorer-country__selection--items"><button type="button">к</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--8">
+                          <li><a href="#">Кабо-Верде</a></li>
+                          <li><a href="#">Казахстан</a></li>
+                          <li><a href="#">Камбоджа</a></li>
+                          <li><a href="#">Камерун</a></li>
+                          <li><a href="#">Канада</a></li>
+                          <li><a href="#">Катар</a></li>
+                          <li><a href="#">Кения</a></li>
+                          <li><a href="#">Кипр</a></li>
+                          <li><a href="#">Киргизия</a></li>
+                          <li><a href="#">Кирибати</a></li>
+                          <li><a href="#">Китай</a></li>
+                          <li><a href="#">Колумбия</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">л</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--9">
+                          <li><a href="#">Лаос</a></li>
+                          <li><a href="#">Латвия</a></li>
+                          <li><a href="#">Лесото</a></li>
+                          <li><a href="#">Либерия</a></li>
+                          <li><a href="#">Ливан</a></li>
+                          <li><a href="#">Ливия</a></li>
+                          <li><a href="#">Литва</a></li>
+                          <li><a href="#">Лихтенштейн</a></li>
+                          <li><a href="#">Люксембург</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">м</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--10">
+                          <li><a href="#">Маврикий</a></li>
+                          <li><a href="#">Мавритания</a></li>
+                          <li><a href="#">Мадагаскар</a></li>
+                          <li><a href="#">Малави</a></li>
+                          <li><a href="#">Малайзия</a></li>
+                          <li><a href="#">Мали</a></li>
+                          <li><a href="#">Мальдивы</a></li>
+                          <li><a href="#">Мальта</a></li>
+                          <li><a href="#">Марокко</a></li>
+                          <!-- <li><a href="#">Мексика</a></li> -->
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">н</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--11">
+                          <li><a href="#">Намибия</a></li>
+                          <li><a href="#"> Науру</a></li>
+                          <li><a href="#">Непал</a></li>
+                          <li><a href="#">Нигер</a></li>
+                          <li><a href="#">Нигерия</a></li>
+                          <li><a href="#">Нидерланды</a></li>
+                          <li><a href="#">Никарагуа</a></li>
+                          <li><a href="#">Новая Зеландия</a></li>
+                          <li><a href="#">Норвегия</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">о</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--12">
+                          <li><a href="#">ОАЭ</a></li>
+                          <li><a href="#">Оман</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">п</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--13">
+                          <li><a href="#">Пакистан</a></li>
+                          <li><a href="#"> Палау
+                            </a></li>
+                          <li><a href="#">Панама
+                            </a></li>
+                          <li><a href="#">Папуа — Новая Гвинея </a></li>
+                          <li><a href="#"> Парагвай
+                            </a></li>
+                          <li><a href="#"> Перу
+                            </a></li>
+                          <li><a href="#"> Польша</a></li>
+                          <li><a href="#">Португалия</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">р</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--14">
+                          <li><a href="#">Руанда</a></li>
+                          <li><a href="#"> Румыния</a></li>
+                          <li><a href="#">Россия</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">с</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--15">
+                          <li><a href="#">Сальвадор</a></li>
+                          <li><a href="#">Самоа</a></li>
+                          <li><a href="#">Сан-Марино</a></li>
+                          <li><a href="#">Саудовская Аравия</a></li>
+                          <li><a href="#">Сейшелы</a></li>
+                          <li><a href="#">Сенегал</a></li>
+                          <li><a href="#">Сербия</a></li>
+                          <li><a href="#">Сингапур</a></li>
+                          <li><a href="#">Сирия</a></li>
+                          <li><a href="#">Словакия</a></li>
+                          <li><a href="#">Словения</a></li>
+                          <li><a href="#">США</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">т</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--16">
+                          <li><a href="#">Таджикистан</a></li>
+                          <li><a href="#">Таиланд</a></li>
+                          <li><a href="#">Танзания</a></li>
+                          <li><a href="#">Того</a></li>
+                          <li><a href="#">Тонга</a></li>
+                          <li><a href="#">Тринидад и Тобаго</a></li>
+                          <li><a href="#">Тувалу</a></li>
+                          <li><a href="#">Тунис</a></li>
+                          <li><a href="#">Туркмения</a></li>
+                          <li><a href="#">Турция</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">у</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--17">
+                          <li><a href="#"> Уганда </a></li>
+                          <li><a href="#">Узбекистан</a></li>
+                          <li><a href="#">Украина</a></li>
+                          <li><a href="#"> Уругвай</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">ф</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--18">
+                          <li><a href="#">Фиджи</a></li>
+                          <li><a href="#">Филиппины</a></li>
+                          <li><a href="#">Финляндия</a></li>
+                          <li><a href="#">Франция</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">х</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--19">
+                          <li><a href="#">Хорватия</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                          type="button">ч</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--20">
+                          <li><a href="#">Чад</a></li>
+                          <li><a href="#">Черногория</a></li>
+                          <li><a href="#">Чехия</a></li>
+                          <li><a href="#"> Чили</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                          type="button">ш</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--21">
+                          <li><a href="#">Швейцария </a></li>
+                          <li><a href="#">Швеция</a></li>
+                          <li><a href="#">Шри-Ланка</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                          type="button">э</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--22">
+                          <li><a href="#">Эквадор</a></li>
+                          <li><a href="#">Эритрея</a></li>
+                          <li><a href="#">Эсватини</a></li>
+                          <li><a href="#">Эстония</a></li>
+                          <li><a href="#">Эфиопия</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                          type="button">ю</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--23">
+                          <li><a href="#">ЮАР</a></li>
+                          <li><a href="#">Южный Судан</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                          type="button">я</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--24">
+                          <li><a href="#">Ямайка </a></li>
+                          <li><a href="#">Япония</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="explorer-step__second--choise--flag">
+                    <img src="../img/flags-back@1x.png" alt="флаг страны" width="70" height="47">
+                    <button class="flag-reset">x</button>
+                  </div>
                 </div>
-
-                <div class="explorer-country__other body">
-                  <ul class="explorer-country__selection">
-                    <li class="explorer-country__selection--items"><button type="button">а</button>
-                      <ul class="explorer-country__chosen explorer-country__chosen--1">
-                        <li><a href=" country/europe/afganistan.html"> Афганистан</a></li>
-                        <!-- обсудить как делать и сделать осталные по образцу -->
-                        <li><a href="#">Албания</a></li>
-                        <li><a href="#">Алжир</a></li>
-                        <li><a href="#">Андорра</a></li>
-                        <li><a href="#">Аргентина</a></li>
-                        <li><a href="#">Армения</a></li>
-                        <li><a href="#">Австралия</a></li>
-                        <li><a href="#">Австрия</a></li>
-                        <li><a href="#">Азербайджан</a></li>
-                      </ul>
-                    </li>
-                    <li class="explorer-country__selection--items"><button type="button">б</button>
-                      <ul class="explorer-country__chosen explorer-country__chosen--2">
-                        <li><a href="#">Багамские Острова </a></li>
-                        <li><a href="#"> Бангладеш</a></li>
-                        <li><a href="#"> Барбадос </a></li>
-                        <li><a href="#"> Бахрейн
-                          </a></li>
-                        <li><a href="#"> Белоруссия
-                          </a></li>
-                        <li><a href="#">Белиз
-                          </a></li>
-                        <li><a href="#">Бельгия
-                          </a></li>
-                        <li><a href="#">Бенин
-                          </a></li>
-                        <li><a href="#">Болгария
-                          </a></li>
-                        <li><a href="#">Боливия
-                          </a></li>
-                        <li><a href="#">Босния и Герцеговина</a></li>
-                        <li><a href="#"> Ботсвана
-                          </a></li>
-                        <li><a href="#"> Бразилия
-                          </a></li>
-                        <li><a href="#">Бруней
-                          </a></li>
-                        <li><a href="#">Буркина-Фасо
-                          </a></li>
-                        <li><a href="#">Бурунди
-                          </a></li>
-                        <li><a href="#">Бутан</a></li>
-                      </ul>
-                    </li>
-                    <li class="explorer-country__selection--items"><button type="button">в</button>
-                      <!-- расписать список нормально -->
-                      <ul class="explorer-country__chosen explorer-country__chosen--3">
-                        <li><a href="#">Вануату</a></li>
-                        <li><a href="#">Великобритания</a></li>
-                        <li><a href="#">Венгрия</a></li>
-                        <li><a href="#">Венесуэла</a></li>
-                        <li><a href="#">Восточный Тимор</a></li>
-                        <li><a href="#">Вьетнам</a></li>
-                      </ul>
-                    </li>
-                    <li class="explorer-country__selection--items"><button type="button">г</button>
-                      <ul class="explorer-country__chosen explorer-country__chosen--4">
-                        <li><a href="#">Габон</a></li>
-                        <li><a href="#"> Гаити</a></li>
-                        <li><a href="#">Гайана</a></li>
-                        <li><a href="#">Гамбия</a></li>
-                        <li><a href="#">Гана</a></li>
-                        <li><a href="#">Гватемала</a></li>
-                        <li><a href="#">Гвинея-Бисау</a></li>
-                        <li><a href="#">Германия</a></li>
-                        <li><a href="#">Гондурас</a></li>
-                        <li><a href="#">Гренада</a></li>
-                        <li><a href="#">Греция</a></li>
-                        <li><a href="#">Грузия</a></li>
-                      </ul>
-                    </li>
-                    <li class="explorer-country__selection--items"><button type="button">д</button>
-                      <ul class="explorer-country__chosen explorer-country__chosen--5">
-                        <li><a href="#">Дания</a></li>
-                        <li><a href="#"> Джибути</a></li>
-                        <li><a href="#">Доминика</a></li>
-                        <li><a href="#"> Доминикана</a></li>
-                      </ul>
-                    </li>
-                    <li class="explorer-country__selection--items"><button type="button">e</button>
-                      <ul class="explorer-country__chosen explorer-country__chosen--5">
-                        <li> <a href="#">Египет</a></li>
-                      </ul>
-                    </li>
-                    <!--  <li class="explorer-country__selection--items"><button type="button">ё</button>  <ul class="explorer-country__chosen explorer-country__chosen--3"></ul>
+                <div class="explorer-step__second--choise select">
+                  <!-- класс для показа  .explorer-step__second--choise--active  -->
+                  <div class="explorer-step__second--country header">
+                    <p class="select__current"> Чехословакия</p>
+                  </div>
+                  <div class="explorer-country__other body">
+                    <ul class="explorer-country__selection">
+                      <li class="explorer-country__selection--items"><button type="button">а</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--1">
+                          <li><a href=" country/europe/afganistan.html"> Афганистан</a></li>
+                          <!-- обсудить как делать и сделать осталные по образцу -->
+                          <li><a href="#">Албания</a></li>
+                          <li><a href="#">Алжир</a></li>
+                          <li><a href="#">Андорра</a></li>
+                          <li><a href="#">Аргентина</a></li>
+                          <li><a href="#">Армения</a></li>
+                          <li><a href="#">Австралия</a></li>
+                          <li><a href="#">Австрия</a></li>
+                          <li><a href="#">Азербайджан</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">б</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--2">
+                          <li><a href="#">Багамские Острова </a></li>
+                          <li><a href="#"> Бангладеш</a></li>
+                          <li><a href="#"> Барбадос </a></li>
+                          <li><a href="#"> Бахрейн
+                            </a></li>
+                          <li><a href="#"> Белоруссия
+                            </a></li>
+                          <li><a href="#">Белиз
+                            </a></li>
+                          <li><a href="#">Бельгия
+                            </a></li>
+                          <li><a href="#">Бенин
+                            </a></li>
+                          <li><a href="#">Болгария
+                            </a></li>
+                          <li><a href="#">Боливия
+                            </a></li>
+                          <li><a href="#">Босния и Герцеговина</a></li>
+                          <li><a href="#"> Ботсвана
+                            </a></li>
+                          <li><a href="#"> Бразилия
+                            </a></li>
+                          <li><a href="#">Бруней
+                            </a></li>
+                          <li><a href="#">Буркина-Фасо
+                            </a></li>
+                          <li><a href="#">Бурунди
+                            </a></li>
+                          <li><a href="#">Бутан</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">в</button>
+                        <!-- расписать список нормально -->
+                        <ul class="explorer-country__chosen explorer-country__chosen--3">
+                          <li><a href="#">Вануату</a></li>
+                          <li><a href="#">Великобритания</a></li>
+                          <li><a href="#">Венгрия</a></li>
+                          <li><a href="#">Венесуэла</a></li>
+                          <li><a href="#">Восточный Тимор</a></li>
+                          <li><a href="#">Вьетнам</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">г</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--4">
+                          <li><a href="#">Габон</a></li>
+                          <li><a href="#"> Гаити</a></li>
+                          <li><a href="#">Гайана</a></li>
+                          <li><a href="#">Гамбия</a></li>
+                          <li><a href="#">Гана</a></li>
+                          <li><a href="#">Гватемала</a></li>
+                          <li><a href="#">Гвинея-Бисау</a></li>
+                          <li><a href="#">Германия</a></li>
+                          <li><a href="#">Гондурас</a></li>
+                          <li><a href="#">Гренада</a></li>
+                          <li><a href="#">Греция</a></li>
+                          <li><a href="#">Грузия</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">д</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--5">
+                          <li><a href="#">Дания</a></li>
+                          <li><a href="#"> Джибути</a></li>
+                          <li><a href="#">Доминика</a></li>
+                          <li><a href="#"> Доминикана</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">e</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--5">
+                          <li> <a href="#">Египет</a></li>
+                        </ul>
+                      </li>
+                      <!--  <li class="explorer-country__selection--items"><button type="button">ё</button>  <ul class="explorer-country__chosen explorer-country__chosen--3"></ul>
                       </li> -->
-                    <!--  <li class="explorer-country__selection--items"><button type="button">ж</button>  <ul class="explorer-country__chosen explorer-country__chosen--3"></ul>
+                      <!--  <li class="explorer-country__selection--items"><button type="button">ж</button>  <ul class="explorer-country__chosen explorer-country__chosen--3"></ul>
                       </li> -->
-                    <li class="explorer-country__selection--items"><button type="button">з</button>
-                      <ul class="explorer-country__chosen explorer-country__chosen--6">
-                        <li><a href="#">Замбия</a></li>
-                        <li><a href="#">Зимбабве</a></li>
-                      </ul>
-                    </li>
-                    <li class="explorer-country__selection--items"><button type="button">и</button>
-                      <ul class="explorer-country__chosen explorer-country__chosen--7">
-                        <li><a href="#"> Израиль </a></li>
-                        <li><a href="#">Индия</a></li>
-                        <li><a href="#">Индонезия</a></li>
-                        <li><a href="#">Иордания</a></li>
-                        <li><a href="#">Ирак</a></li>
-                        <li><a href="#">Иран</a></li>
-                        <li><a href="#">Ирландия</a></li>
-                        <li><a href="#">Исландия</a></li>
-                        <li><a href="#">Испания</a></li>
-                        <li><a href="#">Италия</a></li>
-                      </ul>
-                    </li>
-                    <!--  <li class="explorer-country__selection--items"><button type="button">й</button>  <ul class="explorer-country__chosen explorer-country__chosen--3"></ul>
+                      <li class="explorer-country__selection--items"><button type="button">з</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--6">
+                          <li><a href="#">Замбия</a></li>
+                          <li><a href="#">Зимбабве</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">и</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--7">
+                          <li><a href="#"> Израиль </a></li>
+                          <li><a href="#">Индия</a></li>
+                          <li><a href="#">Индонезия</a></li>
+                          <li><a href="#">Иордания</a></li>
+                          <li><a href="#">Ирак</a></li>
+                          <li><a href="#">Иран</a></li>
+                          <li><a href="#">Ирландия</a></li>
+                          <li><a href="#">Исландия</a></li>
+                          <li><a href="#">Испания</a></li>
+                          <li><a href="#">Италия</a></li>
+                        </ul>
+                      </li>
+                      <!--  <li class="explorer-country__selection--items"><button type="button">й</button>  <ul class="explorer-country__chosen explorer-country__chosen--3"></ul>
                       </li> -->
-                    <li class="explorer-country__selection--items"><button type="button">к</button>
-                      <ul class="explorer-country__chosen explorer-country__chosen--8">
-                        <li><a href="#">Кабо-Верде</a></li>
-                        <li><a href="#">Казахстан</a></li>
-                        <li><a href="#">Камбоджа</a></li>
-                        <li><a href="#">Камерун</a></li>
-                        <li><a href="#">Канада</a></li>
-                        <li><a href="#">Катар</a></li>
-                        <li><a href="#">Кения</a></li>
-                        <li><a href="#">Кипр</a></li>
-                        <li><a href="#">Киргизия</a></li>
-                        <li><a href="#">Кирибати</a></li>
-                        <li><a href="#">Китай</a></li>
-                        <li><a href="#">Колумбия</a></li>
-                      </ul>
-                    </li>
-                    <li class="explorer-country__selection--items"><button type="button">л</button>
-                      <ul class="explorer-country__chosen explorer-country__chosen--9">
-                        <li><a href="#">Лаос</a></li>
-                        <li><a href="#">Латвия</a></li>
-                        <li><a href="#">Лесото</a></li>
-                        <li><a href="#">Либерия</a></li>
-                        <li><a href="#">Ливан</a></li>
-                        <li><a href="#">Ливия</a></li>
-                        <li><a href="#">Литва</a></li>
-                        <li><a href="#">Лихтенштейн</a></li>
-                        <li><a href="#">Люксембург</a></li>
-                      </ul>
-                    </li>
-                    <li class="explorer-country__selection--items"><button type="button">м</button>
-                      <ul class="explorer-country__chosen explorer-country__chosen--10">
-                        <li><a href="#">Маврикий</a></li>
-                        <li><a href="#">Мавритания</a></li>
-                        <li><a href="#">Мадагаскар</a></li>
-                        <li><a href="#">Малави</a></li>
-                        <li><a href="#">Малайзия</a></li>
-                        <li><a href="#">Мали</a></li>
-                        <li><a href="#">Мальдивы</a></li>
-                        <li><a href="#">Мальта</a></li>
-                        <li><a href="#">Марокко</a></li>
-                        <!-- <li><a href="#">Мексика</a></li> -->
-                      </ul>
-                    </li>
-                    <li class="explorer-country__selection--items"><button type="button">н</button>
-                      <ul class="explorer-country__chosen explorer-country__chosen--11">
-                        <li><a href="#">Намибия</a></li>
-                        <li><a href="#"> Науру</a></li>
-                        <li><a href="#">Непал</a></li>
-                        <li><a href="#">Нигер</a></li>
-                        <li><a href="#">Нигерия</a></li>
-                        <li><a href="#">Нидерланды</a></li>
-                        <li><a href="#">Никарагуа</a></li>
-                        <li><a href="#">Новая Зеландия</a></li>
-                        <li><a href="#">Норвегия</a></li>
-                      </ul>
-                    </li>
-                    <li class="explorer-country__selection--items"><button type="button">о</button>
-                      <ul class="explorer-country__chosen explorer-country__chosen--12">
-                        <li><a href="#">ОАЭ</a></li>
-                        <li><a href="#">Оман</a></li>
-                      </ul>
-                    </li>
-                    <li class="explorer-country__selection--items"><button type="button">п</button>
-                      <ul class="explorer-country__chosen explorer-country__chosen--13">
-                        <li><a href="#">Пакистан</a></li>
-                        <li><a href="#"> Палау
-                          </a></li>
-                        <li><a href="#">Панама
-                          </a></li>
-                        <li><a href="#">Папуа — Новая Гвинея </a></li>
-                        <li><a href="#"> Парагвай
-                          </a></li>
-                        <li><a href="#"> Перу
-                          </a></li>
-                        <li><a href="#"> Польша</a></li>
-                        <li><a href="#">Португалия</a></li>
-                      </ul>
-                    </li>
-                    <li class="explorer-country__selection--items"><button type="button">р</button>
-                      <ul class="explorer-country__chosen explorer-country__chosen--14">
-                        <li><a href="#">Руанда</a></li>
-                        <li><a href="#"> Румыния</a></li>
-                        <li><a href="#">Россия</a></li>
-                      </ul>
-                    </li>
-                    <li class="explorer-country__selection--items"><button type="button">с</button>
-                      <ul class="explorer-country__chosen explorer-country__chosen--15">
-                        <li><a href="#">Сальвадор</a></li>
-                        <li><a href="#">Самоа</a></li>
-                        <li><a href="#">Сан-Марино</a></li>
-                        <li><a href="#">Саудовская Аравия</a></li>
-                        <li><a href="#">Сейшелы</a></li>
-                        <li><a href="#">Сенегал</a></li>
-                        <li><a href="#">Сербия</a></li>
-                        <li><a href="#">Сингапур</a></li>
-                        <li><a href="#">Сирия</a></li>
-                        <li><a href="#">Словакия</a></li>
-                        <li><a href="#">Словения</a></li>
-                        <li><a href="#">США</a></li>
-                      </ul>
-                    </li>
-                    <li class="explorer-country__selection--items"><button type="button">т</button>
-                      <ul class="explorer-country__chosen explorer-country__chosen--16">
-                        <li><a href="#">Таджикистан</a></li>
-                        <li><a href="#">Таиланд</a></li>
-                        <li><a href="#">Танзания</a></li>
-                        <li><a href="#">Того</a></li>
-                        <li><a href="#">Тонга</a></li>
-                        <li><a href="#">Тринидад и Тобаго</a></li>
-                        <li><a href="#">Тувалу</a></li>
-                        <li><a href="#">Тунис</a></li>
-                        <li><a href="#">Туркмения</a></li>
-                        <li><a href="#">Турция</a></li>
-                      </ul>
-                    </li>
-                    <li class="explorer-country__selection--items"><button type="button">у</button>
-                      <ul class="explorer-country__chosen explorer-country__chosen--17">
-                        <li><a href="#"> Уганда </a></li>
-                        <li><a href="#">Узбекистан</a></li>
-                        <li><a href="#">Украина</a></li>
-                        <li><a href="#"> Уругвай</a></li>
-                      </ul>
-                    </li>
-                    <li class="explorer-country__selection--items"><button type="button">ф</button>
-                      <ul class="explorer-country__chosen explorer-country__chosen--18">
-                        <li><a href="#">Фиджи</a></li>
-                        <li><a href="#">Филиппины</a></li>
-                        <li><a href="#">Финляндия</a></li>
-                        <li><a href="#">Франция</a></li>
-                      </ul>
-                    </li>
-                    <li class="explorer-country__selection--items"><button type="button">х</button>
-                      <ul class="explorer-country__chosen explorer-country__chosen--19">
-                        <li><a href="#">Хорватия</a></li>
-                      </ul>
-                    </li>
-                    <li class="explorer-country__selection--items explorer-country__selection--last"><button
-                        type="button">ч</button>
-                      <ul class="explorer-country__chosen explorer-country__chosen--20">
-                        <li><a href="#">Чад</a></li>
-                        <li><a href="#">Черногория</a></li>
-                        <li><a href="#">Чехия</a></li>
-                        <li><a href="#"> Чили</a></li>
-                      </ul>
-                    </li>
-                    <li class="explorer-country__selection--items explorer-country__selection--last"><button
-                        type="button">ш</button>
-                      <ul class="explorer-country__chosen explorer-country__chosen--21">
-                        <li><a href="#">Швейцария </a></li>
-                        <li><a href="#">Швеция</a></li>
-                        <li><a href="#">Шри-Ланка</a></li>
-                      </ul>
-                    </li>
-                    <li class="explorer-country__selection--items explorer-country__selection--last"><button
-                        type="button">э</button>
-                      <ul class="explorer-country__chosen explorer-country__chosen--22">
-                        <li><a href="#">Эквадор</a></li>
-                        <li><a href="#">Эритрея</a></li>
-                        <li><a href="#">Эсватини</a></li>
-                        <li><a href="#">Эстония</a></li>
-                        <li><a href="#">Эфиопия</a></li>
-                      </ul>
-                    </li>
-                    <li class="explorer-country__selection--items explorer-country__selection--last"><button
-                        type="button">ю</button>
-                      <ul class="explorer-country__chosen explorer-country__chosen--23">
-                        <li><a href="#">ЮАР</a></li>
-                        <li><a href="#">Южный Судан</a></li>
-                      </ul>
-                    </li>
-                    <li class="explorer-country__selection--items explorer-country__selection--last"><button
-                        type="button">я</button>
-                      <ul class="explorer-country__chosen explorer-country__chosen--24">
-                        <li><a href="#">Ямайка </a></li>
-                        <li><a href="#">Япония</a></li>
-                      </ul>
-                    </li>
-                  </ul>
+                      <li class="explorer-country__selection--items"><button type="button">к</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--8">
+                          <li><a href="#">Кабо-Верде</a></li>
+                          <li><a href="#">Казахстан</a></li>
+                          <li><a href="#">Камбоджа</a></li>
+                          <li><a href="#">Камерун</a></li>
+                          <li><a href="#">Канада</a></li>
+                          <li><a href="#">Катар</a></li>
+                          <li><a href="#">Кения</a></li>
+                          <li><a href="#">Кипр</a></li>
+                          <li><a href="#">Киргизия</a></li>
+                          <li><a href="#">Кирибати</a></li>
+                          <li><a href="#">Китай</a></li>
+                          <li><a href="#">Колумбия</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">л</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--9">
+                          <li><a href="#">Лаос</a></li>
+                          <li><a href="#">Латвия</a></li>
+                          <li><a href="#">Лесото</a></li>
+                          <li><a href="#">Либерия</a></li>
+                          <li><a href="#">Ливан</a></li>
+                          <li><a href="#">Ливия</a></li>
+                          <li><a href="#">Литва</a></li>
+                          <li><a href="#">Лихтенштейн</a></li>
+                          <li><a href="#">Люксембург</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">м</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--10">
+                          <li><a href="#">Маврикий</a></li>
+                          <li><a href="#">Мавритания</a></li>
+                          <li><a href="#">Мадагаскар</a></li>
+                          <li><a href="#">Малави</a></li>
+                          <li><a href="#">Малайзия</a></li>
+                          <li><a href="#">Мали</a></li>
+                          <li><a href="#">Мальдивы</a></li>
+                          <li><a href="#">Мальта</a></li>
+                          <li><a href="#">Марокко</a></li>
+                          <!-- <li><a href="#">Мексика</a></li> -->
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">н</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--11">
+                          <li><a href="#">Намибия</a></li>
+                          <li><a href="#"> Науру</a></li>
+                          <li><a href="#">Непал</a></li>
+                          <li><a href="#">Нигер</a></li>
+                          <li><a href="#">Нигерия</a></li>
+                          <li><a href="#">Нидерланды</a></li>
+                          <li><a href="#">Никарагуа</a></li>
+                          <li><a href="#">Новая Зеландия</a></li>
+                          <li><a href="#">Норвегия</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">о</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--12">
+                          <li><a href="#">ОАЭ</a></li>
+                          <li><a href="#">Оман</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">п</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--13">
+                          <li><a href="#">Пакистан</a></li>
+                          <li><a href="#"> Палау
+                            </a></li>
+                          <li><a href="#">Панама
+                            </a></li>
+                          <li><a href="#">Папуа — Новая Гвинея </a></li>
+                          <li><a href="#"> Парагвай
+                            </a></li>
+                          <li><a href="#"> Перу
+                            </a></li>
+                          <li><a href="#"> Польша</a></li>
+                          <li><a href="#">Португалия</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">р</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--14">
+                          <li><a href="#">Руанда</a></li>
+                          <li><a href="#"> Румыния</a></li>
+                          <li><a href="#">Россия</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">с</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--15">
+                          <li><a href="#">Сальвадор</a></li>
+                          <li><a href="#">Самоа</a></li>
+                          <li><a href="#">Сан-Марино</a></li>
+                          <li><a href="#">Саудовская Аравия</a></li>
+                          <li><a href="#">Сейшелы</a></li>
+                          <li><a href="#">Сенегал</a></li>
+                          <li><a href="#">Сербия</a></li>
+                          <li><a href="#">Сингапур</a></li>
+                          <li><a href="#">Сирия</a></li>
+                          <li><a href="#">Словакия</a></li>
+                          <li><a href="#">Словения</a></li>
+                          <li><a href="#">США</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">т</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--16">
+                          <li><a href="#">Таджикистан</a></li>
+                          <li><a href="#">Таиланд</a></li>
+                          <li><a href="#">Танзания</a></li>
+                          <li><a href="#">Того</a></li>
+                          <li><a href="#">Тонга</a></li>
+                          <li><a href="#">Тринидад и Тобаго</a></li>
+                          <li><a href="#">Тувалу</a></li>
+                          <li><a href="#">Тунис</a></li>
+                          <li><a href="#">Туркмения</a></li>
+                          <li><a href="#">Турция</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">у</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--17">
+                          <li><a href="#"> Уганда </a></li>
+                          <li><a href="#">Узбекистан</a></li>
+                          <li><a href="#">Украина</a></li>
+                          <li><a href="#"> Уругвай</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">ф</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--18">
+                          <li><a href="#">Фиджи</a></li>
+                          <li><a href="#">Филиппины</a></li>
+                          <li><a href="#">Финляндия</a></li>
+                          <li><a href="#">Франция</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">х</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--19">
+                          <li><a href="#">Хорватия</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                          type="button">ч</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--20">
+                          <li><a href="#">Чад</a></li>
+                          <li><a href="#">Черногория</a></li>
+                          <li><a href="#">Чехия</a></li>
+                          <li><a href="#"> Чили</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                          type="button">ш</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--21">
+                          <li><a href="#">Швейцария </a></li>
+                          <li><a href="#">Швеция</a></li>
+                          <li><a href="#">Шри-Ланка</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                          type="button">э</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--22">
+                          <li><a href="#">Эквадор</a></li>
+                          <li><a href="#">Эритрея</a></li>
+                          <li><a href="#">Эсватини</a></li>
+                          <li><a href="#">Эстония</a></li>
+                          <li><a href="#">Эфиопия</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                          type="button">ю</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--23">
+                          <li><a href="#">ЮАР</a></li>
+                          <li><a href="#">Южный Судан</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                          type="button">я</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--24">
+                          <li><a href="#">Ямайка </a></li>
+                          <li><a href="#">Япония</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="explorer-step__second--choise--flag">
+                    <img src="../img/flags-back@1x.png" alt="флаг страны" width="70" height="47">
+                    <button class="flag-reset">x</button>
+                  </div>
                 </div>
+                <div class="explorer-step__second--choise select">
+                  <!-- класс для показа  .explorer-step__second--choise--active  -->
+                  <div class="explorer-step__second--country header">
+                    <p class="select__current"> Выберите страну</p>
+                    <div class="select__icon">X</div>
+                  </div>
+                  <div class="explorer-country__other body">
+                    <ul class="explorer-country__selection">
+                      <li class="explorer-country__selection--items"><button type="button">а</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--1">
+                          <li><a href=" country/europe/afganistan.html"> Афганистан</a></li>
+                          <!-- обсудить как делать и сделать осталные по образцу -->
+                          <li><a href="#">Албания</a></li>
+                          <li><a href="#">Алжир</a></li>
+                          <li><a href="#">Андорра</a></li>
+                          <li><a href="#">Аргентина</a></li>
+                          <li><a href="#">Армения</a></li>
+                          <li><a href="#">Австралия</a></li>
+                          <li><a href="#">Австрия</a></li>
+                          <li><a href="#">Азербайджан</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">б</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--2">
+                          <li><a href="#">Багамские Острова </a></li>
+                          <li><a href="#"> Бангладеш</a></li>
+                          <li><a href="#"> Барбадос </a></li>
+                          <li><a href="#"> Бахрейн
+                            </a></li>
+                          <li><a href="#"> Белоруссия
+                            </a></li>
+                          <li><a href="#">Белиз
+                            </a></li>
+                          <li><a href="#">Бельгия
+                            </a></li>
+                          <li><a href="#">Бенин
+                            </a></li>
+                          <li><a href="#">Болгария
+                            </a></li>
+                          <li><a href="#">Боливия
+                            </a></li>
+                          <li><a href="#">Босния и Герцеговина</a></li>
+                          <li><a href="#"> Ботсвана
+                            </a></li>
+                          <li><a href="#"> Бразилия
+                            </a></li>
+                          <li><a href="#">Бруней
+                            </a></li>
+                          <li><a href="#">Буркина-Фасо
+                            </a></li>
+                          <li><a href="#">Бурунди
+                            </a></li>
+                          <li><a href="#">Бутан</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">в</button>
+                        <!-- расписать список нормально -->
+                        <ul class="explorer-country__chosen explorer-country__chosen--3">
+                          <li><a href="#">Вануату</a></li>
+                          <li><a href="#">Великобритания</a></li>
+                          <li><a href="#">Венгрия</a></li>
+                          <li><a href="#">Венесуэла</a></li>
+                          <li><a href="#">Восточный Тимор</a></li>
+                          <li><a href="#">Вьетнам</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">г</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--4">
+                          <li><a href="#">Габон</a></li>
+                          <li><a href="#"> Гаити</a></li>
+                          <li><a href="#">Гайана</a></li>
+                          <li><a href="#">Гамбия</a></li>
+                          <li><a href="#">Гана</a></li>
+                          <li><a href="#">Гватемала</a></li>
+                          <li><a href="#">Гвинея-Бисау</a></li>
+                          <li><a href="#">Германия</a></li>
+                          <li><a href="#">Гондурас</a></li>
+                          <li><a href="#">Гренада</a></li>
+                          <li><a href="#">Греция</a></li>
+                          <li><a href="#">Грузия</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">д</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--5">
+                          <li><a href="#">Дания</a></li>
+                          <li><a href="#"> Джибути</a></li>
+                          <li><a href="#">Доминика</a></li>
+                          <li><a href="#"> Доминикана</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">e</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--5">
+                          <li> <a href="#">Египет</a></li>
+                        </ul>
+                      </li>
+                      <!--  <li class="explorer-country__selection--items"><button type="button">ё</button>  <ul class="explorer-country__chosen explorer-country__chosen--3"></ul>
+                      </li> -->
+                      <!--  <li class="explorer-country__selection--items"><button type="button">ж</button>  <ul class="explorer-country__chosen explorer-country__chosen--3"></ul>
+                      </li> -->
+                      <li class="explorer-country__selection--items"><button type="button">з</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--6">
+                          <li><a href="#">Замбия</a></li>
+                          <li><a href="#">Зимбабве</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">и</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--7">
+                          <li><a href="#"> Израиль </a></li>
+                          <li><a href="#">Индия</a></li>
+                          <li><a href="#">Индонезия</a></li>
+                          <li><a href="#">Иордания</a></li>
+                          <li><a href="#">Ирак</a></li>
+                          <li><a href="#">Иран</a></li>
+                          <li><a href="#">Ирландия</a></li>
+                          <li><a href="#">Исландия</a></li>
+                          <li><a href="#">Испания</a></li>
+                          <li><a href="#">Италия</a></li>
+                        </ul>
+                      </li>
+                      <!--  <li class="explorer-country__selection--items"><button type="button">й</button>  <ul class="explorer-country__chosen explorer-country__chosen--3"></ul>
+                      </li> -->
+                      <li class="explorer-country__selection--items"><button type="button">к</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--8">
+                          <li><a href="#">Кабо-Верде</a></li>
+                          <li><a href="#">Казахстан</a></li>
+                          <li><a href="#">Камбоджа</a></li>
+                          <li><a href="#">Камерун</a></li>
+                          <li><a href="#">Канада</a></li>
+                          <li><a href="#">Катар</a></li>
+                          <li><a href="#">Кения</a></li>
+                          <li><a href="#">Кипр</a></li>
+                          <li><a href="#">Киргизия</a></li>
+                          <li><a href="#">Кирибати</a></li>
+                          <li><a href="#">Китай</a></li>
+                          <li><a href="#">Колумбия</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">л</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--9">
+                          <li><a href="#">Лаос</a></li>
+                          <li><a href="#">Латвия</a></li>
+                          <li><a href="#">Лесото</a></li>
+                          <li><a href="#">Либерия</a></li>
+                          <li><a href="#">Ливан</a></li>
+                          <li><a href="#">Ливия</a></li>
+                          <li><a href="#">Литва</a></li>
+                          <li><a href="#">Лихтенштейн</a></li>
+                          <li><a href="#">Люксембург</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">м</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--10">
+                          <li><a href="#">Маврикий</a></li>
+                          <li><a href="#">Мавритания</a></li>
+                          <li><a href="#">Мадагаскар</a></li>
+                          <li><a href="#">Малави</a></li>
+                          <li><a href="#">Малайзия</a></li>
+                          <li><a href="#">Мали</a></li>
+                          <li><a href="#">Мальдивы</a></li>
+                          <li><a href="#">Мальта</a></li>
+                          <li><a href="#">Марокко</a></li>
+                          <!-- <li><a href="#">Мексика</a></li> -->
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">н</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--11">
+                          <li><a href="#">Намибия</a></li>
+                          <li><a href="#"> Науру</a></li>
+                          <li><a href="#">Непал</a></li>
+                          <li><a href="#">Нигер</a></li>
+                          <li><a href="#">Нигерия</a></li>
+                          <li><a href="#">Нидерланды</a></li>
+                          <li><a href="#">Никарагуа</a></li>
+                          <li><a href="#">Новая Зеландия</a></li>
+                          <li><a href="#">Норвегия</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">о</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--12">
+                          <li><a href="#">ОАЭ</a></li>
+                          <li><a href="#">Оман</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">п</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--13">
+                          <li><a href="#">Пакистан</a></li>
+                          <li><a href="#"> Палау
+                            </a></li>
+                          <li><a href="#">Панама
+                            </a></li>
+                          <li><a href="#">Папуа — Новая Гвинея </a></li>
+                          <li><a href="#"> Парагвай
+                            </a></li>
+                          <li><a href="#"> Перу
+                            </a></li>
+                          <li><a href="#"> Польша</a></li>
+                          <li><a href="#">Португалия</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">р</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--14">
+                          <li><a href="#">Руанда</a></li>
+                          <li><a href="#"> Румыния</a></li>
+                          <li><a href="#">Россия</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">с</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--15">
+                          <li><a href="#">Сальвадор</a></li>
+                          <li><a href="#">Самоа</a></li>
+                          <li><a href="#">Сан-Марино</a></li>
+                          <li><a href="#">Саудовская Аравия</a></li>
+                          <li><a href="#">Сейшелы</a></li>
+                          <li><a href="#">Сенегал</a></li>
+                          <li><a href="#">Сербия</a></li>
+                          <li><a href="#">Сингапур</a></li>
+                          <li><a href="#">Сирия</a></li>
+                          <li><a href="#">Словакия</a></li>
+                          <li><a href="#">Словения</a></li>
+                          <li><a href="#">США</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">т</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--16">
+                          <li><a href="#">Таджикистан</a></li>
+                          <li><a href="#">Таиланд</a></li>
+                          <li><a href="#">Танзания</a></li>
+                          <li><a href="#">Того</a></li>
+                          <li><a href="#">Тонга</a></li>
+                          <li><a href="#">Тринидад и Тобаго</a></li>
+                          <li><a href="#">Тувалу</a></li>
+                          <li><a href="#">Тунис</a></li>
+                          <li><a href="#">Туркмения</a></li>
+                          <li><a href="#">Турция</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">у</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--17">
+                          <li><a href="#"> Уганда </a></li>
+                          <li><a href="#">Узбекистан</a></li>
+                          <li><a href="#">Украина</a></li>
+                          <li><a href="#"> Уругвай</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">ф</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--18">
+                          <li><a href="#">Фиджи</a></li>
+                          <li><a href="#">Филиппины</a></li>
+                          <li><a href="#">Финляндия</a></li>
+                          <li><a href="#">Франция</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items"><button type="button">х</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--19">
+                          <li><a href="#">Хорватия</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                          type="button">ч</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--20">
+                          <li><a href="#">Чад</a></li>
+                          <li><a href="#">Черногория</a></li>
+                          <li><a href="#">Чехия</a></li>
+                          <li><a href="#"> Чили</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                          type="button">ш</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--21">
+                          <li><a href="#">Швейцария </a></li>
+                          <li><a href="#">Швеция</a></li>
+                          <li><a href="#">Шри-Ланка</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                          type="button">э</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--22">
+                          <li><a href="#">Эквадор</a></li>
+                          <li><a href="#">Эритрея</a></li>
+                          <li><a href="#">Эсватини</a></li>
+                          <li><a href="#">Эстония</a></li>
+                          <li><a href="#">Эфиопия</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                          type="button">ю</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--23">
+                          <li><a href="#">ЮАР</a></li>
+                          <li><a href="#">Южный Судан</a></li>
+                        </ul>
+                      </li>
+                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                          type="button">я</button>
+                        <ul class="explorer-country__chosen explorer-country__chosen--24">
+                          <li><a href="#">Ямайка </a></li>
+                          <li><a href="#">Япония</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="explorer-step__second--choise--flag">
+                    <img src="../img/flags-back@1x.png" alt="флаг страны" width="70" height="47">
+                    <button class="flag-reset">x</button>
+                  </div>
+                </div>
+                        </div>
 
-              </div>
 
 
-              <div class="explorer-step__second--choise">
-                <button type="button" class="explorer-step__second--add">
-                  Добавить страну</button>
-              </div>
+              <button type="button" class="explorer-step__second--add">
+                <span>Добавить страну</span></button>
+
 
               <div class="explorer-step__second--anchor">
                 <a href="#step__three" class="form-button">Следующий шаг</a>
@@ -607,12 +1221,11 @@
   </main>
 
   <footer class="footer">
-    <a class="footer__logo" href="index.html">
-      Погнали?
-      <img src="img/logo-mobile-blue@1x.png" alt="логотип сервиса" width="96" height="15">
-    </a>
-    <div class="footer__social social">
-      <ul class="social__list">
+    <div class="footer__container social">
+      <a class="footer__logo">
+        Погнали?
+      </a>
+      <ul class="footer__social social__list">
         <li class="social__item">
           <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
         </li>

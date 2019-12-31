@@ -64,7 +64,7 @@
 }
 
 .explorer-foto {
-  width: 32%;
+  width: 94px;
   height: 100px;
   border-radius: 50%;
   margin-bottom: 19px;
@@ -165,6 +165,13 @@
   height: 100%;
 }
 
+.explorer__transport--type .explorer__bus--favorite,
+.explorer__transport--type .explorer__air--favorite,
+.explorer__transport--type .explorer__cycle--favorite,
+.explorer__transport--type .explorer__walk--favorite {
+  background-color: white;
+}
+
 .explorer__bus:checked~.explorer__transport--type .explorer__bus--favorite {
   opacity: 0.2;
 }
@@ -173,7 +180,7 @@
   opacity: 0.2;
 }
 
-.explorer__cycle:checked~.explorer__transport--type .explorer__cycle--favorite {
+.explorer__cycle:checked~.explorer__transport--type .explorer__cycle--favorite svg {
   opacity: 0.2;
 }
 
@@ -231,11 +238,13 @@
 
 .explorer-plan__country p {
   @include fontBS (14px, 500, #1d2e5b);
+  text-transform: uppercase;
 }
 
 .explorer-plan__country a {
   @include reset-list;
   @include fontBS (14px, 500, rgba(0, 0, 0, 0.3));
+  text-transform: uppercase;
 }
 
 // _____________________________________перекинуть в отдельный блок
@@ -326,6 +335,10 @@
   align-items: center;
 }
 
+.explorer__month--count {
+  @include fontBS (20px, bold, #1d2e5b);
+}
+
 .explorer-add__score--children input {
   margin-right: 10px;
 }
@@ -390,8 +403,26 @@
   margin-bottom: 20px;
 }
 
-.explorer-add__score input {
+.explorer-add__score .explorer--minus {
+  width: 14px;
+  height: 14px;
   border: none;
+  background-color: inherit;
+  background-image: url("../img/qty-minus-mobile.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: inherit;
+  font-size: 0;
+}
+
+.explorer-add__score .explorer--plus {
+  width: 14px;
+  height: 14px;
+  font-size: 0;
+  border: none;
+  background-color: inherit;
+  background-image: url("../img/qty-plus-mobile.svg");
+  background-repeat: no-repeat;
   background-color: inherit;
 }
 
@@ -438,6 +469,8 @@
 }
 
 .explorer__month--arrow {
+  width: 9px;
+  height: 18px;
   font-size: 0;
 }
 
@@ -491,6 +524,9 @@
 .explorer-data__day label,
 .explorer-data__day button {
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 31px;
   height: 30px;
   text-align: left;
@@ -579,8 +615,7 @@
 
 .explorer-step__second--add {
   @include fontBS (14px, 500, #1d2e5b);
-  width: 100%;
-  height: 100%;
+
   background-color: #edeff6;
   border-radius: 4px;
   border: 1px solid #cbced9;
@@ -628,6 +663,7 @@
 .explorer-step__second--choise.explorer-step__second--choise--active .explorer-country__other {
   display: flex;
 }
+
 // при добавление этого класа - показывает календарь
 
 .explorer-step__second--country:hover {
@@ -748,8 +784,11 @@
 }
 
 .explorer-step__second--choise p {
-  padding-left: 13px;
   width: 100%;
+}
+
+.explorer-step__second--country {
+  padding-left: 13px;
 }
 
 .explorer-step__second--choise .explorer-step__second--country::after {
@@ -774,16 +813,31 @@
 
 @media (min-width: $tablet-width) {
   .explorer-slogan {
-    min-height: 170px;
-    padding-left: 71px;
+    min-height: 252px;
+    padding-left: 70px;
+    padding-top: 46px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  .explorer__idea {
+    font-size: 60px;
+    letter-spacing: -4px;
   }
 
   .explorer__idea::after {
-    bottom: -70px;
+    bottom: -73px;
   }
 
   .explorer-main {
     justify-content: space-evenly;
+    padding-top: 63px;
+    padding-bottom: 44px;
+  }
+
+  .explorer-plan {
+    padding-top: 27px;
+    padding-bottom: 39px;
   }
 
   .explorer-foto {
@@ -796,6 +850,7 @@
     width: 94px;
     height: 94px;
     order: -2;
+    margin-right: 0;
   }
 
   .page-header .explorer__autho {
@@ -814,14 +869,29 @@
     background-color: #dfe3f0;
     margin: 0;
     padding: 0;
+    width: 80%;
+    height: 60px;
+    border-radius: 10px;
+    margin-bottom: 51px;
+    margin-top: 15px;
   }
 
   .explorer__transport {
-    width: 33%;
+    width: 308px;
+    height: 94px;
     order: -1;
   }
 
+  .explorer__transport--type .explorer__bus--favorite,
+  .explorer__transport--type .explorer__air--favorite,
+  .explorer__transport--type .explorer__cycle--favorite,
+  .explorer__transport--type .explorer__walk--favorite {
+    width: 43px;
+    height: 43px;
+  }
+
   .explorer__tegs {
+    width: 80%;
     min-height: 94px;
   }
 
@@ -834,22 +904,53 @@
     font-size: 36px;
   }
 
+  .explorer-plan h2 {
+    margin-left: 9%;
+    margin-bottom: 53px;
+  }
+
+  .explorer-plan__country {
+    width: 80%;
+  }
+
   .explorer-plan__country li {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    padding: 35px;
+    padding-bottom: 0;
+  }
+
+  .explorer-plan__country li::before {
+    font-size: 20px;
+    align-self: baseline;
+    margin: 0;
   }
 
   .explorer-plan__country b {
-    width: 100%;
+    width: 87%;
+    font-size: 24px;
+    order: -1;
+    margin-bottom: 35px;
+    letter-spacing: -1px;
+  }
+
+  .explorer-plan__country p {
+    font-size: 20px;
+  }
+
+  .explorer-plan__country a {
+    font-size: 20px;
   }
 
   .explorer-step__first--container,
   .explorer-step__second--container,
   .explorer-step__three--container {
-    width: 85%;
+    width: 88%;
     align-items: flex-start;
+    padding-top: 22px;
+    // паддинг топ нужен
   }
 
   .explorer-step h3 {
@@ -858,24 +959,109 @@
 
   .explorer-step__text {
     font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 42px;
+  }
+
+  .explorer-route__btn {
+    width: 81%;
+    letter-spacing: -1px;
+  }
+
+  .explorer-add--wrapper {
+    padding-top: 25px;
+  }
+
+  .explorer-add h2 {
+    font-size: 36px;
+    margin-bottom: 59px;
+  }
+
+  .explorer-step__first,
+  .explorer-step__second,
+  .explorer-step__three {
+    width: 81%;
+    margin-bottom: 40px;
+    border-radius: 30px;
+    padding-bottom: 55px;
+  }
+
+  .explorer-step__second--container {
+    padding-left: 0;
+    padding-top: 42px;
   }
 
   .explorer-add b {
     font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .step__first--date,
+  .step__second--route {
+    font-size: 36px;
+    letter-spacing: -2px;
+    margin-bottom: 13px;
+  }
+
+  .explorer-add__base {
+    border-top: 1px solid #d4d9eb;
+    padding-top: 26px;
   }
 
   .explorer-add__base span {
     color: rgba(29, 46, 91, 0.3);
     font-size: 20px;
+    margin-left: auto;
+    margin-bottom: 15px;
   }
 
-  .explorer-add__score--children {
+  .explorer-add__score {
+    padding-top: 7px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 25px;
+    min-height: 70px;
+  }
+
+  .explorer-add__score input {
+    background-image: url("../img/qty-minus.svg");
+  }
+
+  .explorer-add__score--children::before {
+    width: 36px;
+    height: 36px;
+    margin-right: 25px;
+  }
+
+  .explorer-date .explorer-add__score--children {
     font-size: 20px;
     text-transform: uppercase;
+    margin-bottom: 50px;
   }
 
-  .explorer--count {
+  .explorer-add__choise--time,
+  .explorer-add__choise--day,
+  .explorer-add__score--day {
+    order: 4;
+  }
+
+  // поднятие можно с детьми в планшетной версии
+
+  // дальше календарь
+  .explorer__month--count {
     font-size: 36px;
+  }
+
+  .explorer__month {
+    height: 95px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 7px;
+  }
+
+  .explorer__month--arrow {
+    width: 15px;
+    height: 28px;
   }
 
   .explorer-data__day {
@@ -886,6 +1072,11 @@
   .explorer-data__day label {
     width: 77px;
     height: 70px;
+    font-size: 20px;
+  }
+
+  .explorer__calendar {
+    margin-bottom: 45px;
   }
 
   .explorer-add .form-button {
@@ -897,6 +1088,77 @@
     margin: 0;
     padding-left: 34px;
     padding-right: 34px;
+    letter-spacing: -1.8px;
+  }
+
+  // выбор страны
+  .explorer-step__second--choise-wrapper {
+    width: 100%;
+    border-top: 1px solid #d4d9eb;
+    padding-top: 41px;
+  }
+
+  .explorer-step__second--country {
+    height: 70px;
+    margin-right: 53px;
+    max-width: 369px;
+
+    // узнать как делать эти фигурки и изменить маржин
+  }
+
+  .explorer-step__second--choise p {
+    font-size: 20px;
+  }
+
+  .explorer-step__second--choise--flag {
+    width: 30%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid orange;
+    background-color: blueviolet;
+    background-position: center;
+    background-size: 70px 47px;
+    font-size: 0;
+    // Граница временно
+  }
+
+  .explorer-step__second--choise--flag button {
+    width: 17px;
+    height: 17px;
+    border: none;
+    border-color: inherit;
+  }
+
+  .explorer-step__second--choise--flag img {
+    width: 70px;
+    height: 47px;
+  }
+
+  .explorer-step__second--choise {
+    margin-bottom: 16px;
+  }
+
+  .explorer-step__second--country {
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+
+  .explorer-step__second--add {
+    width: 369px;
+    height: 70px;
+    border-radius: 4px;
+    background-color: #edeff6;
+    font-size: 20px;
+  }
+
+  .explorer-step__second--add::after {
+    content: "+";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
   }
 
   .explorer-add .form-button::after {
@@ -909,6 +1171,30 @@
     background-position: center;
     background-size: 100%;
     margin-left: auto;
+  }
+
+  .explorer-step__second--anchor {
+    padding-top: 46px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .explorer-step--back {
+    margin-right: 0;
+    width: 180px;
+    font-size: 24px;
+  }
+
+  .explorer-step--back::before {
+    content: "";
+    width: 10px;
+    height: 14px;
+    display: inline-block;
+    background-image: url("../img/triangle-arrow-left.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    margin-right: auto;
   }
 
   .explorer-step__three textarea {

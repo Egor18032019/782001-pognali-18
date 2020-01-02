@@ -46,6 +46,7 @@
   @include fontBS(16px, bold, #ffffff);
   width: 90%;
   line-height: 1.38;
+  letter-spacing: -0.7px;
 }
 
 .companions__slogan--bold br {
@@ -56,6 +57,8 @@
   @include fontBS(16px, 300, #ffffff);
   line-height: 1.38;
   opacity: 0.8;
+  width: 93%;
+  letter-spacing: -1px;
   margin-bottom: 19px;
 }
 
@@ -120,6 +123,7 @@
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   margin-bottom: 10px;
+  padding-bottom: 5px;
 }
 
 .companions__personal {
@@ -181,7 +185,7 @@
 }
 
 .companions .index-button {
-  margin-bottom: 87px;
+  margin-bottom: 30px;
 }
 
 // ________________________________________________________
@@ -194,6 +198,7 @@
   }
 
   .companions-wrapper {
+    padding-bottom: 56px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
     background-image: url(../img/smolov-back-desktop@1x.png), url(../img/rogovaya-back-desktop@1x.png);

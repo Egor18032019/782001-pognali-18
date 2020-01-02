@@ -218,7 +218,8 @@
 
 .traveler__btn--show-more {
   @include center;
-  margin-bottom: 46px;
+  margin-bottom: 52px;
+  padding-top: 15px;
 }
 
 .traveler__btn {
@@ -227,6 +228,7 @@
   vertical-align: middle;
   border: none;
   background-color: inherit;
+  padding-left: 20px;
   margin-bottom: 27px;
   text-transform: uppercase;
 }
@@ -279,8 +281,9 @@
 
   .traveler__item .traveler__tegs {
     width: 38%;
-    margin-left: 223px;
-    margin-bottom: 53px;
+    margin-left: 237px;
+    margin-bottom: 44px;
+    line-height: 1.2;
   }
 
   .traveler__tegs li {
@@ -318,7 +321,7 @@
   .traveler__name::after {
     width: 7px;
     height: 7px;
-    margin-left: 17px;
+    margin-left: 1px;
     position: initial;
   }
 
@@ -391,13 +394,14 @@
     position: absolute;
     width: 190px;
     height: 190px;
+    top: 32px;
     left: 33px;
     border-radius: 10px;
   }
 
   .traveler__name {
     width: 55%;
-    margin-bottom: 13px;
+    margin-bottom: 17px;
     margin-left: 233px;
     font-size: 30px;
     order: -2;
@@ -420,7 +424,8 @@
 
   .traveler__wish {
     order: 6;
-    padding-top: 4px;
+    padding-top: 0;
+    padding-left: 10px;
   }
 
   .traveler__toggle--list {
@@ -446,10 +451,15 @@
   }
 
   .traveler__btn {
-    width: 30%;
+    width: auto;
     font-size: 20px;
-    margin-bottom: 53px;
+    margin-bottom: 50px;
     vertical-align: middle;
+  }
+
+  .traveler__btn--show-more {
+    margin-bottom: 48px;
+    padding-top: 0;
   }
 
   .traveler__toggle--list li {
@@ -500,7 +510,7 @@
   .traveler__name {
     width: 35%;
     margin: 0;
-    margin-left: 285px;
+    margin-left: 300px;
     margin-bottom: 15px;
     align-self: baseline;
   }
@@ -524,15 +534,15 @@
     width: 24%;
     margin-left: 328px;
     margin-right: auto;
-    margin-bottom: 58px;
+    margin-bottom: 47px;
     order: 1;
   }
 
   .traveler__wish {
     width: 25%;
     position: absolute;
-    right: 35px;
-    top: 51px;
+    right: 43px;
+    top: 48px;
     // order: 0;
     // margin-left: auto;
   }
@@ -564,7 +574,7 @@
   }
 
   .traveler__btn--show-more {
-    padding-top: 37px;
+    padding-top: 23px;
   }
 
   .traveler__btn {

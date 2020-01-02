@@ -130,9 +130,9 @@
         <h2 id="step__first">Добавить план:</h2>
         <!-- слайдер это переключательшагов -пока забить -->
         <ul class="explorer-path">
-          <li><a href="#step__first">Даты</a></li>
+          <li class="explorer-path--current"><a href="#step__first">Даты</a></li>
           <li><a href="#step__second">Маршрут</a></li>
-          <li><a href="#">Развлечения</a></li>
+          <li><a href="#step__three">Развлечения</a></li>
         </ul>
         <form action="https://echo.htmlacademy.ru" method="GET" class="explorer-step">
 
@@ -229,14 +229,14 @@
                   <label class="explorer-data__choise--1" for="1">23</label>
                   <label class="explorer-data__choise--1" for="1">24</label>
                   <label class="explorer-data__choise--1" for="1">25</label>
-                  <label class="explorer-data__choise--0326" for="0326">
+                  <label class="explorer-data__choise--0326 explorer-data__choise--in" for="0326">
                     <p>26</p>
                   </label>
                   <label class="explorer-data__choise--0327" for="0327">27</label>
                   <label class="explorer-data__choise--0328" for="0328">
                     <p>28</p>
                   </label>
-                  <label class="explorer-data__choise--0329" for="0329">29</label>
+                  <label class="explorer-data__choise--0329 explorer-data__choise--out" for="0329">29</label>
                   <label class="explorer-data__choise--0330" for="0330">29</label>
                   <label class="explorer-data__choise--0331" for="0331">31</label>
                   <label class="explorer-data__choise--041" for="041">1</label>
@@ -872,7 +872,6 @@
                   <!-- класс для показа  .explorer-step__second--choise--active  -->
                   <div class="explorer-step__second--country header">
                     <p class="select__current"> Выберите страну</p>
-                    <div class="select__icon">X</div>
                   </div>
                   <div class="explorer-country__other body">
                     <ul class="explorer-country__selection">
@@ -1169,29 +1168,27 @@
                     </ul>
                   </div>
                   <div class="explorer-step__second--choise--flag">
-                    <img src="../img/flags-back@1x.png" alt="флаг страны" width="70" height="47">
+<!-- для флага -->
                     <button class="flag-reset">x</button>
                   </div>
                 </div>
-                        </div>
-
-
+              </div>
 
               <button type="button" class="explorer-step__second--add">
                 <span>Добавить страну</span></button>
 
 
               <div class="explorer-step__second--anchor">
-                <a href="#step__three" class="form-button">Следующий шаг</a>
-                <a href="#step__first" class="explorer-step--back">Шаг назад</a>
+                <a href="#step__three" class="form-button explorer-step__second--button">Следующий шаг</a>
+                <a href="#step__first" class="explorer-step--back">На шаг назад</a>
               </div>
             </div>
           </fieldset>
 
           <fieldset class="explorer-step__three">
             <div class="explorer-step__three--container">
-              <h3 id="step__three">Шаг 3.
-                Развлечения</h3>
+              <h3 id="step__three">Шаг 3.</h3>
+                <span class="explorer-step__three--fun">Развлечения</span>
               <p class="explorer-step__text">Наконец, расскажите о своих планах времяпровождения.
                 Можно писать в свободной форме и ставить тэги.
               </p>

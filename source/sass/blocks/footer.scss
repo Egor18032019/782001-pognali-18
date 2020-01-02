@@ -2,13 +2,15 @@
   @include center;
   @include margin-auto;
   // width: 320px;
-  background-color: #edeff6;
+  background-color: inherit;
   overflow: hidden;
+  z-index: 2;
 }
 
 .footer__logo {
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   margin-top: 40px;
+  // если менять то проверить в индех
   font-size: 0;
   margin-left: 0;
   min-width: 100px;
@@ -21,15 +23,18 @@
 .footer__container {
   @include center;
   width: 100%;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
   background-color: #ffffff;
+  z-index: 3;
 }
 
 .footer__made {
   @include fontBS (16px, normal, #444444);
   display: flex;
   width: 85%;
+  line-height: 1.38;
+  letter-spacing: -1px;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 14px;
@@ -57,9 +62,11 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    padding-top: 18px;
+    padding-top: 20px;
     padding-left: 36px;
     padding-right: 41px;
+    border-top-right-radius: 60px;
+    border-top-left-radius: 60px;
   }
 
   .footer__logo {

@@ -2,7 +2,6 @@
   "variables.scss",
   "mixin.scss",
   "fonts.scss",
-  "stels.scss",
   "blocks/index/companions.scss",
   "blocks/index/menu-autho.scss",
   "blocks/index/scroll-menu.scss",
@@ -23,7 +22,8 @@
   "blocks/index/social.scss",
   "blocks/index/social-autho.scss",
   "blocks/catalog/explorer.scss",
-  "outlines.scss";
+  "outlines.scss",
+  "stels.scss";
 
 *,
 *::after,
@@ -177,27 +177,6 @@ img {
   background-repeat: no-repeat;
 }
 
-.check::before {
-  content: "";
-  width: 18px;
-  height: 18px;
-  margin-right: 10px;
-  vertical-align: middle;
-  background-color: #ffffff;
-  // background-image: url("../img/checkbox-off.svg");
-  background-repeat: no-repeat;
-  display: inline-block;
-}
-
-.check-input {
-  display: none;
-  position: absolute;
-  appearance: none;
-}
-
-.check-input:checked + .check::before {
-  background-image: url("../img/tick.svg");
-  background-size: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
+.form footer {
+  background-color: #edeff6;
 }

@@ -15,11 +15,12 @@
 .register__slogan {
   @include center;
   width: 75%;
-  margin-bottom: 22px;
+  margin-bottom: 23px;
 }
 
 .register__slogan h2 {
   @include fontBS ($fsize:24px, $fweight:bold, $color:#ff8d30);
+  letter-spacing: -2px;
   text-align: center;
   margin-bottom: 21px;
 }
@@ -43,7 +44,7 @@
 .register__container {
   @include center;
   width: 85%;
-  margin-bottom: 28px;
+  margin-bottom: 31px;
 }
 
 .register__button span {
@@ -81,6 +82,10 @@
   text-transform: uppercase;
 }
 
+.register__item--mail {
+  letter-spacing: -1.7px;
+}
+
 .register__item span {
   width: 45px;
   height: 45px;
@@ -115,14 +120,14 @@
 
 .register__container form {
   width: 100%;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .register__container input {
   @include fontBS (16px, bold, rgba(68, 68, 68, 0.3));
   width: 98%;
   min-height: 62px;
-  padding-left: 10px;
+  padding-left: 25px;
   border: 0;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -290,7 +295,7 @@
   .register__container {
     flex-direction: row;
     flex-wrap: wrap;
-    padding-bottom: 34px;
+    padding-bottom: 38px;
     border-radius: 60px;
   }
 
@@ -303,21 +308,22 @@
   //  почему маргином  я не могу толкать спан от псевдоэлемента ?
 
   .register__button {
-    width: 26%;
-    margin-left: -26%;
+    width: 27%;
+    margin-left: -27%;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
     border: none;
   }
 
   .register__container form {
+    width: 95%;
     padding-left: 26px;
     margin-bottom: 37px;
   }
 
   .register__container p {
     width: 100%;
-    margin-bottom: 44px;
+    margin-bottom: 40px;
   }
 
   .register__contact {
@@ -332,7 +338,11 @@
   }
 
   .register__container .register__contact {
-    width: 36%;
+    width: 38%;
+  }
+
+  .register__contact--mail {
+    padding-left: 4px;
   }
 
   .register__container input {

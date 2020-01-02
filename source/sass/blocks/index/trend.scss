@@ -34,7 +34,7 @@
   list-style: none;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 10px;
+  margin-bottom: 13px;
   padding: 0;
 }
 
@@ -117,7 +117,7 @@
     background-position: top 80px right 40px;
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 60px;
-    padding-bottom: 78px;
+    padding-bottom: 81px;
   }
 
   .trend-wrapper::before {
@@ -134,11 +134,13 @@
   .trend-list {
     width: 80%;
     z-index: 1;
-    margin-bottom: 31px;
+    margin-bottom: 35px;
   }
 
   .trend-list li {
     border-radius: 20px;
+    margin-bottom: -6px;
+    // понять не могу откуда там маргин
   }
 
   .trend h2 {
@@ -196,6 +198,7 @@
     width: 186px;
     height: 140px;
     order: 2;
+    border-bottom-right-radius: 20px;
   }
 
   // обсудить с Дашей как должен меняться рисунок
@@ -233,7 +236,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
-    padding-bottom: 141px;
+    padding-bottom: 160px;
   }
 
   .trend-slogan {
@@ -279,8 +282,9 @@
     order: 3;
     align-self: flex-end;
     z-index: 1;
-    right: 302px;
+    right: 300px;
     bottom: 139px;
     border-radius: 20px;
+    padding-right: 37px;
   }
 }

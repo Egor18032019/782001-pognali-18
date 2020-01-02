@@ -215,7 +215,8 @@
 .explorer-plan__country li {
   min-height: 154px;
   margin-bottom: 8px;
-  padding: 24px;
+  padding-left: 24px;
+  padding-top: 20px;
   background-color: white;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
@@ -234,17 +235,23 @@
 
 .explorer-plan__country b {
   @include fontBS (16px, bold, #1d2e5b);
+  display: inline-block;
+  margin-bottom: 17px;
 }
 
 .explorer-plan__country p {
   @include fontBS (14px, 500, #1d2e5b);
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 7px;
 }
 
 .explorer-plan__country a {
   @include reset-list;
   @include fontBS (14px, 500, rgba(0, 0, 0, 0.3));
   text-transform: uppercase;
+  display: inline-block;
+  margin-top: 21px;
 }
 
 // _____________________________________перекинуть в отдельный блок
@@ -281,10 +288,9 @@
   @include center;
   background-color: white;
   width: 85%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
   border: none;
-  padding-bottom: 21px;
+  margin-bottom: 10px;
 }
 
 .explorer-step__end {
@@ -295,6 +301,12 @@
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   overflow: hidden;
+  padding-top: 11px;
+  padding-bottom: 10px;
+}
+
+.explorer-step__end button {
+  margin-bottom: 10px;
 }
 
 .explorer-step__first--container,
@@ -318,7 +330,7 @@
   justify-content: left;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 97%;
+  width: 90%;
   margin-bottom: 21px;
   padding-top: 17px;
 }
@@ -337,6 +349,8 @@
 
 .explorer__month--count {
   @include fontBS (20px, bold, #1d2e5b);
+  margin-top: 12px;
+  margin-bottom: 10px;
 }
 
 .explorer-add__score--children input {
@@ -381,9 +395,14 @@
 .explorer-path li {
   width: 6px;
   height: 5px;
-  background-color: #1d2e5b;
+  background-color: #808285;
   margin-right: 15px;
   border-radius: 50%;
+  flex-shrink: 0;
+}
+
+li.explorer-path--current {
+  background-color: #1d2e5b;
 
 }
 
@@ -571,14 +590,6 @@
   color: white;
 }
 
-.explorer-data--0326:checked~.explorer-data__day .explorer-data__choise--0326::after {
-  content: "Заезд";
-}
-
-.explorer-data--0328:checked~.explorer-data__day .explorer-data__choise--0328::after {
-  content: "Выезд";
-}
-
 .explorer-step__second--choise {
   @include fontBS (14px, 500, #1d2e5b);
   display: flex;
@@ -591,6 +602,31 @@
   position: relative;
 }
 
+.explorer-step__second--choise--flag {
+  width: 53px;
+  height: 42px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #cbced9;
+}
+
+.explorer-step__second--choise--flag img {
+  width: 35px;
+  height: 24px;
+}
+
+.explorer-step__second--choise--flag button {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  border-radius: 50%;
+  right: -9px;
+  top: -13px;
+  border: none;
+}
+
 .explorer-step__second--choise ul {
   @include reset-list;
 }
@@ -598,14 +634,16 @@
 .explorer-step__second--country {
   position: relative;
   cursor: pointer;
-  width: 100%;
-  min-height: 42px;
-  max-width: 230px;
+  width: 168px;
+  height: 42px;
+  max-width: 730px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   border: 1px solid #cbced9;
   border-radius: 4px;
+  padding-left: 13px;
+  padding-right: 10px;
 }
 
 .explorer-step__second--flag {
@@ -615,10 +653,14 @@
 
 .explorer-step__second--add {
   @include fontBS (14px, 500, #1d2e5b);
-
+  width: 220px;
+  height: 42px;
+  text-transform: uppercase;
   background-color: #edeff6;
   border-radius: 4px;
   border: 1px solid #cbced9;
+  padding-left: 13px;
+  margin-bottom: 9px;
 }
 
 .explorer-step__second--flag li:first-child {
@@ -636,7 +678,6 @@
   @include margin-auto;
   @include fontBS($fsize:17px, $fweight:bold, $color:#161c35);
   width: 85%;
-  min-height: 46px;
   line-height: 1.76;
   display: flex;
   justify-content: center;
@@ -644,6 +685,10 @@
   border-radius: 20px;
   text-transform: uppercase;
   background-color: inherit;
+}
+
+.explorer-step__first--container .form-button {
+  margin-bottom: 10px;
 }
 
 .explorer-country__other {
@@ -762,6 +807,10 @@
   margin-bottom: 27px;
 }
 
+.explorer-step__second--choise-wrapper {
+  padding-top: 7px;
+}
+
 .explorer-step__three textarea {
   @include fontBS(16px, normal, #444444);
   width: 96%;
@@ -775,7 +824,8 @@
 
 .explorer-step__three--plan {
   @include center;
-  width: 95%;
+  width: auto;
+  position: relative;
 }
 
 .explorer-step__three--plan p {
@@ -787,11 +837,7 @@
   width: 100%;
 }
 
-.explorer-step__second--country {
-  padding-left: 13px;
-}
-
-.explorer-step__second--choise .explorer-step__second--country::after {
+.explorer-step__second--country::after {
   display: block;
   content: "";
   width: 12px;
@@ -803,10 +849,48 @@
 }
 
 .explorer-step__second--anchor {
-  width: 100%;
+  width: 230px;
   display: flex;
   flex-direction: column;
-  padding-top: 20px;
+  padding-top: 17px;
+}
+
+.explorer-step__second--anchor .explorer-step__second--button {
+  width: 230px;
+  margin-bottom: 11px;
+}
+
+.explorer-step__three--container {
+  width: 88%;
+  padding-top: 15px;
+}
+
+.explorer-step__three--fun {
+  @include fontBS (20px, bold, #1d2e5b);
+  align-self: flex-start;
+}
+
+.explorer-step__three--container .explorer-step__text {
+  margin-bottom: 6px;
+}
+
+.explorer-step__three--plan p::after {
+  content: "флаг";
+  position: absolute;
+  font-size: 0;
+  width: 88px;
+  right: 0;
+  height: 24px;
+  display: inline-block;
+  background-color: inherit;
+  z-index: 2;
+  background-image: linear-gradient(90deg, transparent 0.5%, white 60%, #d9d9d9 28%);
+}
+
+.explorer-step__three {
+  margin-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 // _____________________Направления_____________________________________________
@@ -831,19 +915,20 @@
 
   .explorer-main {
     justify-content: space-evenly;
-    padding-top: 63px;
-    padding-bottom: 44px;
+    padding-top: 55px;
+    padding-bottom: 50px;
   }
 
   .explorer-plan {
     padding-top: 27px;
-    padding-bottom: 39px;
+    padding-bottom: 47px;
   }
 
   .explorer-foto {
-    border-radius: 0;
     width: 94px;
     height: 94px;
+    border-radius: 0;
+    margin-right: 2%;
   }
 
   .explorer-lvl {
@@ -851,6 +936,7 @@
     height: 94px;
     order: -2;
     margin-right: 0;
+    margin-left: 1%;
   }
 
   .page-header .explorer__autho {
@@ -872,8 +958,8 @@
     width: 80%;
     height: 60px;
     border-radius: 10px;
-    margin-bottom: 51px;
-    margin-top: 15px;
+    margin-bottom: 45px;
+    margin-top: 25px;
   }
 
   .explorer__transport {
@@ -905,8 +991,9 @@
   }
 
   .explorer-plan h2 {
-    margin-left: 9%;
-    margin-bottom: 53px;
+    margin-left: 9.6%;
+    margin-bottom: 48px;
+    letter-spacing: -2.5px;
   }
 
   .explorer-plan__country {
@@ -918,8 +1005,8 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 35px;
-    padding-bottom: 0;
+    padding: 32px;
+    padding-bottom: 11px;
   }
 
   .explorer-plan__country li::before {
@@ -938,19 +1025,35 @@
 
   .explorer-plan__country p {
     font-size: 20px;
+    margin-bottom: 0;
   }
 
   .explorer-plan__country a {
     font-size: 20px;
+    margin-top: 0;
+
   }
 
   .explorer-step__first--container,
   .explorer-step__second--container,
   .explorer-step__three--container {
-    width: 88%;
-    align-items: flex-start;
+    // align-items: flex-start;
     padding-top: 22px;
     // паддинг топ нужен
+  }
+
+  .explorer-step__three--container {
+    padding-top: 40px;
+  }
+
+  .explorer-step__three--fun {
+    font-size: 36px;
+    letter-spacing: -2.6px;
+  }
+
+  .explorer-step__three--container .explorer-step__text {
+    margin-top: 35px;
+    margin-bottom: 39px;
   }
 
   .explorer-step h3 {
@@ -966,15 +1069,26 @@
   .explorer-route__btn {
     width: 81%;
     letter-spacing: -1px;
+    margin-bottom: 35px;
   }
 
   .explorer-add--wrapper {
-    padding-top: 25px;
+    padding-top: 20px;
+  }
+
+  .explorer-path {
+    top: 65px;
+    right: 57px;
+    width: 92px;
+    height: 5px;
+    justify-content: space-between;
   }
 
   .explorer-add h2 {
     font-size: 36px;
     margin-bottom: 59px;
+    margin-left: 9.6%;
+    letter-spacing: -2.2px;
   }
 
   .explorer-step__first,
@@ -987,13 +1101,41 @@
   }
 
   .explorer-step__second--container {
+    width: 89%;
+    margin-right: auto;
+    margin-left: auto;
     padding-left: 0;
     padding-top: 42px;
+  }
+
+  .explorer-step__three {
+    margin-bottom: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .explorer-step__end {
+    width: 81%;
+    flex-direction: row;
+    padding-top: 0;
+    padding-left: 45px;
+    padding-right: 35px;
+    padding-bottom: 45px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+
+  .explorer-add {
+    margin-bottom: 64px;
   }
 
   .explorer-add b {
     font-size: 20px;
     margin-bottom: 15px;
+  }
+
+  .explorer-step__second {
+    margin-bottom: 49px;
   }
 
   .step__first--date,
@@ -1005,7 +1147,8 @@
 
   .explorer-add__base {
     border-top: 1px solid #d4d9eb;
-    padding-top: 26px;
+    padding-top: 22px;
+    padding-bottom: 14px;
   }
 
   .explorer-add__base span {
@@ -1053,10 +1196,11 @@
   }
 
   .explorer__month {
-    height: 95px;
+    height: 85px;
     padding-left: 18px;
     padding-right: 18px;
-    padding-top: 7px;
+    padding-top: 0;
+    margin-bottom: 13px;
   }
 
   .explorer__month--arrow {
@@ -1065,10 +1209,16 @@
   }
 
   .explorer-data__day {
-    width: 550px;
+    width: 535px;
+    padding-top: 15px;
   }
 
-  .explorer-data__day button,
+  .explorer-data__day button {
+    width: 77px;
+    height: 40px;
+    font-size: 20px;
+  }
+
   .explorer-data__day label {
     width: 77px;
     height: 70px;
@@ -1091,6 +1241,10 @@
     letter-spacing: -1.8px;
   }
 
+  .explorer-step__first .form-button {
+    margin-left: 5.6%;
+  }
+
   // выбор страны
   .explorer-step__second--choise-wrapper {
     width: 100%;
@@ -1101,8 +1255,6 @@
   .explorer-step__second--country {
     height: 70px;
     margin-right: 53px;
-    max-width: 369px;
-
     // узнать как делать эти фигурки и изменить маржин
   }
 
@@ -1111,16 +1263,16 @@
   }
 
   .explorer-step__second--choise--flag {
-    width: 30%;
+    width: 19%;
     height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid orange;
-    background-color: blueviolet;
+    background-color: inherit;
     background-position: center;
     background-size: 70px 47px;
     font-size: 0;
+    border: none;
     // Граница временно
   }
 
@@ -1128,7 +1280,10 @@
     width: 17px;
     height: 17px;
     border: none;
-    border-color: inherit;
+    position: static;
+    margin-left: auto;
+    background-color: inherit;
+    font-size: 15px;
   }
 
   .explorer-step__second--choise--flag img {
@@ -1141,6 +1296,9 @@
   }
 
   .explorer-step__second--country {
+    width: 369px;
+    height: 70px;
+    border-radius: 4px;
     padding-left: 23px;
     padding-right: 23px;
   }
@@ -1174,15 +1332,21 @@
   }
 
   .explorer-step__second--anchor {
-    padding-top: 46px;
+    width: 100%;
+    padding-top: 36px;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .explorer-step__second--anchor .explorer-step__second--button {
+    margin-left: 0;
   }
 
   .explorer-step--back {
     margin-right: 0;
     width: 180px;
     font-size: 24px;
+    text-transform: unset;
   }
 
   .explorer-step--back::before {
@@ -1210,6 +1374,7 @@
 
   .explorer-step__three--plan p {
     font-size: 30px;
+    letter-spacing: -2px;
   }
 }
 
@@ -1217,11 +1382,23 @@
 
 @media (min-width: $desktop-width) {
   .explorer {
-    margin-bottom: 72px;
+    margin-bottom: 0;
+  }
+
+  .explorer-slogan {
+    padding-top: 50px;
   }
 
   .explorer__idea::after {
     bottom: -70px;
+  }
+
+  label.explorer-data__choise--in::after {
+    content: "Заезд";
+  }
+
+  label.explorer-data__choise--out::after {
+    content: "Выезд";
   }
 
   .explorer-main {
@@ -1236,9 +1413,9 @@
 
   .explorer__idea {
     align-items: center;
-    padding-left: 129px;
-    min-height: 190px;
     font-size: 60px;
+    margin-left: 4%;
+
   }
 
   .explorer-foto {
@@ -1246,15 +1423,15 @@
     width: 190px;
     height: 190px;
     position: absolute;
-    bottom: 188px;
-    right: 200px;
+    bottom: 233px;
+    right: 126px;
     z-index: 1;
   }
 
   .explorer-lvl {
     position: absolute;
-    bottom: 250px;
-    right: 422px;
+    bottom: 306px;
+    right: 391px;
     width: 94px;
     min-height: 94px;
     margin: 0;
@@ -1285,8 +1462,8 @@
     background-color: #dfe3f0;
     margin: 0;
     padding: 0;
-    right: 200px;
-    bottom: 170px;
+    right: 155px;
+    bottom: 206px;
     border-radius: 0;
   }
 
@@ -1296,6 +1473,7 @@
 
   .explorer__transport {
     width: 20%;
+    order: 1;
   }
 
   .explorer-plan {
@@ -1312,7 +1490,14 @@
   }
 
   .explorer-plan__country b {
+    width: auto;
     font-size: 24px;
+    order: 0;
+    margin: 0;
+  }
+
+  .explorer-plan__country li::before {
+    align-self: center;
   }
 
   .explorer-plan__country p {
@@ -1324,9 +1509,17 @@
   }
 
   .explorer-plan__country li {
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    min-height: 97px;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+
+  .explorer-add--wrapper {
+    padding-top: 4px;
   }
 
   .explorer-add {
@@ -1339,23 +1532,33 @@
   }
 
   .explorer-date h3 {
+    width: auto;
     font-size: 36px;
     align-self: flex-start;
   }
 
   .explorer-step__text {
-    width: 58%;
+    width: 60%;
     align-self: flex-start;
     font-size: 20px;
+    margin-bottom: 56px;
   }
 
   .explorer-add b {
-    width: 20%;
+    width: 22%;
     font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  .explorer-add__base span {
+    align-self: center;
+    margin-left: 40px;
+    margin-bottom: 0;
   }
 
   .explorer-add__score {
     width: 181px;
+    margin-bottom: 0;
   }
 
   .explorer-add__choise--day {
@@ -1375,11 +1578,50 @@
     margin-right: auto;
   }
 
-  .explorer-add__score--children {
-    width: 31%;
+  .explorer-path li {
+    width: auto;
+    height: auto;
+    background-color: inherit;
+    margin-bottom: 24px;
+    line-height: 0.69;
+  }
+
+  .explorer-path li::before {
+    content: " ";
+    width: 6px;
+    height: 5px;
+    display: inline-block;
+    background-color: #808285;
+    margin-right: 38px;
+    border-radius: 50%;
+    flex-shrink: 0;
+
+  }
+
+  li.explorer-path--current {
+    background-color: inherit;
+    color: #000000;
+  }
+
+  .explorer-path a {
+    @include fontBS (20px, normal, rgba(0, 0, 0, 0.6));
+  }
+
+  .explorer-date .explorer-add__score--children {
+    width: 250px;
     order: 4;
     font-size: 20px;
     text-transform: uppercase;
+    margin-bottom: 0;
+    align-self: center;
+    margin-bottom: 0;
+  }
+
+  .explorer-add__score--children::before {
+    width: 36px;
+    height: 36px;
+    margin-right: 27px;
+    border-radius: 4px;
   }
 
   // спросить у Дарьи что делать со слайдером и как его ставить
@@ -1389,11 +1631,29 @@
     flex-direction: column;
     font-size: 20px;
     height: auto;
-    background-color: inherit;
+    background-color: #ffffff;
+    top: 233px;
+    right: 269px;
+  }
+
+  .step__first--date,
+  .step__second--route {
+    width: 50%;
+  }
+
+  .explorer-date {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 70px;
   }
 
   .explorer--count {
     font-size: 36px;
+  }
+
+  .explorer__calendar {
+    width: 93%;
+    margin-bottom: 56px;
   }
 
   .explorer__month--arrow {
@@ -1404,38 +1664,57 @@
   .explorer-data__day {
     width: 100%;
     max-width: 1110px;
+    padding-top: 3px;
+    padding-left: 17px;
   }
 
-  .explorer-data__day label,
-  .explorer-data__day button {
+  .explorer-data__day label {
     width: 143px;
     height: 72px;
     font-size: 18px;
   }
 
+  .explorer-data__day button {
+    width: 143px;
+    height: 41px;
+    font-size: 18px;
+    align-items: start;
+    justify-content: start;
+    padding-left: 15px;
+  }
+
   .explorer-step__first,
   .explorer-step__second,
   .explorer-step__three {
+    width: 92%;
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
+    padding-bottom: 105px;
+  }
+
+  .explorer-step__three {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-bottom: 0;
   }
 
   .explorer-step__first--container,
   .explorer-step__second--container,
   .explorer-step__three--container {
     width: 85%;
-    align-items: start;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .explorer-add .form-button {
-    width: 28%;
+    width: 25%;
     height: 81px;
     align-self: flex-start;
     font-size: 24px;
     text-transform: none;
-    margin: 0;
     padding-left: 36px;
     padding-right: 36px;
   }
@@ -1452,12 +1731,16 @@
     margin-left: auto;
   }
 
+  .explorer-step__second--container {
+    padding-top: 96px;
+    padding-left: 55px;
+  }
+
   .explorer-step--back {
     width: 26%;
     text-transform: none;
     margin: 0;
     font-size: 24px;
-
     padding-left: 36px;
     padding-right: 36px;
   }
@@ -1476,22 +1759,69 @@
 
   .explorer-step__second--container h3,
   .explorer-step__three--container h3 {
+    width: auto;
     font-size: 36px;
     align-self: flex-start;
   }
 
   .explorer-step__second--choise {
-    width: 75%;
+    width: 100%;
     min-height: 70px;
   }
 
+  .explorer-step__second--choise-wrapper {
+    padding-top: 62px;
+  }
+
+  .explorer-step__second--country {
+    width: 730px;
+    margin-right: 82px;
+  }
+
+  .explorer-step__second--choise--flag {
+    width: 17%;
+  }
+
+  .explorer-step__second--choise--flag button {
+    width: 18px;
+    height: 18px;
+  }
+
   .explorer-step__second--add {
+    width: 730px;
     font-size: 20px;
   }
 
   .explorer-step__second--anchor {
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 44px;
+  }
+
+  .explorer-step__second--anchor .explorer-step__second--button {
+    width: 27%;
+  }
+
+  .explorer-step__three--container {
+    width: 77%;
+    padding-top: 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-top: 85px;
+  }
+
+  .explorer-step__three--container .explorer-step__text {
+    margin-bottom: 56px;
+  }
+
+  .explorer-step__three--plan {
+    padding-top: 49px;
+    border-top: 1px solid #d4d9eb;
+  }
+
+  .explorer-step__three--fun {
+    width: 66%;
   }
 
   .explorer-step__three--plan p {
@@ -1500,5 +1830,20 @@
 
   .explorer-step__three--plan textarea {
     font-size: 20px;
+  }
+
+  .explorer-step__end {
+    width: 92%;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    padding-top: 44px;
+    padding-bottom: 103px;
+    padding-right: 108px;
+    padding-left: 162px;
+    justify-content: space-between;
+  }
+
+  .explorer-step__end .form-button {
+    width: 27%;
   }
 }

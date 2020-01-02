@@ -7,7 +7,7 @@
 
 .steps-quote {
   width: 70%;
-  margin-bottom: 33px;
+  margin-bottom: 31px;
 }
 
 .steps-quote q {
@@ -15,7 +15,7 @@
   display: block;
   width: 80%;
   line-height: 1.11;
-  margin-bottom: 18px;
+  margin-bottom: 23px;
 }
 
 .steps-quote cite {
@@ -90,9 +90,9 @@
 
 @media (min-width: $tablet-width) {
   .steps-quote {
-    width: 85%;
+    width: 81%;
     margin-top: -562px;
-    margin-bottom: 200px;
+    margin-bottom: 213px;
   }
 
   .steps-quote q {
@@ -104,6 +104,7 @@
   .steps-quote cite {
     width: 50%;
     font-size: 21px;
+    line-height: 1.19;
   }
 
   .steps__list {
@@ -120,7 +121,7 @@
   }
 
   .steps__list .steps__item {
-    width: 50%;
+    width: 49%;
     height: 140px;
     font-size: 24px;
     padding-left: 31px;
@@ -142,14 +143,14 @@
   .steps-quote {
     width: 25%;
     margin-left: auto;
-    margin-top: -532px;
-    margin-bottom: 121px;
+    margin-top: -591px;
+    margin-bottom: 114px;
   }
 
   .steps-quote q {
     width: 84%;
     font-size: 28px;
-    margin-bottom: 42px;
+    margin-bottom: 52px;
   }
 
   .steps-quote cite {

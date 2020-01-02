@@ -56,6 +56,7 @@
 .form-main__autho {
   display: none;
 }
+
 // ---------------------------для планшета_______________________
 @media (min-width: $tablet-width) {
   .form-main__slogan {
@@ -65,10 +66,14 @@
     padding: 0;
     padding-left: 75px;
     padding-right: 74px;
-    padding-top: 119px;
+    padding-top: 122px;
     padding-bottom: 66px;
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 60px;
+  }
+
+  .form-main__home--link span {
+    margin-left: 18px;
   }
 
   .form-main__slogan h1 {
@@ -92,12 +97,14 @@
 
 @media (min-width: $desktop-width) {
   .form-main__idea::after {
-    bottom: -83px;
+    bottom: -76px;
+    height: 8px;
   }
 
   .form-main__slogan {
-    padding-top: 20px;
+    padding-top: 112px;
     padding-left: 129px;
+    padding-bottom: 70px;
   }
 
   .form-main__home--link {

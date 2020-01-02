@@ -20,18 +20,18 @@
 
 .about-us__wrapper {
   width: 74%;
-  padding-top: 10px;
+  padding-top: 14px;
 }
 
 .about-us h2 {
   @include fontBS (24px, bold, #ff8d30);
-  margin-bottom: 23px;
+  margin-bottom: 20px;
 }
 
 .about-us p {
   @include fontBS (16px, 300, #ffffff);
   line-height: 1.38;
-  margin-bottom: 17px;
+  margin-bottom: 19px;
   opacity: 0.8;
 }
 
@@ -193,7 +193,7 @@ display: none;
   }
 
   .about-us__container {
-    padding-top: 80px;
+    padding-top: 51px;
   }
 
   .about-us__wrapper .about-us__button {

@@ -22,7 +22,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 58px;
+  min-height: 70px;
+  // изменил мин-хейт для индекса мобайл
 }
 
 .page-header__logo {
@@ -61,11 +62,12 @@
   width: 87%;
   text-align: center;
   margin-top: 21px;
+  line-height: 1.11;
 }
 
 .page-header__slogan {
   @include center;
-  padding-bottom: 247px;
+  padding-bottom: 238px;
   max-width: 767px;
   margin: 0 auto;
   background-image: url("../img/traveller-illustration-mobile@1x.png"), url("../img/globe-back-mobile@1x.jpg");
@@ -93,8 +95,8 @@
 @media (min-width: $tablet-width) {
   .page-header {
     flex-direction: row-reverse;
-    padding-top: 40px;
-    background-color: #192144;
+    padding-top: 36px;
+    background-color: #161c35;
   }
 
   .page-header__autho {
@@ -126,9 +128,10 @@
   }
 
   .page-header__slogan h2 {
-    width: 60%;
+    width: 59%;
     font-size: 60px;
     line-height: 1.16;
+    letter-spacing: -2.8px;
   }
 
   .page-header__slogan--wrapper {
@@ -138,7 +141,7 @@
   }
 
   .page-header__nav {
-    margin-right: 22%;
+    margin-right: 23%;
     margin-left: auto;
   }
 
@@ -157,6 +160,10 @@
   .page-header__wrapper {
     display: block;
     width: auto;
+  }
+
+  .page-header__main {
+    width: 67%;
   }
 
   .page-header__slogan {

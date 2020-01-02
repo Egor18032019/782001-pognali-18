@@ -69,10 +69,10 @@
   border: 0;
 }
 
-.selection-musiс > input,
-.selection-food > input,
-.selection-transport > input,
-.selection-lvl > input,
+.selection-musiс>input,
+.selection-food>input,
+.selection-transport>input,
+.selection-lvl>input,
 .selection-hobby__id {
   display: none;
 }
@@ -93,7 +93,8 @@
 
 .selection-transport__list {
   display: flex;
-  width: 65%;
+  width: 67%;
+  // 67% для *выбора лвл*
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -143,59 +144,59 @@
   height: 100%;
 }
 
-.selection-hobby__id:checked ~ .selection-hobby__list {
+.selection-hobby__id:checked~.selection-hobby__list {
   display: none;
 }
 
-.selection-hobby__id:checked ~ .selection-hobby__name .selection-hobby--toggle {
+.selection-hobby__id:checked~.selection-hobby__name .selection-hobby--toggle {
   transform: rotate(180deg);
 }
 
-.selection-musiс__id:checked ~ .selection-musiс__list {
+.selection-musiс__id:checked~.selection-musiс__list {
   display: none;
 }
 
-.selection-musiс__id:checked ~ .selection-music__name .selection-musiс--toggle {
+.selection-musiс__id:checked~.selection-music__name .selection-musiс--toggle {
   transform: rotate(180deg);
 }
 
-.selection-food__id:checked ~ .selection-food__list {
+.selection-food__id:checked~.selection-food__list {
   display: none;
 }
 
-.selection-food__id:checked ~ .selection-food__name .selection-food--toggle {
+.selection-food__id:checked~.selection-food__name .selection-food--toggle {
   transform: rotate(180deg);
 }
 
-.selection-transport__id:checked ~ .selection-transport__list {
+.selection-transport__id:checked~.selection-transport__list {
   display: none;
 }
 
-.selection-transport__id:checked ~ .selection-transport__name .selection-transport--toggle {
+.selection-transport__id:checked~.selection-transport__name .selection-transport--toggle {
   transform: rotate(180deg);
 }
 
-.selection-lvl__id:checked ~ .selection-lvl__controls {
+.selection-lvl__id:checked~.selection-lvl__controls {
   display: none;
 }
 
-.selection-lvl__id:checked ~ .selection-lvl__name .selection-lvl--toggle {
+.selection-lvl__id:checked~.selection-lvl__name .selection-lvl--toggle {
   transform: rotate(180deg);
 }
 
-.selection__bus:checked ~ .selection-transport__list .selection__bus--favorite {
+.selection__bus:checked~.selection-transport__list .selection__bus--favorite {
   opacity: 0.2;
 }
 
-.selection__air:checked ~ .selection-transport__list .selection__air--favorite {
+.selection__air:checked~.selection-transport__list .selection__air--favorite {
   opacity: 0.2;
 }
 
-.selection__cycle:checked ~ .selection-transport__list .selection__cycle--favorite {
+.selection__cycle:checked~.selection-transport__list .selection__cycle--favorite {
   opacity: 0.2;
 }
 
-.selection__walk:checked ~ .selection-transport__list .selection__walk--favorite {
+.selection__walk:checked~.selection-transport__list .selection__walk--favorite {
   opacity: 0.2;
 }
 
@@ -215,7 +216,7 @@
 
 .selection-lvl__bar {
   width: 30%;
-  background-color: red;
+  background-color: #d6daed;
   // цвет временно
   min-height: 2px;
 }
@@ -271,6 +272,7 @@
 // ______________________для планшета___________________________
 
 @media (min-width: $tablet-width) {
+
   .selection-musiс__list li,
   .selection-hobby__list li,
   .selection-food__list li {
@@ -286,6 +288,15 @@
 
   .selection-companion fieldset {
     width: 94%;
+  }
+
+  .selection-lvl__range--toogle {
+    width: 13px;
+    height: 13px;
+  }
+
+  .selection-lvl__scale {
+    height: 3px;
   }
 
   .selection-lvl__input input {
@@ -317,7 +328,7 @@
     font-size: 20px;
   }
 
-  .selection .selection-companion .selection-food__list {
+  .selection-food__list {
     display: flex;
   }
 
@@ -370,34 +381,43 @@
   }
 
   .selection-companion fieldset {
-    width: 85%;
+    width: 65%;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    padding: 0;
   }
 
   .selection-companion p {
     width: 100%;
+    margin-top: 20px;
+    margin-bottom: 0;
   }
 
   .selection-transport .selection-transport__list {
     width: 100%;
   }
 
+  .selection-lvl {
+    margin-bottom: 43px;
+  }
+
   .selection-lvl__controls {
+    width: 100%;
     margin: auto;
     flex-direction: column-reverse;
   }
 
   .selection-lvl__input {
     font-size: 20px;
-    margin-bottom: 24px;
+    margin-bottom: 37px
   }
 
   .selection label {
     color: #444444;
     font-weight: normal;
+    letter-spacing: -1.3px;
   }
 
   .selection-companion {
@@ -406,6 +426,27 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 20px;
+  }
+
+  ul.selection-hobby__list,
+  ul.selection-musiс__list,
+  ul.selection-food__list,
+  div.selection-lvl__controls {
+    margin-top: 25px;
+  }
+
+  ul.selection-transport__list {
+    margin-top: 20px;
+  }
+
+  .selection-companion .selection-lvl {
+    padding-top: 10px;
+  }
+
+  .selection-musiс__id:checked~.selection-musiс__list {
+    display: none;
+    margin-top: 20px;
   }
 
   .selection-musiс .selection-musiс--toggle,
@@ -436,5 +477,11 @@
 
   .selection-lvl__range {
     margin: 0;
+  }
+
+  .selection-companion .form-button {
+    width: 73%;
+    height: 50px;
+    margin-bottom: 43px;
   }
 }

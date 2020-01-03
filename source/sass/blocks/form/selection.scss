@@ -69,10 +69,10 @@
   border: 0;
 }
 
-.selection-musiс>input,
-.selection-food>input,
-.selection-transport>input,
-.selection-lvl>input,
+.selection-musiс > input,
+.selection-food > input,
+.selection-transport > input,
+.selection-lvl > input,
 .selection-hobby__id {
   display: none;
 }
@@ -144,59 +144,59 @@
   height: 100%;
 }
 
-.selection-hobby__id:checked~.selection-hobby__list {
+.selection-hobby__id:checked ~ .selection-hobby__list {
   display: none;
 }
 
-.selection-hobby__id:checked~.selection-hobby__name .selection-hobby--toggle {
+.selection-hobby__id:checked ~ .selection-hobby__name .selection-hobby--toggle {
   transform: rotate(180deg);
 }
 
-.selection-musiс__id:checked~.selection-musiс__list {
+.selection-musiс__id:checked ~ .selection-musiс__list {
   display: none;
 }
 
-.selection-musiс__id:checked~.selection-music__name .selection-musiс--toggle {
+.selection-musiс__id:checked ~ .selection-music__name .selection-musiс--toggle {
   transform: rotate(180deg);
 }
 
-.selection-food__id:checked~.selection-food__list {
+.selection-food__id:checked ~ .selection-food__list {
   display: none;
 }
 
-.selection-food__id:checked~.selection-food__name .selection-food--toggle {
+.selection-food__id:checked ~ .selection-food__name .selection-food--toggle {
   transform: rotate(180deg);
 }
 
-.selection-transport__id:checked~.selection-transport__list {
+.selection-transport__id:checked ~ .selection-transport__list {
   display: none;
 }
 
-.selection-transport__id:checked~.selection-transport__name .selection-transport--toggle {
+.selection-transport__id:checked ~ .selection-transport__name .selection-transport--toggle {
   transform: rotate(180deg);
 }
 
-.selection-lvl__id:checked~.selection-lvl__controls {
+.selection-lvl__id:checked ~ .selection-lvl__controls {
   display: none;
 }
 
-.selection-lvl__id:checked~.selection-lvl__name .selection-lvl--toggle {
+.selection-lvl__id:checked ~ .selection-lvl__name .selection-lvl--toggle {
   transform: rotate(180deg);
 }
 
-.selection__bus:checked~.selection-transport__list .selection__bus--favorite {
+.selection__bus:checked ~ .selection-transport__list .selection__bus--favorite {
   opacity: 0.2;
 }
 
-.selection__air:checked~.selection-transport__list .selection__air--favorite {
+.selection__air:checked ~ .selection-transport__list .selection__air--favorite {
   opacity: 0.2;
 }
 
-.selection__cycle:checked~.selection-transport__list .selection__cycle--favorite {
+.selection__cycle:checked ~ .selection-transport__list .selection__cycle--favorite {
   opacity: 0.2;
 }
 
-.selection__walk:checked~.selection-transport__list .selection__walk--favorite {
+.selection__walk:checked ~ .selection-transport__list .selection__walk--favorite {
   opacity: 0.2;
 }
 
@@ -272,7 +272,6 @@
 // ______________________для планшета___________________________
 
 @media (min-width: $tablet-width) {
-
   .selection-musiс__list li,
   .selection-hobby__list li,
   .selection-food__list li {
@@ -411,7 +410,7 @@
 
   .selection-lvl__input {
     font-size: 20px;
-    margin-bottom: 37px
+    margin-bottom: 37px;
   }
 
   .selection label {
@@ -444,7 +443,7 @@
     padding-top: 10px;
   }
 
-  .selection-musiс__id:checked~.selection-musiс__list {
+  .selection-musiс__id:checked ~ .selection-musiс__list {
     display: none;
     margin-top: 20px;
   }

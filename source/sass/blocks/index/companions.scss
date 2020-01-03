@@ -33,8 +33,7 @@
   width: 76%;
   padding-left: 8px;
   margin-bottom: 42px;
-  z-index: 1
-  ;
+  z-index: 1;
 }
 
 .companions h2 {
@@ -201,7 +200,7 @@
     padding-bottom: 56px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
-    background-image: url(../img/smolov-back-desktop@1x.png), url(../img/rogovaya-back-desktop@1x.png);
+    background-image: url("../img/smolov-back-desktop@1x.png"), url("../img/rogovaya-back-desktop@1x.png");
     background-position: top 430px left 56px, top 65px right 25px;
   }
 

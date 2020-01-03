@@ -20,7 +20,6 @@
   border-bottom-right-radius: 20px;
   background-color: #161c35;
   margin: 0;
-
 }
 
 .explorer__idea {
@@ -172,19 +171,19 @@
   background-color: white;
 }
 
-.explorer__bus:checked~.explorer__transport--type .explorer__bus--favorite {
+.explorer__bus:checked ~ .explorer__transport--type .explorer__bus--favorite {
   opacity: 0.2;
 }
 
-.explorer__air:checked~.explorer__transport--type .explorer__air--favorite {
+.explorer__air:checked ~ .explorer__transport--type .explorer__air--favorite {
   opacity: 0.2;
 }
 
-.explorer__cycle:checked~.explorer__transport--type .explorer__cycle--favorite svg {
+.explorer__cycle:checked ~ .explorer__transport--type .explorer__cycle--favorite svg {
   opacity: 0.2;
 }
 
-.explorer__walk:checked~.explorer__transport--type .explorer__walk--favorite {
+.explorer__walk:checked ~ .explorer__transport--type .explorer__walk--favorite {
   opacity: 0.2;
 }
 
@@ -403,7 +402,6 @@
 
 li.explorer-path--current {
   background-color: #1d2e5b;
-
 }
 
 .explorer-add__score {
@@ -426,7 +424,6 @@ li.explorer-path--current {
   width: 14px;
   height: 14px;
   border: none;
-  background-color: inherit;
   background-image: url("../img/qty-minus-mobile.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -439,7 +436,6 @@ li.explorer-path--current {
   height: 14px;
   font-size: 0;
   border: none;
-  background-color: inherit;
   background-image: url("../img/qty-plus-mobile.svg");
   background-repeat: no-repeat;
   background-color: inherit;
@@ -462,7 +458,7 @@ li.explorer-path--current {
   border: 1px solid #cbced9;
 }
 
-.explorer-add__score--children--check:checked+.explorer-add__score--children::before {
+.explorer-add__score--children--check:checked + .explorer-add__score--children::before {
   background-image: url("../img/tick.svg");
   background-size: 50%;
   background-position: center;
@@ -505,6 +501,7 @@ li.explorer-path--current {
 
 .explorer-step__first--container .form-button {
   width: 92%;
+  margin-bottom: 10px;
 }
 
 .explorer--count {
@@ -565,27 +562,27 @@ li.explorer-path--current {
   color: #ff5c23;
 }
 
-.explorer-data--0331:checked~.explorer-data__day .explorer-data__choise--0331 {
+.explorer-data--0331:checked ~ .explorer-data__day .explorer-data__choise--0331 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0329:checked~.explorer-data__day .explorer-data__choise--0329 {
+.explorer-data--0329:checked ~ .explorer-data__day .explorer-data__choise--0329 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0328:checked~.explorer-data__day .explorer-data__choise--0328 {
+.explorer-data--0328:checked ~ .explorer-data__day .explorer-data__choise--0328 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0327:checked~.explorer-data__day .explorer-data__choise--0327 {
+.explorer-data--0327:checked ~ .explorer-data__day .explorer-data__choise--0327 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0326:checked~.explorer-data__day .explorer-data__choise--0326 {
+.explorer-data--0326:checked ~ .explorer-data__day .explorer-data__choise--0326 {
   background-color: #1d2e5b;
   color: white;
 }
@@ -685,10 +682,6 @@ li.explorer-path--current {
   border-radius: 20px;
   text-transform: uppercase;
   background-color: inherit;
-}
-
-.explorer-step__first--container .form-button {
-  margin-bottom: 10px;
 }
 
 .explorer-country__other {
@@ -988,9 +981,6 @@ li.explorer-path--current {
 
   .explorer-plan h2 {
     font-size: 36px;
-  }
-
-  .explorer-plan h2 {
     margin-left: 9.6%;
     margin-bottom: 48px;
     letter-spacing: -2.5px;
@@ -1031,7 +1021,6 @@ li.explorer-path--current {
   .explorer-plan__country a {
     font-size: 20px;
     margin-top: 0;
-
   }
 
   .explorer-step__first--container,
@@ -1253,9 +1242,13 @@ li.explorer-path--current {
   }
 
   .explorer-step__second--country {
+    width: 369px;
     height: 70px;
     margin-right: 53px;
     // узнать как делать эти фигурки и изменить маржин
+    border-radius: 4px;
+    padding-left: 23px;
+    padding-right: 23px;
   }
 
   .explorer-step__second--choise p {
@@ -1295,14 +1288,6 @@ li.explorer-path--current {
     margin-bottom: 16px;
   }
 
-  .explorer-step__second--country {
-    width: 369px;
-    height: 70px;
-    border-radius: 4px;
-    padding-left: 23px;
-    padding-right: 23px;
-  }
-
   .explorer-step__second--add {
     width: 369px;
     height: 70px;
@@ -1312,7 +1297,7 @@ li.explorer-path--current {
   }
 
   .explorer-step__second--add::after {
-    content: "+";
+    content: " + ";
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -1405,6 +1390,7 @@ li.explorer-path--current {
     position: relative;
     padding-top: 73px;
     justify-content: space-evenly;
+    padding-bottom: 26px;
   }
 
   .page-header .explorer__autho {
@@ -1415,7 +1401,6 @@ li.explorer-path--current {
     align-items: center;
     font-size: 60px;
     margin-left: 4%;
-
   }
 
   .explorer-foto {
@@ -1479,6 +1464,15 @@ li.explorer-path--current {
   .explorer-plan {
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
+    padding-left: 4%;
+  }
+
+  .explorer-plan h2 {
+    margin-left: 5.6%;
+  }
+
+  .explorer-plan__country {
+    width: 1260px;
   }
 
   .explorer__tegs textarea {
@@ -1490,7 +1484,7 @@ li.explorer-path--current {
   }
 
   .explorer-plan__country b {
-    width: auto;
+    width: 45%;
     font-size: 24px;
     order: 0;
     margin: 0;
@@ -1498,24 +1492,29 @@ li.explorer-path--current {
 
   .explorer-plan__country li::before {
     align-self: center;
+    margin-right: 33px;
   }
 
   .explorer-plan__country p {
+    width: 184px;
     font-size: 20px;
   }
 
   .explorer-plan__country a {
     font-size: 20px;
+    margin-left: auto;
   }
 
   .explorer-plan__country li {
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: stretch;
     align-items: center;
     min-height: 97px;
     padding: 0;
     margin-bottom: 15px;
+    padding-left: 50px;
+    padding-right: 32px;
   }
 
   .explorer-add--wrapper {
@@ -1595,7 +1594,6 @@ li.explorer-path--current {
     margin-right: 38px;
     border-radius: 50%;
     flex-shrink: 0;
-
   }
 
   li.explorer-path--current {
@@ -1612,7 +1610,6 @@ li.explorer-path--current {
     order: 4;
     font-size: 20px;
     text-transform: uppercase;
-    margin-bottom: 0;
     align-self: center;
     margin-bottom: 0;
   }
@@ -1648,7 +1645,7 @@ li.explorer-path--current {
   }
 
   .explorer--count {
-    font-size: 36px;
+    font-size: 20px;
   }
 
   .explorer__calendar {
@@ -1804,7 +1801,6 @@ li.explorer-path--current {
 
   .explorer-step__three--container {
     width: 77%;
-    padding-top: 50px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;

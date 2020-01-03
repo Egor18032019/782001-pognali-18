@@ -164,6 +164,8 @@
 
   .page-header__main {
     width: 67%;
+    min-height: 52px;
+    // если изменил высоту - проверь потом на каталоге
   }
 
   .page-header__slogan {

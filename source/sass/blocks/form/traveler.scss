@@ -37,6 +37,21 @@
   padding-top: 15px;
 }
 
+.traveler__lvl--svg {
+  position: absolute;
+  flex-shrink: 0;
+  top: 0;
+  left: 0;
+}
+
+.traveler__item--circle {
+  fill: #ffffff;
+  fill-opacity: 0.1;
+  stroke-width: 3px;
+  stroke: #ff8d30;
+}
+
+
 .traveler__item img {
   width: 70px;
   height: 70px;
@@ -48,7 +63,7 @@
   @include fontBS (20px, bold, #1d2e5b);
   position: relative;
   width: 40%;
-  min-height: 37px;
+  height: 37px;
   display: flex;
   align-self: baseline;
   margin: 0;
@@ -190,12 +205,30 @@
 }
 
 .traveler__lvl--wrapp {
+  position: relative;
   border-radius: 50%;
-  border: 3px solid #ff8d30;
   width: 45px;
   height: 45px;
   vertical-align: middle;
   text-align: center;
+}
+
+.traveler-firsova .traveler__item--circle {
+  stroke-dasharray: 210% 5%;
+}
+
+.traveler-demin .traveler__item--circle {
+  stroke-dasharray: 162% 49%;
+}
+
+.traveler-smolov .traveler__item--circle {
+  stroke-dashoffset: 71%;
+  stroke-dasharray: 55% 238%;
+}
+
+.traveler-rogovay .traveler__item--circle {
+  stroke-dashoffset: 22%;
+  stroke-dasharray: 110% 131%;
 }
 
 .traveler__lvl {
@@ -256,7 +289,7 @@
 
 .traveler-wrapper__slider {
   width: 55%;
-  min-height: 40px;
+  height: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -303,7 +336,7 @@
   .traveler__item .traveler__call {
     width: 23%;
     margin-left: 234px;
-    min-height: 50px;
+    height: 50px;
     align-self: baseline;
     margin-right: 0;
     margin-top: 0;
@@ -498,6 +531,8 @@
     height: 285px;
     left: 0;
     top: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
   }
 
   .traveler__list .traveler__item {
@@ -531,15 +566,19 @@
 
   .traveler__item .traveler__tegs {
     position: static;
-    width: 24%;
+    width: 31%;
     margin-left: 328px;
     margin-right: auto;
     margin-bottom: 47px;
     order: 1;
   }
 
+  .traveler__tegs li {
+    margin-right: 10px;
+  }
+
   .traveler__wish {
-    width: 25%;
+    width: auto;
     position: absolute;
     right: 43px;
     top: 48px;
@@ -554,17 +593,19 @@
   .traveler__transport {
     position: initial;
     width: 140px;
+    height: 55px;
     order: 5;
     margin: 0;
     flex-direction: row;
-    margin-left: 71px;
+    margin-left: 75px;
   }
 
-
-  .traveler__list--transport {
+  .traveler__transport .traveler__list--transport {
+    width: 100%;
+    justify-content: space-between;
     flex-direction: row;
     align-items: baseline;
-    align-self: flex-start;
+    align-self: center;
   }
 
   .traveler__item .traveler__call {

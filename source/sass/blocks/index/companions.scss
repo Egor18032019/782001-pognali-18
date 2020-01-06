@@ -146,6 +146,8 @@
 .companions__lvl--svg {
   position: absolute;
   flex-shrink: 0;
+  top: 0;
+  left: 0;
 }
 
 .companion__item--circle {
@@ -194,6 +196,7 @@
     width: 81%;
     padding-top: 52px;
     padding-left: 0;
+    margin-bottom: 45px;
   }
 
   .companions-wrapper {
@@ -241,12 +244,14 @@
   }
 
   .companions__personal .companions__teg {
-    margin-bottom: 23px;
+    margin-bottom: 31px;
   }
 
 
   .companions__personal .companions__transport {
     margin-bottom: 23px;
+    justify-content: space-between;
+    width: 45%;
   }
 
   .companions__personal p {

@@ -13,7 +13,7 @@
 .explorer-slogan {
   display: flex;
   align-items: center;
-  min-height: 85px;
+  height: 85px;
   padding-top: 20px;
   padding-left: 22px;
   border-bottom-left-radius: 20px;
@@ -74,6 +74,7 @@
 .explorer-lvl {
   width: 100px;
   height: 100px;
+  position: relative;
   border-radius: 50%;
   margin-bottom: 19px;
   text-align: center;
@@ -86,6 +87,8 @@
 
 .explorer__lvl--svg {
   position: absolute;
+  top: 0;
+  left: 0;
   flex-shrink: 0;
   width: 100px;
   height: 100px;
@@ -121,7 +124,7 @@
 
 .explorer__tegs {
   width: 85%;
-  min-height: 97px;
+  height: 97px;
   border-radius: 10px;
   margin-bottom: 16px;
   padding: 0;
@@ -212,7 +215,7 @@
 }
 
 .explorer-plan__country li {
-  min-height: 154px;
+  height: 154px;
   margin-bottom: 8px;
   padding-left: 24px;
   padding-top: 20px;
@@ -594,7 +597,7 @@ li.explorer-path--current {
   align-items: center;
   // justify-content: center;
   margin-bottom: 21px;
-  min-height: 42px;
+  height: 42px;
   text-transform: uppercase;
   position: relative;
 }
@@ -662,7 +665,7 @@ li.explorer-path--current {
 
 .explorer-step__second--flag li:first-child {
   width: 100%;
-  min-height: 42px;
+  height: 42px;
   background-color: blueviolet;
   background-repeat: no-repeat;
   background-position: center;
@@ -890,7 +893,7 @@ li.explorer-path--current {
 
 @media (min-width: $tablet-width) {
   .explorer-slogan {
-    min-height: 252px;
+    height: 252px;
     padding-left: 70px;
     padding-top: 46px;
     border-bottom-left-radius: 60px;
@@ -971,7 +974,7 @@ li.explorer-path--current {
 
   .explorer__tegs {
     width: 80%;
-    min-height: 94px;
+    height: 94px;
   }
 
   .explorer__tegs textarea {
@@ -1152,7 +1155,7 @@ li.explorer-path--current {
     padding-left: 25px;
     padding-right: 25px;
     margin-bottom: 25px;
-    min-height: 70px;
+    height: 70px;
   }
 
   .explorer-add__score input {
@@ -1418,7 +1421,7 @@ li.explorer-path--current {
     bottom: 306px;
     right: 391px;
     width: 94px;
-    min-height: 94px;
+    height: 94px;
     margin: 0;
   }
 
@@ -1510,7 +1513,7 @@ li.explorer-path--current {
     display: flex;
     justify-content: stretch;
     align-items: center;
-    min-height: 97px;
+    height: 97px;
     padding: 0;
     margin-bottom: 15px;
     padding-left: 50px;
@@ -1747,7 +1750,7 @@ li.explorer-path--current {
     width: 10px;
     height: 14px;
     display: inline-block;
-    background-image: url("../img/triangle-arrow-left.svg");
+    background-image: url("../img/triangle-arrow-left.");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -1763,7 +1766,7 @@ li.explorer-path--current {
 
   .explorer-step__second--choise {
     width: 100%;
-    min-height: 70px;
+    height: 70px;
   }
 
   .explorer-step__second--choise-wrapper {

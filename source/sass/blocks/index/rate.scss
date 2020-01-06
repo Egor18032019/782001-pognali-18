@@ -2,7 +2,7 @@
   @include center;
   @include margin-auto;
   background-color: #192144;
-  // min-height: 480px;
+  // height 480px;
 }
 
 .rate-wrapper {
@@ -12,7 +12,7 @@
   flex-wrap: wrap;
   background-color: #edeff6;
   padding-top: 32px;
-  // min-height: 480px;
+  // height 480px;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
   overflow: hidden;
@@ -41,7 +41,7 @@
   align-items: center;
   border-top: 1px solid #e2e5f2;
   border-bottom: 1px solid #e2e5f2;
-  min-height: 65px;
+  height: 65px;
   padding-top: 3px;
   padding-right: 4px;
   counter-increment: white-left-rate;
@@ -57,12 +57,14 @@
 }
 
 .rate__list--text {
+  width: 70%;
   margin: 0;
+  margin-right: auto;
 }
 
-.rate__list--text span {
-  float: left;
-}
+// .rate__list--text span {
+//   float: left;
+// }
 
 .rate-wrapper .rate__button::after {
   display: none;
@@ -97,7 +99,7 @@
   @include fontBS(16px, bold, #192144);
   width: 100%;
   letter-spacing: -1px;
-  background-color: inherit;
+  background-color: #edeff6;
   text-align: center;
   border: none;
   margin-bottom: 16px;

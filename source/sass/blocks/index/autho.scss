@@ -4,7 +4,6 @@
   align-items: center;
 }
 
-
 .autho-icon {
   display: inline-block;
   width: 40px;
@@ -16,6 +15,7 @@
 
 .autho__button {
   @include fontBS(17px, bold, #161c35);
+  text-transform: uppercase;
   width: 189px;
   height: 40px;
   border-radius: 20px;

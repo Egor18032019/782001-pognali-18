@@ -239,6 +239,11 @@
     padding-bottom: 160px;
   }
 
+  .trend-wrapper::before {
+    left: 62px;
+    top: 94px;
+  }
+
   .trend-slogan {
     width: 35%;
     align-self: flex-start;

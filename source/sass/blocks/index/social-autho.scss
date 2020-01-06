@@ -1,9 +1,11 @@
 .social-autho__list {
+  @include reset-list;
   display: flex;
   justify-content: center;
   font-size: 0;
   padding: 0;
   margin-bottom: 60px;
+  opacity: 0.5;
 }
 
 .social-autho__link {
@@ -31,4 +33,12 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 18px;
+}
+
+@media (min-width: $tablet-width) {
+  .social-autho__link {
+    width: 24px;
+    height: 24px;
+    opacity: 0.5;
+  }
 }

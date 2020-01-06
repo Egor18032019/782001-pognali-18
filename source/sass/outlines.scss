@@ -155,6 +155,10 @@
   background-repeat: no-repeat;
 }
 
+.form .autho {
+  display: none;
+}
+
 .form footer {
   background-color: #edeff6;
 }
@@ -184,6 +188,14 @@
 }
 
 @media (min-width: $tablet-width) {
+  .form .autho {
+    display: flex;
+  }
+
+  .form .page-header {
+    background-color: #161c34;
+  }
+
   section .index-button {
     min-height: 81px;
     width: 80%;

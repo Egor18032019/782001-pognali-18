@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #192144;
+  background-color: #161c36;
   color: white;
 }
 
@@ -99,6 +99,7 @@
 @media (min-width: $tablet-width) {
   .page-header {
     flex-direction: row-reverse;
+    background-color: #192144;
   }
 
   .page-header__main {
@@ -166,6 +167,11 @@
 // --------------------------для пк ------------------------
 
 @media (min-width: $desktop-width) {
+  .page-header {
+    background-color: #161c34;
+    justify-content: space-evenly;
+  }
+
   .page-header__wrapper {
     display: block;
     width: auto;
@@ -220,10 +226,6 @@
 
   .page-header__list li {
     margin-right: 20px;
-  }
-
-  .page-header {
-    justify-content: space-evenly;
   }
 
   .page-header__slogan h2 {

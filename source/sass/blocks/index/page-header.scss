@@ -74,9 +74,10 @@
   margin: 0 auto;
   background-image: url("../img/traveller-illustration-mobile@1x.png"), url("../img/globe-back-mobile@1x.jpg");
   background-position: bottom right 49px, bottom -99px center;
-  background-size: 192px 256px, auto 569px;
+  background-size: 192px 256px, cover;
   // 320px 569px было так решил изменить// не могу понять почему auto не работает
   background-repeat: no-repeat, no-repeat;
+  background-color: #161c36;
 }
 
 .page-header .explorer__autho {

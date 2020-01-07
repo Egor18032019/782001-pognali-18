@@ -62,7 +62,7 @@
   appearance: none;
 }
 
-.check-input:checked+.check::before {
+.check-input:checked + .check::before {
   background-image: url("../img/tick.svg");
   background-size: 50%;
   background-position: center;
@@ -239,7 +239,6 @@
 }
 
 @media (min-width: $tablet-width) {
-
   .catalog .autho,
   .form .autho {
     display: flex;

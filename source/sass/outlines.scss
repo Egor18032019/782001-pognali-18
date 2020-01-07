@@ -155,9 +155,16 @@
   background-repeat: no-repeat;
 }
 
-.form .autho {
+.catalog,
+.catalog .footer {
+  background-color: #d4d9eb;
+}
+
+.form .autho,
+.catalog .autho {
   display: none;
 }
+
 
 .form footer {
   background-color: #edeff6;
@@ -188,6 +195,7 @@
 }
 
 @media (min-width: $tablet-width) {
+  .catalog .autho,
   .form .autho {
     display: flex;
   }

@@ -8,11 +8,11 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="catalog">
 
   <header class="page-header">
     <div class="page-header__main">
-      <a class="page-header__logo">
+      <a href="index.html" class="page-header__logo">
         Погнали?
       </a>
       <nav class="page-header__nav">
@@ -88,7 +88,7 @@
           <input type="checkbox" name="air" id="air" class="explorer__air">
           <input type="checkbox" id="bus" name="bus" class="explorer__bus">
           <ul class="explorer__transport--type transport">
-            <li class="explorer__air--favorite">
+            <li class="explorer__air--favorite transport--favorite">
               <label for="air">Самолет
               <?xml version="1.0" encoding="utf-8"?>
               <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -180,150 +180,150 @@ z" />
     </section>
 
 
-    <section class="explorer-add">
-      <div class="explorer-add--wrapper">
-        <h2 id="step__first">Добавить план:</h2>
+    <section class="planing-add">
+      <div class="planing-add--wrapper">
+        <h2 id="planing__first">Добавить план:</h2>
         <!-- слайдер это переключательшагов -пока забить -->
-        <ul class="explorer-path">
-          <li class="explorer-path--current"><a href="#step__first">Даты</a></li>
+        <ul class="planing-path">
+          <li class="planing-path--current"><a href="#step__first">Даты</a></li>
           <li><a href="#step__second">Маршрут</a></li>
           <li><a href="#step__three">Развлечения</a></li>
         </ul>
-        <form action="https://echo.htmlacademy.ru" method="GET" class="explorer-step">
+        <form action="https://echo.htmlacademy.ru" method="GET" class="planing-step">
 
-          <fieldset class="explorer-step__first">
-            <div class="explorer-step__first--container">
-              <div class="explorer-date">
+          <fieldset class="planing-step__first">
+            <div class="planing-step__first--container">
+              <div class="planing-date">
                 <h3 id="step__first">Шаг 1.</h3>
-                <span class="step__first--date">Даты пребывания</span>
-                <p class="explorer-date__btn explorer-step__text">Укажите предпочтительное количество попутчиков,
+                <span class="planing__first--date">Даты пребывания</span>
+                <p class="planing-date__btn planing-step__text">Укажите предпочтительное количество попутчиков,
                   которых
                   вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
 
-                <div class="explorer-add__base">
-                  <b class="explorer-add__choise">Ищу попутчиков: </b>
-                  <span class="explorer-add__choise--man">Чел.</span>
-                  <div class="explorer-add__score">
-                    <input type="button" class="explorer--minus" value="-">
-                    <p class="explorer--count">2</p>
-                    <input type="button" class="explorer--plus" value="+">
+                <div class="planing-add__base">
+                  <b class="planing-add__choise">Ищу попутчиков: </b>
+                  <span class="planing-add__choise--man">Чел.</span>
+                  <div class="planing-add__score">
+                    <input type="button" class="planing--minus" value="-">
+                    <p class="planing--count">2</p>
+                    <input type="button" class="planing--plus" value="+">
                   </div>
-                  <b class="explorer-add__choise explorer-add__choise--time">Длительность:</b>
-                  <span class="explorer-add__choise--day">Дн.</span>
-                  <div class="explorer-add__score explorer-add__score--day">
-                    <input type="button" class="explorer--minus" value="-">
-                    <p class="explorer--count">2</p>
-                    <input type="button" class="explorer--plus" value="+">
+                  <b class="planing-add__choise planing-add__choise--time">Длительность:</b>
+                  <span class="planing-add__choise--day">Дн.</span>
+                  <div class="planing-add__score planing-add__score--day">
+                    <input type="button" class="planing--minus" value="-">
+                    <p class="planing--count">2</p>
+                    <input type="button" class="planing--plus" value="+">
                   </div>
                   <input type="checkbox" name="children" id="children"
-                    class="explorer-add__score--children--check visually-hidden">
-                  <label for="children" class="explorer-add__score--children">
+                    class="planing-add__score--children--check visually-hidden">
+                  <label for="children" class="planing-add__score--children">
                     Можно с детьми
                   </label>
                 </div>
               </div>
-              <div class="explorer__calendar">
-                <div class="explorer__month">
-                  <button type="button" class="explorer__month--arrow explorer__month--left">
+              <div class="planing__calendar">
+                <div class="planing__month">
+                  <button type="button" class="planing__month--arrow planing__month--left">
                     предыдущий месяц </button>
-                  <p class="explorer__month--count">Март 2019</p>
-                  <button type="button" class="explorer__month--right explorer__month--arrow">следующий месяц</button>
+                  <p class="planing__month--count">Март 2019</p>
+                  <button type="button" class="planing__month--right planing__month--arrow">следующий месяц</button>
                 </div>
                 <!-- обсудить как делать календарь  = месяцы -->
-                <input type="checkbox" name="031" id="031" class="explorer-data--031">
-                <input type="checkbox" name="032" id="032" class="explorer-data--032">
-                <input type="checkbox" name="033" id="033" class="explorer-data--033">
-                <input type="checkbox" name="034" id="034" class="explorer-data--034">
-                <input type="checkbox" name="035" id="035" class="explorer-data--035">
-                <input type="checkbox" name="036" id="036" class="explorer-data--036">
-                <input type="checkbox" name="037" id="037" class="explorer-data--037">
-                <input type="checkbox" name="038" id="038" class="explorer-data--038">
-                <input type="checkbox" name="039" id="039" class="explorer-data--039">
-                <input type="checkbox" name="0326" id="0326" class="explorer-data--0326" checked>
-                <input type="checkbox" name="0327" id="0327" class="explorer-data--0327" checked>
-                <input type="checkbox" name="0328" id="0328" class="explorer-data--0328" checked>
-                <input type="checkbox" name="0329" id="0329" class="explorer-data--0329" checked>
-                <input type="checkbox" name="0331" id="0331" class="explorer-data--0331">
-                <div class="explorer-data__day">
+                <input type="checkbox" name="031" id="031" class="planing-data--031">
+                <input type="checkbox" name="032" id="032" class="planing-data--032">
+                <input type="checkbox" name="033" id="033" class="planing-data--033">
+                <input type="checkbox" name="034" id="034" class="planing-data--034">
+                <input type="checkbox" name="035" id="035" class="planing-data--035">
+                <input type="checkbox" name="036" id="036" class="planing-data--036">
+                <input type="checkbox" name="037" id="037" class="planing-data--037">
+                <input type="checkbox" name="038" id="038" class="planing-data--038">
+                <input type="checkbox" name="039" id="039" class="planing-data--039">
+                <input type="checkbox" name="0326" id="0326" class="planing-data--0326" checked>
+                <input type="checkbox" name="0327" id="0327" class="planing-data--0327" checked>
+                <input type="checkbox" name="0328" id="0328" class="planing-data--0328" checked>
+                <input type="checkbox" name="0329" id="0329" class="planing-data--0329" checked>
+                <input type="checkbox" name="0331" id="0331" class="planing-data--0331">
+                <div class="planing-data__day">
                   <!-- чем делать дни неделе ? посто кнопками ? сылками ? -->
                   <button>П</button>
                   <button>В</button>
                   <button>С</button>
                   <button>Ч</button>
                   <button>П</button>
-                  <button class="explorer__calendar--weekends">С</button>
-                  <button class="explorer__calendar--weekends">В</button>
-                  <label class="explorer-data__choise--0223" for="0223">23</label>
-                  <label class="explorer-data__choise--0224" for="0224">24</label>
-                  <label class="explorer-data__choise--0225" for="0225">25</label>
-                  <label class="explorer-data__choise--0226" for="0226">26</label>
-                  <label class="explorer-data__choise--0227" for="0227">27</label>
-                  <label class="explorer-data__choise--0228" for="0228">28</label>
-                  <label class="explorer-data__choise--031" for="031">1</label>
-                  <label class="explorer-data__choise--032" for="032">2</label>
-                  <label class="explorer-data__choise--033" for="033">3</label>
-                  <label class="explorer-data__choise--034" for="034">4</label>
-                  <label class="explorer-data__choise--035" for="035">5</label>
-                  <label class="explorer-data__choise--036" for="036">6</label>
-                  <label class="explorer-data__choise--037" for="037">7</label>
-                  <label class="explorer-data__choise--038" for="038">8</label>
-                  <label class="explorer-data__choise--039" for="039">9</label>
-                  <label class="explorer-data__choise--1" for="1">10</label>
-                  <label class="explorer-data__choise--1" for="1">11</label>
-                  <label class="explorer-data__choise--1" for="1">12</label>
-                  <label class="explorer-data__choise--1" for="1">13</label>
-                  <label class="explorer-data__choise--1" for="1">14</label>
-                  <label class="explorer-data__choise--1" for="1">15</label>
-                  <label class="explorer-data__choise--1" for="1">16</label>
-                  <label class="explorer-data__choise--1" for="1">17</label>
-                  <label class="explorer-data__choise--1" for="1">18</label>
-                  <label class="explorer-data__choise--1" for="1">19</label>
-                  <label class="explorer-data__choise--1" for="1">20</label>
-                  <label class="explorer-data__choise--1" for="1">21</label>
-                  <label class="explorer-data__choise--1" for="1">22</label>
-                  <label class="explorer-data__choise--1" for="1">23</label>
-                  <label class="explorer-data__choise--1" for="1">24</label>
-                  <label class="explorer-data__choise--1" for="1">25</label>
-                  <label class="explorer-data__choise--0326 explorer-data__choise--in" for="0326">
+                  <button class="planing__calendar--weekends">С</button>
+                  <button class="planing__calendar--weekends">В</button>
+                  <label class="planing-data__choise--0223" for="0223">23</label>
+                  <label class="planing-data__choise--0224" for="0224">24</label>
+                  <label class="planing-data__choise--0225" for="0225">25</label>
+                  <label class="planing-data__choise--0226" for="0226">26</label>
+                  <label class="planing-data__choise--0227" for="0227">27</label>
+                  <label class="planing-data__choise--0228" for="0228">28</label>
+                  <label class="planing-data__choise--031" for="031">1</label>
+                  <label class="planing-data__choise--032" for="032">2</label>
+                  <label class="planing-data__choise--033" for="033">3</label>
+                  <label class="planing-data__choise--034" for="034">4</label>
+                  <label class="planing-data__choise--035" for="035">5</label>
+                  <label class="planing-data__choise--036" for="036">6</label>
+                  <label class="planing-data__choise--037" for="037">7</label>
+                  <label class="planing-data__choise--038" for="038">8</label>
+                  <label class="planing-data__choise--039" for="039">9</label>
+                  <label class="planing-data__choise--1" for="1">10</label>
+                  <label class="planing-data__choise--1" for="1">11</label>
+                  <label class="planing-data__choise--1" for="1">12</label>
+                  <label class="planing-data__choise--1" for="1">13</label>
+                  <label class="planing-data__choise--1" for="1">14</label>
+                  <label class="planing-data__choise--1" for="1">15</label>
+                  <label class="planing-data__choise--1" for="1">16</label>
+                  <label class="planing-data__choise--1" for="1">17</label>
+                  <label class="planing-data__choise--1" for="1">18</label>
+                  <label class="planing-data__choise--1" for="1">19</label>
+                  <label class="planing-data__choise--1" for="1">20</label>
+                  <label class="planing-data__choise--1" for="1">21</label>
+                  <label class="planing-data__choise--1" for="1">22</label>
+                  <label class="planing-data__choise--1" for="1">23</label>
+                  <label class="planing-data__choise--1" for="1">24</label>
+                  <label class="planing-data__choise--1" for="1">25</label>
+                  <label class="planing-data__choise--0326 planing-data__choise--in" for="0326">
                     <p>26</p>
                   </label>
-                  <label class="explorer-data__choise--0327" for="0327">27</label>
-                  <label class="explorer-data__choise--0328" for="0328">
+                  <label class="planing-data__choise--0327" for="0327">27</label>
+                  <label class="planing-data__choise--0328" for="0328">
                     <p>28</p>
                   </label>
-                  <label class="explorer-data__choise--0329 explorer-data__choise--out" for="0329">29</label>
-                  <label class="explorer-data__choise--0330" for="0330">29</label>
-                  <label class="explorer-data__choise--0331" for="0331">31</label>
-                  <label class="explorer-data__choise--041" for="041">1</label>
-                  <label class="explorer-data__choise--042" for="042">2</label>
-                  <label class="explorer-data__choise--043" for="043">4</label>
-                  <label class="explorer-data__choise--044" for="044">4</label>
-                  <label class="explorer-data__choise--045" for="045">5</label>
+                  <label class="planing-data__choise--0329 planing-data__choise--out" for="0329">29</label>
+                  <label class="planing-data__choise--0330" for="0330">29</label>
+                  <label class="planing-data__choise--0331" for="0331">31</label>
+                  <label class="planing-data__choise--041" for="041">1</label>
+                  <label class="planing-data__choise--042" for="042">2</label>
+                  <label class="planing-data__choise--043" for="043">4</label>
+                  <label class="planing-data__choise--044" for="044">4</label>
+                  <label class="planing-data__choise--045" for="045">5</label>
                 </div>
               </div>
               <a href="#step__second" class="form-button">Следующий шаг</a>
             </div>
           </fieldset>
 
-          <fieldset class="explorer-step__second">
-            <div class="explorer-step__second--container">
+          <fieldset class="planing-step__second">
+            <div class="planing-step__second--container">
               <h3 id="step__second">Шаг 2.</h3>
-              <span class="step__second--route"> Маршрут</span>
-              <p class="explorer-route__btn explorer-step__text">Укажите страны, которые вы хотели по посетить.
+              <span class="planing__second--route"> Маршрут</span>
+              <p class="planing-route__btn planing-step__text">Укажите страны, которые вы хотели по посетить.
                 Это может быть одна или сразу несколько.</p>
               <!-- черный кружочек и кружочек с крестиком аболютное прозиционирование-->
 
-              <div class="explorer-step__second--choise-wrapper">
+              <div class="planing-step__second--choise-wrapper">
 
-                <div class="explorer-step__second--choise select">
-                  <!-- класс для показа  .explorer-step__second--choise--active  -->
-                  <div class="explorer-step__second--country header">
+                <div class="planing-step__second--choise select">
+                  <!-- класс для показа  .planing-step__second--choise--active  -->
+                  <div class="planing-step__second--country header">
                     <p class="select__current"> Босния и Герцеговина</p>
                   </div>
-                  <div class="explorer-country__other body">
-                    <ul class="explorer-country__selection">
-                      <li class="explorer-country__selection--items"><button type="button">а</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--1">
+                  <div class="planing-country__other body">
+                    <ul class="planing-country__selection">
+                      <li class="planing-country__selection--items"><button type="button">а</button>
+                        <ul class="planing-country__chosen planing-country__chosen--1">
                           <li><a href=" country/europe/afganistan.html"> Афганистан</a></li>
                           <!-- обсудить как делать и сделать осталные по образцу -->
                           <li><a href="#">Албания</a></li>
@@ -336,8 +336,8 @@ z" />
                           <li><a href="#">Азербайджан</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">б</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--2">
+                      <li class="planing-country__selection--items"><button type="button">б</button>
+                        <ul class="planing-country__chosen planing-country__chosen--2">
                           <li><a href="#">Багамские Острова </a></li>
                           <li><a href="#"> Бангладеш</a></li>
                           <li><a href="#"> Барбадос </a></li>
@@ -369,9 +369,9 @@ z" />
                           <li><a href="#">Бутан</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">в</button>
+                      <li class="planing-country__selection--items"><button type="button">в</button>
                         <!-- расписать список нормально -->
-                        <ul class="explorer-country__chosen explorer-country__chosen--3">
+                        <ul class="planing-country__chosen planing-country__chosen--3">
                           <li><a href="#">Вануату</a></li>
                           <li><a href="#">Великобритания</a></li>
                           <li><a href="#">Венгрия</a></li>
@@ -380,8 +380,8 @@ z" />
                           <li><a href="#">Вьетнам</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">г</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--4">
+                      <li class="planing-country__selection--items"><button type="button">г</button>
+                        <ul class="planing-country__chosen planing-country__chosen--4">
                           <li><a href="#">Габон</a></li>
                           <li><a href="#"> Гаити</a></li>
                           <li><a href="#">Гайана</a></li>
@@ -396,31 +396,31 @@ z" />
                           <li><a href="#">Грузия</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">д</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--5">
+                      <li class="planing-country__selection--items"><button type="button">д</button>
+                        <ul class="planing-country__chosen planing-country__chosen--5">
                           <li><a href="#">Дания</a></li>
                           <li><a href="#"> Джибути</a></li>
                           <li><a href="#">Доминика</a></li>
                           <li><a href="#"> Доминикана</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">e</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--5">
+                      <li class="planing-country__selection--items"><button type="button">e</button>
+                        <ul class="planing-country__chosen planing-country__chosen--5">
                           <li> <a href="#">Египет</a></li>
                         </ul>
                       </li>
-                      <!--  <li class="explorer-country__selection--items"><button type="button">ё</button>  <ul class="explorer-country__chosen explorer-country__chosen--3"></ul>
+                      <!--  <li class="planing-country__selection--items"><button type="button">ё</button>  <ul class="planing-country__chosen planing-country__chosen--3"></ul>
                       </li> -->
-                      <!--  <li class="explorer-country__selection--items"><button type="button">ж</button>  <ul class="explorer-country__chosen explorer-country__chosen--3"></ul>
+                      <!--  <li class="planing-country__selection--items"><button type="button">ж</button>  <ul class="planing-country__chosen planing-country__chosen--3"></ul>
                       </li> -->
-                      <li class="explorer-country__selection--items"><button type="button">з</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--6">
+                      <li class="planing-country__selection--items"><button type="button">з</button>
+                        <ul class="planing-country__chosen planing-country__chosen--6">
                           <li><a href="#">Замбия</a></li>
                           <li><a href="#">Зимбабве</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">и</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--7">
+                      <li class="planing-country__selection--items"><button type="button">и</button>
+                        <ul class="planing-country__chosen planing-country__chosen--7">
                           <li><a href="#"> Израиль </a></li>
                           <li><a href="#">Индия</a></li>
                           <li><a href="#">Индонезия</a></li>
@@ -433,10 +433,10 @@ z" />
                           <li><a href="#">Италия</a></li>
                         </ul>
                       </li>
-                      <!--  <li class="explorer-country__selection--items"><button type="button">й</button>  <ul class="explorer-country__chosen explorer-country__chosen--3"></ul>
+                      <!--  <li class="planing-country__selection--items"><button type="button">й</button>  <ul class="planing-country__chosen planing-country__chosen--3"></ul>
                       </li> -->
-                      <li class="explorer-country__selection--items"><button type="button">к</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--8">
+                      <li class="planing-country__selection--items"><button type="button">к</button>
+                        <ul class="planing-country__chosen planing-country__chosen--8">
                           <li><a href="#">Кабо-Верде</a></li>
                           <li><a href="#">Казахстан</a></li>
                           <li><a href="#">Камбоджа</a></li>
@@ -451,8 +451,8 @@ z" />
                           <li><a href="#">Колумбия</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">л</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--9">
+                      <li class="planing-country__selection--items"><button type="button">л</button>
+                        <ul class="planing-country__chosen planing-country__chosen--9">
                           <li><a href="#">Лаос</a></li>
                           <li><a href="#">Латвия</a></li>
                           <li><a href="#">Лесото</a></li>
@@ -464,8 +464,8 @@ z" />
                           <li><a href="#">Люксембург</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">м</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--10">
+                      <li class="planing-country__selection--items"><button type="button">м</button>
+                        <ul class="planing-country__chosen planing-country__chosen--10">
                           <li><a href="#">Маврикий</a></li>
                           <li><a href="#">Мавритания</a></li>
                           <li><a href="#">Мадагаскар</a></li>
@@ -478,8 +478,8 @@ z" />
                           <!-- <li><a href="#">Мексика</a></li> -->
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">н</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--11">
+                      <li class="planing-country__selection--items"><button type="button">н</button>
+                        <ul class="planing-country__chosen planing-country__chosen--11">
                           <li><a href="#">Намибия</a></li>
                           <li><a href="#"> Науру</a></li>
                           <li><a href="#">Непал</a></li>
@@ -491,14 +491,14 @@ z" />
                           <li><a href="#">Норвегия</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">о</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--12">
+                      <li class="planing-country__selection--items"><button type="button">о</button>
+                        <ul class="planing-country__chosen planing-country__chosen--12">
                           <li><a href="#">ОАЭ</a></li>
                           <li><a href="#">Оман</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">п</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--13">
+                      <li class="planing-country__selection--items"><button type="button">п</button>
+                        <ul class="planing-country__chosen planing-country__chosen--13">
                           <li><a href="#">Пакистан</a></li>
                           <li><a href="#"> Палау
                             </a></li>
@@ -513,15 +513,15 @@ z" />
                           <li><a href="#">Португалия</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">р</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--14">
+                      <li class="planing-country__selection--items"><button type="button">р</button>
+                        <ul class="planing-country__chosen planing-country__chosen--14">
                           <li><a href="#">Руанда</a></li>
                           <li><a href="#"> Румыния</a></li>
                           <li><a href="#">Россия</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">с</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--15">
+                      <li class="planing-country__selection--items"><button type="button">с</button>
+                        <ul class="planing-country__chosen planing-country__chosen--15">
                           <li><a href="#">Сальвадор</a></li>
                           <li><a href="#">Самоа</a></li>
                           <li><a href="#">Сан-Марино</a></li>
@@ -536,8 +536,8 @@ z" />
                           <li><a href="#">США</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">т</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--16">
+                      <li class="planing-country__selection--items"><button type="button">т</button>
+                        <ul class="planing-country__chosen planing-country__chosen--16">
                           <li><a href="#">Таджикистан</a></li>
                           <li><a href="#">Таиланд</a></li>
                           <li><a href="#">Танзания</a></li>
@@ -550,47 +550,47 @@ z" />
                           <li><a href="#">Турция</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">у</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--17">
+                      <li class="planing-country__selection--items"><button type="button">у</button>
+                        <ul class="planing-country__chosen planing-country__chosen--17">
                           <li><a href="#"> Уганда </a></li>
                           <li><a href="#">Узбекистан</a></li>
                           <li><a href="#">Украина</a></li>
                           <li><a href="#"> Уругвай</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">ф</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--18">
+                      <li class="planing-country__selection--items"><button type="button">ф</button>
+                        <ul class="planing-country__chosen planing-country__chosen--18">
                           <li><a href="#">Фиджи</a></li>
                           <li><a href="#">Филиппины</a></li>
                           <li><a href="#">Финляндия</a></li>
                           <li><a href="#">Франция</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">х</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--19">
+                      <li class="planing-country__selection--items"><button type="button">х</button>
+                        <ul class="planing-country__chosen planing-country__chosen--19">
                           <li><a href="#">Хорватия</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                      <li class="planing-country__selection--items planing-country__selection--last"><button
                           type="button">ч</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--20">
+                        <ul class="planing-country__chosen planing-country__chosen--20">
                           <li><a href="#">Чад</a></li>
                           <li><a href="#">Черногория</a></li>
                           <li><a href="#">Чехия</a></li>
                           <li><a href="#"> Чили</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                      <li class="planing-country__selection--items planing-country__selection--last"><button
                           type="button">ш</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--21">
+                        <ul class="planing-country__chosen planing-country__chosen--21">
                           <li><a href="#">Швейцария </a></li>
                           <li><a href="#">Швеция</a></li>
                           <li><a href="#">Шри-Ланка</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                      <li class="planing-country__selection--items planing-country__selection--last"><button
                           type="button">э</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--22">
+                        <ul class="planing-country__chosen planing-country__chosen--22">
                           <li><a href="#">Эквадор</a></li>
                           <li><a href="#">Эритрея</a></li>
                           <li><a href="#">Эсватини</a></li>
@@ -598,36 +598,36 @@ z" />
                           <li><a href="#">Эфиопия</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                      <li class="planing-country__selection--items planing-country__selection--last"><button
                           type="button">ю</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--23">
+                        <ul class="planing-country__chosen planing-country__chosen--23">
                           <li><a href="#">ЮАР</a></li>
                           <li><a href="#">Южный Судан</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                      <li class="planing-country__selection--items planing-country__selection--last"><button
                           type="button">я</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--24">
+                        <ul class="planing-country__chosen planing-country__chosen--24">
                           <li><a href="#">Ямайка </a></li>
                           <li><a href="#">Япония</a></li>
                         </ul>
                       </li>
                     </ul>
                   </div>
-                  <div class="explorer-step__second--choise--flag">
+                  <div class="planing-step__second--choise--flag">
                     <img src="../img/flags-back@1x.png" alt="флаг страны" width="70" height="47">
                     <button class="flag-reset">x</button>
                   </div>
                 </div>
-                <div class="explorer-step__second--choise select">
-                  <!-- класс для показа  .explorer-step__second--choise--active  -->
-                  <div class="explorer-step__second--country header">
+                <div class="planing-step__second--choise select">
+                  <!-- класс для показа  .planing-step__second--choise--active  -->
+                  <div class="planing-step__second--country header">
                     <p class="select__current"> Чехословакия</p>
                   </div>
-                  <div class="explorer-country__other body">
-                    <ul class="explorer-country__selection">
-                      <li class="explorer-country__selection--items"><button type="button">а</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--1">
+                  <div class="planing-country__other body">
+                    <ul class="planing-country__selection">
+                      <li class="planing-country__selection--items"><button type="button">а</button>
+                        <ul class="planing-country__chosen planing-country__chosen--1">
                           <li><a href=" country/europe/afganistan.html"> Афганистан</a></li>
                           <!-- обсудить как делать и сделать осталные по образцу -->
                           <li><a href="#">Албания</a></li>
@@ -640,8 +640,8 @@ z" />
                           <li><a href="#">Азербайджан</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">б</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--2">
+                      <li class="planing-country__selection--items"><button type="button">б</button>
+                        <ul class="planing-country__chosen planing-country__chosen--2">
                           <li><a href="#">Багамские Острова </a></li>
                           <li><a href="#"> Бангладеш</a></li>
                           <li><a href="#"> Барбадос </a></li>
@@ -673,9 +673,9 @@ z" />
                           <li><a href="#">Бутан</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">в</button>
+                      <li class="planing-country__selection--items"><button type="button">в</button>
                         <!-- расписать список нормально -->
-                        <ul class="explorer-country__chosen explorer-country__chosen--3">
+                        <ul class="planing-country__chosen planing-country__chosen--3">
                           <li><a href="#">Вануату</a></li>
                           <li><a href="#">Великобритания</a></li>
                           <li><a href="#">Венгрия</a></li>
@@ -684,8 +684,8 @@ z" />
                           <li><a href="#">Вьетнам</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">г</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--4">
+                      <li class="planing-country__selection--items"><button type="button">г</button>
+                        <ul class="planing-country__chosen planing-country__chosen--4">
                           <li><a href="#">Габон</a></li>
                           <li><a href="#"> Гаити</a></li>
                           <li><a href="#">Гайана</a></li>
@@ -700,31 +700,31 @@ z" />
                           <li><a href="#">Грузия</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">д</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--5">
+                      <li class="planing-country__selection--items"><button type="button">д</button>
+                        <ul class="planing-country__chosen planing-country__chosen--5">
                           <li><a href="#">Дания</a></li>
                           <li><a href="#"> Джибути</a></li>
                           <li><a href="#">Доминика</a></li>
                           <li><a href="#"> Доминикана</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">e</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--5">
+                      <li class="planing-country__selection--items"><button type="button">e</button>
+                        <ul class="planing-country__chosen planing-country__chosen--5">
                           <li> <a href="#">Египет</a></li>
                         </ul>
                       </li>
-                      <!--  <li class="explorer-country__selection--items"><button type="button">ё</button>  <ul class="explorer-country__chosen explorer-country__chosen--3"></ul>
+                      <!--  <li class="planing-country__selection--items"><button type="button">ё</button>  <ul class="planing-country__chosen planing-country__chosen--3"></ul>
                       </li> -->
-                      <!--  <li class="explorer-country__selection--items"><button type="button">ж</button>  <ul class="explorer-country__chosen explorer-country__chosen--3"></ul>
+                      <!--  <li class="planing-country__selection--items"><button type="button">ж</button>  <ul class="planing-country__chosen planing-country__chosen--3"></ul>
                       </li> -->
-                      <li class="explorer-country__selection--items"><button type="button">з</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--6">
+                      <li class="planing-country__selection--items"><button type="button">з</button>
+                        <ul class="planing-country__chosen planing-country__chosen--6">
                           <li><a href="#">Замбия</a></li>
                           <li><a href="#">Зимбабве</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">и</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--7">
+                      <li class="planing-country__selection--items"><button type="button">и</button>
+                        <ul class="planing-country__chosen planing-country__chosen--7">
                           <li><a href="#"> Израиль </a></li>
                           <li><a href="#">Индия</a></li>
                           <li><a href="#">Индонезия</a></li>
@@ -737,10 +737,10 @@ z" />
                           <li><a href="#">Италия</a></li>
                         </ul>
                       </li>
-                      <!--  <li class="explorer-country__selection--items"><button type="button">й</button>  <ul class="explorer-country__chosen explorer-country__chosen--3"></ul>
+                      <!--  <li class="planing-country__selection--items"><button type="button">й</button>  <ul class="planing-country__chosen planing-country__chosen--3"></ul>
                       </li> -->
-                      <li class="explorer-country__selection--items"><button type="button">к</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--8">
+                      <li class="planing-country__selection--items"><button type="button">к</button>
+                        <ul class="planing-country__chosen planing-country__chosen--8">
                           <li><a href="#">Кабо-Верде</a></li>
                           <li><a href="#">Казахстан</a></li>
                           <li><a href="#">Камбоджа</a></li>
@@ -755,8 +755,8 @@ z" />
                           <li><a href="#">Колумбия</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">л</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--9">
+                      <li class="planing-country__selection--items"><button type="button">л</button>
+                        <ul class="planing-country__chosen planing-country__chosen--9">
                           <li><a href="#">Лаос</a></li>
                           <li><a href="#">Латвия</a></li>
                           <li><a href="#">Лесото</a></li>
@@ -768,8 +768,8 @@ z" />
                           <li><a href="#">Люксембург</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">м</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--10">
+                      <li class="planing-country__selection--items"><button type="button">м</button>
+                        <ul class="planing-country__chosen planing-country__chosen--10">
                           <li><a href="#">Маврикий</a></li>
                           <li><a href="#">Мавритания</a></li>
                           <li><a href="#">Мадагаскар</a></li>
@@ -782,8 +782,8 @@ z" />
                           <!-- <li><a href="#">Мексика</a></li> -->
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">н</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--11">
+                      <li class="planing-country__selection--items"><button type="button">н</button>
+                        <ul class="planing-country__chosen planing-country__chosen--11">
                           <li><a href="#">Намибия</a></li>
                           <li><a href="#"> Науру</a></li>
                           <li><a href="#">Непал</a></li>
@@ -795,14 +795,14 @@ z" />
                           <li><a href="#">Норвегия</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">о</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--12">
+                      <li class="planing-country__selection--items"><button type="button">о</button>
+                        <ul class="planing-country__chosen planing-country__chosen--12">
                           <li><a href="#">ОАЭ</a></li>
                           <li><a href="#">Оман</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">п</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--13">
+                      <li class="planing-country__selection--items"><button type="button">п</button>
+                        <ul class="planing-country__chosen planing-country__chosen--13">
                           <li><a href="#">Пакистан</a></li>
                           <li><a href="#"> Палау
                             </a></li>
@@ -817,15 +817,15 @@ z" />
                           <li><a href="#">Португалия</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">р</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--14">
+                      <li class="planing-country__selection--items"><button type="button">р</button>
+                        <ul class="planing-country__chosen planing-country__chosen--14">
                           <li><a href="#">Руанда</a></li>
                           <li><a href="#"> Румыния</a></li>
                           <li><a href="#">Россия</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">с</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--15">
+                      <li class="planing-country__selection--items"><button type="button">с</button>
+                        <ul class="planing-country__chosen planing-country__chosen--15">
                           <li><a href="#">Сальвадор</a></li>
                           <li><a href="#">Самоа</a></li>
                           <li><a href="#">Сан-Марино</a></li>
@@ -840,8 +840,8 @@ z" />
                           <li><a href="#">США</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">т</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--16">
+                      <li class="planing-country__selection--items"><button type="button">т</button>
+                        <ul class="planing-country__chosen planing-country__chosen--16">
                           <li><a href="#">Таджикистан</a></li>
                           <li><a href="#">Таиланд</a></li>
                           <li><a href="#">Танзания</a></li>
@@ -854,47 +854,47 @@ z" />
                           <li><a href="#">Турция</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">у</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--17">
+                      <li class="planing-country__selection--items"><button type="button">у</button>
+                        <ul class="planing-country__chosen planing-country__chosen--17">
                           <li><a href="#"> Уганда </a></li>
                           <li><a href="#">Узбекистан</a></li>
                           <li><a href="#">Украина</a></li>
                           <li><a href="#"> Уругвай</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">ф</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--18">
+                      <li class="planing-country__selection--items"><button type="button">ф</button>
+                        <ul class="planing-country__chosen planing-country__chosen--18">
                           <li><a href="#">Фиджи</a></li>
                           <li><a href="#">Филиппины</a></li>
                           <li><a href="#">Финляндия</a></li>
                           <li><a href="#">Франция</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">х</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--19">
+                      <li class="planing-country__selection--items"><button type="button">х</button>
+                        <ul class="planing-country__chosen planing-country__chosen--19">
                           <li><a href="#">Хорватия</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                      <li class="planing-country__selection--items planing-country__selection--last"><button
                           type="button">ч</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--20">
+                        <ul class="planing-country__chosen planing-country__chosen--20">
                           <li><a href="#">Чад</a></li>
                           <li><a href="#">Черногория</a></li>
                           <li><a href="#">Чехия</a></li>
                           <li><a href="#"> Чили</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                      <li class="planing-country__selection--items planing-country__selection--last"><button
                           type="button">ш</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--21">
+                        <ul class="planing-country__chosen planing-country__chosen--21">
                           <li><a href="#">Швейцария </a></li>
                           <li><a href="#">Швеция</a></li>
                           <li><a href="#">Шри-Ланка</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                      <li class="planing-country__selection--items planing-country__selection--last"><button
                           type="button">э</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--22">
+                        <ul class="planing-country__chosen planing-country__chosen--22">
                           <li><a href="#">Эквадор</a></li>
                           <li><a href="#">Эритрея</a></li>
                           <li><a href="#">Эсватини</a></li>
@@ -902,36 +902,36 @@ z" />
                           <li><a href="#">Эфиопия</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                      <li class="planing-country__selection--items planing-country__selection--last"><button
                           type="button">ю</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--23">
+                        <ul class="planing-country__chosen planing-country__chosen--23">
                           <li><a href="#">ЮАР</a></li>
                           <li><a href="#">Южный Судан</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                      <li class="planing-country__selection--items planing-country__selection--last"><button
                           type="button">я</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--24">
+                        <ul class="planing-country__chosen planing-country__chosen--24">
                           <li><a href="#">Ямайка </a></li>
                           <li><a href="#">Япония</a></li>
                         </ul>
                       </li>
                     </ul>
                   </div>
-                  <div class="explorer-step__second--choise--flag">
+                  <div class="planing-step__second--choise--flag">
                     <img src="../img/flags-back@1x.png" alt="флаг страны" width="70" height="47">
                     <button class="flag-reset">x</button>
                   </div>
                 </div>
-                <div class="explorer-step__second--choise select">
-                  <!-- класс для показа  .explorer-step__second--choise--active  -->
-                  <div class="explorer-step__second--country header">
+                <div class="planing-step__second--choise select">
+                  <!-- класс для показа  .planing-step__second--choise--active  -->
+                  <div class="planing-step__second--country header">
                     <p class="select__current"> Выберите страну</p>
                   </div>
-                  <div class="explorer-country__other body">
-                    <ul class="explorer-country__selection">
-                      <li class="explorer-country__selection--items"><button type="button">а</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--1">
+                  <div class="planing-country__other body">
+                    <ul class="planing-country__selection">
+                      <li class="planing-country__selection--items"><button type="button">а</button>
+                        <ul class="planing-country__chosen planing-country__chosen--1">
                           <li><a href=" country/europe/afganistan.html"> Афганистан</a></li>
                           <!-- обсудить как делать и сделать осталные по образцу -->
                           <li><a href="#">Албания</a></li>
@@ -944,8 +944,8 @@ z" />
                           <li><a href="#">Азербайджан</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">б</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--2">
+                      <li class="planing-country__selection--items"><button type="button">б</button>
+                        <ul class="planing-country__chosen planing-country__chosen--2">
                           <li><a href="#">Багамские Острова </a></li>
                           <li><a href="#"> Бангладеш</a></li>
                           <li><a href="#"> Барбадос </a></li>
@@ -977,9 +977,9 @@ z" />
                           <li><a href="#">Бутан</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">в</button>
+                      <li class="planing-country__selection--items"><button type="button">в</button>
                         <!-- расписать список нормально -->
-                        <ul class="explorer-country__chosen explorer-country__chosen--3">
+                        <ul class="planing-country__chosen planing-country__chosen--3">
                           <li><a href="#">Вануату</a></li>
                           <li><a href="#">Великобритания</a></li>
                           <li><a href="#">Венгрия</a></li>
@@ -988,8 +988,8 @@ z" />
                           <li><a href="#">Вьетнам</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">г</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--4">
+                      <li class="planing-country__selection--items"><button type="button">г</button>
+                        <ul class="planing-country__chosen planing-country__chosen--4">
                           <li><a href="#">Габон</a></li>
                           <li><a href="#"> Гаити</a></li>
                           <li><a href="#">Гайана</a></li>
@@ -1004,31 +1004,31 @@ z" />
                           <li><a href="#">Грузия</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">д</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--5">
+                      <li class="planing-country__selection--items"><button type="button">д</button>
+                        <ul class="planing-country__chosen planing-country__chosen--5">
                           <li><a href="#">Дания</a></li>
                           <li><a href="#"> Джибути</a></li>
                           <li><a href="#">Доминика</a></li>
                           <li><a href="#"> Доминикана</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">e</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--5">
+                      <li class="planing-country__selection--items"><button type="button">e</button>
+                        <ul class="planing-country__chosen planing-country__chosen--5">
                           <li> <a href="#">Египет</a></li>
                         </ul>
                       </li>
-                      <!--  <li class="explorer-country__selection--items"><button type="button">ё</button>  <ul class="explorer-country__chosen explorer-country__chosen--3"></ul>
+                      <!--  <li class="planing-country__selection--items"><button type="button">ё</button>  <ul class="planing-country__chosen planing-country__chosen--3"></ul>
                       </li> -->
-                      <!--  <li class="explorer-country__selection--items"><button type="button">ж</button>  <ul class="explorer-country__chosen explorer-country__chosen--3"></ul>
+                      <!--  <li class="planing-country__selection--items"><button type="button">ж</button>  <ul class="planing-country__chosen planing-country__chosen--3"></ul>
                       </li> -->
-                      <li class="explorer-country__selection--items"><button type="button">з</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--6">
+                      <li class="planing-country__selection--items"><button type="button">з</button>
+                        <ul class="planing-country__chosen planing-country__chosen--6">
                           <li><a href="#">Замбия</a></li>
                           <li><a href="#">Зимбабве</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">и</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--7">
+                      <li class="planing-country__selection--items"><button type="button">и</button>
+                        <ul class="planing-country__chosen planing-country__chosen--7">
                           <li><a href="#"> Израиль </a></li>
                           <li><a href="#">Индия</a></li>
                           <li><a href="#">Индонезия</a></li>
@@ -1041,10 +1041,10 @@ z" />
                           <li><a href="#">Италия</a></li>
                         </ul>
                       </li>
-                      <!--  <li class="explorer-country__selection--items"><button type="button">й</button>  <ul class="explorer-country__chosen explorer-country__chosen--3"></ul>
+                      <!--  <li class="planing-country__selection--items"><button type="button">й</button>  <ul class="planing-country__chosen planing-country__chosen--3"></ul>
                       </li> -->
-                      <li class="explorer-country__selection--items"><button type="button">к</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--8">
+                      <li class="planing-country__selection--items"><button type="button">к</button>
+                        <ul class="planing-country__chosen planing-country__chosen--8">
                           <li><a href="#">Кабо-Верде</a></li>
                           <li><a href="#">Казахстан</a></li>
                           <li><a href="#">Камбоджа</a></li>
@@ -1059,8 +1059,8 @@ z" />
                           <li><a href="#">Колумбия</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">л</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--9">
+                      <li class="planing-country__selection--items"><button type="button">л</button>
+                        <ul class="planing-country__chosen planing-country__chosen--9">
                           <li><a href="#">Лаос</a></li>
                           <li><a href="#">Латвия</a></li>
                           <li><a href="#">Лесото</a></li>
@@ -1072,8 +1072,8 @@ z" />
                           <li><a href="#">Люксембург</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">м</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--10">
+                      <li class="planing-country__selection--items"><button type="button">м</button>
+                        <ul class="planing-country__chosen planing-country__chosen--10">
                           <li><a href="#">Маврикий</a></li>
                           <li><a href="#">Мавритания</a></li>
                           <li><a href="#">Мадагаскар</a></li>
@@ -1086,8 +1086,8 @@ z" />
                           <!-- <li><a href="#">Мексика</a></li> -->
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">н</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--11">
+                      <li class="planing-country__selection--items"><button type="button">н</button>
+                        <ul class="planing-country__chosen planing-country__chosen--11">
                           <li><a href="#">Намибия</a></li>
                           <li><a href="#"> Науру</a></li>
                           <li><a href="#">Непал</a></li>
@@ -1099,14 +1099,14 @@ z" />
                           <li><a href="#">Норвегия</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">о</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--12">
+                      <li class="planing-country__selection--items"><button type="button">о</button>
+                        <ul class="planing-country__chosen planing-country__chosen--12">
                           <li><a href="#">ОАЭ</a></li>
                           <li><a href="#">Оман</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">п</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--13">
+                      <li class="planing-country__selection--items"><button type="button">п</button>
+                        <ul class="planing-country__chosen planing-country__chosen--13">
                           <li><a href="#">Пакистан</a></li>
                           <li><a href="#"> Палау
                             </a></li>
@@ -1121,15 +1121,15 @@ z" />
                           <li><a href="#">Португалия</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">р</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--14">
+                      <li class="planing-country__selection--items"><button type="button">р</button>
+                        <ul class="planing-country__chosen planing-country__chosen--14">
                           <li><a href="#">Руанда</a></li>
                           <li><a href="#"> Румыния</a></li>
                           <li><a href="#">Россия</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">с</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--15">
+                      <li class="planing-country__selection--items"><button type="button">с</button>
+                        <ul class="planing-country__chosen planing-country__chosen--15">
                           <li><a href="#">Сальвадор</a></li>
                           <li><a href="#">Самоа</a></li>
                           <li><a href="#">Сан-Марино</a></li>
@@ -1144,8 +1144,8 @@ z" />
                           <li><a href="#">США</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">т</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--16">
+                      <li class="planing-country__selection--items"><button type="button">т</button>
+                        <ul class="planing-country__chosen planing-country__chosen--16">
                           <li><a href="#">Таджикистан</a></li>
                           <li><a href="#">Таиланд</a></li>
                           <li><a href="#">Танзания</a></li>
@@ -1158,47 +1158,47 @@ z" />
                           <li><a href="#">Турция</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">у</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--17">
+                      <li class="planing-country__selection--items"><button type="button">у</button>
+                        <ul class="planing-country__chosen planing-country__chosen--17">
                           <li><a href="#"> Уганда </a></li>
                           <li><a href="#">Узбекистан</a></li>
                           <li><a href="#">Украина</a></li>
                           <li><a href="#"> Уругвай</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">ф</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--18">
+                      <li class="planing-country__selection--items"><button type="button">ф</button>
+                        <ul class="planing-country__chosen planing-country__chosen--18">
                           <li><a href="#">Фиджи</a></li>
                           <li><a href="#">Филиппины</a></li>
                           <li><a href="#">Финляндия</a></li>
                           <li><a href="#">Франция</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items"><button type="button">х</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--19">
+                      <li class="planing-country__selection--items"><button type="button">х</button>
+                        <ul class="planing-country__chosen planing-country__chosen--19">
                           <li><a href="#">Хорватия</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                      <li class="planing-country__selection--items planing-country__selection--last"><button
                           type="button">ч</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--20">
+                        <ul class="planing-country__chosen planing-country__chosen--20">
                           <li><a href="#">Чад</a></li>
                           <li><a href="#">Черногория</a></li>
                           <li><a href="#">Чехия</a></li>
                           <li><a href="#"> Чили</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                      <li class="planing-country__selection--items planing-country__selection--last"><button
                           type="button">ш</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--21">
+                        <ul class="planing-country__chosen planing-country__chosen--21">
                           <li><a href="#">Швейцария </a></li>
                           <li><a href="#">Швеция</a></li>
                           <li><a href="#">Шри-Ланка</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                      <li class="planing-country__selection--items planing-country__selection--last"><button
                           type="button">э</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--22">
+                        <ul class="planing-country__chosen planing-country__chosen--22">
                           <li><a href="#">Эквадор</a></li>
                           <li><a href="#">Эритрея</a></li>
                           <li><a href="#">Эсватини</a></li>
@@ -1206,70 +1206,69 @@ z" />
                           <li><a href="#">Эфиопия</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                      <li class="planing-country__selection--items planing-country__selection--last"><button
                           type="button">ю</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--23">
+                        <ul class="planing-country__chosen planing-country__chosen--23">
                           <li><a href="#">ЮАР</a></li>
                           <li><a href="#">Южный Судан</a></li>
                         </ul>
                       </li>
-                      <li class="explorer-country__selection--items explorer-country__selection--last"><button
+                      <li class="planing-country__selection--items planing-country__selection--last"><button
                           type="button">я</button>
-                        <ul class="explorer-country__chosen explorer-country__chosen--24">
+                        <ul class="planing-country__chosen planing-country__chosen--24">
                           <li><a href="#">Ямайка </a></li>
                           <li><a href="#">Япония</a></li>
                         </ul>
                       </li>
                     </ul>
                   </div>
-                  <div class="explorer-step__second--choise--flag">
+                  <div class="planing-step__second--choise--flag">
                     <!-- для флага -->
                     <button class="flag-reset">x</button>
                   </div>
                 </div>
               </div>
 
-              <button type="button" class="explorer-step__second--add">
+              <button type="button" class="planing-step__second--add">
                 <span>Добавить страну</span></button>
 
 
-              <div class="explorer-step__second--anchor">
-                <a href="#step__three" class="form-button explorer-step__second--button">Следующий шаг</a>
-                <a href="#step__first" class="explorer-step--back">На шаг назад</a>
+              <div class="planing-step__second--anchor">
+                <a href="#step__three" class="form-button planing-step__second--button">Следующий шаг</a>
+                <a href="#step__first" class="planing-step--back">На шаг назад</a>
               </div>
             </div>
           </fieldset>
 
-          <fieldset class="explorer-step__three">
-            <div class="explorer-step__three--container">
+          <fieldset class="planing-step__three">
+            <div class="planing-step__three--container">
               <h3 id="step__three">Шаг 3.</h3>
-              <span class="explorer-step__three--fun">Развлечения</span>
-              <p class="explorer-step__text">Наконец, расскажите о своих планах времяпровождения.
+              <span class="planing-step__three--fun">Развлечения</span>
+              <p class="planing-step__text">Наконец, расскажите о своих планах времяпровождения.
                 Можно писать в свободной форме и ставить тэги.
               </p>
-              <div class="explorer-step__three--plan">
+              <div class="planing-step__three--plan">
                 <!-- на линию забить -->
                 <p>Босния и Герцоговина</p>
                 <textarea name="plan" id="step-plan-1" cols="30" rows="10" placeholder="План действий">
             </textarea>
               </div>
-              <div class="explorer-step__three--plan">
+              <div class="planing-step__three--plan">
                 <p>Чехия</p>
                 <textarea name="plan" id="step-plan-2" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
               </textarea>
               </div>
             </div>
           </fieldset>
-          <div class="explorer-step__end">
+          <div class="planing-step__end">
             <button class="form-button">Отправить</button>
-            <a href="#step__second" class="explorer-step--back">На шаг назад</a>
+            <a href="#step__second" class="planing-step--back">На шаг назад</a>
           </div>
 
         </form>
       </div>
     </section>
     <!-- direction -->
-
   </main>
 
   <footer class="footer">

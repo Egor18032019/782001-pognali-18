@@ -14,6 +14,15 @@
   @include reset-list;
 }
 
+.traveler__list--transport li{
+  background-color: #edeff6;
+  opacity: 1;
+}
+
+.traveler__list--transport svg {
+ width: 50%;
+}
+
 .traveler__item {
   position: relative;
 }
@@ -42,6 +51,8 @@
   flex-shrink: 0;
   top: 0;
   left: 0;
+  width: 45px;
+  height: 45px;
 }
 
 .traveler__item--circle {
@@ -214,7 +225,7 @@
 }
 
 .traveler-firsova .traveler__item--circle {
-  stroke-dasharray: 210% 5%;
+  stroke-dasharray: 213% 5%;
 }
 
 .traveler-demin .traveler__item--circle {
@@ -232,10 +243,11 @@
 }
 
 .traveler__lvl {
-  @include fontBS (18px, bold, #1d2e5b);
+  @include fontBS (24px, bold, #1d2e5b);
   text-align: center;
   margin: 0;
   padding: 11px;
+  line-height: 0.75;
 }
 
 .traveler__lvl--rus {

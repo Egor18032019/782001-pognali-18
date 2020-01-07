@@ -62,7 +62,7 @@
   appearance: none;
 }
 
-.check-input:checked + .check::before {
+.check-input:checked+.check::before {
   background-image: url("../img/tick.svg");
   background-size: 50%;
   background-position: center;
@@ -78,9 +78,14 @@
   padding: 0;
 }
 
+.bus-svg {
+  width: 13px;
+  height: 16px;
+}
+
 .transport__normal {
-  width: 24px;
-  height: 21px;
+  width: 33px;
+  height: 32px;
   // margin-right: 17px;
   font-size: 0;
   border-radius: 50%;
@@ -89,10 +94,15 @@
   align-items: center;
   justify-content: center;
   flex-grow: 0;
+}
+
+.transport__normal svg {
+  fill: #1d2e5b;
   opacity: 0.15;
 }
 
-.transport--favorite {
+.transport--favorite svg {
+  fill: #1d2e5b;
   opacity: 1;
 }
 
@@ -175,6 +185,10 @@
   background-color: #ffffff;
 }
 
+.white-logo {
+  background-image: url("../img/logo-mobile-blue@1x.png");
+}
+
 .white-close {
   width: 19px;
   height: 19px;
@@ -184,17 +198,48 @@
   z-index: 1;
 }
 
-.white-logo {
-  background-image: url("../img/logo-mobile-blue@1x.png");
-}
-
 // когда есть этот модификатор то свг нет
 // в планшетной версии модификатор добавлять еще и к page-header__autho
 .white-close svg {
   display: none;
 }
 
+.white-autho {
+  width: 85%;
+  top: 314px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  height: 178px;
+  align-items: flex-start;
+}
+
+.white-autho a {
+  @include fontBS (16px, bold, #192144);
+  line-height: 45px;
+}
+
+.white-nav {
+  display: flex;
+}
+
+.white-autho span {
+  margin-right: 16px;
+  background-color: #121936;
+}
+
+.white-autho .autho-icon {
+  width: 100%;
+}
+
+.white-autho .autho__button {
+  width: 270px;
+  height: 50px;
+  border-radius: 25px;
+}
+
 @media (min-width: $tablet-width) {
+
   .catalog .autho,
   .form .autho {
     display: flex;

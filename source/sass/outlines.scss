@@ -1,11 +1,268 @@
+.index-main {
+  position: relative;
+}
+
+.index-button {
+  @include margin-auto;
+  @include fontBS(18px, bold, #1d2e5b);
+  display: flex;
+  align-items: center;
+  width: 85%;
+  min-height: 62px;
+  border-radius: 10px;
+  background-color: $indexButton;
+  text-decoration: none;
+  vertical-align: middle;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.index-button::after {
+  content: "";
+  width: 10px;
+  height: 14px;
+  display: inline-block;
+  background-image: url("../img/triangle-arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  margin-left: auto;
+}
+
+
+.form-button {
+  @include margin-auto;
+  @include fontBS($fsize:17px, $fweight:bold, $color:#161c35);
+  width: 85%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: $indexButton;
+  text-transform: uppercase;
+  border: none;
+}
+
+.check::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  vertical-align: middle;
+  background-color: #ffffff;
+  // background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.check-input {
+  display: none;
+  position: absolute;
+  appearance: none;
+}
+
+.check-input:checked + .check::before {
+  background-image: url("../img/tick.svg");
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.transport {
+  display: flex;
+  width: 65%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.bus-svg {
+  width: 13px;
+  height: 16px;
+}
+
+.transport__normal {
+  width: 33px;
+  height: 32px;
+  // margin-right: 17px;
+  font-size: 0;
+  border-radius: 50%;
+  background-size: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 0;
+}
+
+.transport__normal svg {
+  fill: #1d2e5b;
+  opacity: 0.15;
+}
+
+.transport--favorite svg {
+  fill: #1d2e5b;
+  opacity: 1;
+}
+
+// .transport li:first-child {
+//   background-image: url("../img/plane.svg");
+//   background-repeat: no-repeat;
+//   background-position: center;
+// }
+
+// .transport li:nth-child(2) {
+//   background-image: url("../img/bus.svg");
+//   background-repeat: no-repeat;
+//   background-position: center;
+// }
+
+// .transport li:nth-child(3) {
+//   background-image: url("../img/bike.svg");
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: 70%;
+// }
+
+// .transport li:last-child {
+//   background-image: url("../img/run.svg");
+//   background-repeat: no-repeat;
+//   background-position: center;
+// }
+
+.teg {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+
+.slider__toggle button {
+  width: 10px;
+  height: 20px;
+  border: none;
+  background-color: #ffffff;
+  font-size: 0;
+}
+
+.slider__toggle--right {
+  background-image: url("../img/triangle-arrow-right.svg");
+  background-repeat: no-repeat;
+}
+
+.slider__toggle--left {
+  background-image: url("../img/triangle-arrow-left.svg");
+  background-repeat: no-repeat;
+}
+
+.catalog,
+.catalog .footer {
+  background-color: #d4d9eb;
+}
+
+.form .autho,
+.catalog .autho {
+  display: none;
+}
+
+
+.form footer {
+  background-color: #edeff6;
+}
+
+// при нажатие на кнопку происходить добавление трёх модификаторов
+.white {
+  background-color: #ffffff;
+}
+
+.white-logo {
+  background-image: url("../img/logo-mobile-blue@1x.png");
+}
+
+.white-close {
+  width: 19px;
+  height: 19px;
+  background-image: url("../img/menu-close.svg");
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+// когда есть этот модификатор то свг нет
+// в планшетной версии модификатор добавлять еще и к page-header__autho
+.white-close svg {
+  display: none;
+}
+
+.white-autho {
+  width: 85%;
+  top: 314px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  height: 178px;
+  align-items: flex-start;
+}
+
+.white-autho a {
+  @include fontBS (16px, bold, #192144);
+  line-height: 45px;
+}
+
+.white-nav {
+  display: flex;
+}
+
+.white-autho span {
+  margin-right: 16px;
+  background-color: #121936;
+}
+
+.white-autho .autho-icon {
+  width: 100%;
+}
+
+.white-autho .autho__button {
+  width: 270px;
+  height: 50px;
+  border-radius: 25px;
+}
+
 @media (min-width: $tablet-width) {
-    section .index-button {
-    min-height: 81px;
+  .catalog .autho,
+  .form .autho {
+    display: flex;
   }
 
-  .check::before {
+  .form .page-header {
+    background-color: #161c34;
+  }
+
+  section .index-button {
+    min-height: 81px;
+    width: 80%;
+    border-radius: 20px;
+    font-size: 24px;
+    letter-spacing: -1px;
+  }
+
+  li .check::before {
     width: 24px;
     height: 24px;
+  }
+
+  .white-logo {
+    background-image: url("../img/logo-tablet-blue@1x.png");
   }
 }
 
@@ -14,10 +271,18 @@
   .main-selection {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
   }
 
   .check::before {
     width: 24px;
     height: 24px;
+  }
+
+  .white-close {
+    width: 18px;
+    height: 18px;
   }
 }

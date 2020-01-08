@@ -3,37 +3,115 @@
 }
 
 .form-main__slogan {
-  background-color: #161c35;
-  border-bottom-right-radius: 20px;
+  display: flex;
+  align-items: center;
+  height: 78px;
+  padding-top: 15px;
+  padding-left: 24px;
   border-bottom-left-radius: 20px;
-}
-
-.form-main__slogan h1 {
-  @include fontBS (36px, bold, #ffffff);
+  border-bottom-right-radius: 20px;
+  background-color: #161c35;
   margin: 0;
 }
 
-.form-main__home-link {
+.form-main__idea::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: -16px;
+  left: 0;
+  background-color: #ff8d30;
+  height: 5px;
+}
+
+.form-main__idea {
+  @include fontBS (36px, bold, #ffffff);
+  position: relative;
+  // width: 58%;
+  margin: 0;
+}
+
+.form-main__home--link {
   @include reset-list;
   @include fontBS(20px, 700, #ffffff);
   display: none;
-  padding-right: 61px;
   text-transform: uppercase;
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-size: 32px 16px;
-  background-image: url("../img/return.svg");
-  // Как залить свг  ?
 }
 
+.form-main__home--link span {
+  background-color: inherit;
+  margin-left: 61px;
+  // width: 45px;
+  // height: 45px;
+  // display: inline-block;
+  // background-color: #121936;
+  // border-radius: 50%;
+  // background-position: center;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // margin-right: 16px;
+}
+
+.form-main__autho {
+  display: none;
+}
+
+// ---------------------------для планшета_______________________
 @media (min-width: $tablet-width) {
   .form-main__slogan {
     display: flex;
     justify-content: space-between;
-    padding: 65px 129px;
+    //height:240px;
+    padding: 0;
+    padding-left: 75px;
+    padding-right: 74px;
+    padding-top: 122px;
+    padding-bottom: 66px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
   }
 
-  .form-main__home-link {
+  .form-main__home--link span {
+    margin-left: 18px;
+  }
+
+  .form-main__slogan h1 {
+    font-size: 60px;
+  }
+
+  .form-main__home--link {
     display: block;
+  }
+
+  .form-main__autho {
+    display: flex;
+  }
+
+  .form-main__idea::after {
+    bottom: -70px;
+  }
+}
+
+// для пк_________________________для пк ___________________________
+
+@media (min-width: $desktop-width) {
+  .form-main__idea::after {
+    bottom: -76px;
+    height: 8px;
+  }
+
+  .form-main__slogan {
+    padding-top: 112px;
+    padding-left: 129px;
+    padding-bottom: 103px;
+  }
+
+  .form-main__home--link {
+    width: 19%;
+  }
+
+  .form-main__home--link span {
+    margin-left: 29px;
   }
 }

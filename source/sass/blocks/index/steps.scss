@@ -2,19 +2,21 @@
   @include center;
   @include margin-auto;
   background-color: $indexColor;
+  padding-top: 30px;
 }
 
 .steps-quote {
   width: 70%;
-  margin-bottom: 33px;
+  margin-bottom: 31px;
+  padding-top: 22px;
 }
 
 .steps-quote q {
   @include fontBS (16px, 300, white);
   display: block;
   width: 80%;
-  line-height: 1.4;
-  margin-bottom: 25px;
+  line-height: 1.11;
+  margin-bottom: 23px;
 }
 
 .steps-quote cite {
@@ -28,7 +30,7 @@
   display: flex;
   width: 100%;
   justify-content: center;
-  padding-bottom: 30px;
+  padding-bottom: 36px;
 }
 
 .steps__list {
@@ -36,11 +38,13 @@
   width: 85%;
   // height: 320px;
   // перенести номера в правую часть ли
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
   overflow: hidden;
+  // включаю нумерацию списка
+  counter-reset: white-left-counter;
 }
 
 .steps__list li {
@@ -50,6 +54,23 @@
   display: flex;
   align-items: center;
   padding-left: 25px;
+  padding-right: 25px;
+  // спсиок
+  counter-increment: white-left-counter;
+}
+
+.steps__list li::after {
+  @include fontBS (18px, bold, #ffffff);
+  content: " "counter(white-left-counter);
+  display: flex;
+  width: 7px;
+  height: 43px;
+  align-items: self-start;
+  margin-left: auto;
+}
+
+.steps__item--text {
+  width: 73%;
 }
 
 .steps__list li:first-child {
@@ -70,60 +91,126 @@
 
 @media (min-width: $tablet-width) {
   .steps-quote {
-    width: 85%;
-    margin-top: -515px;
+    width: 81%;
+    margin-top: -562px;
     margin-bottom: 213px;
+    padding-top: 0;
   }
 
   .steps-quote q {
     width: 50%;
     font-size: 28px;
+    margin-bottom: 44px;
   }
 
   .steps-quote cite {
     width: 50%;
     font-size: 21px;
+    line-height: 1.19;
   }
 
   .steps__list {
+    width: 89%;
     display: flex;
     flex-wrap: wrap;
+    border-radius: 20px;
+  }
+
+  .steps__list li::after {
+    font-size: 30px;
+    margin-left: 0;
+    align-self: flex-start;
   }
 
   .steps__list .steps__item {
-    width: 50%;
+    width: 49%;
     height: 140px;
     font-size: 24px;
     padding-left: 31px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    padding-top: 10px;
+    border-radius: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  .steps__item--text {
+    width: 100%;
+    margin-bottom: 5px;
   }
 }
 
 // --------------------------для пк ------------------------
 @media (min-width: $desktop-width) {
   .steps-quote {
-    width: 30%;
+    width: 25%;
     margin-left: auto;
-    margin-top: -35%;
-    margin-bottom: 117px;
+    margin-top: -635px;
+    margin-bottom: 114px;
   }
 
   .steps-quote q {
-    width: 75%;
+    width: 84%;
     font-size: 28px;
+    margin-bottom: 52px;
   }
 
   .steps-quote cite {
     width: 75%;
     font-size: 21px;
+    line-height: 1.2;
   }
 
   .steps__list {
+    width: 92%;
     flex-wrap: nowrap;
+  }
+
+  .steps__list .steps__item {
+    height: 108px;
+    flex-direction: row;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-left: -14px;
+    padding-top: 2px;
+  }
+
+  .steps__list li:first-child {
+    width: 28%;
+    margin-left: 2px;
+  }
+
+  .steps__list li:nth-child(2) {
+    width: 28%;
+    margin-left: -56px;
+  }
+
+  .steps__list li:nth-child(3) {
+    width: 28%;
+    margin-left: -26px;
+  }
+
+  .steps__list li:last-child {
+    width: 24%;
+    border-radius: 20px;
+    margin-left: -27px;
+  }
+
+  .steps__list li::after {
+    align-self: center;
+    margin-left: 60px;
+    font-size: 24px;
   }
 
   .steps-wrapper {
     padding-bottom: 123px;
+  }
+
+  .steps__item--text {
+    width: 66%;
+  }
+
+  .steps__list li:first-child .steps__item--text {
+    width: 56%;
   }
 }

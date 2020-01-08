@@ -1,66 +1,96 @@
 .page-header {
   width: 100%;
-  min-height: 73px;
+  min-height: 58px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: $indexColor;
+  background-color: #161c36;
   color: white;
+  position: relative;
 }
 
 .page-header__wrapper {
-  display: none;
-}
-
-.page-header__main {
-  width: 85%;
+  // display: none;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 73px;
-}
-
-.page-header__logo {
-  font-size: 0;
+  justify-content: center;
+  padding-bottom: 291px;
 }
 
 .page-header__nav {
-  width: 20%;
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  background-color: white;
+  padding-top: 79px;
 }
 
 .page-header__toggle {
+  cursor: pointer;
   display: block;
-  width: 25px;
+  width: 31px;
   height: 11px;
-  background-image: url("../img/menu.svg");
-  background-color: inherit;
-  // незнаю как залить свг
+  background-color: #161c36;
   border: none;
   font-size: 0;
   // list-style: none;
 }
 
+.page-header__slogan--wrapper {
+  @include center;
+}
+
+.page-header__main {
+  width: 100%;
+  padding-left: 7%;
+  padding-right: 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70px;
+  // изменил мин-хейт для индекса мобайл
+}
+
+.page-header__logo {
+  min-width: 100px;
+  min-height: 19px;
+  font-size: 0;
+  background-image: url("../img/logo-mobile-white@1x.png");
+  background-repeat: no-repeat;
+}
+
+.page-header__autho {
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  bottom: -24px;
+  z-index: 2;
+}
+
+.page-header__toggle--icon {
+  fill: #ffffff;
+}
 
 .page-header__slogan h2 {
   @include fontBS (36px, bold, white);
   width: 87%;
   text-align: center;
+  margin-top: 21px;
+  line-height: 1.11;
 }
 
 .page-header__slogan {
   @include center;
-  padding-bottom: 247px;
-  // max-width: 320px;
+  position: relative;
+  max-width: 767px;
+  padding-bottom: 238px;
   margin: 0 auto;
   background-image: url("../img/traveller-illustration-mobile@1x.png"), url("../img/globe-back-mobile@1x.jpg");
-  background-position: bottom right 49px, bottom -91px center;
-  background-size: 192px 256px, 320px 569px;
+  background-position: bottom right 49px, bottom -99px center;
+  background-size: 192px 256px, cover;
+  // 320px 569px было так решил изменить// не могу понять почему auto не работает
   background-repeat: no-repeat, no-repeat;
-}
-
-.page-header__autho {
-  margin-bottom: 30px;
+  background-color: #161c36;
 }
 
 .page-header .explorer__autho {
@@ -69,64 +99,153 @@
 }
 
 .page-header__list {
-  @include reset-list;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.page-header__list,
 .page-header__list a {
-  @include fontBS (20px, 500, #ffffff);
+  @include reset-list;
+  @include fontBS (30px, 500, #192144);
   text-transform: uppercase;
+  line-height: 1.2;
 }
+
+.page-header__list li:first-child {
+  display: none;
+}
+
+// ________________планшет____________________
 
 @media (min-width: $tablet-width) {
   .page-header {
     flex-direction: row-reverse;
-  }
-
-  .page-header__autho {
-    // align-self: flex-end;
-    order: -1;
-    margin-bottom: 0;
-  }
-
-  .page-header__slogan {
-    padding-bottom: 586px;
-    background-image: url("../img/traveller-illustration-tablet@1x.png"), url("../img/globe-back-tablet@1x.jpg");
-    background-position: bottom 140px right 112px, bottom center;
-    background-size: 372px 451px, auto 610px;
-    background-repeat: no-repeat, no-repeat;
+    background-color: #192144;
   }
 
   .page-header__main {
-    width: 66%;
+    width: 66.5%;
+    justify-content: space-between;
+    height: 133px;
+    padding-right: 15%;
+    padding-top: 1px;
+    padding-left: 5%;
+    margin-left: 0;
+  }
+
+  .page-header__autho {
+    width: 33.5%;
+    height: 133px;
+    order: -1;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 1px;
+    justify-content: center;
+    position: static;
+  }
+
+  .page-header__autho .autho__button {
+    height: 50px;
+    text-transform: uppercase;
+    border-radius: 25px;
+  }
+
+  .page-header__slogan {
+    padding-bottom: 573px;
+    background-image: url("../img/traveller-illustration-tablet@1x.png"), url("../img/globe-back-tablet@1x.jpg");
+    background-position: bottom 139px right 112px, bottom center;
+    background-size: 372px 451px, auto 610px;
+    background-repeat: no-repeat, no-repeat;
+    max-width: 1439px;
+    background-color: #192144;
   }
 
   .page-header__slogan h2 {
-    width: 60%;
+    width: 59%;
     font-size: 60px;
+    line-height: 1.16;
+    letter-spacing: -2.8px;
   }
 
   .page-header__slogan--wrapper {
     display: flex;
     justify-content: center;
+    padding-top: 5px;
   }
 
+  .page-header__nav {
+    margin-right: 10.5%;
+    margin-left: auto;
+  }
+
+  .page-header__logo {
+    margin-left: 0;
+    width: 260px;
+    height: 44px;
+    font-size: 0;
+    background-image: url("../img/logo-tablet-white@1x.png");
+  }
+
+  .page-header__list a {
+    font-size: 60px;
+    line-height: 1.18;
+  }
 }
 
 // --------------------------для пк ------------------------
+
 @media (min-width: $desktop-width) {
+  .page-header {
+    background-color: #161c34;
+    justify-content: space-evenly;
+  }
+
   .page-header__wrapper {
     display: block;
-    width: 80%;
+    width: auto;
+  }
+
+  .page-header__list li:first-child {
+    display: list-item;
+  }
+
+  .page-header__list a {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #ffffff;
+  }
+
+  .page-header__main {
+    width: 67%;
+    height: 52px;
+    // если изменил высоту - проверь потом на каталоге
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .page-header__autho {
+    width: 290px;
+    padding-top: 10px;
   }
 
   .page-header__slogan {
     background-image: url("../img/traveller-illustration-desktop@1x.png"), url("../img/globe-back-desktop@1x.jpg");
-    background-position: bottom right 480px, bottom left -180px;
+    background-position: bottom right 410px, bottom left -180px;
     background-size: 431px 640px, 1800px 750px;
     justify-content: start;
     min-height: 640px;
     padding: 0;
+    padding-top: 31px;
+    max-width: 1440px;
+  }
+
+  .page-header__logo {
+    margin-left: 0;
+    width: 240px;
+    height: 52px;
+    font-size: 0;
+    background-image: url("../img/logo-desktop-white@1x.png");
   }
 
   .page-header__toggle {
@@ -134,7 +253,9 @@
   }
 
   .page-header__nav {
-    width: 70%;
+    width: auto;
+    margin: 0;
+    padding-top: 10px;
   }
 
   .page-header__list {
@@ -142,23 +263,20 @@
     justify-content: space-between;
   }
 
-  // временоо
-  .page-header__logo img {
-    width: 200px;
-    height: 52px;
-  }
-
-  .page-header {
-    min-height: 100px;
+  .page-header__list li {
+    margin-right: 20px;
   }
 
   .page-header__slogan h2 {
     width: 37%;
     text-align: left;
+    align-self: self-start;
+    margin-top: 35px;
   }
 
   .page-header__slogan--wrapper {
     width: 85%;
     justify-content: start;
+    padding-left: 15px;
   }
 }

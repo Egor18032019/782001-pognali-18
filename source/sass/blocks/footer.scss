@@ -2,27 +2,38 @@
   @include center;
   @include margin-auto;
   // width: 320px;
-  background-color: white;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+  background-color: #edeff6;
   overflow: hidden;
+  z-index: 2;
 }
 
 .footer__logo {
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   margin-top: 40px;
+  // если менять то проверить в индех
   font-size: 0;
+  margin-left: 0;
+  min-width: 100px;
+  min-height: 20px;
+  background-image: url("../img/logo-mobile-blue@1x.png");
+  background-repeat: no-repeat;
 }
 
 .footer__container {
   @include center;
   width: 100%;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  background-color: #ffffff;
+  z-index: 3;
 }
 
 .footer__made {
   @include fontBS (16px, normal, #444444);
   display: flex;
-  width: 80%;
+  width: 85%;
+  line-height: 1.38;
+  letter-spacing: -1px;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 14px;
@@ -33,7 +44,7 @@
 }
 
 .footer__social {
-  margin-bottom: 60px;
+  margin-bottom: 41px;
 }
 
 @media (min-width: $tablet-width) {
@@ -50,23 +61,53 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    margin-bottom: 46px;
-    padding-top: 46px;
+    padding-top: 20px;
+    padding-left: 36px;
+    padding-right: 41px;
+    border-top-right-radius: 60px;
+    border-top-left-radius: 60px;
   }
 
-  .footer__social {
+  .footer__logo {
+    min-width: 200px;
+    min-height: 40px;
+    background-image: url("../img/logo-tablet-blue@1x.png");
+  }
+
+
+  .footer__container .footer__social {
     margin-bottom: 0;
     display: flex;
     width: 50%;
-    justify-content: space-between;
+    padding-right: 41px;
   }
 
   .footer__made {
-    width: 21%;
+    width: 23%;
+    margin: 0;
   }
 }
 
 // // --------------------------для пк ------------------------
-// @media (min-width: $desktop-width) {
+@media (min-width: $desktop-width) {
+  .footer__made {
+    width: 15%;
+    justify-content: space-between;
+    padding-left: 41px;
+  }
 
-// }
+  .footer__container {
+    justify-content: space-around;
+    padding-top: 8px;
+  }
+
+  .footer__container .footer__social {
+    padding-right: 97px;
+  }
+
+  .footer__logo {
+    min-width: 300px;
+    min-height: 60px;
+    background-image: url("../img/logo-desktop-blue@1x.png");
+  }
+}

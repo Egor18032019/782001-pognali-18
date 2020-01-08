@@ -1,44 +1,49 @@
 .about-us {
   @include center;
   @include margin-auto;
-  @include bgIndexColor;
-  border-bottom-right-radius: 30px;
-  border-bottom-left-radius: 30px;
-}
-
-.about-us::before {
-  content: "";
-  position: absolute;
-  width: 292px;
-  height: 352px;
-  background-image: url("../img/about-mobile@1x.png");
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: 100%;
+  background-color: #edeff6;
 }
 
 .about-us__container {
-  width: 85%;
+  @include bgIndexColor;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background-image: url("../img/about-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 95%;
   z-index: 1;
 }
 
 .about-us__wrapper {
-  width: 66%;
+  width: 74%;
+  padding-top: 9px;
 }
 
 .about-us h2 {
   @include fontBS (24px, bold, #ff8d30);
+  margin-bottom: 20px;
 }
 
 .about-us p {
   @include fontBS (16px, 300, #ffffff);
+  line-height: 1.38;
+  margin-bottom: 19px;
   opacity: 0.8;
+}
+
+.about-us__wrapper--text br {
+  display: none;
 }
 
 .about-us b {
   @include fontBS (16px, bold, #ffffff);
+  line-height: 1.38;
   display: block;
-  margin-bottom: 84px;
+  margin-bottom: 83px;
 }
 
 .about-us__button {
@@ -73,15 +78,24 @@
   }
 
   .about-us::before {
-    width: 313px;
-    height: 422px;
-    right: 50px;
-    // спросить у наставника - как сделать ярким
+    content: "";
+    width: 404px;
+    height: 548px;
+    right: 0;
+    bottom: 85px;
     z-index: 3;
+    position: absolute;
+    background-image: url("../img/about-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 95%;
   }
 
   .about-us__container {
     position: relative;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    background-image: none;
   }
 
   .about-us__container::before {
@@ -91,74 +105,102 @@
     height: 213px;
     background-color: #141b3b;
     z-index: -1;
-    left: 25px;
+    left: 41px;
+    top: 60px;
+    border-radius: 20px;
+  }
+
+  .about-us__wrapper {
+    width: 80%;
+    padding-top: 67px;
   }
 
   .about-us h2 {
     font-size: 45px;
+    margin-bottom: 45px;
   }
 
   .about-us p {
-    width: 79%;
+    width: 55%;
     font-size: 28px;
+    margin-bottom: 29px;
+    line-height: 1.18;
   }
 
   .about-us b {
-    width: 79%;
+    width: 55%;
     font-size: 21px;
-  }
-
-  .about-us__wrapper {
-    margin-bottom: 53px;
+    margin-bottom: 57px;
+    line-height: 1.19;
   }
 
   .about-us__wrapper .about-us__button {
+    width: 44%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-radius: 20px;
+    margin-bottom: 85px;
   }
 }
 
 // --------------------------для пк ------------------------
 @media (min-width: $desktop-width) {
-// высота времммено
-.about-us {
-  min-height: 750px;
-}
+  .about-us::before {
+    background-image: url("../img/about-desktop@1x.png");
+    width: 630px;
+    height: 665px;
+    right: 60px;
+    bottom: 0;
+    background-size: 100%;
+  }
 
-// картинка карточек
-.about-us::before {
-  background-image: url("../img/about-desktop@1x.png");
-  width: 630px;
-  height: 665px;
-  // спросить у наставника - как сделать ярким
-}
+  .about-us::after {
+    width: 630px;
+    height: 204px;
+    top: 0;
+  }
 
-.about-us::after {
-  width: 630px;
-  height: 204px;
-  top: 0;
-}
+  .about-us__container::before {
+    width: 213px;
+    height: 213px;
+    left: 50px;
+  }
 
-.about-us__container::before {
-  width: 213px;
-  height: 213px;
-  left: 50px;
-}
+  .about-us h2 {
+    margin-bottom: 58px;
+  }
 
-.about-us b {
-  font-size: 21px;
-}
+  .about-us b {
+    font-size: 21px;
+  }
 
-.about-us__wrapper {
-  width: 60%;
-}
+  .about-us__wrapper {
+    width: 82%;
+    padding-top: 10px;
+  }
 
-.about-us__wrapper p {
-  width: 81%;
-}
+  .about-us .about-us__wrapper--text {
+    width: 60%;
+    margin-bottom: 40px;
+  }
 
-.about-us__wrapper b {
-  width: 60%;
-}
+  .about-us__wrapper--text br {
+    display: none;
+  }
+
+  .about-us__wrapper b {
+    width: 40%;
+    margin-bottom: 88px;
+  }
+
+  .about-us__container {
+    padding-top: 29px;
+  }
+
+  .about-us__wrapper .about-us__button {
+    width: 23%;
+    border-radius: 20px;
+    margin-bottom: 160px;
+  }
 }

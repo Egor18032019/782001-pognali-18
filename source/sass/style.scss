@@ -2,7 +2,6 @@
   "variables.scss",
   "mixin.scss",
   "fonts.scss",
-  "stels.scss",
   "blocks/index/companions.scss",
   "blocks/index/menu-autho.scss",
   "blocks/index/scroll-menu.scss",
@@ -23,7 +22,9 @@
   "blocks/index/social.scss",
   "blocks/index/social-autho.scss",
   "blocks/catalog/explorer.scss",
-  "outlines.scss";
+  "blocks/catalog/planing.scss",
+  "outlines.scss",
+  "stels.scss";
 
 *,
 *::after,
@@ -38,7 +39,6 @@ html {
 body {
   min-width: 320px;
   margin: 0 auto;
-  background-color: #d4d9eb;
   font-weight: 400;
   font-size: 16px;
   font-family: "BloggerSans", "Arial", sans-serif;
@@ -51,151 +51,4 @@ a {
 img {
   max-width: 100%;
   height: auto;
-}
-
-.index-button {
-  @include margin-auto;
-  @include fontBS(18px, bold, #1d2e5b);
-  display: flex;
-  align-items: center;
-  width: 85%;
-  min-height: 62px;
-  border-radius: 10px;
-  background-color: $indexButton;
-  text-decoration: none;
-  vertical-align: middle;
-  padding-left: 25px;
-  padding-right: 25px;
-}
-
-.index-button::after {
-  content: "";
-  width: 10px;
-  height: 14px;
-  display: inline-block;
-  background-image: url("../img/triangle-arrow-right.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  margin-left: auto;
-}
-
-
-.form-button {
-  @include margin-auto;
-  @include fontBS($fsize:17px, $fweight:bold, $color:#161c35);
-  width: 85%;
-  min-height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  background-color: $indexButton;
-  text-transform: uppercase;
-}
-
-.transport {
-  display: flex;
-  width: 65%;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-}
-
-.transport li {
-  width: 33px;
-  height: 33px;
-  // margin-right: 17px;
-  font-size: 0;
-  border-radius: 50%;
-  // background-color: white;
-  background-size: 50%;
-}
-
-.transport li:first-child {
-  background-image: url("../img/plane.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.transport li:nth-child(2) {
-  background-image: url("../img/bus.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.transport li:nth-child(3) {
-  background-image: url("../img/bike.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.transport li:last-child {
-  background-image: url("../img/run.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.teg {
-  @include reset-list;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.slider__toggle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  background-color: #ffffff;
-}
-
-.slider__toggle button {
-  width: 10px;
-  height: 20px;
-  border: none;
-  background-color: inherit;
-  font-size: 0;
-}
-
-.slider__toggle--right {
-  background-image: url("../img/triangle-arrow-right.svg");
-  background-repeat: no-repeat;
-}
-
-.slider__toggle--left {
-  background-image: url("../img/triangle-arrow-left.svg");
-  background-repeat: no-repeat;
-}
-
-.check::before {
-  content: "";
-  width: 18px;
-  height: 18px;
-  margin-right: 10px;
-  vertical-align: middle;
-  background-color: #ffffff;
-  // background-image: url("../img/checkbox-off.svg");
-  background-repeat: no-repeat;
-  display: inline-block;
-}
-
-.check-input {
-  display: none;
-  position: absolute;
-  appearance: none;
-}
-
-.check-input:checked + .check::before {
-  background-image: url("../img/tick.svg");
-  background-size: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.weekends {
-  color: #ff5c23;
 }

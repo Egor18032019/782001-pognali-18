@@ -351,6 +351,7 @@ li.planing-path--current {
 
 .planing-step__second--choise {
   @include fontBS (14px, 500, #1d2e5b);
+  position: relative;
   display: flex;
   width: 100%;
   align-items: center;
@@ -361,9 +362,41 @@ li.planing-path--current {
   position: relative;
 }
 
+.planing-step__second--choise::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #1d2e5b;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 49px;
+}
+
+.planing-step__second--choise+.clear::after {
+  background-color: white;
+  border: solid 1px #cbced9;
+}
+
+.planing-step__second--choise::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 5px;
+  height: 10px;
+  background-color: white;
+  background-image: url("../img/small-arrow.svg");
+  top: 48px;
+  right: 51px;
+  opacity: 0.5;
+}
+
 .planing-step__second--choise--flag {
   width: 53px;
   height: 42px;
+  flex-shrink: 0;
   position: relative;
   display: flex;
   justify-content: center;
@@ -376,9 +409,15 @@ li.planing-path--current {
   height: 24px;
 }
 
-.planing-step__second--choise--flag button {
+.planing-step__second--choise button {
   width: 21px;
   height: 21px;
+  font-size: 0;
+  background-image: url("../img/small-cross.svg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+  opacity: 0.5;
   position: absolute;
   border-radius: 50%;
   right: -9px;
@@ -393,7 +432,7 @@ li.planing-path--current {
 .planing-step__second--country {
   position: relative;
   cursor: pointer;
-  width: 168px;
+  width: 100%;
   height: 42px;
   max-width: 730px;
   display: flex;
@@ -412,14 +451,47 @@ li.planing-path--current {
 
 .planing-step__second--add {
   @include fontBS (14px, 500, #1d2e5b);
+  position: relative;
   width: 220px;
   height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   text-transform: uppercase;
   background-color: #edeff6;
   border-radius: 4px;
   border: 1px solid #cbced9;
+  padding-right: 13px;
   padding-left: 13px;
   margin-bottom: 9px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.planing-step__second--add::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #edeff6;
+  border: solid 1px #cbced9;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 49px;
+}
+
+.planing-step__second--add::after {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  opacity: 0.3;
+  background-color: #edeff6;
+  background-image: url("../img/qty-plus-mobile.svg");
+  background-repeat: no-repeat;
+  margin-left: auto;
 }
 
 .planing-step__second--flag li:first-child {
@@ -555,6 +627,7 @@ li.planing-path--current {
 }
 
 .planing-step__second--choise-wrapper {
+  width: 94%;
   padding-top: 7px;
 }
 
@@ -598,18 +671,25 @@ li.planing-path--current {
 }
 
 .planing-step__second--choise p {
+  @include fontBS (14px, 500, #1d2e5b);
   width: 100%;
 }
 
 .planing-step__second--country::after {
-  display: block;
   content: "";
-  width: 12px;
-  height: 7px;
-  background-image: url("../img/dropdown.svg");
+  position: absolute;
+  display: block;
+  width: 49px;
+  height: 38px;
+  top: 1px;
+  right: 0;
+  background-image: url("../img/dropdown-form.svg");
+  background-size: 12px 7px;
   background-repeat: no-repeat;
   background-position: center;
   margin-left: auto;
+  background-color: white;
+  opacity: 0.3;
 }
 
 .planing-step__second--anchor {
@@ -617,6 +697,8 @@ li.planing-path--current {
   display: flex;
   flex-direction: column;
   padding-top: 17px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .planing-step__second--anchor .planing-step__second--button {

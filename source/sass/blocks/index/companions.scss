@@ -309,6 +309,7 @@
     padding-bottom: 123px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
+    background-position: top 133px left 547px, top 386px right 966px;
   }
 
   .companions__slogan h2 {
@@ -344,6 +345,12 @@
   .companions__item img {
     width: 285px;
     height: 285px;
+  }
+
+  .companions___countries img {
+    width: 35px;
+    height: 24px;
+    border-radius: 0;
   }
 
   .companions__personal {

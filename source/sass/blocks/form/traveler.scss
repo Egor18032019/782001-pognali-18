@@ -16,6 +16,7 @@
 
 .traveler__list--transport li {
   background-color: #edeff6;
+  // в индексе без бэкграунда - тут с заливкой
   opacity: 1;
 }
 
@@ -30,8 +31,6 @@
 .traveler__list .traveler__item {
   display: flex;
   width: 85%;
-  // align-items: center;
-  // justify-content: space-between;
   flex-wrap: wrap;
   list-style: none;
   margin-bottom: 10px;
@@ -109,6 +108,12 @@
   top: 55px;
 }
 
+
+// Доделать ради интереса
+.traveler__heart--wrapp::after {
+  content: attr(data-tooltip);
+}
+
 .traveler__heart--btn {
   border: none;
   background-color: #edeff6;
@@ -173,13 +178,14 @@
   margin-bottom: 5px;
 }
 
-.country__item::before {
-  content: "";
+.country__item img {
   width: 26px;
   height: 18px;
   display: inline-block;
-  background-color: coral;
+  background-color: white;
+  margin: 0;
   margin-right: 20px;
+  border-radius: 0;
 }
 
 .traveler__transport {
@@ -310,10 +316,14 @@
 // _______________________________для планшета____________________________
 
 @media (min-width: $tablet-width) {
-  .traveler__item {
+  .traveler__list .traveler__item {
     position: relative;
     // align-items: flex-start;
     justify-content: start;
+    padding-bottom: 19px;
+    width: 89%;
+    padding-top: 28px;
+    margin-bottom: 40px;
   }
 
   .traveler__heart--wrapp {
@@ -338,6 +348,12 @@
   .traveler__lvl {
     font-size: 24px;
     padding: 0;
+    line-height: 1;
+  }
+
+  .traveler__lvl--svg {
+    width: 60px;
+    height: 60px;
   }
 
   .traveler__list--transport li,
@@ -368,12 +384,6 @@
     height: 7px;
     margin-left: 1px;
     position: initial;
-  }
-
-  .traveler__list .traveler__item {
-    width: 89%;
-    padding-top: 28px;
-    margin-bottom: 40px;
   }
 
   .traveler__transport {
@@ -491,7 +501,7 @@
     padding-left: 30px;
     padding-right: 30px;
     margin-bottom: 10px;
-    padding-top: 5px;
+    padding-top: 22px;
     padding-bottom: 16px;
   }
 
@@ -503,7 +513,7 @@
   }
 
   .traveler__btn--show-more {
-    margin-bottom: 48px;
+    margin-bottom: 55px;
     padding-top: 0;
   }
 
@@ -551,7 +561,7 @@
     width: 100%;
     padding-top: 40px;
     padding-right: 41px;
-    margin-bottom: 27px;
+    margin-bottom: 32px;
   }
 
   .traveler__name {
@@ -627,7 +637,7 @@
   }
 
   .traveler__btn--show-more {
-    padding-top: 23px;
+    padding-top: 36px;
   }
 
   .traveler__btn {

@@ -34,7 +34,7 @@
   list-style: none;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 13px;
+  margin-bottom: 20px;
   padding: 0;
 }
 
@@ -48,10 +48,8 @@
   overflow: hidden;
 }
 
-.trend__text::before {
-  content: "";
+.trend__text img {
   position: absolute;
-  background-image: url("https://via.placeholder.com/35x24");
   width: 35px;
   height: 24px;
   top: -12px;
@@ -117,7 +115,7 @@
     background-position: top 80px right 40px;
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 60px;
-    padding-bottom: 81px;
+    padding-bottom: 79px;
   }
 
   .trend-wrapper::before {

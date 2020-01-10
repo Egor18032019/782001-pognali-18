@@ -103,6 +103,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-left: 0;
 }
 
 .page-header__list a {
@@ -149,6 +150,7 @@
     height: 50px;
     text-transform: uppercase;
     border-radius: 25px;
+    font-size: 20px;
   }
 
   .page-header__slogan {
@@ -204,6 +206,8 @@
   .page-header__wrapper {
     display: block;
     width: auto;
+    padding: 0;
+    background-color: #161c34;
   }
 
   .page-header__list li:first-child {
@@ -217,7 +221,7 @@
   }
 
   .page-header__main {
-    width: 67%;
+    width: 15%;
     height: 52px;
     // если изменил высоту - проверь потом на каталоге
     padding-left: 0;
@@ -225,8 +229,10 @@
   }
 
   .page-header__autho {
-    width: 290px;
+    width: 300px;
+    justify-content: flex-start;
     padding-top: 10px;
+    order: -2;
   }
 
   .page-header__slogan {
@@ -253,14 +259,21 @@
   }
 
   .page-header__nav {
-    width: auto;
+    display: flex;
+    width: 53%;
+    justify-content: start;
+    align-items: start;
     margin: 0;
     padding-top: 10px;
+    background-color: #161c34;
+    order: -1;
   }
 
   .page-header__list {
+    @include reset-list;
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
   }
 
   .page-header__list li {

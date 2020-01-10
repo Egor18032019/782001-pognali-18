@@ -1,0 +1,116 @@
+// при нажатие на кнопку происходить добавление 3+1 модификаторов
+// попробывать уменьшить
+.white {
+  background-color: #ffffff;
+}
+
+.white .page-header__logo {
+  background-image: url("../img/logo-mobile-blue@1x.png");
+}
+
+.white-close {
+  width: 19px;
+  height: 19px;
+  background-image: url("../img/menu-close.svg");
+  background-image: none;
+  // так как нет js - крестик скрыт
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+// когда есть этот модификатор то свг нет
+// в планшетной версии модификатор добавлять еще и к page-header__autho
+.white-close svg {
+  display: none;
+}
+
+.white-autho {
+  width: 85%;
+  top: 314px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  height: 178px;
+  align-items: flex-start;
+}
+
+.white-autho .autho__contact--icon {
+  fill: #ffd74b;
+}
+
+.white-autho a {
+  @include fontBS (16px, bold, #192144);
+  line-height: 45px;
+}
+
+.white .page-header__nav {
+  display: flex;
+}
+
+.white-autho span {
+  margin-right: 16px;
+  background-color: #121936;
+}
+
+.white-autho .autho-icon {
+  width: 100%;
+}
+
+.white-autho .autho__button {
+  width: 270px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+@media (min-width: $tablet-width) {
+  .white-autho {
+    position: relative;
+    height: auto;
+  }
+
+  .white-autho .autho-icon {
+    display: flex;
+    position: absolute;
+    bottom: -244px;
+    left: 0;
+    font-size: 28px;
+  }
+
+  .white-autho .autho__mail {
+    bottom: -310px;
+  }
+
+  .white-autho span {
+    width: 67px;
+    height: 67px;
+  }
+  .page-header__main.white {
+    width: 100%;
+  }
+
+  .white .page-header__list {
+    align-items: flex-start;
+  }
+
+  .white-autho .autho__button {
+    position: absolute;
+    top: -270px;
+    right: 0;
+    font-size: 20px;
+    width: 189px;
+    height: 50px;
+  }
+
+    .white .page-header__logo {
+    background-image: url("../img/logo-tablet-blue@1x.png");
+  }
+}
+
+// --------------------------для пк ------------------------
+@media (min-width: $desktop-width) {
+  .white-close {
+    width: 18px;
+    height: 18px;
+  }
+}

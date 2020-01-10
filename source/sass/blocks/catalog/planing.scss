@@ -139,13 +139,18 @@
 .planing-path {
   @include reset-list;
   position: absolute;
-  top: 57px;
+  top: 41px;
   right: 49px;
   display: flex;
   // ставлю флех - он исчезает. чудеса какие-то
   width: 40px;
   height: 5px;
   font-size: 0;
+}
+
+.planing-path a {
+  width: 6px;
+  height: 5px;
 }
 
 .planing-path li {
@@ -215,7 +220,7 @@ li.planing-path--current {
   border: 1px solid #cbced9;
 }
 
-.planing-add__score--children--check:checked + .planing-add__score--children::before {
+.planing-add__score--children--check:checked+.planing-add__score--children::before {
   background-image: url("../img/tick.svg");
   background-size: 50%;
   background-position: center;
@@ -223,7 +228,7 @@ li.planing-path--current {
 }
 
 .planing__calendar {
-  margin-bottom: 21px;
+  margin-bottom: 25px;
 }
 
 .planing__month button {
@@ -287,7 +292,7 @@ li.planing-path--current {
 .planing-data__day {
   display: flex;
   flex-wrap: wrap;
-  width: 221px;
+  width: 225px;
 }
 
 .planing-data__day p {
@@ -300,8 +305,8 @@ li.planing-path--current {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 31px;
-  height: 30px;
+  width: 33px;
+  height: 32px;
   text-align: left;
   border: 1px solid #d4d9eb;
   margin-left: -1px;
@@ -319,27 +324,27 @@ li.planing-path--current {
   color: #ff5c23;
 }
 
-.planing-data--0331:checked ~ .planing-data__day .planing-data__choise--0331 {
+.planing-data--0331:checked~.planing-data__day .planing-data__choise--0331 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.planing-data--0329:checked ~ .planing-data__day .planing-data__choise--0329 {
+.planing-data--0329:checked~.planing-data__day .planing-data__choise--0329 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.planing-data--0328:checked ~ .planing-data__day .planing-data__choise--0328 {
+.planing-data--0328:checked~.planing-data__day .planing-data__choise--0328 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.planing-data--0327:checked ~ .planing-data__day .planing-data__choise--0327 {
+.planing-data--0327:checked~.planing-data__day .planing-data__choise--0327 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.planing-data--0326:checked ~ .planing-data__day .planing-data__choise--0326 {
+.planing-data--0326:checked~.planing-data__day .planing-data__choise--0326 {
   background-color: #1d2e5b;
   color: white;
 }
@@ -443,12 +448,14 @@ li.planing-path--current {
 
 .planing-country__other {
   @include center;
-  width: 230px;
+  width: 369px;
+
   position: absolute;
   left: 0;
   right: 0;
   display: none;
   padding-top: 21px;
+  z-index: 5;
 }
 
 .planing-step__second--choise:hover .planing-country__other {
@@ -461,7 +468,7 @@ li.planing-path--current {
 
 // при добавление этого класа - показывает календарь
 
-.planing-step__second--country:hover {
+.planning-select__current-country {
   color: #ffffff;
   background-color: #1d2e5b;
 }
@@ -470,13 +477,16 @@ li.planing-path--current {
   @include reset-list;
 }
 
-.planing-country__selection {
-  position: absolute;
+.planing-country__other .planing-country__selection {
+  // position: absolute;
+  // left: 0;
+  // right: 0;
+  // top: 100%;
   width: 230px;
   height: 210px;
   display: flex;
   flex-wrap: wrap;
-  top: 42px;
+  margin-bottom: 282px;
 }
 
 .planing-country__selection--items,
@@ -539,19 +549,6 @@ li.planing-path--current {
   padding-left: 20px;
 }
 
-
-.planing-country__other .planing-country__selection {
-  position: absolute;
-  width: 230px;
-  height: 210px;
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 282px;
-  left: 0;
-  right: 0;
-  top: 100%;
-}
-
 .planing-country__other .planing-country__button {
   background-color: #d6daed;
   margin-bottom: 27px;
@@ -563,7 +560,8 @@ li.planing-path--current {
 
 .planing-step__three textarea {
   @include fontBS(16px, normal, #444444);
-  width: 96%;
+  width: 100%;
+  height: 218px;
   line-height: 1.38;
   // letter-spacing: -0.5px;
   resize: none;
@@ -575,12 +573,28 @@ li.planing-path--current {
 .planing-step__three--plan {
   @include center;
   width: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   position: relative;
+  padding-top: 8px;
 }
 
 .planing-step__three--plan p {
   @include fontBS (17px, bold, #1d2e5b);
   align-self: flex-start;
+}
+
+@media (max-width: 767px) {
+  .planing-step__three--plan p::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #1d2e5b;
+    margin-right: 8px;
+  }
 }
 
 .planing-step__second--choise p {
@@ -612,7 +626,9 @@ li.planing-path--current {
 
 .planing-step__three--container {
   width: 88%;
-  padding-top: 15px;
+  padding-top: 18px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .planing-step__three--fun {
@@ -621,20 +637,27 @@ li.planing-path--current {
 }
 
 .planing-step__three--container .planing-step__text {
-  margin-bottom: 6px;
+  margin-bottom: 0;
 }
 
-.planing-step__three--plan p::after {
-  content: "флаг";
+.planing-step__three--country {
   position: absolute;
   font-size: 0;
+  padding-left: 22%;
   width: 88px;
+  top: 22px;
   right: 0;
   height: 24px;
   display: inline-block;
-  background-color: inherit;
   z-index: 2;
-  background-image: linear-gradient(90deg, transparent 0.5%, white 60%, #d9d9d9 28%);
+  background-image: linear-gradient(90deg, transparent 0.5%, white 35%);
+}
+
+.planing-step__three--country img {
+  width: 35px;
+  height: 24px;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 .planing-step__three {
@@ -646,6 +669,7 @@ li.planing-path--current {
 // _____________________Направления_____________________________________________
 
 @media (min-width: $tablet-width) {
+
   .planing-step__first--container,
   .planing-step__second--container,
   .planing-step__three--container {
@@ -672,10 +696,16 @@ li.planing-path--current {
     font-size: 36px;
   }
 
+  .planing__first--date,
+  .planing__second--route {
+    font-size: 36px;
+  }
+
   .planing-step__text {
     font-size: 20px;
     line-height: 1.2;
     margin-bottom: 42px;
+    margin-top: 36px;
   }
 
   .planing-route__btn {
@@ -724,6 +754,31 @@ li.planing-path--current {
     margin-bottom: 0;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
+    padding-bottom: 32px;
+  }
+
+  .planing-step__three--country img {
+    width: 70px;
+    height: 47px;
+  }
+
+  .planing-step__three--country {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 103px;
+    top: 40px;
+    right: 10px;
+    padding-left: 0;
+  }
+
+  .planing-step__three--country::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #1d2e5b;
+    border-radius: 50%;
   }
 
   .planing-step__end {
@@ -732,9 +787,38 @@ li.planing-path--current {
     padding-top: 0;
     padding-left: 45px;
     padding-right: 35px;
-    padding-bottom: 45px;
+    padding-bottom: 50px;
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
+  }
+
+  .planing-country__other {
+    background-color: white;
+    top: 30px;
+    padding-top: 0;
+  }
+
+  .planning-select__current-country {
+    width: 100%;
+    height: 70px;
+    padding-left: 27px;
+  }
+
+  .planing-country__other .planing-country__selection {
+    width: 257px;
+    margin-bottom: 0;
+    margin-right: auto;
+    padding-left: 27px;
+  }
+
+  .planing-country__selection--items .planing-country__chosen {
+    width: 473px;
+    padding-top: 0;
+    background-color: white;
+    /* padding-left: 20px; */
+    padding-left: 349px;
+    margin-top: -42px;
+    background: white;
   }
 
   .planing-add {
@@ -861,7 +945,7 @@ li.planing-path--current {
   .planing-step__second--choise-wrapper {
     width: 100%;
     border-top: 1px solid #d4d9eb;
-    padding-top: 41px;
+    padding-top: 38px;
   }
 
   .planing-step__second--country {
@@ -908,6 +992,7 @@ li.planing-path--current {
   }
 
   .planing-step__second--choise {
+    height: 70px;
     margin-bottom: 16px;
   }
 
@@ -952,7 +1037,7 @@ li.planing-path--current {
 
   .planing-step--back {
     margin-right: 0;
-    width: 180px;
+    width: 188px;
     font-size: 24px;
     text-transform: unset;
   }
@@ -971,18 +1056,24 @@ li.planing-path--current {
 
   .planing-step__three textarea {
     @include fontBS (20px, normal, #444444);
-    width: 100%;
+    width: 95%;
     padding: 20px;
     border: 1px solid #cbced9;
+    height: 144px;
+    margin-left: 0;
+    align-self: flex-start;
   }
 
   .planing-step__three--plan {
     width: 100%;
+    padding-top: 3px;
+    margin-bottom: 15px;
   }
 
   .planing-step__three--plan p {
     font-size: 30px;
     letter-spacing: -2px;
+    margin-bottom: 37px;
   }
 }
 

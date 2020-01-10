@@ -12,40 +12,94 @@
 
   <header class="page-header">
     <div class="page-header__main">
+      <!-- для белой добавить  white  -->
       <a href="index.html" class="page-header__logo">
         Погнали?
       </a>
-      <nav class="page-header__nav">
-        <button class="page-header__toggle">Показать меню
+
+      <button class="page-header__toggle">Показать меню
+        <?xml version="1.0" encoding="utf-8"?>
+        <svg version="1.1" id="Layer_1" class="page-header__toggle--icon" width="25" height="11"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 25 11" style="enable-background:new 0 0 25 11;" xml:space="preserve">
+          <g>
+            <path d="M1.5,3h22C24.3,3,25,2.3,25,1.5S24.3,0,23.5,0h-22C0.7,0,0,0.7,0,1.5S0.7,3,1.5,3z" />
+            <path d="M23.5,8h-22C0.7,8,0,8.7,0,9.5S0.7,11,1.5,11h22c0.8,0,1.5-0.7,1.5-1.5S24.3,8,23.5,8z" />
+          </g>
+        </svg>
+      </button>
+      <!-- для белой добавить white-close -->
+    </div>
+    <nav class="page-header__nav">
+      <div class="page-header__wrapper">
+        <ul class="page-header__list">
+          <li class="page-header__item"><a href="#">--------</a></li>
+          <li class="page-header__item"><a href="#">О сервисе</a></li>
+          <li class="page-header__item"><a href="form.html">Направления</a></li>
+          <li class="page-header__item"><a href="catalog.html">Попутчики</a></li>
+        </ul>
+      </div>
+      <div class="menu-autho__social social-autho">
+        <!-- для белой white-autho  -->
+        <ul class="social-autho__list">
+          <li class="social-autho__item">
+            <a class="social-autho__link social-autho__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в
+              Фейсбуке</a>
+          </li>
+          <li class="social-autho__item">
+            <a class="social-autho__link social-autho__link--vk" href="https://vk.com/htmlacademy">Мы в
+              Вконтакте</a>
+          </li>
+          <li class="social-autho__item">
+            <a class="social-autho__link social-autho__link--instagram" href="https://www.instagram.com/htmlacademy">Мы
+              в
+              Инстаграме</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="page-header__autho autho">
+      <!-- для белой добавить white-autho -->
+      <a href="tel:+74954959595" class="autho__telephone autho-icon" title="Телефон">
+        <span>
           <?xml version="1.0" encoding="utf-8"?>
           <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-          <svg version="1.1" id="Layer_1" class="page-header__toggle--icon" width="25" height="11"
+          <svg version="1.1" id="Layer_1" class="register__contact--icon" width="18" height="18"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            viewBox="0 0 25 11" style="enable-background:new 0 0 25 11;" xml:space="preserve">
-            <g>
-              <path d="M1.5,3h22C24.3,3,25,2.3,25,1.5S24.3,0,23.5,0h-22C0.7,0,0,0.7,0,1.5S0.7,3,1.5,3z" />
-              <path d="M23.5,8h-22C0.7,8,0,8.7,0,9.5S0.7,11,1.5,11h22c0.8,0,1.5-0.7,1.5-1.5S24.3,8,23.5,8z" />
-            </g>
+            viewBox="0 0 36 36" style="enable-background:new 0 0 36 36;" xml:space="preserve">
+            <style type="text/css">
+            </style>
+            <path class="autho__contact--icon" d="M18,0C11.6,0,5.2,1.1,2.8,3.4C0.9,5.3,0.2,8.7,0,10.8c0,0,0,0.2,0,0.3c0,0.8,0.7,1.5,1.5,1.5
+      c0.1,0,3.7-0.3,5.9-0.5c0.1,0,0.1,0,0.2,0c0.8,0,1.5-0.7,1.5-1.5l0-3C9,6.7,9.7,6,10.7,6h14.7C26.2,6,27,6.7,27,7.7l0,3
+      c0,0.8,0.7,1.5,1.5,1.5c0.1,0,0.1,0,0.2,0c2.2,0.2,5.8,0.5,5.9,0.5c0.8,0,1.5-0.7,1.5-1.5c0-0.1,0-0.3,0-0.3
+      c-0.2-2.1-0.9-5.5-2.8-7.4C30.8,1.1,24.4,0,18,0z M18,19.5c-1.7,0-3,1.3-3,3s1.3,3,3,3c1.7,0,3-1.3,3-3S19.7,19.5,18,19.5z
+      M15.7,12.7v-1.9c0-1-0.8-1.9-1.9-1.9S12,9.8,12,10.9v1.9L1.9,23.6c-0.7,0.7-1.1,1.6-1.1,2.7v3c0,1.7,1.3,3,3,3h0.8v1.9
+      c0,1,0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9v-1.9h19.5v1.9c0,1,0.8,1.9,1.9,1.9c1,0,1.9-0.8,1.9-1.9v-1.9h0.8c1.7,0,3-1.3,3-3v-3
+      c0-1.1-0.4-2-1.1-2.7L24,12.7v-1.9c0-1-0.8-1.9-1.9-1.9s-1.9,0.8-1.9,1.9v1.9H15.7z M18,16.5c3.3,0,6,2.7,6,6c0,3.3-2.7,6-6,6
+      c-3.3,0-6-2.7-6-6C12,19.2,14.7,16.5,18,16.5z" />
           </svg>
-        </button>
-        <div class="page-header__wrapper">
-          <ul class="page-header__list">
-            <li class="page-header__item"><a href="#">--------</a></li>
-            <li class="page-header__item"><a href="#">О сервисе</a></li>
-            <li class="page-header__item"><a href="#">Направления</a></li>
-            <li class="page-header__item"><a href="#">Попутчики</a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    <div class="page-header__autho autho">
-      <a href="tel:+74954959595" class="autho__telephone autho-icon" title="Телефон">
-        Звонок
+        </span>
+        8 800 555-86-28
       </a>
       <a href="#" class="autho__mail autho-icon" title="Написать">
-        Почта
+        <span>
+          <?xml version="1.0" encoding="utf-8"?>
+          <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+          <svg class="autho__contact--icon" version="1.1" id="Layer_1" class="register__contact--icon" width="18"
+            height="13" xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36 26"
+            style="enable-background:new 0 0 36 26;" xml:space="preserve">
+            <style type="text/css">
+            </style>
+            <path class="autho__contact--icon" d="M0,23c0,1.6,1.3,3,3,3h30c1.7,0,3-1.3,3-3V3c0-1.6-1.3-3-3-3H3C1.3,0,0,1.3,0,3L0,23L0,23z M11,13L4.2,6.2
+      c-0.6-0.6-0.6-1.5,0-2c0.6-0.6,1.5-0.6,2.1,0l11,10.9c0.4,0.4,1.2,0.4,1.6,0l11-10.9c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2
+      L25,13l6.9,6.8c0.6,0.6,0.6,1.5,0,2c-0.6,0.6-1.5,0.6-2.1,0l-6.9-6.8c0,0-2.1,2.2-2.5,2.5c-0.6,0.6-1.4,1-2.4,1
+      c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-0.6-0.6-0.6-1.5,0-2L11,13z" />
+          </svg>
+        </span>
+        mail@htmlacademy.ru
       </a>
-      <!-- или списком это сделать? -->
       <button class="autho__button">Авторизация</button>
     </div>
   </header>
@@ -412,7 +466,8 @@
         <form action="https://echo.htmlacademy.ru" method="GET" class="selection-companion">
           <h2>Подберите идеального попутчика</h2>
 
-          <fieldset class="selection-hobby">
+          <!-- <fieldset class="selection-hobby"> -->
+          <div class="selection-hobby">
             <legend>Хобби</legend>
             <input type="checkbox" id="hobby" name="hobby-group" class="selection-hobby__id">
             <p class="selection-hobby__name"> Хобби
@@ -432,108 +487,115 @@
                 <label class="check" for="Relax">Кальян</label>
               </li>
             </ul>
-          </fieldset>
+          </div>
 
-          <fieldset class="selection-musiс">
-            <legend>Музыка</legend>
-            <input type="checkbox" id="music" name="music-group" class="selection-musiс__id">
-            <p class="selection-music__name">Музыка
-              <label class="selection-musiс--toggle" for="music">Открыть или Закрыть</label>
-            </p>
+          <!-- </fieldset> -->
 
-            <ul class="selection-musiс__list">
-              <li>
-                <input class="check-input" type="checkbox" name="rock" id="hard-rock" checked>
-                <label class="check" for="hard-rock">Тяжелый рок</label>
-              </li>
-              <li>
-                <input class="check-input" type="checkbox" name="rock" id="rus-rap">
-                <label class="check" for="rus-rap">Русский рэп</label>
-              </li>
-              <li>
-                <input class="check-input" type="checkbox" name="rock" id="eurodance">
-                <label class="check" for="eurodance">Евроденс</label>
-              </li>
-            </ul>
-          </fieldset>
+          <!-- <fieldset class="selection-musiс"> -->
+            <div class="selection-musiс">
+              <legend>Музыка</legend>
+              <input type="checkbox" id="music" name="music-group" class="selection-musiс__id">
+              <p class="selection-music__name">Музыка
+                <label class="selection-musiс--toggle" for="music">Открыть или Закрыть</label>
+              </p>
 
-          <fieldset class="selection-food">
-            <legend>Еда</legend>
-            <input type="checkbox" id="food" name="food-group" class="selection-food__id" checked>
-            <p class="selection-food__name">Еда
-              <label class="selection-food--toggle" for="food">Открыть или Закрыть</label>
-            </p>
+              <ul class="selection-musiс__list">
+                <li>
+                  <input class="check-input" type="checkbox" name="rock" id="hard-rock" checked>
+                  <label class="check" for="hard-rock">Тяжелый рок</label>
+                </li>
+                <li>
+                  <input class="check-input" type="checkbox" name="rock" id="rus-rap">
+                  <label class="check" for="rus-rap">Русский рэп</label>
+                </li>
+                <li>
+                  <input class="check-input" type="checkbox" name="rock" id="eurodance">
+                  <label class="check" for="eurodance">Евроденс</label>
+                </li>
+              </ul>
+            </div>
+            <!-- </fieldset> -->
 
-            <ul class="selection-food__list">
-              <li>
-                <input class="check-input" type="checkbox" name="food" id="meet" checked>
-                <label class="check" for="meet">Мясоед</label>
-              </li>
-              <li>
-                <input class="check-input" type="checkbox" name="food" id="product">
-                <label class="check" for="product">Сидит на ПП</label>
-              </li>
-              <li>
-                <input class="check-input" type="checkbox" name="food" id="cheese">
-                <label class="check" for="cheese">Веган-сыроед</label>
-              </li>
-            </ul>
-          </fieldset>
+            <div class="selection-food">
 
-          <fieldset class="selection-transport">
-            <input type="checkbox" id="transport" name="transport-group" class="selection-transport__id">
-            <p class="selection-transport__name">транспорт:
-              <label class="selection-transport--toggle" for="transport">Открыть или Закрыть</label>
-            </p>
-            <input type="checkbox" name="walks" id="walk" class="selection__walk">
-            <input type="checkbox" name="cycle" id="cycle" class="selection__cycle">
-            <input type="checkbox" name="air" id="air" class="selection__air">
-            <input type="checkbox" id="bus" name="bus" class="selection__bus">
-            <ul class="selection-transport__list">
-              <li class="selection__air--favorite">
-                <label for="air">Самолет</label>
-              </li>
-              <li class="selection__bus--favorite">
-                <label for="bus">Автобус</label>
-              </li>
-              <li class="selection__cycle--favorite">
-                <label for="cycle">Велосипед</label>
-              </li>
-              <li class="selection__walk--favorite">
-                <label for="walk">Пешие прогулки</label>
-              </li>
-            </ul>
-          </fieldset>
+              <legend>Еда</legend>
+              <input type="checkbox" id="food" name="food-group" class="selection-food__id" checked>
+              <p class="selection-food__name">Еда
+                <label class="selection-food--toggle" for="food">Открыть или Закрыть</label>
+              </p>
 
-          <fieldset class="selection-lvl">
-            <legend>Левел</legend>
-            <input type="checkbox" id="lvl" name="lvl-group" class="selection-lvl__id">
-            <p class="selection-lvl__name">Левел:
-              <label class="selection-lvl--toggle" for="lvl">Открыть или Закрыть</label>
-            </p>
+              <ul class="selection-food__list">
+                <li>
+                  <input class="check-input" type="checkbox" name="food" id="meet" checked>
+                  <label class="check" for="meet">Мясоед</label>
+                </li>
+                <li>
+                  <input class="check-input" type="checkbox" name="food" id="product">
+                  <label class="check" for="product">Сидит на ПП</label>
+                </li>
+                <li>
+                  <input class="check-input" type="checkbox" name="food" id="cheese">
+                  <label class="check" for="cheese">Веган-сыроед</label>
+                </li>
+              </ul>
+            </div>
 
-            <div class="selection-lvl__controls">
-              <div class="selection-lvl__range">
-                <div class="selection-lvl__scale">
-                  <!-- а это заполненая линия -->
-                  <div class="selection-lvl__bar"></div>
-                  <!-- незаполненая линия -->
+            <div class="selection-transport">
+
+              <input type="checkbox" id="transport" name="transport-group" class="selection-transport__id">
+              <p class="selection-transport__name">транспорт:
+                <label class="selection-transport--toggle" for="transport">Открыть или Закрыть</label>
+              </p>
+              <input type="checkbox" name="walks" id="walk" class="selection__walk">
+              <input type="checkbox" name="cycle" id="cycle" class="selection__cycle">
+              <input type="checkbox" name="air" id="air" class="selection__air">
+              <input type="checkbox" id="bus" name="bus" class="selection__bus">
+              <ul class="selection-transport__list">
+                <li class="selection__air--favorite">
+                  <label for="air">Самолет</label>
+                </li>
+                <li class="selection__bus--favorite">
+                  <label for="bus">Автобус</label>
+                </li>
+                <li class="selection__cycle--favorite">
+                  <label for="cycle">Велосипед</label>
+                </li>
+                <li class="selection__walk--favorite">
+                  <label for="walk">Пешие прогулки</label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="selection-lvl">
+              <legend>Левел</legend>
+              <input type="checkbox" id="lvl" name="lvl-group" class="selection-lvl__id">
+              <p class="selection-lvl__name">Левел:
+                <label class="selection-lvl--toggle" for="lvl">Открыть или Закрыть</label>
+              </p>
+
+              <div class="selection-lvl__controls">
+                <div class="selection-lvl__range">
+                  <div class="selection-lvl__scale">
+                    <!-- а это заполненая линия -->
+                    <div class="selection-lvl__bar"></div>
+                    <!-- незаполненая линия -->
+                  </div>
+                  <div class="selection-lvl__range--toogle range--toogle-min">Выбрать минимальный уровень.</div>
+                  <!-- ползунок слева -->
+                  <div class="selection-lvl__range--toogle range--toogle-max">Выбрать максимальный уровень. </div>
+                  <!-- ползунок справа -->
                 </div>
-                <div class="selection-lvl__range--toogle range--toogle-min">Выбрать минимальный уровень.</div>
-                <!-- ползунок слева -->
-                <div class="selection-lvl__range--toogle range--toogle-max">Выбрать максимальный уровень. </div>
-                <!-- ползунок справа -->
-              </div>
-              <!-- или ползунки в спаны и п обернуть ? -->
+                <!-- или ползунки в спаны и п обернуть ? -->
 
-              <div class="selection-lvl__input">
-                <input type="text" id="lvl-start" name="start" value="30">
-                <input type="text" id="lvl-end" name="end" value="100" class="lvl-end">
+                <div class="selection-lvl__input">
+                  <input type="text" id="lvl-start" name="start" value="30" class="selection-lvl__input--start">
+                  <input type="text" id="lvl-end" name="end" value="100" class="lvl-end">
+                </div>
               </div>
             </div>
-          </fieldset>
-          <button class="form-button">Показать
-          </button>
+
+            <button class="form-button" type="submit">Показать
+            </button>
         </form>
       </section>
       <section class="traveler">
@@ -541,11 +603,10 @@
         <ul class="traveler__list">
 
           <li class="traveler__item traveler-firsova">
-
             <img src="img/firsova-mobile@1x.jpg" width="70" height="70" alt="Фото попутчика.">
             <h3 class="traveler__name">Таня Фирсова</h3>
-            <div class="traveler__heart--wrapp">
-              <button class="traveler__heart--btn traveler__heart--red">
+            <div class="traveler__heart--wrapp" data-tooltip="Zvezda">
+              <button class="traveler__heart--btn traveler__heart--red" data-tooltip="Звезда">
                 <svg width="13" height="11" class="traveler__heart--img traveler__heart--active" version="1.1"
                   id="heart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                   y="0px" viewBox="0 0 13 11" style="enable-background:new 0 0 13 11;" xml:space="preserve">
@@ -575,9 +636,15 @@ c1.3-1.3,3.5-1.3,4.9,0c1.3,1.3,1.3,3.5,0,4.8L14.9,9.8z" />
             <div class="traveler__wish">
               <p class="traveler__text">хочет посетить:</p>
               <ul class="traveler__countries">
-                <li class="country__item">Шри-Ланка</li>
-                <li class="country__item">Тайланд</li>
-                <li class="country__item">Сейшелы</li>
+                <li class="country__item">
+                  <img src="img/flag-sri-lanka.svg" alt="Флаг любимой страны" width="26" height="18">
+                  Шри-Ланка</li>
+                <li class="country__item">
+                  <img src="img/flag-thailand.svg" alt="Флаг любимой страны" width="26" height="18">
+                  Тайланд </li>
+                <li class="country__item">
+                  <img src="img/flag-seychelles.svg" alt="Флаг любимой страны" width="26" height="18">
+                  Сейшелы</li>
               </ul>
             </div>
             <p class="traveler__text traveler__text--car">транспорт: <span>левел:</span></p>
@@ -687,8 +754,12 @@ c1.3-1.3,3.5-1.3,4.9,0c1.3,1.3,1.3,3.5,0,4.8L14.9,9.8z" />
             <div class="traveler__wish">
               <p class="traveler__text">хочет посетить:</p>
               <ul class="traveler__countries country">
-                <li class="country__item">Бельгия</li>
-                <li class="country__item">Чехия</li>
+                <li class="country__item">
+                  <img src="img/flag-belgium.svg" alt="Флаг любимой страны" width="26" height="18">
+                  Бельгия</li>
+                <li class="country__item">
+                  <img src="img/flag-czech.svg" alt="Флаг любимой страны" width="26" height="18">
+                  Чехия</li>
               </ul>
             </div>
             <p class="traveler__text traveler__text--car">транспорт: <span>левел:</span></p>
@@ -716,9 +787,9 @@ c0.2-0.3,0.4-0.3,0.6-0.1c0.2,0.2,5.7,6.7,5.7,6.7c0.3,0.3,0.5,0.4,0.9-0.2C19.1,19
                 <li class="transport__normal transport--favorite">Автобус
                   <?xml version="1.0" encoding="utf-8"?>
                   <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                  <svg width="13" height="16" class="bus-svg" version="1.1" id="svg2103" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 17 21"
-                    style="enable-background:new 0 0 17 21;" xml:space="preserve">
+                  <svg width="13" height="16" class="bus-svg" version="1.1" id="svg2103"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 17 21" style="enable-background:new 0 0 17 21;" xml:space="preserve">
                     <path d="M16.2,3.1c-0.2-1.2-1-1.6-2.1-2.1C13,0.6,10.4,0,8.5,0C6.6,0,4,0.6,2.9,1C1.8,1.5,1.1,1.9,0.8,3.1L0,9.5v8.8h1.4v1.4
 c0,1.7,2.5,1.7,2.5,0v-1.4h4.5h0h4.7v1.4c0,1.7,2.5,1.7,2.5,0v-1.4H17V9.5L16.2,3.1z M5,1.6h3.4H12c0.7,0,0.7,1,0,1H8.4H5
 C4.3,2.7,4.3,1.6,5,1.6z M2.7,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C3.8,15,3.3,15.6,2.7,15.6z
@@ -802,9 +873,15 @@ c1.3-1.3,3.5-1.3,4.9,0c1.3,1.3,1.3,3.5,0,4.8L14.9,9.8z" />
             <div class="traveler__wish">
               <p class="traveler__text">хочет посетить:</p>
               <ul class="traveler__countries country">
-                <li class="country__item">США</li>
-                <li class="country__item">Австралия</li>
-                <li class="country__item">Доминикана</li>
+                <li class="country__item">
+                  <img src="img/flag-usa(1).svg" alt="Флаг любимой страны" width="26" height="18">
+                  США</li>
+                <li class="country__item">
+                  <img src="img/flag-australia.svg" alt="Флаг любимой страны" width="26" height="18">
+                  Австралия</li>
+                <li class="country__item">
+                  <img src="img/flag-dominica.svg" alt="Флаг любимой страны" width="26" height="18">
+                  Доминикана</li>
               </ul>
             </div>
             <p class="traveler__text traveler__text--car">транспорт: <span>левел:</span></p>
@@ -913,8 +990,12 @@ c1.3-1.3,3.5-1.3,4.9,0c1.3,1.3,1.3,3.5,0,4.8L14.9,9.8z" />
             <div class="traveler__wish">
               <p class="traveler__text">хочет посетить:</p>
               <ul class="traveler__countries country">
-                <li class="country__item">Великобритания</li>
-                <li class="country__item">Германия</li>
+                <li class="country__item">
+                  <img src="img/flag-united-kingdom.svg" alt="Флаг любимой страны" width="26" height="18">
+                  Великобритания</li>
+                <li class="country__item">
+                  <img src="img/flag-bosnia.svg" alt="Флаг любимой страны" width="26" height="18">
+                  Германия</li>
               </ul>
             </div>
             <p class="traveler__text traveler__text--car">транспорт: <span>левел:</span></p>

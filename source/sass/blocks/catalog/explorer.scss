@@ -13,8 +13,8 @@
 .explorer-slogan {
   display: flex;
   align-items: center;
-  height: 85px;
-  padding-top: 20px;
+  height: 82px;
+  padding-top: 14px;
   padding-left: 22px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -57,9 +57,27 @@
   @include fontBS(20px, bold, #1d2e5b);
 }
 
-.explorer-main legend {
+.explorer__transport--users,
+.explorer__tegs--users {
   @include fontBS (16px, bold, #1d2e5b);
   text-align: center;
+  text-transform: uppercase;
+}
+
+.explorer__tegs--users {
+  position: absolute;
+  top: -25px;
+  right: 37%;
+  width: 70px;
+  background-color: #edeff6;
+}
+
+.explorer__transport--users {
+  position: absolute;
+  top: -25px;
+  right: 30%;
+  width: 110px;
+  background-color: #edeff6;
 }
 
 .explorer-foto {
@@ -125,6 +143,7 @@
 .explorer__tegs {
   width: 85%;
   height: 97px;
+  position: relative;
   border-radius: 10px;
   margin-bottom: 16px;
   padding: 0;
@@ -144,7 +163,10 @@
 
 .explorer__transport {
   width: 85%;
+  height: 63px;
+  position: relative;
   margin-bottom: 36px;
+  padding-top: 15px;
 }
 
 .explorer__transport--type {
@@ -158,8 +180,21 @@
   width: 33px;
   height: 33px;
   background-color: white;
+  opacity: 0.4;
   border-radius: 50%;
 }
+
+.explorer__transport--type .transport--favorite {
+  opacity: 1;
+}
+
+// .explorer__transport--type .explorer__bus--favorite,
+// .explorer__transport--type .explorer__air--favorite,
+// .explorer__transport--type .explorer__cycle--favorite,
+// .explorer__transport--type .explorer__walk--favorite {
+//   background-color: white;
+// }
+
 
 .explorer__transport input {
   display: none;
@@ -174,27 +209,24 @@
   font-size: 0;
 }
 
-.explorer__transport--type .explorer__bus--favorite,
-.explorer__transport--type .explorer__air--favorite,
-.explorer__transport--type .explorer__cycle--favorite,
-.explorer__transport--type .explorer__walk--favorite {
-  background-color: white;
+.explorer__bus:checked~.explorer__transport--type .explorer__bus--favorite {
+  opacity: 1;
+  fill: #1d2e5b;
 }
 
-.explorer__bus:checked ~ .explorer__transport--type .explorer__bus--favorite {
-  opacity: 0.2;
+.explorer__air:checked~.explorer__transport--type .explorer__air--favorite {
+  opacity: 1;
+  fill: #1d2e5b;
 }
 
-.explorer__air:checked ~ .explorer__transport--type .explorer__air--favorite {
-  opacity: 0.2;
+.explorer__cycle:checked~.explorer__transport--type .explorer__cycle--favorite svg {
+  opacity: 1;
+  fill: #1d2e5b;
 }
 
-.explorer__cycle:checked ~ .explorer__transport--type .explorer__cycle--favorite svg {
-  opacity: 0.2;
-}
-
-.explorer__walk:checked ~ .explorer__transport--type .explorer__walk--favorite {
-  opacity: 0.2;
+.explorer__walk:checked~.explorer__transport--type .explorer__walk--favorite {
+  opacity: 1;
+  fill: #1d2e5b;
 }
 
 
@@ -468,7 +500,7 @@ li.explorer-path--current {
   border: 1px solid #cbced9;
 }
 
-.explorer-add__score--children--check:checked + .explorer-add__score--children::before {
+.explorer-add__score--children--check:checked+.explorer-add__score--children::before {
   background-image: url("../img/tick.svg");
   background-size: 50%;
   background-position: center;
@@ -572,27 +604,27 @@ li.explorer-path--current {
   color: #ff5c23;
 }
 
-.explorer-data--0331:checked ~ .explorer-data__day .explorer-data__choise--0331 {
+.explorer-data--0331:checked~.explorer-data__day .explorer-data__choise--0331 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0329:checked ~ .explorer-data__day .explorer-data__choise--0329 {
+.explorer-data--0329:checked~.explorer-data__day .explorer-data__choise--0329 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0328:checked ~ .explorer-data__day .explorer-data__choise--0328 {
+.explorer-data--0328:checked~.explorer-data__day .explorer-data__choise--0328 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0327:checked ~ .explorer-data__day .explorer-data__choise--0327 {
+.explorer-data--0327:checked~.explorer-data__day .explorer-data__choise--0327 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0326:checked ~ .explorer-data__day .explorer-data__choise--0326 {
+.explorer-data--0326:checked~.explorer-data__day .explorer-data__choise--0326 {
   background-color: #1d2e5b;
   color: white;
 }
@@ -900,9 +932,9 @@ li.explorer-path--current {
 
 @media (min-width: $tablet-width) {
   .explorer-slogan {
-    height: 252px;
+    height: 220px;
     padding-left: 70px;
-    padding-top: 46px;
+    padding-top: 18px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
   }
@@ -914,6 +946,20 @@ li.explorer-path--current {
 
   .explorer__idea::after {
     bottom: -73px;
+  }
+
+  .explorer__tegs--users {
+    width: 83px;
+    font-size: 20px;
+    top: 61px;
+    right: 45%;
+  }
+
+  .explorer__transport--users {
+    top: 62px;
+    font-size: 20px;
+    width: 153px;
+    right: 25%;
   }
 
   .explorer-main {
@@ -969,6 +1015,7 @@ li.explorer-path--current {
     width: 308px;
     height: 94px;
     order: -1;
+    padding-top: 25px;
   }
 
   .explorer__transport--type .explorer__bus--favorite,
@@ -985,8 +1032,10 @@ li.explorer-path--current {
   }
 
   .explorer__tegs textarea {
-    font-size: 24px;
     width: 100%;
+    font-size: 24px;
+    padding-top: 37px;
+    padding-left: 40px;
   }
 
   .explorer-plan h2 {
@@ -1470,6 +1519,8 @@ li.explorer-path--current {
 
   .explorer__transport {
     width: 20%;
+    position: relative;
+    padding-top: 25px;
     order: 1;
   }
 
@@ -1489,10 +1540,36 @@ li.explorer-path--current {
 
   .explorer__tegs textarea {
     font-size: 20px;
+    padding: 40px 37px;
   }
 
-  .explorer-main legend {
+  .explorer__transport--users,
+  .explorer__tegs--users {
     font-size: 20px;
+  }
+
+  .explorer__tegs {
+    position: relative;
+  }
+
+  .explorer__transport--users {
+    position: absolute;
+    z-index: 5;
+    left: 24%;
+    bottom: -30px;
+    background-color: #edeff6;
+    width: 153px;
+    text-transform: uppercase;
+  }
+
+  .explorer__tegs--users {
+    position: absolute;
+    z-index: 5;
+    left: 5%;
+    bottom: -30px;
+    background-color: #edeff6;
+    width: 83px;
+    text-transform: uppercase;
   }
 
   .explorer-plan__country b {

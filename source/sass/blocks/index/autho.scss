@@ -64,7 +64,15 @@
 
   .autho-icon {
     display: inline-block;
+  }
+
+  .autho-icon span {
     width: 50px;
     min-height: 50px;
+  }
+
+  .autho__contact--icon {
+    width: 18px;
+    height: 14px;
   }
 }

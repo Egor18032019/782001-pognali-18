@@ -76,7 +76,7 @@
 .filter-country__continent {
   @include reset-list;
   margin-bottom: 0;
-  margin-top: 20px;
+  margin-top: 16px;
   margin-left: 14%;
 }
 
@@ -99,6 +99,7 @@
 .filter-country__continent--radio {
   @include fontBS (16px, bold, rgba(25, 33, 68, 0.3));
   text-transform: uppercase;
+  line-height: 1.38;
 }
 
 // не могу понять страны это сылки или нет ?
@@ -107,7 +108,7 @@
   display: none;
 }
 
-.filter-country__continent--choose:checked + .filter-country__continent--radio {
+.filter-country__continent--choose:checked+.filter-country__continent--radio {
   color: #192144;
 }
 
@@ -127,7 +128,7 @@
 }
 
 .filter-country__other .filter-country__selection {
-  width: 230px;
+  width: 225px;
   height: 210px;
   display: flex;
   flex-wrap: wrap;
@@ -144,6 +145,8 @@
   width: 45px;
   height: 42px;
   border: 1px solid #cbced9;
+  margin-bottom: -1px;
+  margin-right: -1px;
 }
 
 .filter-country__selection button {
@@ -209,10 +212,11 @@
   .filter-country__pushbutton--close,
   .filter-country__continent--radio {
     font-size: 20px;
+    line-height: 20px;
   }
 
   .filter-country__chosen,
-  .filter-country__continent .filter-country__continent--choose:checked + .filter-country__continent--radios {
+  .filter-country__continent .filter-country__continent--choose:checked+.filter-country__continent--radios {
     font-size: 20px;
   }
 
@@ -262,6 +266,7 @@
 
   .filter-country__chosen a {
     font-size: 20px;
+    line-height: 1.5;
   }
 
   .filter-country__other {
@@ -290,11 +295,11 @@
 
   .filter-country__selection--items .filter-country__chosen {
     margin-left: 453px;
-    margin-top: -49px;
+    margin-top: -57px;
   }
 
   .filter-country__chosen li {
-    margin-bottom: 4px;
+    margin-bottom: 0;
     line-height: 1.5;
   }
 }
@@ -441,7 +446,7 @@
     font-size: 20px;
   }
 
-  .filter-country__continent--choose:checked + .filter-country__continent--radio {
+  .filter-country__continent--choose:checked+.filter-country__continent--radio {
     font-size: 20px;
   }
 }

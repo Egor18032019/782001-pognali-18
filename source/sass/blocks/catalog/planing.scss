@@ -220,7 +220,7 @@ li.planing-path--current {
   border: 1px solid #cbced9;
 }
 
-.planing-add__score--children--check:checked+.planing-add__score--children::before {
+.planing-add__score--children--check:checked + .planing-add__score--children::before {
   background-image: url("../img/tick.svg");
   background-size: 50%;
   background-position: center;
@@ -324,27 +324,27 @@ li.planing-path--current {
   color: #ff5c23;
 }
 
-.planing-data--0331:checked~.planing-data__day .planing-data__choise--0331 {
+.planing-data--0331:checked ~ .planing-data__day .planing-data__choise--0331 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.planing-data--0329:checked~.planing-data__day .planing-data__choise--0329 {
+.planing-data--0329:checked ~ .planing-data__day .planing-data__choise--0329 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.planing-data--0328:checked~.planing-data__day .planing-data__choise--0328 {
+.planing-data--0328:checked ~ .planing-data__day .planing-data__choise--0328 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.planing-data--0327:checked~.planing-data__day .planing-data__choise--0327 {
+.planing-data--0327:checked ~ .planing-data__day .planing-data__choise--0327 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.planing-data--0326:checked~.planing-data__day .planing-data__choise--0326 {
+.planing-data--0326:checked ~ .planing-data__day .planing-data__choise--0326 {
   background-color: #1d2e5b;
   color: white;
 }
@@ -359,7 +359,6 @@ li.planing-path--current {
   margin-bottom: 21px;
   height: 42px;
   text-transform: uppercase;
-  position: relative;
 }
 
 .planing-step__second--choise::after {
@@ -375,7 +374,7 @@ li.planing-path--current {
   right: 49px;
 }
 
-.planing-step__second--choise+.clear::after {
+.planing-step__second--choise + .clear::after {
   background-color: white;
   border: solid 1px #cbced9;
 }
@@ -767,7 +766,6 @@ li.planing-path--current {
 // _____________________Направления_____________________________________________
 
 @media (min-width: $tablet-width) {
-
   .planing-step__first--container,
   .planing-step__second--container,
   .planing-step__three--container {
@@ -926,11 +924,9 @@ li.planing-path--current {
   .planing-country__selection--items .planing-country__chosen {
     width: 473px;
     padding-top: 0;
-    background-color: white;
-    /* padding-left: 20px; */
     padding-left: 349px;
     margin-top: -42px;
-    background: white;
+    background-color: white;
   }
 
   .planing-country__chosen a {
@@ -1217,8 +1213,6 @@ li.planing-path--current {
   .planing-add--wrapper {
     padding-top: 4px;
   }
-
-
 
   .planing-add {
     border-top-left-radius: 60px;

@@ -1,0 +1,71 @@
+.transport {
+  display: flex;
+  width: 65%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.bus-svg {
+  width: 13px;
+  height: 16px;
+}
+
+.transport__normal {
+  width: 33px;
+  height: 32px;
+  // margin-right: 17px;
+  font-size: 0;
+  border-radius: 50%;
+  background-size: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 0;
+}
+
+.transport__normal svg {
+  fill: #1d2e5b;
+  opacity: 0.15;
+}
+
+.transport--favorite svg {
+  fill: #1d2e5b;
+  opacity: 1;
+}
+
+// .transport li:first-child {
+//   background-image: url("../img/plane.svg");
+//   background-repeat: no-repeat;
+//   background-position: center;
+// }
+
+// .transport li:nth-child(2) {
+//   background-image: url("../img/bus.svg");
+//   background-repeat: no-repeat;
+//   background-position: center;
+// }
+
+// .transport li:nth-child(3) {
+//   background-image: url("../img/bike.svg");
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: 70%;
+// }
+
+// .transport li:last-child {
+//   background-image: url("../img/run.svg");
+//   background-repeat: no-repeat;
+//   background-position: center;
+// }
+
+
+// @media (min-width: $tablet-width) {
+
+// }
+
+// // --------------------------для пк ------------------------
+// @media (min-width: $desktop-width) {
+
+// }

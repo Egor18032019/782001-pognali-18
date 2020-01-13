@@ -209,22 +209,22 @@
   font-size: 0;
 }
 
-.explorer__bus:checked~.explorer__transport--type .explorer__bus--favorite {
+.explorer__bus:checked ~ .explorer__transport--type .explorer__bus--favorite {
   opacity: 1;
   fill: #1d2e5b;
 }
 
-.explorer__air:checked~.explorer__transport--type .explorer__air--favorite {
+.explorer__air:checked ~ .explorer__transport--type .explorer__air--favorite {
   opacity: 1;
   fill: #1d2e5b;
 }
 
-.explorer__cycle:checked~.explorer__transport--type .explorer__cycle--favorite svg {
+.explorer__cycle:checked ~ .explorer__transport--type .explorer__cycle--favorite svg {
   opacity: 1;
   fill: #1d2e5b;
 }
 
-.explorer__walk:checked~.explorer__transport--type .explorer__walk--favorite {
+.explorer__walk:checked ~ .explorer__transport--type .explorer__walk--favorite {
   opacity: 1;
   fill: #1d2e5b;
 }
@@ -500,7 +500,7 @@ li.explorer-path--current {
   border: 1px solid #cbced9;
 }
 
-.explorer-add__score--children--check:checked+.explorer-add__score--children::before {
+.explorer-add__score--children--check:checked + .explorer-add__score--children::before {
   background-image: url("../img/tick.svg");
   background-size: 50%;
   background-position: center;
@@ -604,27 +604,27 @@ li.explorer-path--current {
   color: #ff5c23;
 }
 
-.explorer-data--0331:checked~.explorer-data__day .explorer-data__choise--0331 {
+.explorer-data--0331:checked ~ .explorer-data__day .explorer-data__choise--0331 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0329:checked~.explorer-data__day .explorer-data__choise--0329 {
+.explorer-data--0329:checked ~ .explorer-data__day .explorer-data__choise--0329 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0328:checked~.explorer-data__day .explorer-data__choise--0328 {
+.explorer-data--0328:checked ~ .explorer-data__day .explorer-data__choise--0328 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0327:checked~.explorer-data__day .explorer-data__choise--0327 {
+.explorer-data--0327:checked ~ .explorer-data__day .explorer-data__choise--0327 {
   background-color: #1d2e5b;
   color: white;
 }
 
-.explorer-data--0326:checked~.explorer-data__day .explorer-data__choise--0326 {
+.explorer-data--0326:checked ~ .explorer-data__day .explorer-data__choise--0326 {
   background-color: #1d2e5b;
   color: white;
 }
@@ -1521,6 +1521,7 @@ li.explorer-path--current {
   .explorer__tegs {
     width: 40%;
     height: 94px;
+    position: relative;
   }
 
   .explorer__transport {
@@ -1553,10 +1554,6 @@ li.explorer-path--current {
   .explorer__transport--users,
   .explorer__tegs--users {
     font-size: 20px;
-  }
-
-  .explorer__tegs {
-    position: relative;
   }
 
   .explorer__transport--users {

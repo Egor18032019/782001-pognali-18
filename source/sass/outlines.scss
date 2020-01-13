@@ -151,7 +151,7 @@
   width: 10px;
   height: 20px;
   border: none;
-  background-color: #ffffff;
+  background-color: #edeff6;
   font-size: 0;
 }
 
@@ -202,6 +202,13 @@
     width: 24px;
     height: 24px;
   }
+
+  .country__item img {
+    width: 35px;
+    height: 24px;
+    position: static;
+    border-radius: 0;
+  }
 }
 
 // --------------------------для пк ------------------------
@@ -217,5 +224,12 @@
   .check::before {
     width: 24px;
     height: 24px;
+  }
+
+  .country__item img {
+    width: 35px;
+    height: 24px;
+    position: static;
+    border-radius: 0;
   }
 }

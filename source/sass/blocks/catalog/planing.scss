@@ -409,20 +409,32 @@ li.planing-path--current {
   height: 24px;
 }
 
-.planing-step__second--choise button {
+.planing-step__second--choise .flag-reset {
   width: 21px;
   height: 21px;
   font-size: 0;
   background-image: url("../img/small-cross.svg");
   background-repeat: no-repeat;
-  background-size: 50%;
+  // background-size: 50%;
   background-position: center;
-  opacity: 0.5;
+  opacity: 0.2;
   position: absolute;
   border-radius: 50%;
   right: -9px;
   top: -13px;
   border: none;
+}
+
+.planning-select__reset {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  color: white;
+  font-size: 0;
+  right: 225px;
+  top: 20px;
+  border: none;
+  background-color: transparent;
 }
 
 .planing-step__second--choise ul {
@@ -464,7 +476,6 @@ li.planing-path--current {
   padding-right: 13px;
   padding-left: 13px;
   margin-bottom: 9px;
-  margin-left: auto;
   margin-right: auto;
 }
 
@@ -520,14 +531,25 @@ li.planing-path--current {
 
 .planing-country__other {
   @include center;
-  width: 369px;
-
+  display: none;
+  width: 220px;
   position: absolute;
+  top: 0;
   left: 0;
   right: 0;
-  display: none;
-  padding-top: 21px;
   z-index: 5;
+  background-color: white;
+}
+
+.planning-select__current-country {
+  width: 220px;
+  height: 42px;
+  background-color: #1d2e5b;
+}
+
+.flag-reset {
+  top: 0;
+  right: 0;
 }
 
 .planing-step__second--choise:hover .planing-country__other {
@@ -540,33 +562,15 @@ li.planing-path--current {
 
 // при добавление этого класа - показывает календарь
 
-.planning-select__current-country {
-  color: #ffffff;
-  background-color: #1d2e5b;
-}
-
 .planing-country__other ul {
   @include reset-list;
 }
 
 .planing-country__other .planing-country__selection {
-  // position: absolute;
-  // left: 0;
-  // right: 0;
-  // top: 100%;
-  width: 230px;
+  width: 220px;
   height: 210px;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 282px;
-}
-
-.planing-country__selection--items,
-.planing-country__selection--items button {
-  width: 45px;
-  height: 42px;
-  border: 1px solid #cbced9;
-  margin-right: -1px;
 }
 
 .planing-country__selection button {
@@ -577,6 +581,14 @@ li.planing-path--current {
   text-transform: uppercase;
   background-color: white;
   border: 0 none;
+}
+
+.planing-country__selection--items,
+.planing-country__selection--items button {
+  width: 45px;
+  height: 42px;
+  border: 1px solid #cbced9;
+  margin-right: -1px;
 }
 
 .planing-country__chosen--2,
@@ -673,6 +685,10 @@ li.planing-path--current {
 .planing-step__second--choise p {
   @include fontBS (14px, 500, #1d2e5b);
   width: 100%;
+}
+
+.planning-select__current-country p {
+  color: #ffffff;
 }
 
 .planing-step__second--country::after {
@@ -846,11 +862,12 @@ li.planing-path--current {
 
   .planing-step__three--country {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    width: 103px;
-    top: 40px;
-    right: 10px;
+    width: 105px;
+    top: 35px;
+    right: -2px;
     padding-left: 0;
   }
 
@@ -875,19 +892,32 @@ li.planing-path--current {
   }
 
   .planing-country__other {
+    width: 575px;
+    height: 476px;
     background-color: white;
-    top: 30px;
+    top: 44px;
     padding-top: 0;
+    justify-content: flex-start;
   }
 
   .planning-select__current-country {
-    width: 100%;
+    width: 369px;
     height: 70px;
     padding-left: 27px;
+    align-self: flex-start;
+  }
+
+  .planing-country__selection--items,
+  .planing-country__selection--items button {
+    width: 52px;
+    height: 70px;
+    border: solid 1px #cbced9;
+    background-color: #ffffff;
+    font-size: 20px;
   }
 
   .planing-country__other .planing-country__selection {
-    width: 257px;
+    width: 285px;
     margin-bottom: 0;
     margin-right: auto;
     padding-left: 27px;
@@ -901,6 +931,11 @@ li.planing-path--current {
     padding-left: 349px;
     margin-top: -42px;
     background: white;
+  }
+
+  .planing-country__chosen a {
+    font-size: 20px;
+    line-height: 1.5;
   }
 
   .planing-add {
@@ -1078,12 +1113,29 @@ li.planing-path--current {
     margin-bottom: 16px;
   }
 
+  .planing-step__second--choise .flag-reset {
+    right: -13px;
+    top: 22px;
+  }
+
+  .planing-step__second--choise::before {
+    display: none;
+    // убрал стрелочки
+  }
+
+  .planing-step__second--choise::after {
+    width: 15px;
+    height: 15px;
+    right: 134px;
+  }
+
   .planing-step__second--add {
     width: 369px;
     height: 70px;
     border-radius: 4px;
     background-color: #edeff6;
     font-size: 20px;
+    padding-left: 25px;
   }
 
   .planing-step__second--add::after {
@@ -1107,7 +1159,7 @@ li.planing-path--current {
   }
 
   .planing-step__second--anchor {
-    width: 100%;
+    width: 89%;
     padding-top: 36px;
     flex-direction: row;
     justify-content: space-between;
@@ -1165,6 +1217,8 @@ li.planing-path--current {
   .planing-add--wrapper {
     padding-top: 4px;
   }
+
+
 
   .planing-add {
     border-top-left-radius: 60px;
@@ -1225,9 +1279,11 @@ li.planing-path--current {
   .planing-path li {
     width: auto;
     height: auto;
-    background-color: inherit;
+    background-color: white;
     margin-bottom: 24px;
     line-height: 0.69;
+    opacity: 0.3;
+    text-transform: uppercase;
   }
 
   .planing-path li::before {
@@ -1242,12 +1298,13 @@ li.planing-path--current {
   }
 
   li.planing-path--current {
-    background-color: inherit;
+    background-color: white;
     color: #000000;
+    opacity: 0.6;
   }
 
   .planing-path a {
-    @include fontBS (20px, normal, rgba(0, 0, 0, 0.6));
+    @include fontBS (20px, normal, #000000);
   }
 
   .planing-date .planing-add__score--children {
@@ -1266,21 +1323,33 @@ li.planing-path--current {
     border-radius: 4px;
   }
 
-  // спросить у Дарьи что делать со слайдером и как его ставить
+  .planing-data__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #d4d9eb;
+  }
 
   .planing-path {
-    width: 180px;
+    display: none;
+  }
+
+  .planing-path__first,
+  .planing-path__second,
+  .planing-path__three {
+    position: static;
+    display: flex;
+    width: 210px;
     flex-direction: column;
     font-size: 20px;
-    height: auto;
     background-color: #ffffff;
-    top: 233px;
-    right: 269px;
+    margin-left: auto;
+    line-height: 0.69;
+    letter-spacing: 2px;
   }
 
   .planing__first--date,
   .planing__second--route {
-    width: 50%;
+    width: 40%;
   }
 
   .planing-date {
@@ -1435,6 +1504,7 @@ li.planing-path--current {
   }
 
   .planing-step__second--anchor {
+    width: 76%;
     flex-direction: row;
     justify-content: space-between;
     padding-top: 44px;
@@ -1453,16 +1523,39 @@ li.planing-path--current {
   }
 
   .planing-step__three--container .planing-step__text {
-    margin-bottom: 56px;
+    margin-bottom: 80px;
   }
 
   .planing-step__three--plan {
-    padding-top: 49px;
-    border-top: 1px solid #d4d9eb;
+    padding-top: 21px;
+    margin-bottom: 0;
   }
 
   .planing-step__three--fun {
     width: 66%;
+  }
+
+  .planing-step__second--choise::after {
+    right: 270px;
+  }
+
+  .planing-step__three--country {
+    width: 118px;
+    flex-direction: row;
+    top: 60px;
+    right: 115px;
+  }
+
+  .start-country.planing-step__three--country::after {
+    content: "от куда и куда";
+    font-size: 0;
+    position: absolute;
+    width: 3px;
+    height: 261px;
+    background-color: #1d2e5b;
+    right: 110px;
+    transform: translateX(50%);
+    top: 7px;
   }
 
   .planing-step__three--plan p {

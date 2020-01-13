@@ -154,7 +154,7 @@
   letter-spacing: -1px;
   line-height: 21px;
   width: 100%;
-  background-color: inherit;
+  background-color: #edeff6;
   border: none;
   resize: none;
   padding-top: 14px;
@@ -939,6 +939,11 @@ li.explorer-path--current {
     border-bottom-right-radius: 60px;
   }
 
+  .explorer__lvl--svg {
+    width: 94px;
+    height: 94px;
+  }
+
   .explorer__idea {
     font-size: 60px;
     letter-spacing: -4px;
@@ -1515,10 +1520,12 @@ li.explorer-path--current {
 
   .explorer__tegs {
     width: 40%;
+    height: 94px;
   }
 
   .explorer__transport {
     width: 20%;
+    height: 94px;
     position: relative;
     padding-top: 25px;
     order: 1;
@@ -1540,7 +1547,7 @@ li.explorer-path--current {
 
   .explorer__tegs textarea {
     font-size: 20px;
-    padding: 40px 37px;
+    padding: 21px 37px;
   }
 
   .explorer__transport--users,

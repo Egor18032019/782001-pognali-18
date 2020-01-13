@@ -16,12 +16,11 @@
       <a href="index.html" class="page-header__logo">
         Погнали?
       </a>
-
-      <button class="page-header__toggle">Показать меню
+      <button class="page-header__toggle" aria-label="При нажатие откроеться меню">Показать меню
         <?xml version="1.0" encoding="utf-8"?>
-        <svg version="1.1" id="Layer_1" class="page-header__toggle--icon" width="25" height="11"
-          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          viewBox="0 0 25 11" style="enable-background:new 0 0 25 11;" xml:space="preserve">
+        <svg aria-hidden="true" focusable="false" version="1.1" id="Layer_1" class="page-header__toggle--icon"
+          width="25" height="11" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+          y="0px" viewBox="0 0 25 11" style="enable-background:new 0 0 25 11;" xml:space="preserve">
           <g>
             <path d="M1.5,3h22C24.3,3,25,2.3,25,1.5S24.3,0,23.5,0h-22C0.7,0,0,0.7,0,1.5S0.7,3,1.5,3z" />
             <path d="M23.5,8h-22C0.7,8,0,8.7,0,9.5S0.7,11,1.5,11h22c0.8,0,1.5-0.7,1.5-1.5S24.3,8,23.5,8z" />
@@ -492,110 +491,110 @@
           <!-- </fieldset> -->
 
           <!-- <fieldset class="selection-musiс"> -->
-            <div class="selection-musiс">
-              <legend>Музыка</legend>
-              <input type="checkbox" id="music" name="music-group" class="selection-musiс__id">
-              <p class="selection-music__name">Музыка
-                <label class="selection-musiс--toggle" for="music">Открыть или Закрыть</label>
-              </p>
+          <div class="selection-musiс">
+            <legend>Музыка</legend>
+            <input type="checkbox" id="music" name="music-group" class="selection-musiс__id">
+            <p class="selection-music__name">Музыка
+              <label class="selection-musiс--toggle" for="music">Открыть или Закрыть</label>
+            </p>
 
-              <ul class="selection-musiс__list">
-                <li>
-                  <input class="check-input" type="checkbox" name="rock" id="hard-rock" checked>
-                  <label class="check" for="hard-rock">Тяжелый рок</label>
-                </li>
-                <li>
-                  <input class="check-input" type="checkbox" name="rock" id="rus-rap">
-                  <label class="check" for="rus-rap">Русский рэп</label>
-                </li>
-                <li>
-                  <input class="check-input" type="checkbox" name="rock" id="eurodance">
-                  <label class="check" for="eurodance">Евроденс</label>
-                </li>
-              </ul>
-            </div>
-            <!-- </fieldset> -->
+            <ul class="selection-musiс__list">
+              <li>
+                <input class="check-input" type="checkbox" name="rock" id="hard-rock" checked>
+                <label class="check" for="hard-rock">Тяжелый рок</label>
+              </li>
+              <li>
+                <input class="check-input" type="checkbox" name="rock" id="rus-rap">
+                <label class="check" for="rus-rap">Русский рэп</label>
+              </li>
+              <li>
+                <input class="check-input" type="checkbox" name="rock" id="eurodance">
+                <label class="check" for="eurodance">Евроденс</label>
+              </li>
+            </ul>
+          </div>
+          <!-- </fieldset> -->
 
-            <div class="selection-food">
+          <div class="selection-food">
 
-              <legend>Еда</legend>
-              <input type="checkbox" id="food" name="food-group" class="selection-food__id" checked>
-              <p class="selection-food__name">Еда
-                <label class="selection-food--toggle" for="food">Открыть или Закрыть</label>
-              </p>
+            <legend>Еда</legend>
+            <input type="checkbox" id="food" name="food-group" class="selection-food__id" checked>
+            <p class="selection-food__name">Еда
+              <label class="selection-food--toggle" for="food">Открыть или Закрыть</label>
+            </p>
 
-              <ul class="selection-food__list">
-                <li>
-                  <input class="check-input" type="checkbox" name="food" id="meet" checked>
-                  <label class="check" for="meet">Мясоед</label>
-                </li>
-                <li>
-                  <input class="check-input" type="checkbox" name="food" id="product">
-                  <label class="check" for="product">Сидит на ПП</label>
-                </li>
-                <li>
-                  <input class="check-input" type="checkbox" name="food" id="cheese">
-                  <label class="check" for="cheese">Веган-сыроед</label>
-                </li>
-              </ul>
-            </div>
+            <ul class="selection-food__list">
+              <li>
+                <input class="check-input" type="checkbox" name="food" id="meet" checked>
+                <label class="check" for="meet">Мясоед</label>
+              </li>
+              <li>
+                <input class="check-input" type="checkbox" name="food" id="product">
+                <label class="check" for="product">Сидит на ПП</label>
+              </li>
+              <li>
+                <input class="check-input" type="checkbox" name="food" id="cheese">
+                <label class="check" for="cheese">Веган-сыроед</label>
+              </li>
+            </ul>
+          </div>
 
-            <div class="selection-transport">
+          <div class="selection-transport">
 
-              <input type="checkbox" id="transport" name="transport-group" class="selection-transport__id">
-              <p class="selection-transport__name">транспорт:
-                <label class="selection-transport--toggle" for="transport">Открыть или Закрыть</label>
-              </p>
-              <input type="checkbox" name="walks" id="walk" class="selection__walk">
-              <input type="checkbox" name="cycle" id="cycle" class="selection__cycle">
-              <input type="checkbox" name="air" id="air" class="selection__air">
-              <input type="checkbox" id="bus" name="bus" class="selection__bus">
-              <ul class="selection-transport__list">
-                <li class="selection__air--favorite">
-                  <label for="air">Самолет</label>
-                </li>
-                <li class="selection__bus--favorite">
-                  <label for="bus">Автобус</label>
-                </li>
-                <li class="selection__cycle--favorite">
-                  <label for="cycle">Велосипед</label>
-                </li>
-                <li class="selection__walk--favorite">
-                  <label for="walk">Пешие прогулки</label>
-                </li>
-              </ul>
-            </div>
+            <input type="checkbox" id="transport" name="transport-group" class="selection-transport__id">
+            <p class="selection-transport__name">транспорт:
+              <label class="selection-transport--toggle" for="transport">Открыть или Закрыть</label>
+            </p>
+            <input type="checkbox" name="walks" id="walk" class="selection__walk">
+            <input type="checkbox" name="cycle" id="cycle" class="selection__cycle">
+            <input type="checkbox" name="air" id="air" class="selection__air">
+            <input type="checkbox" id="bus" name="bus" class="selection__bus">
+            <ul class="selection-transport__list">
+              <li class="selection__air--favorite">
+                <label for="air">Самолет</label>
+              </li>
+              <li class="selection__bus--favorite">
+                <label for="bus">Автобус</label>
+              </li>
+              <li class="selection__cycle--favorite">
+                <label for="cycle">Велосипед</label>
+              </li>
+              <li class="selection__walk--favorite">
+                <label for="walk">Пешие прогулки</label>
+              </li>
+            </ul>
+          </div>
 
-            <div class="selection-lvl">
-              <legend>Левел</legend>
-              <input type="checkbox" id="lvl" name="lvl-group" class="selection-lvl__id">
-              <p class="selection-lvl__name">Левел:
-                <label class="selection-lvl--toggle" for="lvl">Открыть или Закрыть</label>
-              </p>
+          <div class="selection-lvl">
+            <legend>Левел</legend>
+            <input type="checkbox" id="lvl" name="lvl-group" class="selection-lvl__id">
+            <p class="selection-lvl__name">Левел:
+              <label class="selection-lvl--toggle" for="lvl">Открыть или Закрыть</label>
+            </p>
 
-              <div class="selection-lvl__controls">
-                <div class="selection-lvl__range">
-                  <div class="selection-lvl__scale">
-                    <!-- а это заполненая линия -->
-                    <div class="selection-lvl__bar"></div>
-                    <!-- незаполненая линия -->
-                  </div>
-                  <div class="selection-lvl__range--toogle range--toogle-min">Выбрать минимальный уровень.</div>
-                  <!-- ползунок слева -->
-                  <div class="selection-lvl__range--toogle range--toogle-max">Выбрать максимальный уровень. </div>
-                  <!-- ползунок справа -->
+            <div class="selection-lvl__controls">
+              <div class="selection-lvl__range">
+                <div class="selection-lvl__scale">
+                  <!-- а это заполненая линия -->
+                  <div class="selection-lvl__bar"></div>
+                  <!-- незаполненая линия -->
                 </div>
-                <!-- или ползунки в спаны и п обернуть ? -->
+                <div class="selection-lvl__range--toogle range--toogle-min">Выбрать минимальный уровень.</div>
+                <!-- ползунок слева -->
+                <div class="selection-lvl__range--toogle range--toogle-max">Выбрать максимальный уровень. </div>
+                <!-- ползунок справа -->
+              </div>
+              <!-- или ползунки в спаны и п обернуть ? -->
 
-                <div class="selection-lvl__input">
-                  <input type="text" id="lvl-start" name="start" value="30" class="selection-lvl__input--start">
-                  <input type="text" id="lvl-end" name="end" value="100" class="lvl-end">
-                </div>
+              <div class="selection-lvl__input">
+                <input type="text" id="lvl-start" name="start" value="30" class="selection-lvl__input--start">
+                <input type="text" id="lvl-end" name="end" value="100" class="lvl-end">
               </div>
             </div>
+          </div>
 
-            <button class="form-button" type="submit">Показать
-            </button>
+          <button class="form-button" type="submit">Показать
+          </button>
         </form>
       </section>
       <section class="traveler">
@@ -605,7 +604,7 @@
           <li class="traveler__item traveler-firsova">
             <img src="img/firsova-mobile@1x.jpg" width="70" height="70" alt="Фото попутчика.">
             <h3 class="traveler__name">Таня Фирсова</h3>
-            <div class="traveler__heart--wrapp" data-tooltip="Zvezda">
+            <div class="traveler__heart--wrapp">
               <button class="traveler__heart--btn traveler__heart--red" data-tooltip="Звезда">
                 <svg width="13" height="11" class="traveler__heart--img traveler__heart--active" version="1.1"
                   id="heart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"

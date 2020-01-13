@@ -309,6 +309,12 @@
     flex-wrap: wrap;
   }
 
+  .selection-lvl__input::before {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 66px;
+    }
+
   .selection-lvl,
   .selection-transport,
   .selection-food,
@@ -385,6 +391,7 @@
 
   .selection-lvl__input {
     width: 32%;
+    order: 1;
   }
 
   .selection-lvl {
@@ -410,6 +417,10 @@
     width: 67%;
     font-size: 30px;
     margin-bottom: 15px;
+  }
+
+  .selection-lvl__input::before {
+    right: 103px;
   }
 
   .selection-lvl,

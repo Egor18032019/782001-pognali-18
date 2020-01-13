@@ -176,6 +176,12 @@ li.planing-path--current {
   border: solid 1px #cbced9;
   margin-bottom: 21px;
   margin-top: 10px;
+  &:hover {
+    border-color: #959bb2;
+  }
+  &:active {
+    border-color: #161c35;
+  }
 }
 
 .planing-add__score--day {
@@ -249,6 +255,13 @@ li.planing-path--current {
   width: 9px;
   height: 18px;
   font-size: 0;
+  opacity: 0.3;
+  &:hover {
+    opacity: 0.5;
+  }
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .planing__month--left {
@@ -434,6 +447,13 @@ li.planing-path--current {
   top: 20px;
   border: none;
   background-color: transparent;
+  opacity: 0.3;
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .planing-step__second--choise ul {
@@ -588,6 +608,21 @@ li.planing-path--current {
   height: 42px;
   border: 1px solid #cbced9;
   margin-right: -1px;
+}
+
+.planing-country__selection--items button:hover {
+  border-color: #959bb2;
+  &:active {
+    color: #ffffff;
+    background-color: #1d2e5b;
+  }
+}
+
+.planing-country__chosen--pick:hover {
+  color: #1d2e5b;
+  &:visited {
+    color: rgba(29, 46, 91, 0.3);
+  }
 }
 
 .planing-country__chosen--2,
@@ -1302,7 +1337,7 @@ li.planing-path--current {
   }
 
   .planing-date .planing-add__score--children {
-    width: 250px;
+    width: auto;
     order: 4;
     font-size: 20px;
     text-transform: uppercase;
@@ -1396,7 +1431,7 @@ li.planing-path--current {
     border-top-right-radius: 60px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
-    padding-bottom: 105px;
+    padding-bottom: 102px;
   }
 
   .planing-step__three {

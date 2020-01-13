@@ -10,6 +10,13 @@
   background-color: $indexButton;
   text-transform: uppercase;
   border: none;
+  &:visited {
+    color: rgba(29,46,91,0.3);
+    background-color: #ffbd30;
+  }
+  &:hover {
+    background-color: #ffbd30;
+  }
 }
 
 .check::before {

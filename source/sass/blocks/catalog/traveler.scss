@@ -12,6 +12,7 @@
 
 .traveler__list li {
   @include reset-list;
+  margin-right: 5px;
 }
 
 .traveler__list--transport li {

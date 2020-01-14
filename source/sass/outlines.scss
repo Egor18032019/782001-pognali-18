@@ -19,6 +19,10 @@
   }
 }
 
+.main-selection {
+  background-color: #edeff6;
+}
+
 .check::before {
   content: "";
   width: 18px;
@@ -52,8 +56,8 @@
   align-items: center;
 }
 
-.catalog,
-.catalog .footer {
+.form,
+.form .footer {
   background-color: #d4d9eb;
 }
 
@@ -62,7 +66,7 @@
   display: none;
 }
 
-.form footer {
+.catalog footer {
   background-color: #edeff6;
 }
 
@@ -72,7 +76,7 @@
     display: flex;
   }
 
-  .form .page-header {
+  .catalog .page-header {
     background-color: #161c34;
   }
 

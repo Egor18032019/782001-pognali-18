@@ -8,7 +8,7 @@
   background-image: url("../img/logo-mobile-blue@1x.png");
 }
 
-.white-close {
+.white .page-header__toggle {
   width: 19px;
   height: 19px;
   // background-image: url("../img/menu-close.svg");
@@ -18,28 +18,27 @@
   background-repeat: no-repeat;
   z-index: 1;
 }
+// когда есть  модификатор то кнопки нет
 
-// когда есть этот модификатор то свг нет
-// в планшетной версии модификатор добавлять еще и к page-header__autho
-.white-close svg {
-  display: none;
-}
-
-.white-autho {
+.white .page-header__autho {
   width: 85%;
+  height: 195px;
   top: 314px;
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
-  height: 178px;
   align-items: flex-start;
 }
 
-.white-autho .autho__contact--icon {
+.white .autho__contact--icon {
   fill: #ffd74b;
 }
 
-.white-autho a {
+.white .autho__mail {
+  order: -1;
+}
+
+.white .autho-icon {
   @include fontBS (16px, bold, #192144);
   line-height: 45px;
 }
@@ -48,28 +47,32 @@
   display: flex;
 }
 
-.white-autho span {
+.white .page-header__autho span {
   margin-right: 16px;
   background-color: #121936;
 }
 
-.white-autho .autho-icon {
+.white .autho-icon {
   width: 100%;
 }
 
-.white-autho .autho__button {
+.white .autho__button {
   width: 270px;
   height: 50px;
   border-radius: 25px;
+  margin-bottom: 55px;
 }
 
 @media (min-width: $tablet-width) {
-  .white-autho {
+  .white.page-header {
+    background-color: #ffffff;
+  }
+  .white .page-header__autho {
     position: relative;
     height: auto;
   }
 
-  .white-autho .autho-icon {
+  .white .autho-icon {
     display: flex;
     position: absolute;
     bottom: -244px;
@@ -77,11 +80,11 @@
     font-size: 28px;
   }
 
-  .white-autho .autho__mail {
+  .white .autho__mail {
     bottom: -310px;
   }
 
-  .white-autho span {
+  .white span {
     width: 67px;
     height: 67px;
   }
@@ -94,7 +97,7 @@
     align-items: flex-start;
   }
 
-  .white-autho .autho__button {
+  .white .autho__button {
     position: absolute;
     top: -270px;
     right: 0;
@@ -110,7 +113,7 @@
 
 // --------------------------для пк ------------------------
 @media (min-width: $desktop-width) {
-  .white-close {
+  .white .page-header__toggle {
     width: 18px;
     height: 18px;
   }

@@ -136,6 +136,10 @@
     padding-top: 1px;
     padding-left: 5%;
     margin-left: 0;
+
+    @media (max-width: 1439px) {
+      margin-right: auto;
+    }
   }
 
   .page-header__autho {

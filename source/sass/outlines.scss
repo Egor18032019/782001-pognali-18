@@ -21,10 +21,6 @@
   }
 }
 
-.main-selection {
-  background-color: #edeff6;
-}
-
 .check::before {
   content: "";
   width: 18px;
@@ -105,14 +101,6 @@
 @media (min-width: $desktop-width) {
   .form {
     background-color: #dfe3f0;
-  }
-
-  .main-selection {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 15px;
   }
 
   .check::before {

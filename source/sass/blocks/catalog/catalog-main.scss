@@ -1,8 +1,8 @@
-.form-main {
-  background-color: #edeff6;
+.catalog-main {
+  background-color: #e2e5f2;
 }
 
-.form-main__slogan {
+.catalog-main__slogan {
   display: flex;
   align-items: center;
   height: 78px;
@@ -14,7 +14,7 @@
   margin: 0;
 }
 
-.form-main__idea::after {
+.catalog-main__idea::after {
   position: absolute;
   content: "";
   right: 0;
@@ -24,21 +24,21 @@
   height: 5px;
 }
 
-.form-main__idea {
+.catalog-main__idea {
   @include fontBS (36px, bold, #ffffff);
   position: relative;
   // width: 58%;
   margin: 0;
 }
 
-.form-main__home--link {
+.catalog-main__home--link {
   @include reset-list;
   @include fontBS(20px, 700, #ffffff);
   display: none;
   text-transform: uppercase;
 }
 
-.form-main__home--link span {
+.catalog-main__home--link span {
   background-color: inherit;
   margin-left: 61px;
   // width: 45px;
@@ -53,42 +53,42 @@
   // margin-right: 16px;
 }
 
-.form-main__autho {
+.catalog-main__autho {
   display: none;
 }
 
 // ---------------------------для планшета_______________________
 @media (min-width: $tablet-width) {
-  .form-main__slogan {
+  .catalog-main__slogan {
     display: flex;
     justify-content: space-between;
     //height:240px;
     padding: 0;
     padding-left: 75px;
     padding-right: 74px;
-    padding-top: 122px;
-    padding-bottom: 66px;
+    padding-top: 120px;
+    padding-bottom: 99px;
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 60px;
   }
 
-  .form-main__home--link span {
+  .catalog-main__home--link span {
     margin-left: 18px;
   }
 
-  .form-main__slogan h1 {
+  .catalog-main__slogan h1 {
     font-size: 60px;
   }
 
-  .form-main__home--link {
+  .catalog-main__home--link {
     display: block;
   }
 
-  .form-main__autho {
+  .catalog-main__autho {
     display: flex;
   }
 
-  .form-main__idea::after {
+  .catalog-main__idea::after {
     bottom: -70px;
   }
 }
@@ -96,22 +96,22 @@
 // для пк_________________________для пк ___________________________
 
 @media (min-width: $desktop-width) {
-  .form-main__idea::after {
+  .catalog-main__idea::after {
     bottom: -76px;
     height: 8px;
   }
 
-  .form-main__slogan {
+  .catalog-main__slogan {
     padding-top: 112px;
     padding-left: 129px;
     padding-bottom: 103px;
   }
 
-  .form-main__home--link {
+  .catalog-main__home--link {
     width: 19%;
   }
 
-  .form-main__home--link span {
+  .catalog-main__home--link span {
     margin-left: 29px;
   }
 }

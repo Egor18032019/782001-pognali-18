@@ -1,0 +1,21 @@
+.main-selection {
+  background-color: #e2e5f2;
+  padding-top: 80px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-selection {
+    padding-top: 190px;
+  }
+}
+
+// --------------------------для пк ------------------------
+@media (min-width: $desktop-width) {
+  .main-selection {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 150px;
+  }
+}

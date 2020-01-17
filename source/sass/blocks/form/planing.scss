@@ -139,13 +139,18 @@
 .planing-path {
   @include reset-list;
   position: absolute;
-  top: 57px;
+  top: 41px;
   right: 49px;
   display: flex;
   // ставлю флех - он исчезает. чудеса какие-то
   width: 40px;
   height: 5px;
   font-size: 0;
+}
+
+.planing-path a {
+  width: 6px;
+  height: 5px;
 }
 
 .planing-path li {
@@ -171,6 +176,14 @@ li.planing-path--current {
   border: solid 1px #cbced9;
   margin-bottom: 21px;
   margin-top: 10px;
+
+  &:hover {
+    border-color: #959bb2;
+  }
+
+  &:active {
+    border-color: #161c35;
+  }
 }
 
 .planing-add__score--day {
@@ -223,7 +236,7 @@ li.planing-path--current {
 }
 
 .planing__calendar {
-  margin-bottom: 21px;
+  margin-bottom: 25px;
 }
 
 .planing__month button {
@@ -244,6 +257,15 @@ li.planing-path--current {
   width: 9px;
   height: 18px;
   font-size: 0;
+  opacity: 0.3;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .planing__month--left {
@@ -287,7 +309,7 @@ li.planing-path--current {
 .planing-data__day {
   display: flex;
   flex-wrap: wrap;
-  width: 221px;
+  width: 225px;
 }
 
 .planing-data__day p {
@@ -300,8 +322,8 @@ li.planing-path--current {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 31px;
-  height: 30px;
+  width: 33px;
+  height: 32px;
   text-align: left;
   border: 1px solid #d4d9eb;
   margin-left: -1px;
@@ -346,6 +368,7 @@ li.planing-path--current {
 
 .planing-step__second--choise {
   @include fontBS (14px, 500, #1d2e5b);
+  position: relative;
   display: flex;
   width: 100%;
   align-items: center;
@@ -353,12 +376,51 @@ li.planing-path--current {
   margin-bottom: 21px;
   height: 42px;
   text-transform: uppercase;
-  position: relative;
+}
+
+.planing-step__second--choise::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #1d2e5b;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 49px;
+}
+
+.planing-step__second--choise + .clear::after {
+  background-color: white;
+  border: solid 1px #cbced9;
+}
+
+.planing-step__second--choise + .clear .planing-step__second--country {
+  border-right: 0;
+}
+
+.planing-step__second--choise.clear .planing-step__second--choise--flag {
+  border-left: 0;
+}
+
+.planing-step__second--choise::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 5px;
+  height: 10px;
+  background-color: white;
+  background-image: url("../img/small-arrow.svg");
+  top: 48px;
+  right: 51px;
+  opacity: 0.5;
 }
 
 .planing-step__second--choise--flag {
   width: 53px;
   height: 42px;
+  flex-shrink: 0;
   position: relative;
   display: flex;
   justify-content: center;
@@ -371,14 +433,54 @@ li.planing-path--current {
   height: 24px;
 }
 
-.planing-step__second--choise--flag button {
+.planing-step__second--choise .flag-reset {
   width: 21px;
   height: 21px;
+  font-size: 0;
+  background-color: #edeff6;
   position: absolute;
   border-radius: 50%;
   right: -9px;
   top: -13px;
   border: none;
+}
+
+.flag-reset::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/small-cross.svg");
+  background-repeat: no-repeat;
+  background-size: 9px;
+  background-position: center;
+  opacity: 0.2;
+}
+
+.planning-select__reset {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  color: white;
+  font-size: 0;
+  right: 20px;
+  top: 12px;
+  border: none;
+  background-color: transparent;
+  opacity: 0.4;
+
+  &:active {
+    opacity: 0.1;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.planning-select__reset svg {
+  width: 9px;
+  height: 9px;
 }
 
 .planing-step__second--choise ul {
@@ -388,7 +490,7 @@ li.planing-path--current {
 .planing-step__second--country {
   position: relative;
   cursor: pointer;
-  width: 168px;
+  width: 100%;
   height: 42px;
   max-width: 730px;
   display: flex;
@@ -398,6 +500,7 @@ li.planing-path--current {
   border-radius: 4px;
   padding-left: 13px;
   padding-right: 10px;
+  background-color: #ffffff;
 }
 
 .planing-step__second--flag {
@@ -407,14 +510,46 @@ li.planing-path--current {
 
 .planing-step__second--add {
   @include fontBS (14px, 500, #1d2e5b);
+  position: relative;
   width: 220px;
   height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   text-transform: uppercase;
   background-color: #edeff6;
   border-radius: 4px;
   border: 1px solid #cbced9;
+  padding-right: 13px;
   padding-left: 13px;
   margin-bottom: 9px;
+  margin-right: auto;
+}
+
+.planing-step__second--add::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #edeff6;
+  border: solid 1px #cbced9;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 49px;
+}
+
+.planing-step__second--add::after {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  opacity: 0.3;
+  background-color: #edeff6;
+  background-image: url("../img/qty-plus-mobile.svg");
+  background-repeat: no-repeat;
+  margin-left: auto;
 }
 
 .planing-step__second--flag li:first-child {
@@ -443,48 +578,56 @@ li.planing-path--current {
 
 .planing-country__other {
   @include center;
-  width: 230px;
+  display: none;
   position: absolute;
+  top: 0;
   left: 0;
   right: 0;
-  display: none;
-  padding-top: 21px;
+  z-index: 5;
+  background-color: white;
 }
 
-.planing-step__second--choise:hover .planing-country__other {
-  display: flex;
+.planning-select__current-country {
+  width: 220px;
+  height: 42px;
+  background-color: #1d2e5b;
+  color: #ffffff;
+  padding-left: 13px;
 }
+
+.planning-select__current-country:focus .planing-step__second--country {
+  background-color: #1d2e5b;
+  color: #ffffff;
+}
+
+.flag-reset {
+  top: 0;
+  right: 0;
+}
+
+// .planning-select__current-country::selection + .planing-step__second--country {
+//   display: flex;
+//   background-color: #1d2e5b;
+// не погу сделать так чтобы он работал на состояние
+// }
 
 .planing-step__second--choise.planing-step__second--choise--active .planing-country__other {
   display: flex;
 }
 
-// при добавление этого класа - показывает календарь
-
-.planing-step__second--country:hover {
-  color: #ffffff;
-  background-color: #1d2e5b;
+.planing-step__second--choise.planing-step__second--choise--active .planing-step__second--choise--flag {
+  display: none;
 }
 
 .planing-country__other ul {
   @include reset-list;
 }
 
-.planing-country__selection {
-  position: absolute;
-  width: 230px;
+.planing-country__other .planing-country__selection {
+  width: 220px;
   height: 210px;
   display: flex;
   flex-wrap: wrap;
-  top: 42px;
-}
-
-.planing-country__selection--items,
-.planing-country__selection--items button {
-  width: 45px;
-  height: 42px;
-  border: 1px solid #cbced9;
-  margin-right: -1px;
 }
 
 .planing-country__selection button {
@@ -495,6 +638,43 @@ li.planing-path--current {
   text-transform: uppercase;
   background-color: white;
   border: 0 none;
+}
+
+.planing-country__selection--items {
+  margin-right: -0.5px;
+  margin-left: -0.5px;
+}
+
+.planing-country__selection--items,
+.planing-country__selection--items button {
+  width: 45px;
+  height: 42px;
+  border: none;
+}
+
+.planing-country__selection--items button {
+  border: 1px solid #cbced9;
+}
+
+.planing-country__selection--items button:hover {
+  border-color: #959bb2;
+
+  &:active {
+    color: #ffffff;
+    background-color: #1d2e5b;
+  }
+}
+
+.planing-country__chosen--pick:hover {
+  color: #1d2e5b;
+
+  &:visited {
+    color: rgba(29, 46, 91, 0.3);
+  }
+}
+
+.planing-country__selection--items--pick button {
+  background-color: #cbced9;
 }
 
 .planing-country__chosen--2,
@@ -539,31 +719,20 @@ li.planing-path--current {
   padding-left: 20px;
 }
 
-
-.planing-country__other .planing-country__selection {
-  position: absolute;
-  width: 230px;
-  height: 210px;
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 282px;
-  left: 0;
-  right: 0;
-  top: 100%;
-}
-
 .planing-country__other .planing-country__button {
   background-color: #d6daed;
   margin-bottom: 27px;
 }
 
 .planing-step__second--choise-wrapper {
+  width: 94%;
   padding-top: 7px;
 }
 
 .planing-step__three textarea {
   @include fontBS(16px, normal, #444444);
-  width: 96%;
+  width: 100%;
+  height: 218px;
   line-height: 1.38;
   // letter-spacing: -0.5px;
   resize: none;
@@ -574,28 +743,83 @@ li.planing-path--current {
 
 .planing-step__three--plan {
   @include center;
+  @include reset-list;
+  position: relative;
   width: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 8px;
+}
+
+.planing-step__three--selected,
+.planing-step__three--selected label {
   position: relative;
 }
 
-.planing-step__three--plan p {
+.planing-step__three--selected:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 28px;
+  left: -13px;
+  width: 2px;
+  height: calc(100%);
+  background-color: #1d2e5b;
+}
+
+.planing-step__three--selected label::before {
+  content: "";
+  position: absolute;
+  top: 27px;
+  left: -13px;
+  width: 15px;
+  height: 2px;
+  background-color: #1d2e5b;
+}
+
+.planing-step__three--selected p {
   @include fontBS (17px, bold, #1d2e5b);
   align-self: flex-start;
 }
 
-.planing-step__second--choise p {
+@media (max-width: 767px) {
+  .planing-step__three--selected p::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #1d2e5b;
+    margin-right: 8px;
+  }
+}
+
+.planing-step__second--choise p,
+.planing-step__second select {
+  @include fontBS (14px, 500, #1d2e5b);
   width: 100%;
+  text-transform: uppercase;
+}
+
+.planning-select__current-country p {
+  color: #ffffff;
 }
 
 .planing-step__second--country::after {
-  display: block;
   content: "";
-  width: 12px;
-  height: 7px;
-  background-image: url("../img/dropdown.svg");
+  position: absolute;
+  display: block;
+  width: 49px;
+  height: 38px;
+  top: 1px;
+  right: 0;
+  background-image: url("../img/dropdown-form.svg");
+  background-size: 12px 7px;
   background-repeat: no-repeat;
   background-position: center;
   margin-left: auto;
+  background-color: white;
+  opacity: 0.3;
 }
 
 .planing-step__second--anchor {
@@ -603,6 +827,8 @@ li.planing-path--current {
   display: flex;
   flex-direction: column;
   padding-top: 17px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .planing-step__second--anchor .planing-step__second--button {
@@ -612,7 +838,9 @@ li.planing-path--current {
 
 .planing-step__three--container {
   width: 88%;
-  padding-top: 15px;
+  padding-top: 18px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .planing-step__three--fun {
@@ -621,20 +849,27 @@ li.planing-path--current {
 }
 
 .planing-step__three--container .planing-step__text {
-  margin-bottom: 6px;
+  margin-bottom: 0;
 }
 
-.planing-step__three--plan p::after {
-  content: "флаг";
+.planing-step__three--country {
   position: absolute;
   font-size: 0;
+  padding-left: 22%;
   width: 88px;
+  top: 15px;
   right: 0;
   height: 24px;
   display: inline-block;
-  background-color: inherit;
   z-index: 2;
-  background-image: linear-gradient(90deg, transparent 0.5%, white 60%, #d9d9d9 28%);
+  background-image: linear-gradient(90deg, transparent 0.5%, white 35%);
+}
+
+.planing-step__three--country img {
+  width: 35px;
+  height: 24px;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 .planing-step__three {
@@ -668,7 +903,18 @@ li.planing-path--current {
     margin-bottom: 39px;
   }
 
+  .planing-step__second select {
+    font-size: 18px;
+    line-height: 0.9;
+    letter-spacing: 2px;
+  }
+
   .planing-step h3 {
+    font-size: 36px;
+  }
+
+  .planing__first--date,
+  .planing__second--route {
     font-size: 36px;
   }
 
@@ -676,6 +922,7 @@ li.planing-path--current {
     font-size: 20px;
     line-height: 1.2;
     margin-bottom: 42px;
+    margin-top: 36px;
   }
 
   .planing-route__btn {
@@ -724,6 +971,32 @@ li.planing-path--current {
     margin-bottom: 0;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
+    padding-bottom: 32px;
+  }
+
+  .planing-step__three--country img {
+    width: 70px;
+    height: 47px;
+  }
+
+  .planing-step__three--country {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 105px;
+    top: 35px;
+    right: -2px;
+    padding-left: 0;
+  }
+
+  .planing-step__three--country::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #1d2e5b;
+    border-radius: 50%;
   }
 
   .planing-step__end {
@@ -732,9 +1005,54 @@ li.planing-path--current {
     padding-top: 0;
     padding-left: 45px;
     padding-right: 35px;
-    padding-bottom: 45px;
+    padding-bottom: 50px;
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
+  }
+
+  .planing-country__other {
+    width: 575px;
+    height: 476px;
+    background-color: white;
+    top: 44px;
+    padding-top: 0;
+    justify-content: flex-start;
+  }
+
+  .planning-select__current-country {
+    width: 369px;
+    height: 70px;
+    padding-left: 27px;
+    align-self: flex-start;
+  }
+
+  .planing-country__selection--items,
+  .planing-country__selection--items button {
+    width: 52px;
+    height: 70px;
+    border: solid 1px #cbced9;
+    background-color: #ffffff;
+    font-size: 20px;
+  }
+
+  .planing-country__other .planing-country__selection {
+    width: 285px;
+    margin-bottom: 0;
+    margin-right: auto;
+    padding-left: 27px;
+  }
+
+  .planing-country__selection--items .planing-country__chosen {
+    width: 473px;
+    padding-top: 0;
+    padding-left: 349px;
+    margin-top: -42px;
+    background-color: white;
+  }
+
+  .planing-country__chosen a {
+    font-size: 20px;
+    line-height: 1.5;
   }
 
   .planing-add {
@@ -859,9 +1177,10 @@ li.planing-path--current {
 
   // выбор страны
   .planing-step__second--choise-wrapper {
+    position: relative;
     width: 100%;
     border-top: 1px solid #d4d9eb;
-    padding-top: 41px;
+    padding-top: 38px;
   }
 
   .planing-step__second--country {
@@ -908,19 +1227,59 @@ li.planing-path--current {
   }
 
   .planing-step__second--choise {
+    height: 70px;
     margin-bottom: 16px;
   }
 
+  .planing-step__second--choise .flag-reset {
+    right: -13px;
+    top: 22px;
+    background-color: transparent;
+  }
+
+  .planing-step__second--choise + .clear .planing-step__second--country {
+    border: 1px solid #cbced9;
+  }
+
+  .planing-step__second--choise::before {
+    display: none;
+    // убрал стрелочки
+  }
+
+  .planing-step__second--choise::after {
+    width: 15px;
+    height: 15px;
+    right: 123px;
+  }
+
+  .planing-step__second--choise-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 130px;
+    width: 2px;
+    height: calc(100% + 120px);
+    background-color: #edeff6;
+    background-image: linear-gradient(90deg, #edeff6 80%, white 25%);
+  }
+
+  .planing-step__second--add::before {
+    right: -33px;
+    width: 15px;
+    height: 15px;
+  }
+
   .planing-step__second--add {
-    width: 369px;
+    width: 71%;
     height: 70px;
     border-radius: 4px;
     background-color: #edeff6;
     font-size: 20px;
+    padding-left: 25px;
   }
 
   .planing-step__second--add::after {
-    content: " + ";
+    content: " ";
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -940,7 +1299,7 @@ li.planing-path--current {
   }
 
   .planing-step__second--anchor {
-    width: 100%;
+    width: 89%;
     padding-top: 36px;
     flex-direction: row;
     justify-content: space-between;
@@ -952,7 +1311,7 @@ li.planing-path--current {
 
   .planing-step--back {
     margin-right: 0;
-    width: 180px;
+    width: 188px;
     font-size: 24px;
     text-transform: unset;
   }
@@ -971,18 +1330,35 @@ li.planing-path--current {
 
   .planing-step__three textarea {
     @include fontBS (20px, normal, #444444);
-    width: 100%;
+    width: 95%;
     padding: 20px;
     border: 1px solid #cbced9;
+    height: 144px;
+    margin-left: 0;
+    align-self: flex-start;
   }
 
-  .planing-step__three--plan {
+  .planing-step__three--selected:not(:last-child)::after {
+    top: 47px;
+    left: -13px;
+    height: calc(100% + 15px);
+  }
+
+  .planing-step__three--selected label::before {
+    top: 42px;
+    left: -13px;
+  }
+
+  .planing-step__three--selected {
     width: 100%;
+    padding-top: 3px;
+    margin-bottom: 15px;
   }
 
-  .planing-step__three--plan p {
+  .planing-step__three--selected p {
     font-size: 30px;
     letter-spacing: -2px;
+    margin-bottom: 37px;
   }
 }
 
@@ -1006,6 +1382,74 @@ li.planing-path--current {
     width: auto;
     font-size: 36px;
     align-self: flex-start;
+  }
+
+  .planning-select__current-country {
+    width: 730px;
+    height: 70px;
+    border-radius: 4px;
+    margin-bottom: 37px;
+  }
+
+  .planing-country__other {
+    width: 70%;
+    height: 546px;
+    box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
+  }
+
+  .planing-country__chosen li {
+    font-size: 20px;
+  }
+
+  .planing-country__selection--items .planing-country__chosen {
+    padding-left: 480px;
+    margin-top: -85px;
+  }
+
+  .planning-select__reset svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .planning-select__reset {
+    top: 25px;
+    right: 35px;
+  }
+
+  .planing-country__other .planing-country__selection {
+    width: 400px;
+  }
+
+  .planing-country__selection--items,
+  .planing-country__selection--items button {
+    width: 60px;
+    height: 70px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+
+  .planing-step__three--selected:not(:last-child)::after {
+    top: 62px;
+    left: -13px;
+    height: calc(100% + 1px);
+  }
+
+  .planing-step__three--selected label::before {
+    top: 41px;
+    left: -13px;
+  }
+
+  .planing-step__second--add::before {
+    right: -55px;
+  }
+
+  .planing-step__second select,
+  .planing-step__second option {
+    font-size: 20px;
+    font-weight: 500;
+    color: #1d2e5b;
   }
 
   .planing-step__text {
@@ -1052,9 +1496,11 @@ li.planing-path--current {
   .planing-path li {
     width: auto;
     height: auto;
-    background-color: inherit;
+    background-color: white;
     margin-bottom: 24px;
     line-height: 0.69;
+    opacity: 0.3;
+    text-transform: uppercase;
   }
 
   .planing-path li::before {
@@ -1069,16 +1515,17 @@ li.planing-path--current {
   }
 
   li.planing-path--current {
-    background-color: inherit;
+    background-color: white;
     color: #000000;
+    opacity: 0.6;
   }
 
   .planing-path a {
-    @include fontBS (20px, normal, rgba(0, 0, 0, 0.6));
+    @include fontBS (20px, normal, #000000);
   }
 
   .planing-date .planing-add__score--children {
-    width: 250px;
+    width: auto;
     order: 4;
     font-size: 20px;
     text-transform: uppercase;
@@ -1093,21 +1540,34 @@ li.planing-path--current {
     border-radius: 4px;
   }
 
-  // спросить у Дарьи что делать со слайдером и как его ставить
+  .planing-data__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #d4d9eb;
+  }
 
   .planing-path {
-    width: 180px;
+    display: none;
+  }
+
+  .planing-path__first,
+  .planing-path__second,
+  .planing-path__three {
+    position: static;
+    display: flex;
+    width: 210px;
+    height: auto;
     flex-direction: column;
     font-size: 20px;
-    height: auto;
     background-color: #ffffff;
-    top: 233px;
-    right: 269px;
+    margin-left: auto;
+    line-height: 0.69;
+    letter-spacing: 2px;
   }
 
   .planing__first--date,
   .planing__second--route {
-    width: 50%;
+    width: 40%;
   }
 
   .planing-date {
@@ -1160,7 +1620,7 @@ li.planing-path--current {
     border-top-right-radius: 60px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
-    padding-bottom: 105px;
+    padding-bottom: 102px;
   }
 
   .planing-step__three {
@@ -1262,6 +1722,7 @@ li.planing-path--current {
   }
 
   .planing-step__second--anchor {
+    width: 76%;
     flex-direction: row;
     justify-content: space-between;
     padding-top: 44px;
@@ -1280,23 +1741,47 @@ li.planing-path--current {
   }
 
   .planing-step__three--container .planing-step__text {
-    margin-bottom: 56px;
+    margin-bottom: 80px;
   }
 
-  .planing-step__three--plan {
-    padding-top: 49px;
-    border-top: 1px solid #d4d9eb;
+  .planing-step__three--selected {
+    padding-top: 21px;
+    margin-bottom: 0;
   }
 
   .planing-step__three--fun {
     width: 66%;
   }
 
-  .planing-step__three--plan p {
+  .planing-step__second--choise::after {
+    right: 270px;
+  }
+
+  .planing-step__three--country {
+    width: 118px;
+    flex-direction: row;
+    top: 60px;
+    right: 115px;
+  }
+
+  .start-country.planing-step__three--country::after {
+    content: "от куда и куда";
+    font-size: 0;
+    position: absolute;
+    width: 3px;
+    height: 261px;
+    background-color: #1d2e5b;
+    right: 110px;
+    transform: translateX(50%);
+    top: 10px;
+  }
+
+  .planing-step__three--selected p {
     font-size: 30px;
   }
 
-  .planing-step__three--plan textarea {
+  .planing-step__three--selected textarea {
+    width: 730px;
     font-size: 20px;
   }
 
@@ -1309,6 +1794,10 @@ li.planing-path--current {
     padding-right: 108px;
     padding-left: 162px;
     justify-content: space-between;
+  }
+
+  .planing-step__second--choise-wrapper::before {
+    right: 276px;
   }
 
   .planing-step__end .form-button {

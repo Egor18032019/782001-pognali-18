@@ -98,9 +98,14 @@
   }
 
   .trail__gprs span {
-    width: 60px;
-    height: 60px;
+    width: 67px;
+    height: 67px;
     margin-right: 30px;
+  }
+
+  .trail__gprs--icon {
+    width: 21px;
+    height: 31px;
   }
 
   .trail__gprs::before {

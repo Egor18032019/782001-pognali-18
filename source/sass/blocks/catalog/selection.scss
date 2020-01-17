@@ -4,7 +4,7 @@
   width: 85%;
   margin-left: auto;
   margin-right: auto;
-  background-color: $indexButton;
+  background-color: #edeff6;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   border-top-left-radius: 20px;
@@ -16,6 +16,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: $indexButton;
+  border-radius: 20px;
 }
 
 .selection ul {
@@ -25,6 +27,8 @@
 .selection-companion h2 {
   @include fontBS (23px, bold, #1d2e5b);
   width: 50%;
+  align-self: start;
+  margin-left: 12%;
 }
 
 .selection-companion legend {
@@ -49,7 +53,7 @@
   font-size: 0;
   border: none;
   width: 8px;
-  min-height: 4px;
+  height: 4px;
 }
 
 .selection-musiс__list li,
@@ -64,9 +68,14 @@
   margin-bottom: 21px;
 }
 
-.selection-companion fieldset {
+.selection-lvl,
+.selection-transport,
+.selection-food,
+.selection-musiс,
+.selection-hobby {
   width: 85%;
   border: 0;
+  border-top: 1px solid #cbced9;
 }
 
 .selection-musiс > input,
@@ -83,7 +92,7 @@
 .selection-lvl .selection-lvl--toggle,
 .selection-hobby--toggle {
   width: 8px;
-  min-height: 4px;
+  height: 4px;
   display: inline-block;
   font-size: 0;
   background-image: url("../img/dropdown.svg");
@@ -216,7 +225,8 @@
 
 .selection-lvl__bar {
   width: 30%;
-  background-color: #d6daed;
+  background-color: #cbced9;
+  opacity: 0.5;
   // цвет временно
   min-height: 2px;
 }
@@ -245,12 +255,29 @@
 .selection-lvl__input {
   @include fontBS (15px, bold, #1d2e5b);
   display: flex;
+  position: relative;
+}
+
+.selection-lvl__input::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 16px;
+  height: 7px;
+  top: 50%;
+  right: 68px;
+  background-image: linear-gradient(white 30%, #edeff6 60%, white 30%);
 }
 
 .selection-lvl__input input {
-  width: 50%;
+  width: 110px;
+  height: 35px;
   border: 0;
   text-align: center;
+}
+
+.selection-lvl__input .selection-lvl__input--start {
+  border-right: 1px solid #edeff6;
 }
 
 
@@ -279,14 +306,34 @@
     width: 33.3%;
   }
 
+  .selection-companion h2 {
+    width: auto;
+    padding-top: 37px;
+    padding-bottom: 37px;
+    margin-left: 3%;
+  }
+
   .selection-companion {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
   }
 
-  .selection-companion fieldset {
+  .selection-lvl__input::before {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 66px;
+  }
+
+  .selection-lvl,
+  .selection-transport,
+  .selection-food,
+  .selection-musiс,
+  .selection-hobby {
     width: 94%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .selection-lvl__range--toogle {
@@ -294,28 +341,25 @@
     height: 13px;
   }
 
-  .selection-lvl__scale {
+  .selection-lvl__scale,
+  .selection-lvl__bar {
     height: 3px;
   }
 
   .selection-lvl__input input {
+    width: 75px;
+    height: 46px;
     font-size: 20px;
-    min-height: 46px;
-    // надо ли это?
   }
 
   .selection-companion p {
     font-size: 20px;
+    margin-right: auto;
+    width: 160px;
   }
 
-  .selection-hobby,
-  .selection-musiс,
-  .selection-food,
-  .selection-transport,
-  .selection-lvl {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  .selection-transport__list {
+    width: 75%;
   }
 
   .selection-hobby__list,
@@ -353,15 +397,22 @@
   }
 
   .selection-lvl__range {
-    width: 40%;
+    width: 50%;
   }
 
   .selection-lvl__input {
     width: 32%;
+    order: 1;
   }
 
   .selection-lvl {
     margin-bottom: 73px;
+  }
+
+  .selection-companion .form-button {
+    height: 50px;
+    font-size: 20px;
+    letter-spacing: normal;
   }
 }
 
@@ -376,10 +427,20 @@
   .selection-companion h2 {
     width: 67%;
     font-size: 30px;
+    padding-top: 0;
     margin-bottom: 15px;
+    margin-left: 15%;
   }
 
-  .selection-companion fieldset {
+  .selection-lvl__input::before {
+    right: 103px;
+  }
+
+  .selection-lvl,
+  .selection-transport,
+  .selection-food,
+  .selection-musiс,
+  .selection-hobby {
     width: 65%;
     flex-direction: row;
     flex-wrap: wrap;

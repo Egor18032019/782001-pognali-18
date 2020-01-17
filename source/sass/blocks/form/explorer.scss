@@ -10,11 +10,15 @@
   padding-top: 23px;
 }
 
+.explorer-main .form-button {
+  background-color: #dfe3f0;
+}
+
 .explorer-slogan {
   display: flex;
   align-items: center;
-  height: 85px;
-  padding-top: 20px;
+  height: 82px;
+  padding-top: 14px;
   padding-left: 22px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -57,9 +61,29 @@
   @include fontBS(20px, bold, #1d2e5b);
 }
 
-.explorer-main legend {
+.explorer__transport--users,
+.explorer__tegs--users {
   @include fontBS (16px, bold, #1d2e5b);
   text-align: center;
+  text-transform: uppercase;
+}
+
+.explorer__tegs--users {
+  position: absolute;
+  top: -25px;
+  // right: 37%;
+  // width: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #edeff6;
+}
+
+.explorer__transport--users {
+  position: absolute;
+  top: -25px;
+  right: 30%;
+  width: 110px;
+  background-color: #edeff6;
 }
 
 .explorer-foto {
@@ -95,7 +119,7 @@
 }
 
 .explorer__item--circle {
-  fill: #000000;
+  fill: transparent;
   fill-opacity: 0.1;
   stroke-width: 2px;
   stroke: #ff8d30;
@@ -115,7 +139,7 @@
 
 .explorer-main__button {
   border: none;
-  margin-bottom: 26px;
+  margin-bottom: 31px;
 }
 
 .explorer-main__button p {
@@ -125,26 +149,44 @@
 .explorer__tegs {
   width: 85%;
   height: 97px;
+  position: relative;
   border-radius: 10px;
   margin-bottom: 16px;
   padding: 0;
+
+  &:hover {
+    border-color: #aeb4cb;
+  }
+
+  &:focus {
+    border-color: #161c35;
+  }
 }
 
 .explorer__tegs textarea {
-  @include fontBS (16px, normal, #444444);
+  @include fontBS (16px, normal, rgba(68, 68, 68, 0.6));
   letter-spacing: -1px;
   line-height: 21px;
   width: 100%;
-  background-color: inherit;
+  height: 89px;
+  border-radius: 20px;
+  background-color: #edeff6;
   border: none;
   resize: none;
   padding-top: 14px;
   padding-left: 23px;
+
+  &:focus {
+    color: #444444;
+  }
 }
 
 .explorer__transport {
   width: 85%;
+  height: 63px;
+  position: relative;
   margin-bottom: 36px;
+  padding-top: 15px;
 }
 
 .explorer__transport--type {
@@ -161,6 +203,14 @@
   border-radius: 50%;
 }
 
+.explorer__transport--pick {
+  opacity: 0.4;
+}
+
+.explorer__transport--type .transport--favorite {
+  opacity: 1;
+}
+
 .explorer__transport input {
   display: none;
 }
@@ -172,29 +222,34 @@
   align-items: center;
   justify-content: center;
   font-size: 0;
-}
 
-.explorer__transport--type .explorer__bus--favorite,
-.explorer__transport--type .explorer__air--favorite,
-.explorer__transport--type .explorer__cycle--favorite,
-.explorer__transport--type .explorer__walk--favorite {
-  background-color: white;
+  &:hover {
+    box-shadow: 0 2px 10px 0 rgba(202, 104, 104, 0.08);
+  }
 }
 
 .explorer__bus:checked ~ .explorer__transport--type .explorer__bus--favorite {
-  opacity: 0.2;
+  opacity: 1;
+  fill: #1d2e5b;
+}
+
+.explorer__bus:checked + .explorer__transport label:hover {
+  fill: red;
 }
 
 .explorer__air:checked ~ .explorer__transport--type .explorer__air--favorite {
-  opacity: 0.2;
+  opacity: 1;
+  fill: #1d2e5b;
 }
 
-.explorer__cycle:checked ~ .explorer__transport--type .explorer__cycle--favorite svg {
-  opacity: 0.2;
+.explorer__cycle:checked ~ .explorer__transport--type .explorer__cycle--favorite {
+  opacity: 1;
+  fill: #1d2e5b;
 }
 
 .explorer__walk:checked ~ .explorer__transport--type .explorer__walk--favorite {
-  opacity: 0.2;
+  opacity: 1;
+  fill: #1d2e5b;
 }
 
 
@@ -261,6 +316,14 @@
   text-transform: uppercase;
   display: inline-block;
   margin-top: 21px;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.1);
+  }
 }
 
 // _____________________________________перекинуть в отдельный блок
@@ -900,11 +963,16 @@ li.explorer-path--current {
 
 @media (min-width: $tablet-width) {
   .explorer-slogan {
-    height: 252px;
+    height: 220px;
     padding-left: 70px;
-    padding-top: 46px;
+    padding-top: 18px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
+  }
+
+  .explorer__lvl--svg {
+    width: 94px;
+    height: 94px;
   }
 
   .explorer__idea {
@@ -914,6 +982,20 @@ li.explorer-path--current {
 
   .explorer__idea::after {
     bottom: -73px;
+  }
+
+  .explorer__tegs--users {
+    width: 83px;
+    font-size: 20px;
+    top: 61px;
+    right: 45%;
+  }
+
+  .explorer__transport--users {
+    top: 62px;
+    font-size: 20px;
+    width: 153px;
+    right: 25%;
   }
 
   .explorer-main {
@@ -969,6 +1051,7 @@ li.explorer-path--current {
     width: 308px;
     height: 94px;
     order: -1;
+    padding-top: 25px;
   }
 
   .explorer__transport--type .explorer__bus--favorite,
@@ -985,8 +1068,10 @@ li.explorer-path--current {
   }
 
   .explorer__tegs textarea {
-    font-size: 24px;
     width: 100%;
+    font-size: 24px;
+    padding-top: 37px;
+    padding-left: 40px;
   }
 
   .explorer-plan h2 {
@@ -1387,7 +1472,8 @@ li.explorer-path--current {
   }
 
   .explorer__idea::after {
-    bottom: -70px;
+    bottom: -74px;
+    z-index: 2;
   }
 
   label.explorer-data__choise--in::after {
@@ -1420,14 +1506,14 @@ li.explorer-path--current {
     width: 190px;
     height: 190px;
     position: absolute;
-    bottom: 233px;
+    bottom: 211px;
     right: 126px;
     z-index: 1;
   }
 
   .explorer-lvl {
     position: absolute;
-    bottom: 306px;
+    bottom: 282px;
     right: 391px;
     width: 94px;
     height: 94px;
@@ -1460,17 +1546,25 @@ li.explorer-path--current {
     margin: 0;
     padding: 0;
     right: 155px;
-    bottom: 206px;
+    bottom: 191px;
     border-radius: 0;
   }
 
   .explorer__tegs {
-    width: 40%;
+    width: 51%;
+    height: 94px;
+    position: relative;
+    margin-bottom: 36px;
+    margin-left: 5%;
   }
 
   .explorer__transport {
-    width: 20%;
+    width: 27%;
+    height: 94px;
+    position: relative;
+    padding-top: 25px;
     order: 1;
+    margin-left: 6%;
   }
 
   .explorer-plan {
@@ -1489,10 +1583,32 @@ li.explorer-path--current {
 
   .explorer__tegs textarea {
     font-size: 20px;
+    padding: 21px 37px;
   }
 
-  .explorer-main legend {
+  .explorer__transport--users,
+  .explorer__tegs--users {
     font-size: 20px;
+  }
+
+  .explorer__tegs--users {
+    position: absolute;
+    z-index: 5;
+    left: 10%;
+    bottom: -30px;
+    background-color: #edeff6;
+    width: 83px;
+    text-transform: uppercase;
+  }
+
+  .explorer__transport--users {
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    bottom: -30px;
+    background-color: #edeff6;
+    width: 153px;
+    text-transform: uppercase;
   }
 
   .explorer-plan__country b {

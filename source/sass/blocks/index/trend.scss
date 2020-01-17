@@ -7,7 +7,7 @@
 
 .trend-slogan {
   width: 70%;
-  padding-bottom: 28px;
+  padding-bottom: 30px;
 }
 
 .trend-wrapper {
@@ -34,7 +34,7 @@
   list-style: none;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 13px;
+  margin-bottom: 18px;
   padding: 0;
 }
 
@@ -48,15 +48,13 @@
   overflow: hidden;
 }
 
-.trend__text::before {
-  content: "";
+.trend__text img {
   position: absolute;
-  background-image: url("https://via.placeholder.com/35x24");
   width: 35px;
   height: 24px;
   top: -12px;
   left: 27px;
-  background-color: hotpink;
+  background-color: transparent;
 }
 
 .trend__text {
@@ -117,7 +115,7 @@
     background-position: top 80px right 40px;
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 60px;
-    padding-bottom: 81px;
+    padding-bottom: 79px;
   }
 
   .trend-wrapper::before {
@@ -201,6 +199,14 @@
     border-bottom-right-radius: 20px;
   }
 
+  .trend__text img {
+    width: 70px;
+    height: 47px;
+    top: 29px;
+    left: 396px;
+    border-radius: 5px;
+  }
+
   // обсудить с Дашей как должен меняться рисунок
 
   .trend__text {
@@ -236,7 +242,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
-    padding-bottom: 160px;
+    padding-bottom: 140px;
   }
 
   .trend-wrapper::before {
@@ -263,6 +269,7 @@
 
   .trend-list li {
     border-radius: 20px;
+    margin-bottom: 0;
   }
 
   .trend__text {
@@ -279,6 +286,14 @@
   .trend__item img {
     width: 186px;
     height: 140px;
+  }
+
+  .trend__text img {
+    width: 70px;
+    height: 47px;
+    border-radius: 5px;
+    top: 45px;
+    left: 345px;
   }
 
   .trend .trend__button {

@@ -612,10 +612,15 @@
   .traveler__wish {
     width: auto;
     position: absolute;
+    padding-top: 0;
     right: 43px;
     top: 48px;
     // order: 0;
     // margin-left: auto;
+  }
+
+  .traveler__wish p {
+    display: none;
   }
 
   .traveler__countries {

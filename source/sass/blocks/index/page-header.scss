@@ -204,7 +204,8 @@
   .index .page-header,
   .page-header {
     background-color: #161c34;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding-top: 41px;
   }
 
   .page-header__wrapper {
@@ -230,13 +231,15 @@
     // если изменил высоту - проверь потом на каталоге
     padding-left: 0;
     padding-right: 0;
+    margin-left: 6%;
   }
 
   .page-header__autho {
-    width: 300px;
+    width: 292px;
     justify-content: flex-start;
-    padding-top: 10px;
     order: -2;
+    height: auto;
+    margin-right: 4%;
   }
 
   .page-header__slogan {
@@ -246,7 +249,7 @@
     justify-content: start;
     min-height: 640px;
     padding: 0;
-    padding-top: 31px;
+    padding-top: 55px;
     max-width: 1440px;
   }
 
@@ -268,7 +271,7 @@
     justify-content: start;
     align-items: start;
     margin: 0;
-    padding-top: 10px;
+    padding-top: 0;
     background-color: #161c34;
     order: -1;
   }

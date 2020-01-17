@@ -127,7 +127,8 @@
       </a>
     </div>
 
-    <section class="filter-country">
+    <section class="filter-country filter-country--close">
+<!-- добавить filter-country--close -->
       <div class="filter-country__main">
         <nav class="filter-nav">
           <button class="filter-nav__toggle">Показать меню</button>
@@ -143,8 +144,7 @@
         <span class="filter-country__pushbutton--close"> Свернуть </span>
         <span class="filter-country__pushbutton--open">Показать всё</span>
       </button>
-<!-- что бы скрыть добавляем display-none -->
-      <ul class="filter-country__continent display-none">
+      <ul class="filter-country__continent">
         <li>
           <input class="filter-country__continent--choose" type="radio" name="continent" value="Europe" id="Europe"
             checked>
@@ -164,9 +164,9 @@
         </li>
       </ul>
       <!-- Получаеться три разные формы ? при нажатие на континент -показывает нужную форму выбора стран -->
-      <form class="filter-country__other display-none" action="https://echo.htmlacademy.ru" method="GET">
+      <form class="filter-country__other" action="https://echo.htmlacademy.ru" method="GET">
         <ul class="filter-country__selection">
-          <li class="filter-country__selection--items"><button type="button">а</button>
+          <li class="filter-country__selection--items filter-country__selection--items--pick"><button type="button">а</button>
             <ul class="filter-country__chosen filter-country__chosen--1">
               <li><a class="filter-country__chosen--pick" href="country/europe/afganistan.html">Афганистан</a></li>
               <!-- обсудить как делать и сделать осталные по образцу -->
@@ -763,11 +763,7 @@ c1.3-1.3,3.5-1.3,4.9,0c1.3,1.3,1.3,3.5,0,4.8L14.9,9.8z" />
             <div class="traveler__transport traveler-demin">
               <ul class="traveler__list--transport transport">
                 <li class="transport__normal transport--favorite">Самолет
-                  <!-- спрость как с свг быть в таком случае? -->
-                  <picture>
-                    <source media="(min-width:768px)" svg width="19" height="21">
                     <?xml version="1.0" encoding="utf-8"?>
-                    <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                     <svg width="14" height="16" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19 21"
                       style="enable-background:new 0 0 19 21;" xml:space="preserve">
@@ -779,7 +775,6 @@ c0.2,0.1,0.4,0.3,0.2,0.6c-0.3,0.6-0.4,1.2-0.2,1.3s0.6-0.2,1-0.7c0.2-0.3,0.4-0.2,
 c0.2,0.3,0.4,0.3,0.6,0c0.2-0.3,0.4-0.6,0.4-0.6c0.1-0.1,0.1-0.3,0.1-0.5l-0.3-3.1c0-0.2,0-0.2,0.1-0.5c0.1-0.2,1.4-2.2,1.6-2.5
 c0.2-0.3,0.4-0.3,0.6-0.1c0.2,0.2,5.7,6.7,5.7,6.7c0.3,0.3,0.5,0.4,0.9-0.2C19.1,19.5,19,19.1,18.9,18.9z" />
                     </svg>
-                  </picture>
                 </li>
                 <li class="transport__normal transport--favorite">Автобус
                   <?xml version="1.0" encoding="utf-8"?>

@@ -23,9 +23,11 @@
 
 .autho__telephone span {
   background-color: #ff8d30;
+
   &:hover {
     background-color: #f26926;
   }
+
   &:active {
     opacity: 0.3;
   }
@@ -33,9 +35,11 @@
 
 .autho__mail span {
   background-color: #ffbd30;
+
   &:hover {
     background-color: #ff8d30;
   }
+
   &:active {
     opacity: 0.3;
   }

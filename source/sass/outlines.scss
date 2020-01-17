@@ -10,10 +10,12 @@
   background-color: $indexButton;
   text-transform: uppercase;
   border: none;
+
   &:visited {
-    color: rgba(29,46,91,0.3);
+    color: rgba(29, 46, 91, 0.3);
     background-color: #ffbd30;
   }
+
   &:hover {
     background-color: #ffbd30;
   }
@@ -91,10 +93,20 @@
     position: static;
     border-radius: 0;
   }
+
+  .flag-reset::before {
+    background-size: 17px;
+    width: 17px;
+    height: 17px;
+  }
 }
 
 // --------------------------для пк ------------------------
 @media (min-width: $desktop-width) {
+  .form {
+    background-color: #dfe3f0;
+  }
+
   .main-selection {
     display: flex;
     flex-direction: row-reverse;

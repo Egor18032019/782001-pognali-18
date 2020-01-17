@@ -331,7 +331,7 @@
   .traveler__heart--wrapp {
     position: relative;
     order: 4;
-    margin-bottom: 55px;
+    margin-bottom: 30px;
     left: 0;
     top: 0;
   }
@@ -397,8 +397,16 @@
     flex-direction: column;
   }
 
-  .traveler__text {
+  .traveler__text--car {
     display: none;
+  }
+
+  .traveler__text {
+    position: absolute;
+    width: 118px;
+    height: 18px;
+    top: -23px;
+    left: 64px;
   }
 
   .traveler__lvl--eng {
@@ -433,8 +441,10 @@
   }
 
   .traveler__countries li {
+    display: flex;
+    align-items: center;
     font-size: 20px;
-    margin-right: 18px;
+    margin-right: 5px;
   }
 
   .country__item::before {
@@ -446,9 +456,9 @@
     position: absolute;
     width: 190px;
     height: 190px;
-    top: 32px;
+    top: 34px;
     left: 33px;
-    border-radius: 10px;
+    border-radius: 20px;
   }
 
   .traveler__name {
@@ -475,9 +485,11 @@
   }
 
   .traveler__wish {
+    position: relative;
     order: 6;
-    padding-top: 0;
-    padding-left: 10px;
+    padding-top: 28px;
+    padding-left: 16px;
+    border-top: 1px solid #edeff6;
   }
 
   .traveler__toggle--list {
@@ -611,12 +623,12 @@
 
   .traveler__transport {
     position: initial;
-    width: 140px;
+    width: 155px;
     height: 55px;
     order: 5;
     margin: 0;
     flex-direction: row;
-    margin-left: 75px;
+    margin-left: 50px;
   }
 
   .traveler__transport .traveler__list--transport {

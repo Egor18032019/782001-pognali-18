@@ -132,18 +132,18 @@
 
         <fieldset class="explorer__tegs">
           <p class="explorer__tegs--users">Тэги</p>
-          <textarea name="tegs" id="" cols="35" rows="2" readonly>#бургер #бар #футбол #концерт #крафт
+          <textarea name="tegs" id="" cols="35" rows="2">#бургер #бар #футбол #концерт #крафт
             </textarea>
         </fieldset>
 
         <fieldset class="explorer__transport">
-          <p class="explorer__tegs--users">Транспорт</p>
-          <input type="checkbox" name="walks" id="walk" class="explorer__walk">
+          <p class="explorer__tegs--users explorer__transport--users">Транспорт</p>
+          <input type="checkbox" name="walks" id="walk" class="explorer__walk" checked>
           <input type="checkbox" name="cycle" id="cycle" class="explorer__cycle">
-          <input type="checkbox" name="air" id="air" class="explorer__air">
-          <input type="checkbox" id="bus" name="bus" class="explorer__bus">
+          <input type="checkbox" name="air" id="air" class="explorer__air" checked>
+          <input type="checkbox" id="bus" name="bus" class="explorer__bus" checked>
           <ul class="explorer__transport--type transport">
-            <li class="explorer__air--favorite transport--favorite">
+            <li class="explorer__air--favorite explorer__transport--pick">
               <label for="air">Самолет
                 <?xml version="1.0" encoding="utf-8"?>
                 <svg width="24" height="21" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -160,7 +160,8 @@ c0.2-0.3,0.4-0.3,0.6-0.1c0.2,0.2,5.7,6.7,5.7,6.7c0.3,0.3,0.5,0.4,0.9-0.2C19.1,19
                 </svg>
               </label>
             </li>
-            <li class="explorer__bus--favorite">
+            <!-- добавить transport--favorite для выбора -->
+            <li class="explorer__bus--favorite explorer__transport--pick">
               <label for="bus">Автобус
                 <?xml version="1.0" encoding="utf-8"?>
                 <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -175,7 +176,7 @@ H8.4z M14.3,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,
                 </svg>
               </label>
             </li>
-            <li class="explorer__cycle--favorite transport--favorite">
+            <li class="explorer__cycle--favorite explorer__transport--pick">
               <label for="cycle">Велосипед
                 <?xml version="1.0" encoding="utf-8"?>
                 <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -190,7 +191,7 @@ s1.6-3.5,3.5-3.5s3.5,1.5,3.5,3.5S6.9,19.6,5,19.6z" />
                 </svg>
               </label>
             </li>
-            <li class="explorer__walk--favorite transport--favorite">
+            <li class="explorer__walk--favorite explorer__transport--pick">
               <label for="walk">Пешие прогулки
                 <?xml version="1.0" encoding="utf-8"?>
                 <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -380,20 +381,31 @@ z" />
               </ul>
               <div class="planing-step__second--choise-wrapper">
 
-                <div class="planing-step__second--choise select">
+                <div class="planing-step__second--choise planing-step__second--choise--active select">
                   <!-- класс для показа  .planing-step__second--choise--active  -->
-                  <div class="planing-step__second--country header">
-                    <p class="select__current"> Босния и Герцеговина</p>
-                  </div>
+                  <select class="planing-step__second--country header" name="planing-countries" id="plan01">
+                    <option value="0"> Выберите страну </option>
+                    <option class="select__current" value="333" selected>Босния и Герцеговина</option>
+                  </select>
+                  <!-- <label for="plan01">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 17 9"
+                      style="enable-background:new 0 0 17 9;" xml:space="preserve">
+                      <path d="M8.5,7.2l-7.2-7C1-0.1,0.5-0.1,0.2,0.2c-0.3,0.3-0.3,0.8,0,1L8,8.8c0.3,0.3,0.8,0.3,1.1,0l7.7-7.5C16.9,1.1,17,0.9,17,0.7
+s-0.1-0.4-0.2-0.5c-0.3-0.3-0.8-0.3-1.1,0L8.5,7.2z" />
+                    </svg>
+                  </label> -->
                   <div class="planing-country__other body">
                     <div class="planning-select__current-country">
                       <p> Выберите страну</p>
                     </div>
                     <ul class="planing-country__selection">
-                      <li class="planing-country__selection--items">
+                      <li class="planing-country__selection--items planing-country__selection--items--pick">
                         <button type="button">а</button>
                         <ul class="planing-country__chosen planing-country__chosen--1">
-                          <li><a class="planing-country__chosen--pick" href=" country/europe/afganistan.html"> Афганистан</a></li>
+                          <li><a class="planing-country__chosen--pick" href=" country/europe/afganistan.html">
+                              Афганистан</a></li>
                           <!-- обсудить как делать и сделать осталные по образцу -->
                           <li><a class="planing-country__chosen--pick" href="#">Албания</a></li>
                           <li><a class="planing-country__chosen--pick" href="#">Алжир</a></li>
@@ -693,17 +705,19 @@ z" />
                     <button class="flag-reset">Закрыть</button>
                   </div>
                 </div>
+
                 <div class="planing-step__second--choise select">
                   <!-- класс для показа  .planing-step__second--choise--active  -->
-                  <div class="planing-step__second--country header">
-                    <p class="select__current"> Чехия</p>
-                  </div>
+                  <select class="planing-step__second--country header" name="planing-countries" id="plan01">
+                    <option value="0"> Выберите страну </option>
+                    <option class="select__current" value="333" selected>Чехия</option>
+                  </select>
                   <div class="planing-country__other body">
                     <div class="planning-select__current-country">
                       <p> Выберите страну</p>
                     </div>
                     <ul class="planing-country__selection">
-                      <li class="planing-country__selection--items">
+                      <li class="planing-country__selection--items planing-country__selection--items--pick">
                         <button type="button">а</button>
                         <ul class="planing-country__chosen planing-country__chosen--1">
                           <li><a href=" country/europe/afganistan.html"> Афганистан</a></li>
@@ -1000,19 +1014,19 @@ z" />
                         <use xlink:href="img/small-cross.svg#Layer_1"></use>
                       </svg>
                     </button>
-
                   </div>
                   <div class="planing-step__second--choise--flag">
                     <img src="img/flag-czech.svg" alt="флаг выбранной страны" width="35" height="24">
                     <button class="flag-reset">Закрыть</button>
                   </div>
                 </div>
+
                 <div class="planing-step__second--choise select clear">
-                  <!-- это main -->
                   <!-- класс для показа  .planing-step__second--choise--active  -->
-                  <div class="planing-step__second--country header">
-                    <p class="select__current"> Выберите страну</p>
-                  </div>
+                  <select class="planing-step__second--country header" name="planing-countries" id="plan01">
+                    <option value="0" selected> Выберите страну </option>
+                    <option class="select__current" value="111">Другая страна</option>
+                  </select>
                   <div class="planing-country__other body">
                     <div class="planning-select__current-country">
                       <p> Выберите страну</p>
@@ -1349,23 +1363,28 @@ z" />
                   <li class="planing-path--current"><a href="#step__three">Развлечения</a></li>
                 </ul>
               </div>
-              <div class="planing-step__three--plan">
-                <!-- на линию забить -->
-                <p>Босния и Герцоговина</p>
-                <div class="start-country planing-step__three--country">
-                  <img src="/img/flag-bosnia.svg" alt="флаг страны" width="35" height="24">
-                </div>
-                <textarea name="plan" id="step-plan-1" cols="30" rows="10" placeholder="План действий" required>
-            </textarea>
-              </div>
-              <div class="planing-step__three--plan">
-                <p>Чехия</p>
-                <div class="planing-step__three--country">
-                  <img src="img/flag-czech.svg" alt="флаг страны" width="35" height="24">
-                </div>
-                <textarea name="plan" id="step-plan-2" cols="30" rows="10" placeholder="План действий" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
-              </textarea>
-              </div>
+              <ul class="planing-step__three--plan">
+                <li class="planing-step__three--selected">
+                  <label for="country01">
+                    <p>Босния и Герцоговина</p>
+                  </label>
+                  <div class="start-country planing-step__three--country">
+                    <img src="/img/flag-bosnia.svg" alt="флаг страны" width="35" height="24">
+                  </div>
+                  <textarea name="country01" id="step-plan-1" cols="30" rows="10" placeholder="План действий" required>
+                  </textarea>
+                </li>
+                <li class="planing-step__three--selected">
+                  <label for="country02">
+                    <p>Чехия</p>
+                  </label>
+                  <div class="planing-step__three--country">
+                    <img src="img/flag-czech.svg" alt="флаг страны" width="35" height="24">
+                  </div>
+                  <textarea name="country02" id="step-plan-2" cols="30" rows="10" placeholder="План действий" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+                  </textarea>
+                </li>
+              </ul>
             </div>
           </fieldset>
           <div class="planing-step__end">

@@ -441,8 +441,9 @@
   }
 
   .filter-country {
+    position: static;
     padding-top: 42px;
-    padding-bottom: 110px;
+    padding-bottom: 0;
   }
 
   .filter-country__continent {

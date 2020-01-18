@@ -100,6 +100,12 @@
   background-size: 100%;
 }
 
+.trend-list__image-wrapper {
+  width: 270px;
+  height: 110px;
+  flex-shrink: 0;
+}
+
 // .trend--thailand {
 //   background-image: url("../img/flag.svg");
 //   background-size: 35px,14px;
@@ -110,12 +116,17 @@
 @media (min-width: $tablet-width) {
   .trend-wrapper {
     position: relative;
-    background-image: url("../img/flags-back@1x.png");
     background-repeat: no-repeat;
     background-position: top 80px right 40px;
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 60px;
     padding-bottom: 79px;
+    background-image: url("../img/flags-back@1x.png");
+    background-size: 289px 575px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/flags-back@2x.png");
+    }
   }
 
   .trend-wrapper::before {
@@ -192,11 +203,13 @@
     display: flex;
   }
 
-  .trend__item img {
+  .trend__item img,
+  .trend-list__image-wrapper {
     width: 186px;
     height: 140px;
     order: 2;
     border-bottom-right-radius: 20px;
+    flex-shrink: 0;
   }
 
   .trend__text img {

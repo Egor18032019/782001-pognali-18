@@ -55,8 +55,13 @@
   min-width: 100px;
   min-height: 19px;
   font-size: 0;
-  background-image: url("../img/logo-mobile-white@1x.png");
   background-repeat: no-repeat;
+  background-size: 100px 19px;
+  background-image: url("../img/logo-mobile-white@1x.png");
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/logo-mobile-white@2x.png");
+  }
 }
 
 .page-header__autho {
@@ -193,7 +198,12 @@
     width: 260px;
     height: 44px;
     font-size: 0;
+    background-size: 165px 44px;
     background-image: url("../img/logo-tablet-white@1x.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/logo-tablet-white@2x.png");
+    }
   }
 
   .page-header__list a {
@@ -247,7 +257,6 @@
   }
 
   .page-header__slogan {
-    background-image: url("../img/traveller-illustration-desktop@1x.png"), url("../img/globe-back-desktop@1x.jpg");
     background-position: bottom right 410px, bottom left -180px;
     background-size: 431px 640px, 1800px 750px;
     justify-content: start;
@@ -255,6 +264,7 @@
     padding: 0;
     padding-top: 55px;
     max-width: 1440px;
+    background-image: url("../img/traveller-illustration-desktop@1x.png"), url("../img/globe-back-desktop@1x.jpg");
   }
 
   .page-header__logo {
@@ -263,6 +273,11 @@
     height: 52px;
     font-size: 0;
     background-image: url("../img/logo-desktop-white@1x.png");
+    background-size: 200px 52px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/logo-desktop-white@2x.png");
+    }
   }
 
   .page-header__toggle {

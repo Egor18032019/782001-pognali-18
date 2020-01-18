@@ -121,7 +121,15 @@
           <span>level</span>
         </div>
 
-        <img src="img/demin-mobile@1x.jpg" class="explorer-foto" alt="Photo Demin" width="99" height="100">
+        <div class="explorer-foto">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+            <img src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg" alt="Фото попутчика" width="99"
+              height="100" class="demin-form">
+          </picture>
+        </div>
+
 
         <button class="form-button explorer-main__button">
           <input class="visually-hidden" type="file" accept="image/*" name="user-photo" id="upload-photo">

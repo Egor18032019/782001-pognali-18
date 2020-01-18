@@ -113,14 +113,16 @@
 .companions-list .companions__item {
   width: 100%;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
   background-color: white;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  overflow: hidden;
   margin-bottom: 10px;
   padding-bottom: 5px;
 }
@@ -189,6 +191,11 @@
   margin-bottom: 30px;
 }
 
+.companions-list__image-wrapper {
+  width: 270px;
+  height: 270px;
+  flex-shrink: 0;
+}
 // ________________________________________________________
 
 @media (min-width: $tablet-width) {
@@ -197,6 +204,13 @@
     padding-top: 52px;
     padding-left: 0;
     margin-bottom: 45px;
+  }
+
+  .companions-list__image-wrapper img,
+  .companions-list__image-wrapper {
+    width: 285px;
+    height: 285px;
+    flex-shrink: 0;
   }
 
   .companions-wrapper {
@@ -342,9 +356,11 @@
     border-radius: 20px;
   }
 
-  .companions__item img {
+  .companions-list__image-wrapper img,
+  .companions-list__image-wrapper {
     width: 285px;
     height: 285px;
+    flex-shrink: 0;
   }
 
   .companions___countries img {

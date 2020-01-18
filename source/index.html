@@ -17,9 +17,9 @@
 
       <button class="page-header__toggle" aria-label="При нажатие откроеться меню">Показать меню
         <?xml version="1.0" encoding="utf-8"?>
-        <svg aria-hidden="true" focusable="false" version="1.1" id="Layer_1" class="page-header__toggle--icon" width="25" height="11"
-          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          viewBox="0 0 25 11" style="enable-background:new 0 0 25 11;" xml:space="preserve">
+        <svg aria-hidden="true" focusable="false" version="1.1" id="Layer_1" class="page-header__toggle--icon"
+          width="25" height="11" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+          y="0px" viewBox="0 0 25 11" style="enable-background:new 0 0 25 11;" xml:space="preserve">
           <g>
             <path d="M1.5,3h22C24.3,3,25,2.3,25,1.5S24.3,0,23.5,0h-22C0.7,0,0,0.7,0,1.5S0.7,3,1.5,3z" />
             <path d="M23.5,8h-22C0.7,8,0,8.7,0,9.5S0.7,11,1.5,11h22c0.8,0,1.5-0.7,1.5-1.5S24.3,8,23.5,8z" />
@@ -168,9 +168,14 @@
         </div>
         <ul class="trend-list">
           <li class="trend__item trend--thailand">
-            <img src="img/thailand-mobile@1x.jpg" alt="Тайланд" width="100%" height="110"
-              class="trend-flag trend-flag--thailand">
-            <!-- <img src="https://via.placeholder.com/35x24"  alt="вместо флага" width="35" height="24" class="zaglushka-flaga"> -->
+            <div class="trend-list__image-wrapper">
+              <picture>
+                <source media="(min-width: 1440px)"
+                  srcset="img/thailand-desktop@1x.jpg 1x, img/thailand-desktop@2x.jpg 2x">
+                <img src="img/thailand-mobile@1x.jpg" srcset="img/thailand-mobile@2x.jpg" alt="Тайланд" width="270"
+                  height="110" class="trend-flag trend-flag--thailand">
+              </picture>
+            </div>
             <div class="trend__text">
               <img src="img/flag-thailand.svg" alt="флаг Тайланда" width="35" height="24">
               <p>Тайланд </p>
@@ -180,7 +185,13 @@
             </div>
           </li>
           <li class="trend__item">
-            <img src="img/france-mobile@1x.jpg" alt="Франция" width="100%" height="110">
+            <div class="trend-list__image-wrapper">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/france-desktop@1x.jpg 1x, img/france-desktop@2x.jpg 2x">
+                <img src="img/france-mobile@1x.jpg" srcset="img/france-mobile@2x.jpg" alt="Тайланд" width="270"
+                  height="110" class="trend-flag trend-flag--thailand">
+              </picture>
+            </div>
             <div class="trend__text">
               <img src="img/flag-france.svg" alt="Флаг Франции" width="35" height="24">
               <p>Франция </p>
@@ -189,7 +200,13 @@
             </div>
           </li>
           <li class="trend__item">
-            <img src="img/czech-mobile@1x.jpg" alt="Чехия" width="100%" height="110">
+            <div class="trend-list__image-wrapper">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/czech-desktop@1x.jpg 1x, img/czech-desktop@2x.jpg 2x">
+                <img src="img/czech-mobile@1x.jpg" srcset="img/czech-mobile@2x.jpg" alt="Тайланд" width="270"
+                  height="110" class="trend-flag trend-flag--thailand">
+              </picture>
+            </div>
             <div class="trend__text">
               <img src="img/flag-czech.svg" alt="Флаг Чехии" width="35" height="24">
               <p>Чехия</p>
@@ -222,7 +239,16 @@
               <p>99</p>
               <span>level</span>
             </div>
-            <img src="img/firsova-mobile@1x.jpg" alt="Фото в бассейне" width="100%" height="270">
+            <div class="companions-list__image-wrapper">
+              <picture>
+                <source media="(min-width: 1440px)"
+                  srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
+                <img src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg" alt="Фото попутчика" width="270"
+                  height="270" class="firsova">
+              </picture>
+            </div>
             <div class="companions__personal">
               <p class="visually-hidden">хочет посетить:</p>
               <ul class="companions___countries">
@@ -317,7 +343,15 @@ z" />
               <p>80</p>
               <span>level</span>
             </div>
-            <img src="img/demin-mobile@1x.jpg" alt="Зимнее фото" width="100%" height="270">
+            <div class="companions-list__image-wrapper">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+                <img src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg" alt="Фото попутчика" width="270"
+                  height="270" class="demin">
+              </picture>
+            </div>
             <div class="companions__personal">
               <p class="visually-hidden">хочет посетить:</p>
               <ul class="companions___countries">

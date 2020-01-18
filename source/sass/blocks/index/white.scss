@@ -6,6 +6,10 @@
 
 .white .page-header__logo {
   background-image: url("../img/logo-mobile-blue@1x.png");
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/logo-mobile-blue@2x.png");
+  }
 }
 
 .white .page-header__toggle {
@@ -108,6 +112,10 @@
 
   .white .page-header__logo {
     background-image: url("../img/logo-tablet-blue@1x.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/logo-tablet-blue@2x.png");
+    }
   }
 }
 
@@ -125,6 +133,10 @@
 
   .white .page-header__logo {
     background-image: url("../img/logo-tablet-white@1x.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/logo-tablet-white@2x.png");
+    }
   }
 
   .white .page-header__autho {

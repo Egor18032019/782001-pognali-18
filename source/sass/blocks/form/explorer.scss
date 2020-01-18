@@ -91,8 +91,12 @@
   height: 100px;
   border-radius: 50%;
   margin-bottom: 19px;
-  // background-image: url("../img/photo-account-mobile@1x.jpg");
+  overflow: hidden;
   font-size: 0;
+}
+
+.explorer-foto img {
+  width: 100%;
 }
 
 .explorer-lvl {

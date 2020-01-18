@@ -128,7 +128,7 @@
     </div>
 
     <section class="filter-country">
-<!-- добавить filter-country--close -->
+      <!-- добавить filter-country--close -->
       <div class="filter-country__main">
         <nav class="filter-nav">
           <button class="filter-nav__toggle">Показать меню</button>
@@ -166,7 +166,8 @@
       <!-- Получаеться три разные формы ? при нажатие на континент -показывает нужную форму выбора стран -->
       <form class="filter-country__other" action="https://echo.htmlacademy.ru" method="GET">
         <ul class="filter-country__selection">
-          <li class="filter-country__selection--items filter-country__selection--items--pick"><button type="button">а</button>
+          <li class="filter-country__selection--items filter-country__selection--items--pick"><button
+              type="button">а</button>
             <ul class="filter-country__chosen filter-country__chosen--1">
               <li><a class="filter-country__chosen--pick" href="country/europe/afganistan.html">Афганистан</a></li>
               <!-- обсудить как делать и сделать осталные по образцу -->
@@ -600,7 +601,16 @@
         <ul class="traveler__list">
 
           <li class="traveler__item traveler-firsova">
-            <img src="img/firsova-mobile@1x.jpg" width="70" height="70" alt="Фото попутчика.">
+            <div class="traveler__item__image-wrapper">
+              <picture>
+                <source media="(min-width: 1440px)"
+                  srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
+                <img src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg" alt="Фото попутчика" width="270"
+                  height="270" class="firsova">
+              </picture>
+            </div>
             <h3 class="traveler__name">Таня Фирсова</h3>
             <div class="traveler__heart--wrapp">
               <button class="traveler__heart--btn traveler__heart--red" data-tooltip="Звезда">
@@ -719,7 +729,15 @@ z" />
           </li>
 
           <li class="traveler__item">
-            <img src="img/demin-mobile@1x.jpg" width="70" height="70" alt="Демин">
+            <div class="traveler__item__image-wrapper">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+                <img src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg" alt="Фото попутчика" width="270"
+                  height="270" class="demin">
+              </picture>
+            </div>
             <h3 class="traveler__name traveler-demin"> Петя Демин</h3>
             <div class="traveler__heart--wrapp traveler__heart--demin">
               <button class="traveler__heart--btn">
@@ -763,18 +781,18 @@ c1.3-1.3,3.5-1.3,4.9,0c1.3,1.3,1.3,3.5,0,4.8L14.9,9.8z" />
             <div class="traveler__transport traveler-demin">
               <ul class="traveler__list--transport transport">
                 <li class="transport__normal transport--favorite">Самолет
-                    <?xml version="1.0" encoding="utf-8"?>
-                    <svg width="14" height="16" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19 21"
-                      style="enable-background:new 0 0 19 21;" xml:space="preserve">
-                      <path d="M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8
+                  <?xml version="1.0" encoding="utf-8"?>
+                  <svg width="14" height="16" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19 21"
+                    style="enable-background:new 0 0 19 21;" xml:space="preserve">
+                    <path d="M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8
 c-0.7-0.5-1.7-0.1-2.5,1c-0.8,1.1-3,4.5-3,4.5c-0.3,0.4-0.4,0.7-0.9,0.8c0,0,0,0,0,0C11.7,6.5,1.5,7,1.2,7c-0.3,0-0.7,0.1-1,0.6
 C-0.2,8.3,0,8.5,0.4,8.6c0,0,8,2.6,8.3,2.7C9,11.3,9,11.5,8.9,11.9c-0.2,0.4-1.4,2.3-1.6,2.6c-0.1,0.2-0.2,0.2-0.4,0.3l-2.8,1
 c-0.1,0-0.3,0.1-0.4,0.3c0,0-0.2,0.3-0.4,0.6c-0.2,0.3-0.1,0.5,0.2,0.5c0.3,0.1,2.1,0.2,2.1,0.2c0,0,0.3,0.1,0.4,0.1
 c0.2,0.1,0.4,0.3,0.2,0.6c-0.3,0.6-0.4,1.2-0.2,1.3s0.6-0.2,1-0.7c0.2-0.3,0.4-0.2,0.6,0C7.8,18.6,8,18.8,8,18.8c0,0,0.8,1.6,1,1.9
 c0.2,0.3,0.4,0.3,0.6,0c0.2-0.3,0.4-0.6,0.4-0.6c0.1-0.1,0.1-0.3,0.1-0.5l-0.3-3.1c0-0.2,0-0.2,0.1-0.5c0.1-0.2,1.4-2.2,1.6-2.5
 c0.2-0.3,0.4-0.3,0.6-0.1c0.2,0.2,5.7,6.7,5.7,6.7c0.3,0.3,0.5,0.4,0.9-0.2C19.1,19.5,19,19.1,18.9,18.9z" />
-                    </svg>
+                  </svg>
                 </li>
                 <li class="transport__normal transport--favorite">Автобус
                   <?xml version="1.0" encoding="utf-8"?>
@@ -831,9 +849,16 @@ z" />
             </div>
             <a href="#" class="traveler__call form-button ">Позвать!</a>
           </li>
-
           <li class="traveler__item traveler-smolov">
-            <img src="img/smolov-mobile@1x.jpg" width="70px" height="70px" alt="Фото попутчика.">
+            <div class="traveler__item__image-wrapper">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
+                <img src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg" alt="Фото попутчика" width="270"
+                  height="270" class="smolov">
+              </picture>
+            </div>
             <p class="traveler__name traveler-smolov__name">Марк Смолов</p>
             <div class="traveler__heart--wrapp">
               <button class="traveler__heart--btn">
@@ -951,7 +976,15 @@ z" />
           </li>
 
           <li class="traveler__item traveler-rogovay">
-            <img src="img/rogovaya-mobile@1x.jpg" width="70" height="70" alt="Фото попутчика.">
+            <div class="traveler__item__image-wrapper">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
+                <img src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg" alt="Фото попутчика" width="270"
+                  height="270" class="rogovaya">
+              </picture>
+            </div>
             <p class="traveler__name traveler__name--online">Лариса Роговая</p>
             <div class="traveler__heart--wrapp traveler__heart--firsova">
               <button class="traveler__heart--btn">

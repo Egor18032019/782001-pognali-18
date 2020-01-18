@@ -21,31 +21,6 @@
   }
 }
 
-.check::before {
-  content: "";
-  width: 18px;
-  height: 18px;
-  margin-right: 10px;
-  vertical-align: middle;
-  background-color: #ffffff;
-  // background-image: url("../img/checkbox-off.svg");
-  background-repeat: no-repeat;
-  display: inline-block;
-}
-
-.check-input {
-  display: none;
-  position: absolute;
-  appearance: none;
-}
-
-.check-input:checked + .check::before {
-  background-image: url("../img/tick.svg");
-  background-size: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 .teg {
   @include reset-list;
   display: flex;
@@ -78,11 +53,6 @@
     background-color: #161c34;
   }
 
-  li .check::before {
-    width: 24px;
-    height: 24px;
-  }
-
   .country__item img {
     width: 35px;
     height: 24px;
@@ -101,11 +71,6 @@
 @media (min-width: $desktop-width) {
   .form {
     background-color: #dfe3f0;
-  }
-
-  .check::before {
-    width: 24px;
-    height: 24px;
   }
 
   .country__item img {

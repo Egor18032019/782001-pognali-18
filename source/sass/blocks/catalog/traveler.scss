@@ -140,8 +140,10 @@
 }
 
 .traveler__heart--img {
-  border-color: cadetblue;
+  width: 13px;
+  height: 11px;
   fill: #edeff6;
+  flex-shrink: 0;
 }
 
 .traveler__heart--active {
@@ -155,7 +157,8 @@
   fill: #192144;
 }
 
-.traveler__heart--none {
+.traveler__heart--red .traveler__heart--noactive,
+.traveler__heart--black .traveler__heart--active {
   display: none;
 }
 
@@ -335,6 +338,11 @@
     margin-bottom: 40px;
   }
 
+  .traveler__heart--img {
+    width: 20px;
+    height: 17px;
+  }
+
   .traveler__heart--wrapp {
     position: relative;
     order: 4;
@@ -428,11 +436,6 @@
     width: 50px;
     height: 50px;
     position: relative;
-  }
-
-  .traveler__heart--btn svg {
-    width: 20px;
-    height: 17px;
   }
 
   .traveler__btn::before {

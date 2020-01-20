@@ -54,6 +54,12 @@
   // border-bottom-left-radius: 20px;
 }
 
+.trail__gprs--icon {
+  width: 14px;
+  height: 22px;
+  fill: #ffd74b;
+}
+
 .trail-container {
   @include center;
   background-color: #ffd74b;

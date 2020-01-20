@@ -5,8 +5,9 @@
 .catalog-main__slogan {
   display: flex;
   align-items: center;
-  height: 78px;
-  padding-top: 15px;
+  min-height: 70px;
+  padding-top: 22px;
+  padding-bottom: 15px;
   padding-left: 24px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -72,8 +73,8 @@
     padding: 0;
     padding-left: 75px;
     padding-right: 74px;
-    padding-top: 120px;
-    padding-bottom: 99px;
+    padding-top: 86px;
+    padding-bottom: 71px;
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 60px;
   }
@@ -108,9 +109,9 @@
   }
 
   .catalog-main__slogan {
-    padding-top: 112px;
+    padding-top: 99px;
     padding-left: 129px;
-    padding-bottom: 103px;
+    padding-bottom: 73px;
   }
 
   .catalog-main__home--link {

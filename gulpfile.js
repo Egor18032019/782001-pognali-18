@@ -35,20 +35,6 @@ gulp.task("css", function() {
     .pipe(server.stream());
 });
 
-gulp.task("server", function () {
-  server.init({
-    server: "build/",
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false
-  });
-
-gulp.task("refresh", function(done) {
-  server.reload();
-  done();
-});
-
   gulp.task("images", function() {
     return gulp
       .src("source/img/**/*{png,jpg,svg}")
@@ -111,6 +97,20 @@ gulp.task("refresh", function(done) {
       .pipe(webp({ quality: 90 }))
       .pipe(gulp.dest("source/img"));
   });
+
+  gulp.task("server", function () {
+    server.init({
+      server: "build/",
+      notify: false,
+      open: true,
+      cors: true,
+      ui: false
+    });
+
+    gulp.task("refresh", function(done) {
+      server.reload();
+      done();
+    });
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));

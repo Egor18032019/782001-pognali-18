@@ -29,8 +29,8 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
-    // "minifity-html": "npm run minifity-html",
     "start": "gulp start"
+    // "minifity-html": "npm run minifity-html",
   },
   "browserslist": [
     "last 2 versions",

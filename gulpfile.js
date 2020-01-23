@@ -23,13 +23,7 @@ var csso = require("gulp-csso");
 // минификатор для html
 var htmlmin = require ("gulp-htmlmin");
 
-// Пишу задачу для модификатора
-// gulp task ("minifity-html", function (){
-//   return gulp
-//   .src("source/*.html")
-//   .pipe(htmlmin({collapseWhitespace:true}))
-//   .pipe(gulp.dest("build/"));
-// });
+// css, jsmin и т.п. = это название задач. переменную обьявлять ненадо
 
 gulp.task("css", function() {
   return gulp

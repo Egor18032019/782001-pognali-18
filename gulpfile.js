@@ -20,6 +20,12 @@ var include = require("posthtml-include");
 // для вставки в html
 var rename = require("gulp-rename");
 var csso = require("gulp-csso");
+// минификатор для html
+var htmlmin = require ("gulp-htmlmin");
+//  минификатор JS
+var uglify = require("gulp-uglify");
+
+// css, jsmin и т.п. = это название задач. переменную обьявлять ненадо
 
 gulp.task("css", function() {
   return gulp
@@ -33,6 +39,14 @@ gulp.task("css", function() {
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
+});
+
+gulp.task("jsmin",function (){
+  return gulp
+  .src("sourse/js/*.js")
+  .pipe(uglify())
+  .pipe(rename({suffix:".min"}))
+  .pipe(gulp.dest("build/js"))
 });
 
   gulp.task("images", function() {
@@ -83,6 +97,7 @@ gulp.task("css", function() {
     return gulp
       .src("source/*.html")
       .pipe(posthtml([include()]))
+      .pipe(htmlmin())
       .pipe(gulp.dest("build"));
   });
 
@@ -116,5 +131,5 @@ gulp.task("css", function() {
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
-gulp.task("build", gulp.series("clean","images", "webp","copy", "css", "sprite", "html"));
+gulp.task("build", gulp.series("clean","images", "webp","copy", "css", "sprite", "html","jsmin"));
 gulp.task("start", gulp.series("build", "server"));

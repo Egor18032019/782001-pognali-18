@@ -20,6 +20,16 @@ var include = require("posthtml-include");
 // для вставки в html
 var rename = require("gulp-rename");
 var csso = require("gulp-csso");
+// минификатор для html
+var htmlmin = require ("gulp-htmlmin");
+
+// Пишу задачу для модификатора
+gulp task ("minifity-html", function (){
+  return gulp
+  .src("source/*.html")
+  .pipe(htmlmin({collapseWhitespace:true}))
+  .pipe(gulp.dest("build/"));
+});
 
 gulp.task("css", function() {
   return gulp

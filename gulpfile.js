@@ -24,12 +24,12 @@ var csso = require("gulp-csso");
 var htmlmin = require ("gulp-htmlmin");
 
 // Пишу задачу для модификатора
-gulp task ("minifity-html", function (){
-  return gulp
-  .src("source/*.html")
-  .pipe(htmlmin({collapseWhitespace:true}))
-  .pipe(gulp.dest("build/"));
-});
+// gulp task ("minifity-html", function (){
+//   return gulp
+//   .src("source/*.html")
+//   .pipe(htmlmin({collapseWhitespace:true}))
+//   .pipe(gulp.dest("build/"));
+// });
 
 gulp.task("css", function() {
   return gulp

@@ -22,6 +22,8 @@ var rename = require("gulp-rename");
 var csso = require("gulp-csso");
 // минификатор для html
 var htmlmin = require ("gulp-htmlmin");
+//  минификатор JS
+var uglify = require("gulp-uglify");
 
 // css, jsmin и т.п. = это название задач. переменную обьявлять ненадо
 
@@ -45,7 +47,7 @@ gulp.task("jsmin",function (){
   .pipe(uglify())
   .pipe(rename({suffix:".min"}))
   .pipe(gulp.dest("build/js"))
-})
+});
 
   gulp.task("images", function() {
     return gulp

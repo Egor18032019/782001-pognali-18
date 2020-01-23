@@ -30,7 +30,6 @@
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
     "start": "gulp start"
-    // "minifity-html": "npm run minifity-html",
   },
   "browserslist": [
     "last 2 versions",

@@ -605,19 +605,14 @@ li.planing-path--current {
   right: 0;
 }
 
-// .planning-select__current-country::selection + .planing-step__second--country {
-//   display: flex;
-//   background-color: #1d2e5b;
-// не погу сделать так чтобы он работал на состояние
-// }
-
 .planing-step__second--choise.planing-step__second--choise--active .planing-country__other {
   display: flex;
 }
 
-.planing-step__second--choise.planing-step__second--choise--active .planing-step__second--choise--flag {
-  display: none;
-}
+// // при добавление класса planing-step__second--choise--active  флаг исчезает
+// .planing-step__second--choise.planing-step__second--choise--active .planing-step__second--choise--flag img {
+//   display: none;
+// }
 
 .planing-country__other ul {
   @include reset-list;

@@ -151,6 +151,8 @@
 .filter-country__other .filter-country__button {
   @include reset-list;
   font-size: 16.5px;
+  background-color: #d6daed;
+  margin-bottom: 27px;
 }
 
 .filter-country__selection--items,
@@ -176,11 +178,6 @@
 .filter-country__selection--items--pick button {
   background-color: #1d2e5b;
   color: #ffffff;
-}
-
-.filter-country__other .filter-country__button {
-  background-color: #d6daed;
-  margin-bottom: 27px;
 }
 
 .filter-country__button::before {
@@ -335,9 +332,6 @@
   .filter-country__other .filter-country__button {
     width: 100%;
     height: 100px;
-  }
-
-  .filter-country__other .filter-country__button {
     font-size: 20px;
   }
 

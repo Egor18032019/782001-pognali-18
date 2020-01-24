@@ -148,7 +148,7 @@
   margin-bottom: 282px;
 }
 
-.filter-country__button p {
+.filter-country__other .filter-country__button {
   @include reset-list;
   font-size: 16.5px;
 }
@@ -183,7 +183,7 @@
   margin-bottom: 27px;
 }
 
-.filter-country__button p::before {
+.filter-country__button::before {
   content: "";
   display: inline-block;
   width: 12px;
@@ -337,11 +337,11 @@
     height: 100px;
   }
 
-  .filter-country__button p {
+  .filter-country__other .filter-country__button {
     font-size: 20px;
   }
 
-  .filter-country__button p::before {
+  .filter-country__button::before {
     width: 19px;
     height: 19px;
   }
@@ -477,7 +477,7 @@
     font-size: 20px;
   }
 
-  .filter-country__button p::before {
+  .filter-country__button::before {
     width: 18px;
     height: 18px;
   }

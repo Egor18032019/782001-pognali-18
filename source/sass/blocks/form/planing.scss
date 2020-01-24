@@ -772,7 +772,8 @@ li.planing-path--current {
   background-color: #1d2e5b;
 }
 
-.planing-step__three--selected p {
+.planing-step__three--selected p,
+.planing-step__three--selected {
   @include fontBS (17px, bold, #1d2e5b);
   align-self: flex-start;
 }

@@ -39,6 +39,16 @@
   display: none;
 }
 
+.white .autho,
+.white .autho {
+  display: flex;
+}
+
+.form .page-header__slogan,
+.catalog .page-header__slogan {
+  display: none;
+}
+
 .catalog footer {
   background-color: #edeff6;
 }
@@ -49,9 +59,9 @@
     display: flex;
   }
 
-  .catalog .page-header {
-    background-color: #161c34;
-  }
+  // .catalog .page-header {
+  //   background-color: #161c34;
+  // }
 
   .country__item img {
     width: 35px;

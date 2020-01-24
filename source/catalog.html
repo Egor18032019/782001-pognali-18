@@ -14,14 +14,14 @@
 
 <body class="catalog">
   <svg style="display:none">
-    <symbol viewBox="0 0 18 18" id="topMenuPhone">
-      <g>
+    <symbol viewBox="0 0 18 18" id="topMenuPhone" class="autho__contact--icon">
+      <g class="autho__contact--icon">
         <g>
           <g>
             <path class="autho__contact--icon" d="M12.6,18c-0.3,0-0.5,0-0.8,0c-3.6-0.4-6.2-2.1-8.1-4.3C1.8,11.6,0.3,8.8,0,5c0-0.3,0-0.7,0-1
 c0.1-0.7,0.4-1.1,0.8-1.5C1.2,2,2,1.4,2.6,1.3c0.5,0,1.3,0.3,1.6,0.8c0.3,0.4,0.4,1.2,0.6,1.8c0.1,0.6,0.4,1.4,0.4,2
 C5,6.8,3.9,7.2,3.5,7.8c1.1,2.8,3,4.8,5.4,6.2c0.6-0.3,1.2-1.4,2-1.4c0.3,0,0.7,0.2,1,0.3c0.3,0.1,0.6,0.2,1,0.4
-c0.5,0.2,1.4,0.5,1.7,0.9c0.3,0.4,0.5,1.2,0.4,1.7C14.9,16.7,13.4,17.7,12.6,18z" fill="currentColor" />
+c0.5,0.2,1.4,0.5,1.7,0.9c0.3,0.4,0.5,1.2,0.4,1.7C14.9,16.7,13.4,17.7,12.6,18z"/>
           </g>
         </g>
         <path class="autho__contact--icon" d="M9.1,1.1c4.3,0,7.8,3.6,7.8,8H18c0-5-4-9.1-8.9-9.1L9.1,1.1z" />
@@ -71,11 +71,33 @@ L11.9,7.1z" />
     <include src="build/img/sprite.svg"></include>
   </div>
 
-  <header class="page-header">
+  <header class="page-header white">
     <!-- для белой добавить  white  -->
     <!-- для липкой добавить page-header__main--sticky -->
     <div class="page-header__main">
-      <a class="page-header__logo" href="index.html"> Погнали? </a>
+      <a class="page-header__logo"> Погнали?
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="
+              img/logo-desktop-white@1x.webp 1x,
+              img/logo-desktop-white@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="
+              img/logo-tablet-white@1x.webp 1x,
+              img/logo-tablet-white@2x.webp 2x">
+          <source type="image/webp" srcset="
+              img/logo-mobile-white@1x.webp 1x,
+              img/logo-mobile-white@2x.webp 2x">
+          <source media="(min-width: 1440px)" srcset="
+              img/logo-desktop-white@1x.png 1x,
+              img/logo-desktop-white@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="
+              img/logo-tablet-white@1x.png 1x,
+              img/logo-tablet-white@2x.png 2x">
+          <img class="logo__picture" src="img/logo-mobile-white@1x.png" srcset="
+              img/logo-mobile-white@1x.png 1x,
+              img/logo-mobile-white@2x.png 2x"
+              alt="Логотип приложения Погнали">
+        </picture>
+      </a>
       <button class="page-header__toggle" aria-label="При нажатие откроеться меню">Показать меню
         <svg class="page-header__toggle--icon" width="25" height="11">
           <use xlink:href="#menuHeader"></use>
@@ -109,6 +131,11 @@ L11.9,7.1z" />
         </ul>
       </div>
     </nav>
+    <div class="page-header__slogan">
+      <div class="page-header__slogan--wrapper">
+        <h2>В путешествие с крутыми попутчиками!</h2>
+      </div>
+    </div>
     <div class="page-header__autho autho">
       <a href="tel:+74954959595" class="autho__telephone autho-icon" title="Телефон">
         <span>

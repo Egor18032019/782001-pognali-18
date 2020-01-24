@@ -63,6 +63,11 @@
   background-image: url("../img/logo-mobile-blue@1x.png");
 }
 
+.page-header__main--sticky  .logo__picture,
+.white .logo__picture {
+  display: none;
+}
+
 .page-header__main--sticky .page-header__toggle--icon {
   fill: #cccccc;
 }

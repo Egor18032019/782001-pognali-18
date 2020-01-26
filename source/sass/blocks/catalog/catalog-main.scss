@@ -45,6 +45,14 @@
   text-transform: uppercase;
 }
 
+.catalog-main__home--link:hover {
+  opacity: 0.6;
+}
+
+.catalog-main__home--link:active {
+  opacity: 0.3;
+}
+
 .catalog-main__home--link span {
   background-color: inherit;
   margin-left: 61px;

@@ -48,6 +48,15 @@
   margin-bottom: 35px;
 }
 
+.trail__run:hover {
+  background-color: #192144;
+  color: #ffffff;
+}
+
+.trail__run:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .trail-map {
   width: 85%;
   // border-bottom-right-radius: 20px;

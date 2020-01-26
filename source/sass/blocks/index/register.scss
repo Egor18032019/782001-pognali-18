@@ -53,10 +53,13 @@
   margin: 0;
 }
 
+.register__container .register__contact--icon {
+  fill: #ffd74b;
+}
+
 .register__contact--icon {
   width: 18px;
   height: 18px;
-  fill: #ffd74b;
 }
 
 .register__button::after {
@@ -86,6 +89,14 @@
   flex-direction: row;
   justify-content: flex-start;
   text-transform: uppercase;
+}
+
+.register__item:hover {
+  color: #ffbd30;
+}
+
+.register__item:hover .register__contact--icon {
+  fill: #ffbd30;
 }
 
 .register__item--mail {

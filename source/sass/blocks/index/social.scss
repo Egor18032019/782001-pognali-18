@@ -13,6 +13,10 @@
   border-radius: 50%;
 }
 
+.social__item a:hover {
+  background-color: #ffbd30;
+}
+
 .social__link--facebook {
   background-image: url("../img/facebook.svg");
   background-repeat: no-repeat;

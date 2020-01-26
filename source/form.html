@@ -9,11 +9,15 @@
   <link rel="preload" href="../fonts/bloggersans-light.woff">
   <link rel="preload" href="../fonts/bloggersans-medium.woff">
   <link rel="preload" href="../fonts/bloggersans-bold.woff">
+  <link rel="preload" href="../fonts/bloggersans.woff2">
+  <link rel="preload" href="../fonts/bloggersans-light.woff2">
+  <link rel="preload" href="../fonts/bloggersans-medium.woff2">
+  <link rel="preload" href="../fonts/bloggersans-bold.woff2">
   <link href="css/style.min.css" rel="stylesheet">
-
 </head>
 
 <body class="form">
+
   <svg style="display:none">
     <symbol viewBox="0 0 18 18" id="topMenuPhone" class="autho__contact--icon">
       <g class="autho__contact--icon">
@@ -22,7 +26,7 @@
             <path class="autho__contact--icon" d="M12.6,18c-0.3,0-0.5,0-0.8,0c-3.6-0.4-6.2-2.1-8.1-4.3C1.8,11.6,0.3,8.8,0,5c0-0.3,0-0.7,0-1
 c0.1-0.7,0.4-1.1,0.8-1.5C1.2,2,2,1.4,2.6,1.3c0.5,0,1.3,0.3,1.6,0.8c0.3,0.4,0.4,1.2,0.6,1.8c0.1,0.6,0.4,1.4,0.4,2
 C5,6.8,3.9,7.2,3.5,7.8c1.1,2.8,3,4.8,5.4,6.2c0.6-0.3,1.2-1.4,2-1.4c0.3,0,0.7,0.2,1,0.3c0.3,0.1,0.6,0.2,1,0.4
-c0.5,0.2,1.4,0.5,1.7,0.9c0.3,0.4,0.5,1.2,0.4,1.7C14.9,16.7,13.4,17.7,12.6,18z" />
+c0.5,0.2,1.4,0.5,1.7,0.9c0.3,0.4,0.5,1.2,0.4,1.7C14.9,16.7,13.4,17.7,12.6,18z"/>
           </g>
         </g>
         <path class="autho__contact--icon" d="M9.1,1.1c4.3,0,7.8,3.6,7.8,8H18c0-5-4-9.1-8.9-9.1L9.1,1.1z" />
@@ -82,8 +86,6 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
   </div>
 
   <header class="page-header white">
-    <!-- для белой добавить  white  -->
-    <!-- для липкой добавить page-header__main--sticky -->
     <div class="page-header__main">
       <a class="page-header__logo" href="index.html"> Погнали?
         <picture>
@@ -191,12 +193,12 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
           </picture>
         </div>
 
-        <input class="visually-hidden" type="file" accept="image/*" name="user-photo" id="upload-photo">
-        <button class="form-button explorer-main__button">
+        <div class="form-button explorer-main__button">
+          <input class="visually-hidden" type="file" accept="image/*" name="user-photo" id="upload-photo">
           <label for="upload-photo">
             Сменить &nbsp;фото
           </label>
-        </button>
+        </div>
 
         <fieldset class="explorer__tegs">
           <p class="explorer__tegs--users">Тэги</p>
@@ -218,7 +220,6 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
                 </svg>
               </label>
             </li>
-            <!-- добавить transport--favorite для выбора -->
             <li class="explorer__bus--favorite explorer__transport--pick">
               <label for="bus">Автобус
                 <svg width="24" height="21">
@@ -246,7 +247,6 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
       </form>
 
       <div class="explorer-plan">
-        <!-- не ФОРМА -->
         <h2>Мои планы:</h2>
         <ol class="explorer-plan__country">
           <li>
@@ -254,7 +254,6 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
             <p>3 попутчика</p>
             <p>26 мар — 29 мар</p>
             <a href="#">Изменить</a>
-            <!-- 5.8. Ссылка «Изменить» в блоке «Мои планы» ведёт на страницу редактирования планов. Страницу реализовывать не нужно. -->
           </li>
           <li>
             <b>Таиланд, Индонезия</b>
@@ -270,13 +269,11 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
     <section class="planing-add">
       <div class="planing-add--wrapper">
         <h2 id="planing__first">Добавить план:</h2>
-        <!-- слайдер скрыть в ПК версии -->
         <ul class="planing-path">
           <li class="planing-path--current"><a href="#step__first">Даты</a></li>
           <li><a href="#step__second">Маршрут</a></li>
           <li><a href="#step__three">Развлечения</a></li>
         </ul>
-        <!-- в мобильной и планшетной версии меню это в одном  месте - в ПК в другом -->
         <form action="https://echo.htmlacademy.ru" method="GET" class="planing-step">
 
           <fieldset class="planing-step__first">
@@ -345,12 +342,12 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
                   <button>П</button>
                   <button class="planing__calendar--weekends">С</button>
                   <button class="planing__calendar--weekends">В</button>
-                  <label class="planing-data__choise--0223" for="0223">23</label>
-                  <label class="planing-data__choise--0224" for="0224">24</label>
-                  <label class="planing-data__choise--0225" for="0225">25</label>
-                  <label class="planing-data__choise--0226" for="0226">26</label>
-                  <label class="planing-data__choise--0227" for="0227">27</label>
-                  <label class="planing-data__choise--0228" for="0228">28</label>
+                  <label class="planing-data__choise--0223">23</label>
+                  <label class="planing-data__choise--0224">24</label>
+                  <label class="planing-data__choise--0225">25</label>
+                  <label class="planing-data__choise--0226">26</label>
+                  <label class="planing-data__choise--0227">27</label>
+                  <label class="planing-data__choise--0228">28</label>
                   <label class="planing-data__choise--031" for="031">1</label>
                   <label class="planing-data__choise--032" for="032">2</label>
                   <label class="planing-data__choise--033" for="033">3</label>
@@ -360,22 +357,22 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
                   <label class="planing-data__choise--037" for="037">7</label>
                   <label class="planing-data__choise--038" for="038">8</label>
                   <label class="planing-data__choise--039" for="039">9</label>
-                  <label class="planing-data__choise--1" for="1">10</label>
-                  <label class="planing-data__choise--1" for="1">11</label>
-                  <label class="planing-data__choise--1" for="1">12</label>
-                  <label class="planing-data__choise--1" for="1">13</label>
-                  <label class="planing-data__choise--1" for="1">14</label>
-                  <label class="planing-data__choise--1" for="1">15</label>
-                  <label class="planing-data__choise--1" for="1">16</label>
-                  <label class="planing-data__choise--1" for="1">17</label>
-                  <label class="planing-data__choise--1" for="1">18</label>
-                  <label class="planing-data__choise--1" for="1">19</label>
-                  <label class="planing-data__choise--1" for="1">20</label>
-                  <label class="planing-data__choise--1" for="1">21</label>
-                  <label class="planing-data__choise--1" for="1">22</label>
-                  <label class="planing-data__choise--1" for="1">23</label>
-                  <label class="planing-data__choise--1" for="1">24</label>
-                  <label class="planing-data__choise--1" for="1">25</label>
+                  <label class="planing-data__choise--1">10</label>
+                  <label class="planing-data__choise--1">11</label>
+                  <label class="planing-data__choise--1">12</label>
+                  <label class="planing-data__choise--1">13</label>
+                  <label class="planing-data__choise--1">14</label>
+                  <label class="planing-data__choise--1">15</label>
+                  <label class="planing-data__choise--1">16</label>
+                  <label class="planing-data__choise--1">17</label>
+                  <label class="planing-data__choise--1">18</label>
+                  <label class="planing-data__choise--1">19</label>
+                  <label class="planing-data__choise--1">20</label>
+                  <label class="planing-data__choise--1">21</label>
+                  <label class="planing-data__choise--1">22</label>
+                  <label class="planing-data__choise--1">23</label>
+                  <label class="planing-data__choise--1">24</label>
+                  <label class="planing-data__choise--1">25</label>
                   <label class="planing-data__choise--0326 planing-data__choise--in" for="0326">
                     26
                   </label>
@@ -384,13 +381,13 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
                     28
                   </label>
                   <label class="planing-data__choise--0329 planing-data__choise--out" for="0329">29</label>
-                  <label class="planing-data__choise--0330" for="0330">29</label>
-                  <label class="planing-data__choise--0331" for="0331">31</label>
-                  <label class="planing-data__choise--041" for="041">1</label>
-                  <label class="planing-data__choise--042" for="042">2</label>
-                  <label class="planing-data__choise--043" for="043">4</label>
-                  <label class="planing-data__choise--044" for="044">4</label>
-                  <label class="planing-data__choise--045" for="045">5</label>
+                  <label class="planing-data__choise--0330">29</label>
+                  <label class="planing-data__choise--0331">31</label>
+                  <label class="planing-data__choise--041">1</label>
+                  <label class="planing-data__choise--042">2</label>
+                  <label class="planing-data__choise--043">4</label>
+                  <label class="planing-data__choise--044">4</label>
+                  <label class="planing-data__choise--045">5</label>
                 </div>
               </div>
               <a href="#step__second" class="form-button">Следующий шаг</a>
@@ -410,7 +407,6 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
               </ul>
               <div class="planing-step__second--choise-wrapper">
                 <div class="planing-step__second--choise planing-step__second--choise--active">
-                  <!-- класс для показа  .planing-step__second--choise--active  -->
                   <select class="planing-step__second--country header" name="planing-countries" id="plan01">
                     <option value="0"> Выберите страну </option>
                     <option class="select__current" value="333" selected>Босния и Герцеговина</option>
@@ -425,7 +421,6 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
                         <ul class="planing-country__chosen planing-country__chosen--1">
                           <li><a class="planing-country__chosen--pick" href=" country/europe/afganistan.html">
                               Афганистан</a></li>
-                          <!-- обсудить как делать и сделать осталные по образцу -->
                           <li><a class="planing-country__chosen--pick" href="#">Албания</a></li>
                           <li><a class="planing-country__chosen--pick" href="#">Алжир</a></li>
                           <li><a class="planing-country__chosen--pick" href="#">Андорра</a></li>
@@ -470,7 +465,6 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
                         </ul>
                       </li>
                       <li class="planing-country__selection--items"><button type="button">в</button>
-                        <!-- расписать список нормально -->
                         <ul class="planing-country__chosen planing-country__chosen--3">
                           <li><a href="#">Вануату</a></li>
                           <li><a href="#">Великобритания</a></li>
@@ -529,8 +523,6 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
                           <li><a href="#">Италия</a></li>
                         </ul>
                       </li>
-                      <!--  <li class="planing-country__selection--items"><button type="button">й</button>  <ul class="planing-country__chosen planing-country__chosen--3"></ul>
-                      </li> -->
                       <li class="planing-country__selection--items"><button type="button">к</button>
                         <ul class="planing-country__chosen planing-country__chosen--8">
                           <li><a href="#">Кабо-Верде</a></li>
@@ -571,7 +563,6 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
                           <li><a href="#">Мальдивы</a></li>
                           <li><a href="#">Мальта</a></li>
                           <li><a href="#">Марокко</a></li>
-                          <!-- <li><a href="#">Мексика</a></li> -->
                         </ul>
                       </li>
                       <li class="planing-country__selection--items"><button type="button">н</button>
@@ -722,7 +713,6 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
                 </div>
 
                 <div class="planing-step__second--choise select">
-                  <!-- класс для показа  .planing-step__second--choise--active  -->
                   <select class="planing-step__second--country header" name="planing-countries" id="plan02">
                     <option value="0"> Выберите страну </option>
                     <option class="select__current" value="333" selected>Чехия</option>
@@ -736,7 +726,6 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
                         <button type="button">а</button>
                         <ul class="planing-country__chosen planing-country__chosen--1">
                           <li><a href=" country/europe/afganistan.html"> Афганистан</a></li>
-                          <!-- обсудить как делать и сделать осталные по образцу -->
                           <li><a href="#">Албания</a></li>
                           <li><a href="#">Алжир</a></li>
                           <li><a href="#">Андорра</a></li>
@@ -781,7 +770,6 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
                         </ul>
                       </li>
                       <li class="planing-country__selection--items"><button type="button">в</button>
-                        <!-- расписать список нормально -->
                         <ul class="planing-country__chosen planing-country__chosen--3">
                           <li><a href="#">Вануату</a></li>
                           <li><a href="#">Великобритания</a></li>
@@ -840,8 +828,6 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
                           <li><a href="#">Италия</a></li>
                         </ul>
                       </li>
-                      <!--  <li class="planing-country__selection--items"><button type="button">й</button>  <ul class="planing-country__chosen planing-country__chosen--3"></ul>
-                      </li> -->
                       <li class="planing-country__selection--items"><button type="button">к</button>
                         <ul class="planing-country__chosen planing-country__chosen--8">
                           <li><a href="#">Кабо-Верде</a></li>
@@ -882,7 +868,6 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
                           <li><a href="#">Мальдивы</a></li>
                           <li><a href="#">Мальта</a></li>
                           <li><a href="#">Марокко</a></li>
-                          <!-- <li><a href="#">Мексика</a></li> -->
                         </ul>
                       </li>
                       <li class="planing-country__selection--items"><button type="button">н</button>
@@ -1033,7 +1018,6 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
                 </div>
 
                 <div class="planing-step__second--choise select clear">
-                  <!-- класс для показа  .planing-step__second--choise--active  -->
                   <select class="planing-step__second--country header" name="planing-countries" id="plan03">
                     <option value="0" selected> Выберите страну </option>
                     <option class="select__current" value="111">Другая страна</option>
@@ -1047,7 +1031,6 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
                         <button type="button">а</button>
                         <ul class="planing-country__chosen planing-country__chosen--1">
                           <li><a href=" country/europe/afganistan.html"> Афганистан</a></li>
-                          <!-- обсудить как делать и сделать осталные по образцу -->
                           <li><a href="#">Албания</a></li>
                           <li><a href="#">Алжир</a></li>
                           <li><a href="#">Андорра</a></li>
@@ -1092,7 +1075,6 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
                         </ul>
                       </li>
                       <li class="planing-country__selection--items"><button type="button">в</button>
-                        <!-- расписать список нормально -->
                         <ul class="planing-country__chosen planing-country__chosen--3">
                           <li><a href="#">Вануату</a></li>
                           <li><a href="#">Великобритания</a></li>
@@ -1131,10 +1113,6 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
                           <li> <a href="#">Египет</a></li>
                         </ul>
                       </li>
-                      <!--  <li class="planing-country__selection--items"><button type="button">ё</button>  <ul class="planing-country__chosen planing-country__chosen--3"></ul>
-                      </li> -->
-                      <!--  <li class="planing-country__selection--items"><button type="button">ж</button>  <ul class="planing-country__chosen planing-country__chosen--3"></ul>
-                      </li> -->
                       <li class="planing-country__selection--items"><button type="button">з</button>
                         <ul class="planing-country__chosen planing-country__chosen--6">
                           <li><a href="#">Замбия</a></li>
@@ -1155,8 +1133,6 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
                           <li><a href="#">Италия</a></li>
                         </ul>
                       </li>
-                      <!--  <li class="planing-country__selection--items"><button type="button">й</button>  <ul class="planing-country__chosen planing-country__chosen--3"></ul>
-                      </li> -->
                       <li class="planing-country__selection--items"><button type="button">к</button>
                         <ul class="planing-country__chosen planing-country__chosen--8">
                           <li><a href="#">Кабо-Верде</a></li>
@@ -1197,7 +1173,6 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
                           <li><a href="#">Мальдивы</a></li>
                           <li><a href="#">Мальта</a></li>
                           <li><a href="#">Марокко</a></li>
-                          <!-- <li><a href="#">Мексика</a></li> -->
                         </ul>
                       </li>
                       <li class="planing-country__selection--items"><button type="button">н</button>
@@ -1341,8 +1316,6 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
                       </svg>
                     </button>
                   </div>
-                  <!-- <div class="planing-step__second--choise--flag">
-                    для флага -->
                   <div class="planing-step__second--choise--flag">
                     <button class="flag-reset">Закрыть</button>
                   </div>
@@ -1377,22 +1350,22 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
               <ul class="planing-step__three--plan">
                 <li class="planing-step__three--selected">
                   <label for="country01">
-                    <p>Босния и Герцоговина</p>
+                    Босния и Герцоговина
                   </label>
                   <div class="start-country planing-step__three--country">
                     <img src="/img/flag-bosnia.svg" alt="флаг страны" width="35" height="24">
                   </div>
-                  <textarea name="country01" id="step-plan-1" cols="30" rows="10" placeholder="План действий" required>
+                  <textarea name="step-plan-1" id="country01" cols="30" rows="10" placeholder="План действий" required>
                   </textarea>
                 </li>
                 <li class="planing-step__three--selected">
                   <label for="country02">
-                    <p>Чехия</p>
+                    Чехия
                   </label>
                   <div class="planing-step__three--country">
                     <img src="img/flag-czech.svg" alt="флаг страны" width="35" height="24">
                   </div>
-                  <textarea name="country02" id="step-plan-2" cols="30" rows="10" placeholder="План действий" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+                  <textarea name="step-plan-2" id="country02" cols="30" rows="10" placeholder="План действий" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
                   </textarea>
                 </li>
               </ul>
@@ -1406,7 +1379,6 @@ c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-
         </form>
       </div>
     </section>
-    <!-- direction -->
   </main>
 
   <footer class="footer">

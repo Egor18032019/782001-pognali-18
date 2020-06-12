@@ -116,8 +116,9 @@ gulp.task("jsmin",function (){
     server.init({
       server: "build/",
       notify: false,
-      open: true,
+      open: false,
       cors: true,
+      port: 2000,
       ui: false
     });
 
